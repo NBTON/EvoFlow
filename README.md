@@ -3,7 +3,8 @@
 <p align="center"><strong>A native Windows companion that turns verified workflows into reusable skills.</strong></p>
 <p align="center">WinUI 3 · Python / LangGraph · Local execution · Supabase · Optional LangSmith</p>
 <p align="center">
-  <a href="#meet-evoflow">Tour</a> · <a href="#workflow-evolution">Evolution</a> ·
+  <a href="#quick-demo">Watch demo</a> · <a href="#meet-evoflow">Tour</a> ·
+  <a href="#workflow-evolution">Evolution</a> ·
   <a href="#set-up-with-your-agent">Agent setup</a> · <a href="#run-from-source">Manual setup</a> ·
   <a href="#validation">Build & test</a> ·
   <a href="#evidence-and-boundaries">Evidence</a>
@@ -18,6 +19,15 @@ Covered fresh inputs can then run locally without another model request.
 Built for **HUMAIN Future AI Builders Hackathon · Challenge 2: Deliver AI with
 Less Compute**. This working prototype includes limited-scope measured evidence.
 It makes no dollar, GPU, energy or general quality claim.
+
+## Quick demo
+
+[![Watch the EvoFlow demo: a chat request opens Notepad.](docs/images/demo-video-preview.png)](https://github.com/NBTON/EvoFlow/raw/refs/heads/main/docs/media/evoflow-notepad-demo.mp4)
+
+**[▶ Watch or download the demo — 27 seconds, MP4](https://github.com/NBTON/EvoFlow/raw/refs/heads/main/docs/media/evoflow-notepad-demo.mp4)**
+
+A short desktop recording shows EvoFlow receiving “open the notepad app for me”
+and launching Notepad. Click the preview above to open the full-resolution video.
 
 ## Meet EvoFlow
 
