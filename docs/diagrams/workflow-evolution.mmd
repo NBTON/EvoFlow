@@ -1,0 +1,29 @@
+---
+title: Workflow evolution
+---
+flowchart TD
+    A[Task + supported input contract] --> B{Eligible active skill?}
+    B -->|Matching schema, policy and dependencies| C[Execute saved plan locally]
+    B -->|Missing or invalidated| D[Model synthesizes bounded relational plan]
+    D --> E[Validate contract and allowed operations]
+    E --> F[Execute with trusted interpreter]
+    C --> G[Independent correctness oracle]
+    F --> G
+    G -->|Fails| H{Repair budget remains?}
+    H -->|Yes: development only| D
+    H -->|No| R[Reject candidate / needs attention]
+    G -->|Passes: new candidate| I[Independent development and regression checks]
+    I -->|Fails| R
+    I -->|Passes| J[Hash artifact + contracts + provenance]
+    J --> K[Auditable promotion to versioned active skill]
+    K --> L[Fresh compatible inputs]
+    L --> B
+    G -->|Passes: covered reuse| M[Verified result + usage record]
+    K --> M
+
+    classDef accent fill:#12382d,stroke:#34d399,color:#edfdf5
+    classDef check fill:#1a2e40,stroke:#80bde2,color:#edf3f7
+    classDef reject fill:#38222b,stroke:#df8b9c,color:#fff1f4
+    class C,K,L,M accent
+    class E,G,I,J check
+    class R reject

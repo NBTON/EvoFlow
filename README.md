@@ -56,27 +56,9 @@ Learning lives in external workflow artifacts. **Model weights stay fixed.**
 The implemented learning task is order/inventory/shipment reconciliation;
 ordinary chat and desktop tool use do not automatically become learned skills.
 
-```mermaid
-flowchart TD
-    A[Task + supported input contract] --> B{Eligible active skill?}
-    B -->|Matching schema, policy and dependencies| C[Execute saved plan locally]
-    B -->|Missing or invalidated| D[Model synthesizes bounded relational plan]
-    D --> E[Validate contract and allowed operations]
-    E --> F[Execute with trusted interpreter]
-    C --> G[Independent correctness oracle]
-    F --> G
-    G -->|Fails| H{Repair budget remains?}
-    H -->|Yes: development only| D
-    H -->|No| R[Reject candidate / needs attention]
-    G -->|Passes: new candidate| I[Independent development and regression checks]
-    I -->|Fails| R
-    I -->|Passes| J[Hash artifact + contracts + provenance]
-    J --> K[Auditable promotion to versioned active skill]
-    K --> L[Fresh compatible inputs]
-    L --> B
-    G -->|Passes: covered reuse| M[Verified result + usage record]
-    K --> M
-```
+[![Workflow evolution: model-authored plans pass independent checks before versioned promotion or rejection.](docs/images/workflow-evolution.svg)](docs/images/workflow-evolution.svg)
+
+<sub>Rendered with <a href="https://github.com/obsidianmd/pele">Pele</a> · <a href="docs/diagrams/workflow-evolution.mmd">Editable diagram source</a></sub>
 
 The model composes generic relational operations such as joins, aggregation,
 deduplication and projection. Trusted code validates and interprets the plan;
@@ -85,24 +67,16 @@ reuse. Candidates face development/regression checks before promotion, and
 prior versions retain provenance and rollback history.
 
 Open the native **Memory** window for the interactive graph explorer: inspect
-actual skill versions, sources and dependency edges there. The Mermaid diagram
-above is GitHub's static lifecycle representation; it runs no custom JavaScript.
+actual skill versions, sources and dependency edges there. The Pele-rendered SVG
+above shows the lifecycle directly on GitHub, with no custom JavaScript.
 Build-time instructions in `.agents/skills` are separate from product learning.
 Final evaluation feedback stays separate from acquisition and repair.
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    UI[Native WinUI island + windows] <-->|Authenticated loopback + events| W[Local Python worker]
-    W --> LG[LangGraph reconciliation runtime]
-    W --> P[Explicit model/provider adapters]
-    W --> DB[(SQLite records + checkpoints)]
-    UI --> T[Compiled .NET ToolHost + document handlers]
-    UI --> MCP[Native MCP broker + managed Cua children]
-    W <-->|Protected device session| S[Supabase Auth / Postgres / private Storage]
-    W -. Optional operational metadata .-> LS[LangSmith]
-```
+[![EvoFlow architecture: native WinUI, authenticated local worker, trusted tools, persistence and optional monitoring.](docs/images/architecture.svg)](docs/images/architecture.svg)
+
+<sub>Rendered with <a href="https://github.com/obsidianmd/pele">Pele</a> · <a href="docs/diagrams/architecture.mmd">Editable diagram source</a></sub>
 
 The native supervisor owns its hidden worker and tool processes. A per-launch
 token protects the loopback API. Models cannot bypass native policy, approve

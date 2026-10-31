@@ -1,0 +1,11 @@
+{
+  "name": "evoflow-readme-diagrams",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "devDependencies": {
+    "pele": "1.13.0"
+  }
+}
