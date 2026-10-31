@@ -1,0 +1,164 @@
+{
+  "benchmark_id": "benchmark-learning-20261031-reviewed",
+  "setup_attempts": "Interrupted overlapping CLI runs retained under artifacts/local/benchmark-20261031; excluded from paired estimates and reported separately.",
+  "created_at_utc": "2026-10-31T11:25:11.769151+00:00",
+  "runner": "Gemini 3.8 Flash (High)",
+  "configuration": {
+    "general_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "decision_primary": "baseten/joey-1",
+    "decision_fallback": "respan/span-01-lite:free",
+    "models": {
+      "deepseek_flash": {
+        "enabled": true,
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ],
+        "description": "Direct DeepSeek Flash; candidate for efficient synthesis and deeper reasoning with supported effort controls"
+      },
+      "mimo_flash": {
+        "enabled": true,
+        "provider": "mimo",
+        "model": "mimo-v2.6-flash",
+        "efforts": [
+          "disabled",
+          "enabled"
+        ],
+        "description": "MiMo Flash; intended for frequent moderately complex synthesis; thinking on/off only"
+      },
+      "mimo_pro": {
+        "enabled": true,
+        "provider": "mimo",
+        "model": "mimo-v2.6-pro",
+        "efforts": [
+          "disabled",
+          "enabled"
+        ],
+        "description": "MiMo Pro; candidate for more complex coding and multi-step relational workflows; thinking on/off only"
+      },
+      "gpt_luna": {
+        "enabled": true,
+        "provider": "openrouter",
+        "model": "openai/gpt-6-luna",
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "description": "GPT-6 Luna; candidate for lightweight through difficult synthesis, effort gated by current metadata"
+      }
+    },
+    "max_calls_budget": 45
+  },
+  "paired_experiment": {
+    "acquisition_seeds": [
+      30201,
+      30202
+    ],
+    "sealed_final_seeds": [
+      30211,
+      30212,
+      30213,
+      30214,
+      30215,
+      30216
+    ],
+    "conditions": [
+      {
+        "name": "no_reuse_fixed",
+        "mode": "none",
+        "routing_policy": "fixed",
+        "adapter": "openrouter"
+      },
+      {
+        "name": "frozen_library_fixed",
+        "mode": "frozen",
+        "routing_policy": "fixed",
+        "adapter": "openrouter"
+      },
+      {
+        "name": "evolving_fixed",
+        "mode": "evolving",
+        "routing_policy": "fixed",
+        "adapter": "openrouter"
+      },
+      {
+        "name": "evolving_adaptive",
+        "mode": "evolving",
+        "routing_policy": "adaptive",
+        "adapter": "multiprovider"
+      }
+    ]
+  },
+  "longitudinal_sequence": {
+    "phase_1": {
+      "schema": 1,
+      "split": false,
+      "grace": 0,
+      "policy_version": 1,
+      "seeds": [
+        30301,
+        30302,
+        30303,
+        30301
+      ],
+      "kinds": [
+        "acquisition",
+        "new_record_repeat",
+        "new_record_repeat",
+        "same_input_repeat"
+      ]
+    },
+    "phase_2": {
+      "schema": 2,
+      "split": true,
+      "grace": 0,
+      "policy_version": 1,
+      "seeds": [
+        30311,
+        30312,
+        30313,
+        30311
+      ],
+      "kinds": [
+        "adaptation",
+        "new_record_repeat",
+        "new_record_repeat",
+        "same_input_repeat"
+      ]
+    },
+    "phase_3": {
+      "schema": 2,
+      "split": true,
+      "grace": 2,
+      "policy_version": 2,
+      "seeds": [
+        30321,
+        30322,
+        30323,
+        30321
+      ],
+      "kinds": [
+        "adaptation",
+        "new_record_repeat",
+        "new_record_repeat",
+        "same_input_repeat"
+      ]
+    }
+  },
+  "safeguards": {
+    "freeze_assertion": true,
+    "no_final_feedback_leak": true,
+    "no_fabricated_measurements": true,
+    "no_dollar_or_gpu_savings_claims": true,
+    "unreported_cost_unknown": true,
+    "call_budget_cap": 45
+  }
+}

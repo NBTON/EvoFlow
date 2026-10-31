@@ -1,0 +1,131 @@
+{
+  "classification": "Interrupted overlapping harness setup; not part of paired estimates; preserve unknown usage for canceled in-flight calls. These attempts remain additional experiment overhead.",
+  "runs": [
+    {
+      "run_id": "816e2273-8dec-4db0-bd6e-ad5dfe8ff076",
+      "status": "working",
+      "receipt_count": 0,
+      "input_tokens_reported": 0,
+      "output_tokens_reported": 0,
+      "calls": [],
+      "source_store": "artifacts\\local\\benchmark-20261031\\paired\\no_reuse_fixed",
+      "calls_recorded_lower_bound": 0
+    },
+    {
+      "run_id": "2f3b2278-1017-425a-8adf-e84e8c395061",
+      "status": "complete",
+      "receipt_count": 1,
+      "input_tokens_reported": 1904,
+      "output_tokens_reported": 635,
+      "calls": [
+        {
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "interface": "chat/completions",
+          "status": 200,
+          "temperature": 0,
+          "reasoning": {
+            "enabled": false
+          },
+          "attempt": 0,
+          "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "requested_effort": "none",
+          "submitted_effort": "none",
+          "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "effective_effort": "unknown",
+          "routing": {
+            "policy": "fixed",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_novelty": true,
+              "schema_novelty": false,
+              "repair": false,
+              "complexity": "standard",
+              "delegated_role": null,
+              "reuse": false
+            },
+            "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "requested_effort": "none",
+            "submitted_effort": "none",
+            "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "profile": "fixed",
+            "reason": "Fixed benchmark model and effort; input novelty and repairs do not change settings",
+            "capability_reason": "Disable control supported by current model and endpoint metadata",
+            "capabilities_checked_at": 1793445870.1097565,
+            "eligible_providers": [
+              "nvidia"
+            ],
+            "provider": "Nvidia",
+            "request_id": "gen-1793445870-NvL3NolyE4ZTZSbAiOdD",
+            "usage": {
+              "prompt_tokens": 1904,
+              "completion_tokens": 635,
+              "total_tokens": 2539,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "provider": "Nvidia",
+          "request_id": "gen-1793445870-NvL3NolyE4ZTZSbAiOdD",
+          "usage": {
+            "prompt_tokens": 1904,
+            "completion_tokens": 635,
+            "total_tokens": 2539,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "effort_status": "submitted_unconfirmed"
+        }
+      ],
+      "source_store": "artifacts\\local\\benchmark-20261031\\paired\\no_reuse_fixed",
+      "calls_recorded_lower_bound": 1
+    },
+    {
+      "run_id": "81bcc8cf-e111-4192-80b2-b5934a39e80f",
+      "status": "working",
+      "receipt_count": 0,
+      "input_tokens_reported": 0,
+      "output_tokens_reported": 0,
+      "calls": [],
+      "source_store": "artifacts\\local\\benchmark-20261031\\paired\\no_reuse_fixed",
+      "calls_recorded_lower_bound": 0
+    }
+  ],
+  "calls_recorded_lower_bound": 1,
+  "incomplete_working_records": 2,
+  "usage_complete": false,
+  "notice": "Working records may contain in-flight attempts not yet persisted by Engine. The recorded call count is a lower bound, not a complete total. Retained outside paired estimates as interrupted harness overhead."
+}

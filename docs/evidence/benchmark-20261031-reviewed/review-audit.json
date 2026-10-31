@@ -1,0 +1,97 @@
+{
+  "controlled_runs": 44,
+  "independently_reverified_successes": 42,
+  "controlled_provider_calls": 25,
+  "paired_audit": {
+    "no_reuse_fixed": {
+      "paired_fixture_hashes_match": true,
+      "pre_final_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "post_final_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "no_skill_acquired_from_final": true
+    },
+    "frozen_library_fixed": {
+      "paired_fixture_hashes_match": true,
+      "pre_final_hash": "07ce977464d56b37d40b56fa7a5e85b0ac1b2bd552e34c8f2f93bfbc8feb8e06",
+      "post_final_hash": "07ce977464d56b37d40b56fa7a5e85b0ac1b2bd552e34c8f2f93bfbc8feb8e06",
+      "no_skill_acquired_from_final": true
+    },
+    "evolving_fixed": {
+      "paired_fixture_hashes_match": true,
+      "pre_final_hash": "b72057673c0701c1534c68b0d27ce7da63b18945a2105f79645b9de9d78c4ff8",
+      "post_final_hash": "b72057673c0701c1534c68b0d27ce7da63b18945a2105f79645b9de9d78c4ff8",
+      "no_skill_acquired_from_final": true
+    },
+    "evolving_adaptive": {
+      "paired_fixture_hashes_match": true,
+      "pre_final_hash": "1a6922c7148cd777fd34a9f9b98275ef137fdae76c2d3bc0da3fbbb347d1e062",
+      "post_final_hash": "1a6922c7148cd777fd34a9f9b98275ef137fdae76c2d3bc0da3fbbb347d1e062",
+      "no_skill_acquired_from_final": true
+    }
+  },
+  "longitudinal_audit": [
+    {
+      "phase": "phase_1",
+      "skill_version": 1,
+      "acquisition_calls": 2,
+      "acquisition_tokens": 6991,
+      "acquisition_ms": 20719.965599986608,
+      "repeat_ms": [
+        85.48200000950601,
+        83.42080000147689,
+        85.49870000570081
+      ],
+      "same_input_hash_matches": true,
+      "average_tokens_after_4": 1747.75
+    },
+    {
+      "phase": "phase_2",
+      "skill_version": 2,
+      "acquisition_calls": 2,
+      "acquisition_tokens": 10093,
+      "acquisition_ms": 36693.71130000218,
+      "repeat_ms": [
+        108.52959999465384,
+        92.04190000309609,
+        82.40250000380911
+      ],
+      "same_input_hash_matches": true,
+      "average_tokens_after_4": 2523.25
+    },
+    {
+      "phase": "phase_3",
+      "skill_version": 3,
+      "acquisition_calls": 2,
+      "acquisition_tokens": 7696,
+      "acquisition_ms": 24992.766900002607,
+      "repeat_ms": [
+        88.71310000540689,
+        85.69910000369418,
+        86.4482000033604
+      ],
+      "same_input_hash_matches": true,
+      "average_tokens_after_4": 1924.0
+    }
+  ],
+  "fixed_evolving_call_reduction_percent": 75.0,
+  "fixed_evolving_token_reduction_percent": 74.97193068098609,
+  "adaptive_vs_fixed_evolving_token_increase_percent": 220.08972108445482,
+  "adaptive_cost_complete": false,
+  "interrupted_setup": "Separate retained incomplete setup records; their costs cannot be reconstructed completely. Excluded from paired estimates, not erased.",
+  "execution": "Gemini authored the initial harness; Codex reviewed it and ran the single controlled process.",
+  "source_commit": "72c8db095ce900bb7338edb5e04a80cb6ad64771",
+  "source_hashes_sha256": {
+    "scripts\\benchmark-learning-20261031.py": "0e6cca691e37c48aa1adc6cd661622b29b9c0f2ef157bbb05850cd5460c92fbd",
+    "scripts\\plot-benchmark-learning.py": "e5ff4b4bf01ee8521b05a7159011e277e63a3fb106331528965f937de2333ccd",
+    "config\\runtime.json": "303cc966a5204a08668f1cf6763e97929231a303d4bf172c0868a0ce6db4a386",
+    "worker\\evoflow_worker\\engine.py": "7b95fa1e7ed67e879d9084b7b2a9bce7956173f6b183babf1c7c6b323bb1825f",
+    "worker\\evoflow_worker\\fixtures.py": "3f13b5e5eb6d5bafd80fe0960494d98ea6de15668022831ec4e24e4d2ff7c18b",
+    "worker\\evoflow_worker\\providers.py": "3ee920da58c9603477b3250a8bddd6d10bae89dd40f01dc92bd6be394ad2b17a"
+  },
+  "validation": {
+    "pytest": "166 passed in 12.91s",
+    "ruff_check": "passed repository-wide",
+    "format_check": "both added scripts passed",
+    "budget_guard": "failed attempts counted; retry capacity reserved",
+    "figures": "both rendered and visually inspected"
+  }
+}

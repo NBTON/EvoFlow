@@ -6,7 +6,7 @@
   <a href="#quick-demo">Watch demo</a> · <a href="#meet-evoflow">Tour</a> ·
   <a href="#memory-and-brain-graph">Memory graph</a> · <a href="#workflow-evolution">Evolution</a> ·
   <a href="#set-up-with-your-agent">Agent setup</a> · <a href="#run-from-source">Manual setup</a> ·
-  <a href="#validation">Build & test</a> ·
+  <a href="#benchmarks">Benchmarks</a> · <a href="#validation">Build & test</a> ·
   <a href="#evidence-and-boundaries">Evidence</a> · <a href="#research-and-inspiration">Research</a>
 </p>
 
@@ -89,6 +89,49 @@ actual skill versions, sources and dependency edges there. The Pele-rendered SVG
 above shows the lifecycle directly on GitHub, with no custom JavaScript.
 Build-time instructions in `.agents/skills` are separate from product learning.
 Final evaluation feedback stays separate from acquisition and repair.
+
+## Benchmarks
+
+The [reviewed October 31, 2026 findings](docs/evidence/benchmark-20261031-reviewed/reviewed-findings.md)
+report real measured executions on **fictional order-reconciliation inputs**.
+This is a small sample from one task family, not a general reliability guarantee.
+Each controlled condition used the same two acquisition and six held-out final
+datasets; acquisition and both failed baseline attempts remain included.
+
+| Condition | Tasks passed | Model calls | Input + output tokens |
+| --- | ---: | ---: | ---: |
+| No reuse, fixed model | 6/8 | 8 | 20,485 |
+| Frozen library, fixed model | 8/8 | 5 | 12,737 |
+| Evolving skills, fixed model | 8/8 | 2 | 5,127 |
+| Evolving skills + adaptive routing | 8/8 | 4 | 16,411 |
+
+**Fixed-model evolution used 75% fewer calls and 74.97% fewer tokens than no
+reuse, including acquisition.** All six final tasks in that condition ran with
+zero model inference.
+
+![Measured paired learning curves](docs/evidence/benchmark-20261031-reviewed/paired-learning-curve.png)
+
+A separate **12-task adaptive sequence** produced skill versions **v1 → v2 → v3**.
+All 12 tasks passed. All nine covered repeats—six with fresh records and three
+with the exact acquisition input—used **zero model calls and zero inference
+tokens**. Schema and policy changes triggered new acquisition/adaptation calls;
+local execution and independent verification still perform work.
+
+![Adaptive acquisition, evolution, and repeat costs](docs/evidence/benchmark-20261031-reviewed/adaptive-learning-curve.png)
+
+**Adaptive routing did not demonstrate additional savings over fixed-model
+evolution. Dollar savings remain unproven:** the fixed model was free, and
+adaptive execution lacked complete cost receipts. No GPU or energy savings
+are claimed.
+
+Supporting evidence: [raw results](docs/evidence/benchmark-20261031-reviewed/raw_benchmark.json),
+[run accounting](docs/evidence/benchmark-20261031-reviewed/runs.csv),
+[predeclared design](docs/evidence/benchmark-20261031-reviewed/manifest.json),
+[independent review](docs/evidence/benchmark-20261031-reviewed/review-audit.json)
+and [aggregate metrics](docs/evidence/benchmark-20261031-reviewed/totals.json).
+[Interrupted setup attempts](docs/evidence/benchmark-20261031-reviewed/interrupted-setup.json)
+are disclosed separately, excluded from the controlled estimates, and have
+incomplete cost accounting. Historical benchmarks below are separate experiments.
 
 ## Architecture
 
@@ -264,6 +307,7 @@ checks and package integrity are in [the delivery report](docs/BRANDING-MONITORI
 | --- | --- |
 | Implemented product | Native chat/history, scoped local tools, Memory, routing, optional monitoring and native MCP connections. [Current delivery checks](docs/BRANDING-MONITORING-VERIFICATION-2026-10-31.md). |
 | Explicit learning demo | Fictional reconciliation, model-authored candidate admission and verified fresh-input reuse. [Development evidence](docs/evidence/multi-provider-workflow-20261030T220759Z.json). |
+| Latest reviewed benchmark | Fixed-model evolution reduced calls by 75% and tokens by 74.97%, including acquisition; small fictional workload. [Reviewed findings](docs/evidence/benchmark-20261031-reviewed/reviewed-findings.md) and [summary above](#benchmarks). |
 | Historical experiment | Preliminary fixed-policy comparison, separate from current adaptive routing. [Aggregate report](docs/evidence/benchmark.md); raw sealed final rows/feedback are not published. |
 | Browser limits | Playwright tooling is implemented, but the latest retained Chrome startup check failed. Managed Cua browser preparation is blocked by an ownership refusal. [Exact outcomes](docs/MCP-CUA-VERIFICATION-2026-10-31.md). |
 | Planned / unverified | Voice, continuous screen capture, general browser/desktop autonomy, full MCP resource/prompt/sampling compatibility, production signing and clean-machine installation. |
