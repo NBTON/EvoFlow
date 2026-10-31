@@ -1,0 +1,35 @@
+{
+  "case": "calculator",
+  "appPid": 49080,
+  "target": "local",
+  "status": "PASS",
+  "approvals": [
+    "MCP · Cua · Calculator / launch_app",
+    "MCP · Cua · Calculator / get_window_state",
+    "MCP · Cua · Calculator / click",
+    "MCP · Cua · Calculator / get_window_state",
+    "MCP · Cua · Calculator / get_window_state",
+    "MCP · Cua · Calculator / click",
+    "MCP · Cua · Calculator / get_window_state",
+    "MCP · Cua · Calculator / click",
+    "MCP · Cua · Calculator / get_window_state",
+    "MCP · Cua · Calculator / get_window_state",
+    "MCP · Cua · Calculator / click",
+    "MCP · Cua · Calculator / verify_state"
+  ],
+  "started": "2026-10-31T04:18:42.2243731+03:00",
+  "finalText": [
+    "Local action",
+    "MCP response received from Cua · Calculator / get_window_state\nsucceeded · verified: true",
+    "Local action",
+    "MCP response received from Cua · Calculator / get_window_state\nsucceeded · verified: true",
+    "Local action",
+    "MCP response received from Cua · Calculator / click\nsucceeded · verified: false",
+    "Local action",
+    "MCP response received from Cua · Calculator / verify_state\nsucceeded · verified: false",
+    "EvoFlow",
+    "Done — verified.\n\n**Result: Calculator displays 42** ✅\n\nSteps performed with the Cua desktop tools on Calculator (pid 2664, window 5050126, launched hidden in the background so it never stole focus):\n\n| Step | Action | Observed state |\n|---|---|---|\n| 1 | Launch Calculator | \"Calculator\" window opened, display `0` |\n| 2 | Click **Six** | Display `6` |\n| 3 | Click **Multiply by** | Accepted (next digit replaced the operand rather than appending) |\n| 4 | Click **Seven** | Display `7` (second operand) |\n| 5 | Click **Equals** | Display `42` |\n\nVerification: `verify_state` returned **satisfied** for the predicate \"a Text element labeled `Display is 42`\", stable across 2 consecutive samples (~1s). The observed accessibility element was the display region at (51,265) with label exactly `Display is 42`.\n\nAll interactions used background UIA Invoke delivery — the foreground window and pointer position were unchanged throughout (`foregroundBefore = foregroundAfter`). A screenshot of the final state was saved as evidence at `C:\\Users\\nbton\\AppData\\Local\\EvoFlow\\connector-evidence\\...\\333dfca5c9604dc79f0c96ff8ae4c041.png`, though I did not visually inspect those pixels; the confirmation above is from the structured accessibility state.",
+    "Message",
+    "Enter to send · Shift+Enter for a new line"
+  ]
+}

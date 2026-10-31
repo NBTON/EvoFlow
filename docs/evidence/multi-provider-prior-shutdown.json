@@ -1,0 +1,11 @@
+{
+  "native_pid": 36536,
+  "native_exited": true,
+  "owned_children": [
+    {
+      "ProcessId": 44748,
+      "ExecutablePath": "C:\\Users\\nbton\\Documents\\EvoFlow-Delivery-20261030-234118\\app\\AppX\\runtime\\python.exe"
+    }
+  ],
+  "owned_children_exited": true
+}

@@ -1,0 +1,27 @@
+{
+  "case": "calculator",
+  "appPid": 41100,
+  "target": "local",
+  "status": "FAIL",
+  "approvals": [
+    "MCP · Cua · Calculator / launch_app",
+    "MCP · Cua · Calculator / launch_app",
+    "MCP · Cua · Calculator / launch_app"
+  ],
+  "started": "2026-10-31T04:13:22.1049230+03:00",
+  "finalText": [
+    "Local action",
+    "Protected or stale target. This native capability is restricted to the installed Calculator executable.\ndenied · verified: false",
+    "Local action",
+    "Protected or stale target. This native capability is restricted to the installed Calculator executable.\ndenied · verified: false",
+    "Local action",
+    "MCP response received from Cua · Calculator / launch_app\nsucceeded · verified: false",
+    "Local action",
+    "Protected or stale target. This native capability is restricted to the installed Calculator executable.\ndenied · verified: false",
+    "EvoFlow",
+    "I attempted the task but could not complete it. Here's exactly what happened:\n\n**What worked**\n- Calculator launched via the reviewed Cua path with the exact AUMID `Microsoft.WindowsCalculator_8wekyb3d8bbwe!App`. Launch succeeded and reported a visible \"Calculator\" window (e.g. window_id 2232036, bounds 500×750 at 50,150) under pid 2664.\n\n**What was blocked**\n- Every attempt to inspect the app (`get_window_state`) and to verify state (`verify_state`) for that pid/window was refused by native policy with `policy_denied`: *\"Protected or stale target. This native capability is restricted to the installed Calculator executable.\"*\n- This repeated across 3 separate launches (window_ids 1445628, 8588200, 2232036) with the same pid 2664, so it isn't a single stale window ID — the launched process/window pair does not satisfy the Calculator-target restriction in this session.\n- `list_windows` with an `app` filter and without a pid was also denied (\"Select the exact PID returned by Calculator launch\"), and `start_minimized` was denied as an unsupported launch variant.\n- A direct `application_launch` of Calculator also failed verification (`launch_unverified`, no stable matching window, expected `C:\\WINDOWS\\system32\\calc.exe`).\n\n**Result**\n- **6 × 7 was not computed in Calculator, and nothing was verified as displaying 42.** I did not press any calculator keys, so I have no display evidence.\n- Per policy I also did not fall back to FlaUI/`windows_ui` or any other automation after the Cua denials.\n\nIf you want, I can retry in a fresh session (which may restore access to the Calculator target), or you can open Calculator yourself and I'll attempt the keystrokes and read back the display.",
+    "Message",
+    "Enter to send · Shift+Enter for a new line"
+  ],
+  "error": "Actual Cua clicks and a readback of 42 were not established by the chat evidence"
+}

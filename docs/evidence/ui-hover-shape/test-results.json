@@ -1,0 +1,51 @@
+{
+  "target": "local",
+  "appPid": 30512,
+  "mainWindow": "3214702",
+  "time": "2026-10-30T22:14:54.0183231+03:00",
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "status": "PASS",
+      "name": "Compact native pill"
+    },
+    {
+      "status": "PASS",
+      "name": "Hover expansion and stable pointer traversal"
+    },
+    {
+      "status": "PASS",
+      "name": "Click keeps task panel accessible; no settings form in chat"
+    },
+    {
+      "status": "PASS",
+      "name": "Separate settings window and automatic cloud connection"
+    },
+    {
+      "status": "PASS",
+      "name": "Native graph uses stored memory"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph search, empty state and recovery"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph zoom controls and history filter"
+    },
+    {
+      "status": "PASS",
+      "name": "Preference management remains separate and cancellable"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape\\compact.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape\\hover.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape\\settings.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape\\memory.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape\\memory-search-empty.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape\\memory-management.png"
+  ],
+  "visual_review": "REVIEWED: all six PNGs viewed on the squared-hover build; compact pill square top corners with rounded bottom corners; hover shading reaches the top edge squarely (pixel-sampled uniform color across top rows in hover-collapsed-zoom.png); Settings scrolls intentionally; graph overview labels small at Fit; memory.png captured with the Save preference dialog open and memory-management.png after it closed — both states render correctly, capture-state quirk of this run only"
+}

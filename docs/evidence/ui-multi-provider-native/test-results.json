@@ -1,0 +1,51 @@
+{
+  "target": "local",
+  "appPid": 31384,
+  "mainWindow": "789318",
+  "time": "2026-10-31T01:12:33.2630724+03:00",
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "status": "PASS",
+      "name": "Compact native pill"
+    },
+    {
+      "status": "PASS",
+      "name": "Hover expansion and stable pointer traversal"
+    },
+    {
+      "status": "PASS",
+      "name": "Click keeps task panel accessible; no settings form in chat"
+    },
+    {
+      "status": "PASS",
+      "name": "Separate settings window and automatic cloud connection"
+    },
+    {
+      "status": "PASS",
+      "name": "Native graph uses stored memory"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph search, empty state and recovery"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph zoom controls and history filter"
+    },
+    {
+      "status": "PASS",
+      "name": "Preference management remains separate and cancellable"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-multi-provider-native\\compact.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-multi-provider-native\\hover.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-multi-provider-native\\settings.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-multi-provider-native\\memory.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-multi-provider-native\\memory-search-empty.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-multi-provider-native\\memory-management.png"
+  ],
+  "visual_review": "PASS; all six batch PNGs viewed. Settings intentionally scrolls; graph detail is available through zoom and its readable list. Keyboard focus outline is intentional."
+}

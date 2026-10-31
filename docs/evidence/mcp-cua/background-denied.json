@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "dispatch_outcome",
+    "callId": "fe983aec-61c1-4ead-b023-2d345be05c08",
+    "runId": "f078c595-290b-443a-98cb-5dbc7cdb00c3",
+    "serverId": "cua_desktop",
+    "tool": "mcp_cua_desktop_e5c7ffac26fe",
+    "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+    "argumentHash": "23d416ef5e654e745a2e272a837dc043fa3cc504e5b5c67f46c2ade20c67ee9d",
+    "deliveryMode": "background",
+    "status": "denied",
+    "errorCode": "policy_denied",
+    "verified": false,
+    "executionMs": 49.8258,
+    "at": "2026-10-31T05:37:09.6461484+00:00"
+  }
+]

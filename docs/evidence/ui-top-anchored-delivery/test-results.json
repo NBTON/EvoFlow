@@ -1,0 +1,51 @@
+{
+  "target": "local",
+  "appPid": 41040,
+  "mainWindow": "2427320",
+  "time": "2026-10-30T22:04:05.0997096+03:00",
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "status": "PASS",
+      "name": "Compact native pill"
+    },
+    {
+      "status": "PASS",
+      "name": "Hover expansion and stable pointer traversal"
+    },
+    {
+      "status": "PASS",
+      "name": "Click keeps task panel accessible; no settings form in chat"
+    },
+    {
+      "status": "PASS",
+      "name": "Separate settings window and automatic cloud connection"
+    },
+    {
+      "status": "PASS",
+      "name": "Native graph uses stored memory"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph search, empty state and recovery"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph zoom controls and history filter"
+    },
+    {
+      "status": "PASS",
+      "name": "Preference management remains separate and cancellable"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-top-anchored-delivery\\compact.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-top-anchored-delivery\\hover.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-top-anchored-delivery\\settings.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-top-anchored-delivery\\memory.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-top-anchored-delivery\\memory-search-empty.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-top-anchored-delivery\\memory-management.png"
+  ],
+  "visual_review": "REVIEWED: compact/hover captures and both desktop top strips viewed on the delivered binary; island flush with top edge (y=0), square top corners merge into the screen, rounded bottom corners, no white frame or title bar; separate Settings scrolls intentionally; graph overview labels small at Fit with accessible list/detail available; suite required one foreground activation after cold launch"
+}

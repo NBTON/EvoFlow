@@ -1,0 +1,3397 @@
+[
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua \u00b7 Calculator / launch_app",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "launch_app",
+      "schemaHash": "3c9a78db7e0bbd1bc088c1e7849f4246947baa03090743922e2a729663476d45",
+      "text": "\u2705 Launched Microsoft.WindowsCalculator_8wekyb3d8bbwe!App (pid 2664) in background.\n\nWindows:\n- \"Calculator\" [window_id: 34475372]\n\u2192 Call get_window_state(pid: 2664, window_id) to inspect.",
+      "structuredContent": {
+        "active": false,
+        "bundle_id": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App",
+        "name": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App",
+        "pid": 2664,
+        "running": true,
+        "windows": [
+          {
+            "bounds": {
+              "height": 750,
+              "width": 500,
+              "x": 50,
+              "y": 150
+            },
+            "is_on_screen": true,
+            "layer": 0,
+            "title": "Calculator",
+            "window_id": 34475372,
+            "z_index": 0
+          }
+        ]
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 3181.2197,
+    "callId": "35463514-175d-49d5-af9f-5b44e3fc4387",
+    "argumentHash": "10790e65ef3ad60373e6a487b016a830cca145e5dbf092a0d0833971dfb81915"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=34475372 pid=2664 elements=39 snapshot_id=s00000001\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "set_value"
+            ],
+            "depth": 1,
+            "element_index": 0,
+            "element_token": "s00000001:0",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 188,
+              "x": 361,
+              "y": 151
+            },
+            "label": "Calculator",
+            "role": "Window",
+            "value": "Calculator"
+          },
+          {
+            "actions": [
+              "expand"
+            ],
+            "depth": 3,
+            "element_index": 1,
+            "element_token": "s00000001:1",
+            "enabled": true,
+            "label": "System",
+            "parent_index": 0,
+            "role": "MenuItem"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 2,
+            "element_token": "s00000001:2",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 411,
+              "y": 151
+            },
+            "label": "Minimize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 3,
+            "element_token": "s00000001:3",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 457,
+              "y": 151
+            },
+            "label": "Maximize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 4,
+            "element_token": "s00000001:4",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 503,
+              "y": 151
+            },
+            "label": "Close Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000001:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000001:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 4,
+            "element_index": 7,
+            "element_token": "s00000001:7",
+            "enabled": true,
+            "label": "PaneTitleTextBlock",
+            "parent_index": 6,
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000001:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 0",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 9,
+            "element_token": "s00000001:9",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 509,
+              "y": 191
+            },
+            "label": "Open history flyout",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 10,
+            "element_token": "s00000001:10",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 215,
+              "y": 377
+            },
+            "label": "Memory add",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 11,
+            "element_token": "s00000001:11",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 295,
+              "y": 377
+            },
+            "label": "Memory subtract",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 12,
+            "element_token": "s00000001:12",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 375,
+              "y": 377
+            },
+            "label": "Memory store",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 13,
+            "element_token": "s00000001:13",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 426
+            },
+            "label": "Percent",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 14,
+            "element_token": "s00000001:14",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 426
+            },
+            "label": "Clear entry",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 15,
+            "element_token": "s00000001:15",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 426
+            },
+            "label": "Clear",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 16,
+            "element_token": "s00000001:16",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 426
+            },
+            "label": "Backspace",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 17,
+            "element_token": "s00000001:17",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 505
+            },
+            "label": "Reciprocal",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 18,
+            "element_token": "s00000001:18",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 505
+            },
+            "label": "Square",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 19,
+            "element_token": "s00000001:19",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 505
+            },
+            "label": "Square root",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 20,
+            "element_token": "s00000001:20",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 505
+            },
+            "label": "Divide by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 21,
+            "element_token": "s00000001:21",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 583
+            },
+            "label": "Multiply by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 22,
+            "element_token": "s00000001:22",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 662
+            },
+            "label": "Minus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 23,
+            "element_token": "s00000001:23",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 740
+            },
+            "label": "Plus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 24,
+            "element_token": "s00000001:24",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 819
+            },
+            "label": "Equals",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 25,
+            "element_token": "s00000001:25",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 819
+            },
+            "label": "Zero",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 26,
+            "element_token": "s00000001:26",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 740
+            },
+            "label": "One",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 27,
+            "element_token": "s00000001:27",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 740
+            },
+            "label": "Two",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 28,
+            "element_token": "s00000001:28",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 740
+            },
+            "label": "Three",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 29,
+            "element_token": "s00000001:29",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 662
+            },
+            "label": "Four",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 30,
+            "element_token": "s00000001:30",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 662
+            },
+            "label": "Five",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 31,
+            "element_token": "s00000001:31",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 662
+            },
+            "label": "Six",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 32,
+            "element_token": "s00000001:32",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 583
+            },
+            "label": "Seven",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 33,
+            "element_token": "s00000001:33",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 583
+            },
+            "label": "Eight",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 34,
+            "element_token": "s00000001:34",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 583
+            },
+            "label": "Nine",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 35,
+            "element_token": "s00000001:35",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 819
+            },
+            "label": "Decimal separator",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 36,
+            "element_token": "s00000001:36",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 819
+            },
+            "label": "Positive negative",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 3,
+            "element_index": 37,
+            "element_token": "s00000001:37",
+            "enabled": true,
+            "frame": {
+              "h": 27,
+              "w": 82,
+              "x": 99,
+              "y": 192
+            },
+            "label": "Standard Calculator mode",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 38,
+            "element_token": "s00000001:38",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 191,
+              "y": 191
+            },
+            "label": "Keep on top",
+            "role": "Button"
+          }
+        ],
+        "elements_complete": true,
+        "pid": 2664,
+        "returned_element_count": 39,
+        "snapshot_id": "s00000001",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 34475372,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2294.9778,
+    "callId": "2f78162e-9a0d-4114-987e-e059956b2907",
+    "argumentHash": "5ce2baa9b38a0e155f3ac2b3be05ac5b485259925777e6662ac993aeeaa73820"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua \u00b7 Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "\u2705 Performed UIA Invoke on [31] (screen (361,700)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 34475372
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "\u2705 Performed UIA Invoke on [31] (screen (361,700))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2358.6113,
+    "callId": "8183b57c-14e4-4165-b170-ed59dbf623fb",
+    "argumentHash": "25f28d4e78ed6107a950351bf1c41d628ab710caa181867731415a12ccc978b1"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=34475372 pid=2664 elements=39 snapshot_id=s00000002\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000001: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000002:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000002:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000002:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 6",
+            "role": "Text"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000001"
+        ],
+        "pid": 2664,
+        "returned_element_count": 3,
+        "snapshot_id": "s00000002",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 34475372,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2115.7344,
+    "callId": "2c7250aa-dd4d-481e-b8a9-ba8e903b3d41",
+    "argumentHash": "458aa1e55a90f384d2af1d502fd838ca511fecf724d13f7990eba69c9918c74b"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=34475372 pid=2664 elements=39 snapshot_id=s00000003\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000002: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "set_value"
+            ],
+            "depth": 1,
+            "element_index": 0,
+            "element_token": "s00000003:0",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 188,
+              "x": 361,
+              "y": 151
+            },
+            "label": "Calculator",
+            "role": "Window",
+            "value": "Calculator"
+          },
+          {
+            "actions": [
+              "expand"
+            ],
+            "depth": 3,
+            "element_index": 1,
+            "element_token": "s00000003:1",
+            "enabled": true,
+            "label": "System",
+            "parent_index": 0,
+            "role": "MenuItem"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 2,
+            "element_token": "s00000003:2",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 411,
+              "y": 151
+            },
+            "label": "Minimize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 3,
+            "element_token": "s00000003:3",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 457,
+              "y": 151
+            },
+            "label": "Maximize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 4,
+            "element_token": "s00000003:4",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 503,
+              "y": 151
+            },
+            "label": "Close Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000003:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000003:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 4,
+            "element_index": 7,
+            "element_token": "s00000003:7",
+            "enabled": true,
+            "label": "PaneTitleTextBlock",
+            "parent_index": 6,
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000003:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 6",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 9,
+            "element_token": "s00000003:9",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 509,
+              "y": 191
+            },
+            "label": "Open history flyout",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 10,
+            "element_token": "s00000003:10",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 215,
+              "y": 377
+            },
+            "label": "Memory add",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 11,
+            "element_token": "s00000003:11",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 295,
+              "y": 377
+            },
+            "label": "Memory subtract",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 12,
+            "element_token": "s00000003:12",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 375,
+              "y": 377
+            },
+            "label": "Memory store",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 13,
+            "element_token": "s00000003:13",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 426
+            },
+            "label": "Percent",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 14,
+            "element_token": "s00000003:14",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 426
+            },
+            "label": "Clear entry",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 15,
+            "element_token": "s00000003:15",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 426
+            },
+            "label": "Clear",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 16,
+            "element_token": "s00000003:16",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 426
+            },
+            "label": "Backspace",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 17,
+            "element_token": "s00000003:17",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 505
+            },
+            "label": "Reciprocal",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 18,
+            "element_token": "s00000003:18",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 505
+            },
+            "label": "Square",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 19,
+            "element_token": "s00000003:19",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 505
+            },
+            "label": "Square root",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 20,
+            "element_token": "s00000003:20",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 505
+            },
+            "label": "Divide by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 21,
+            "element_token": "s00000003:21",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 583
+            },
+            "label": "Multiply by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 22,
+            "element_token": "s00000003:22",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 662
+            },
+            "label": "Minus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 23,
+            "element_token": "s00000003:23",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 740
+            },
+            "label": "Plus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 24,
+            "element_token": "s00000003:24",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 819
+            },
+            "label": "Equals",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 25,
+            "element_token": "s00000003:25",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 819
+            },
+            "label": "Zero",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 26,
+            "element_token": "s00000003:26",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 740
+            },
+            "label": "One",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 27,
+            "element_token": "s00000003:27",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 740
+            },
+            "label": "Two",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 28,
+            "element_token": "s00000003:28",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 740
+            },
+            "label": "Three",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 29,
+            "element_token": "s00000003:29",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 662
+            },
+            "label": "Four",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 30,
+            "element_token": "s00000003:30",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 662
+            },
+            "label": "Five",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 31,
+            "element_token": "s00000003:31",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 662
+            },
+            "label": "Six",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 32,
+            "element_token": "s00000003:32",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 583
+            },
+            "label": "Seven",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 33,
+            "element_token": "s00000003:33",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 583
+            },
+            "label": "Eight",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 34,
+            "element_token": "s00000003:34",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 583
+            },
+            "label": "Nine",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 35,
+            "element_token": "s00000003:35",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 819
+            },
+            "label": "Decimal separator",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 36,
+            "element_token": "s00000003:36",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 819
+            },
+            "label": "Positive negative",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 3,
+            "element_index": 37,
+            "element_token": "s00000003:37",
+            "enabled": true,
+            "frame": {
+              "h": 27,
+              "w": 82,
+              "x": 99,
+              "y": 192
+            },
+            "label": "Standard Calculator mode",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 38,
+            "element_token": "s00000003:38",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 191,
+              "y": 191
+            },
+            "label": "Keep on top",
+            "role": "Button"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000002"
+        ],
+        "pid": 2664,
+        "returned_element_count": 39,
+        "snapshot_id": "s00000003",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 34475372,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2626.9451,
+    "callId": "ff70ea7e-e8c9-4492-a6e4-acb764bd2815",
+    "argumentHash": "bb4b46fe561c9ec9d8857cf1f98cecc9bc51d26af4d88a0127758190affd7f7d"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua \u00b7 Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "\u2705 Performed UIA Invoke on [21] (screen (484,621)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 34475372
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "\u2705 Performed UIA Invoke on [21] (screen (484,621))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2734.7177,
+    "callId": "288bce8d-ffaf-44eb-a819-9b3099e707b6",
+    "argumentHash": "768e59ef47d26f32e980deffbe4a804292143f35cafff6f03e8b131544d2f045"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=34475372 pid=2664 elements=39 snapshot_id=s00000004\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000003: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000004:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000004:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000004:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 6",
+            "role": "Text"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000003"
+        ],
+        "pid": 2664,
+        "returned_element_count": 3,
+        "snapshot_id": "s00000004",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 34475372,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2694.6632,
+    "callId": "18e1d8fc-54c2-4973-acbd-29fd6343b012",
+    "argumentHash": "458aa1e55a90f384d2af1d502fd838ca511fecf724d13f7990eba69c9918c74b"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=34475372 pid=2664 elements=39 snapshot_id=s00000005\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000004: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "set_value"
+            ],
+            "depth": 1,
+            "element_index": 0,
+            "element_token": "s00000005:0",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 188,
+              "x": 361,
+              "y": 151
+            },
+            "label": "Calculator",
+            "role": "Window",
+            "value": "Calculator"
+          },
+          {
+            "actions": [
+              "expand"
+            ],
+            "depth": 3,
+            "element_index": 1,
+            "element_token": "s00000005:1",
+            "enabled": true,
+            "label": "System",
+            "parent_index": 0,
+            "role": "MenuItem"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 2,
+            "element_token": "s00000005:2",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 411,
+              "y": 151
+            },
+            "label": "Minimize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 3,
+            "element_token": "s00000005:3",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 457,
+              "y": 151
+            },
+            "label": "Maximize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 4,
+            "element_token": "s00000005:4",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 503,
+              "y": 151
+            },
+            "label": "Close Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000005:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000005:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 4,
+            "element_index": 7,
+            "element_token": "s00000005:7",
+            "enabled": true,
+            "label": "PaneTitleTextBlock",
+            "parent_index": 6,
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000005:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 6",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 9,
+            "element_token": "s00000005:9",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 509,
+              "y": 191
+            },
+            "label": "Open history flyout",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 10,
+            "element_token": "s00000005:10",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 215,
+              "y": 377
+            },
+            "label": "Memory add",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 11,
+            "element_token": "s00000005:11",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 295,
+              "y": 377
+            },
+            "label": "Memory subtract",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 12,
+            "element_token": "s00000005:12",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 375,
+              "y": 377
+            },
+            "label": "Memory store",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 13,
+            "element_token": "s00000005:13",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 426
+            },
+            "label": "Percent",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 14,
+            "element_token": "s00000005:14",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 426
+            },
+            "label": "Clear entry",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 15,
+            "element_token": "s00000005:15",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 426
+            },
+            "label": "Clear",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 16,
+            "element_token": "s00000005:16",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 426
+            },
+            "label": "Backspace",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 17,
+            "element_token": "s00000005:17",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 505
+            },
+            "label": "Reciprocal",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 18,
+            "element_token": "s00000005:18",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 505
+            },
+            "label": "Square",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 19,
+            "element_token": "s00000005:19",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 505
+            },
+            "label": "Square root",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 20,
+            "element_token": "s00000005:20",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 505
+            },
+            "label": "Divide by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 21,
+            "element_token": "s00000005:21",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 583
+            },
+            "label": "Multiply by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 22,
+            "element_token": "s00000005:22",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 662
+            },
+            "label": "Minus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 23,
+            "element_token": "s00000005:23",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 740
+            },
+            "label": "Plus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 24,
+            "element_token": "s00000005:24",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 819
+            },
+            "label": "Equals",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 25,
+            "element_token": "s00000005:25",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 819
+            },
+            "label": "Zero",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 26,
+            "element_token": "s00000005:26",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 740
+            },
+            "label": "One",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 27,
+            "element_token": "s00000005:27",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 740
+            },
+            "label": "Two",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 28,
+            "element_token": "s00000005:28",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 740
+            },
+            "label": "Three",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 29,
+            "element_token": "s00000005:29",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 662
+            },
+            "label": "Four",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 30,
+            "element_token": "s00000005:30",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 662
+            },
+            "label": "Five",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 31,
+            "element_token": "s00000005:31",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 662
+            },
+            "label": "Six",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 32,
+            "element_token": "s00000005:32",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 583
+            },
+            "label": "Seven",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 33,
+            "element_token": "s00000005:33",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 583
+            },
+            "label": "Eight",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 34,
+            "element_token": "s00000005:34",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 583
+            },
+            "label": "Nine",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 35,
+            "element_token": "s00000005:35",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 819
+            },
+            "label": "Decimal separator",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 36,
+            "element_token": "s00000005:36",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 819
+            },
+            "label": "Positive negative",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 3,
+            "element_index": 37,
+            "element_token": "s00000005:37",
+            "enabled": true,
+            "frame": {
+              "h": 27,
+              "w": 82,
+              "x": 99,
+              "y": 192
+            },
+            "label": "Standard Calculator mode",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 38,
+            "element_token": "s00000005:38",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 191,
+              "y": 191
+            },
+            "label": "Keep on top",
+            "role": "Button"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000004"
+        ],
+        "pid": 2664,
+        "returned_element_count": 39,
+        "snapshot_id": "s00000005",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 34475372,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2342.9068,
+    "callId": "354b7884-1cc3-4a8e-9072-24a33406380c",
+    "argumentHash": "bb4b46fe561c9ec9d8857cf1f98cecc9bc51d26af4d88a0127758190affd7f7d"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua \u00b7 Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "\u2705 Performed UIA Invoke on [32] (screen (115,621)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire. Three single actions in a row: send the next ones as one run_steps call. It runs them in order, stops at the first failure and returns what changed.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 34475372
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "\u2705 Performed UIA Invoke on [32] (screen (115,621))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 3516.8843,
+    "callId": "c938e2f4-0f04-4eb6-9e68-1e637cc302ed",
+    "argumentHash": "84bf501b8c989076ff59d9cd8a39bf46acdadebd913742e19e0a78513e0d4713"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=34475372 pid=2664 elements=39 snapshot_id=s00000006\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000005: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000006:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000006:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000006:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 7",
+            "role": "Text"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000005"
+        ],
+        "pid": 2664,
+        "returned_element_count": 3,
+        "snapshot_id": "s00000006",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 34475372,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2651.1199,
+    "callId": "87eed571-5c6b-478e-87b7-730c365523d1",
+    "argumentHash": "458aa1e55a90f384d2af1d502fd838ca511fecf724d13f7990eba69c9918c74b"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=34475372 pid=2664 elements=39 snapshot_id=s00000007\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000006: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "set_value"
+            ],
+            "depth": 1,
+            "element_index": 0,
+            "element_token": "s00000007:0",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 188,
+              "x": 361,
+              "y": 151
+            },
+            "label": "Calculator",
+            "role": "Window",
+            "value": "Calculator"
+          },
+          {
+            "actions": [
+              "expand"
+            ],
+            "depth": 3,
+            "element_index": 1,
+            "element_token": "s00000007:1",
+            "enabled": true,
+            "label": "System",
+            "parent_index": 0,
+            "role": "MenuItem"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 2,
+            "element_token": "s00000007:2",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 411,
+              "y": 151
+            },
+            "label": "Minimize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 3,
+            "element_token": "s00000007:3",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 457,
+              "y": 151
+            },
+            "label": "Maximize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 4,
+            "element_token": "s00000007:4",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 503,
+              "y": 151
+            },
+            "label": "Close Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000007:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000007:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 4,
+            "element_index": 7,
+            "element_token": "s00000007:7",
+            "enabled": true,
+            "label": "PaneTitleTextBlock",
+            "parent_index": 6,
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000007:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 7",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 9,
+            "element_token": "s00000007:9",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 509,
+              "y": 191
+            },
+            "label": "Open history flyout",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 10,
+            "element_token": "s00000007:10",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 215,
+              "y": 377
+            },
+            "label": "Memory add",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 11,
+            "element_token": "s00000007:11",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 295,
+              "y": 377
+            },
+            "label": "Memory subtract",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 12,
+            "element_token": "s00000007:12",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 375,
+              "y": 377
+            },
+            "label": "Memory store",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 13,
+            "element_token": "s00000007:13",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 426
+            },
+            "label": "Percent",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 14,
+            "element_token": "s00000007:14",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 426
+            },
+            "label": "Clear entry",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 15,
+            "element_token": "s00000007:15",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 426
+            },
+            "label": "Clear",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 16,
+            "element_token": "s00000007:16",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 426
+            },
+            "label": "Backspace",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 17,
+            "element_token": "s00000007:17",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 505
+            },
+            "label": "Reciprocal",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 18,
+            "element_token": "s00000007:18",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 505
+            },
+            "label": "Square",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 19,
+            "element_token": "s00000007:19",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 505
+            },
+            "label": "Square root",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 20,
+            "element_token": "s00000007:20",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 505
+            },
+            "label": "Divide by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 21,
+            "element_token": "s00000007:21",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 583
+            },
+            "label": "Multiply by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 22,
+            "element_token": "s00000007:22",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 662
+            },
+            "label": "Minus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 23,
+            "element_token": "s00000007:23",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 740
+            },
+            "label": "Plus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 24,
+            "element_token": "s00000007:24",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 819
+            },
+            "label": "Equals",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 25,
+            "element_token": "s00000007:25",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 819
+            },
+            "label": "Zero",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 26,
+            "element_token": "s00000007:26",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 740
+            },
+            "label": "One",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 27,
+            "element_token": "s00000007:27",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 740
+            },
+            "label": "Two",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 28,
+            "element_token": "s00000007:28",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 740
+            },
+            "label": "Three",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 29,
+            "element_token": "s00000007:29",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 662
+            },
+            "label": "Four",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 30,
+            "element_token": "s00000007:30",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 662
+            },
+            "label": "Five",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 31,
+            "element_token": "s00000007:31",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 662
+            },
+            "label": "Six",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 32,
+            "element_token": "s00000007:32",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 583
+            },
+            "label": "Seven",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 33,
+            "element_token": "s00000007:33",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 583
+            },
+            "label": "Eight",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 34,
+            "element_token": "s00000007:34",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 583
+            },
+            "label": "Nine",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 35,
+            "element_token": "s00000007:35",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 819
+            },
+            "label": "Decimal separator",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 36,
+            "element_token": "s00000007:36",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 819
+            },
+            "label": "Positive negative",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 3,
+            "element_index": 37,
+            "element_token": "s00000007:37",
+            "enabled": true,
+            "frame": {
+              "h": 27,
+              "w": 82,
+              "x": 99,
+              "y": 192
+            },
+            "label": "Standard Calculator mode",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 38,
+            "element_token": "s00000007:38",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 191,
+              "y": 191
+            },
+            "label": "Keep on top",
+            "role": "Button"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000006"
+        ],
+        "pid": 2664,
+        "returned_element_count": 39,
+        "snapshot_id": "s00000007",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 34475372,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2768.4336,
+    "callId": "ebd154fc-d41f-4ca7-a640-5f5e8e85087c",
+    "argumentHash": "bb4b46fe561c9ec9d8857cf1f98cecc9bc51d26af4d88a0127758190affd7f7d"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua \u00b7 Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "\u2705 Performed UIA Invoke on [24] (screen (484,857)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 34475372
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "\u2705 Performed UIA Invoke on [24] (screen (484,857))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 2763.2561,
+    "callId": "dbf2bf6b-94e8-43cd-bc8e-9ddbdb9c911a",
+    "argumentHash": "7f9ad34645a637820f26b623a7973dc747291802e35b06d5554e90c3b824faa0"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua \u00b7 Calculator / verify_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "verify_state",
+      "schemaHash": "ad49c4a5c442f53fea41356b0940a24e2a2f96b05a2cc3b2e590b66563e7ed1e",
+      "text": "verify_state: satisfied after 2 sample(s) in 2388 ms",
+      "structuredContent": {
+        "elapsed_ms": 2388,
+        "predicates": [
+          {
+            "index": 0,
+            "observed_json": "{\"element_index\":8,\"enabled\":true,\"frame\":{\"h\":111,\"w\":498,\"x\":51,\"y\":265},\"label\":\"Display is 42\",\"role\":\"Text\"}",
+            "status": "satisfied",
+            "unknown_reason": null
+          }
+        ],
+        "samples": 2,
+        "stable": true,
+        "status": "satisfied"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 17633076,
+        "foregroundAfter": 17633076,
+        "pointerBeforeX": 1280,
+        "pointerBeforeY": 21,
+        "pointerAfterX": 1280,
+        "pointerAfterY": 21
+      }
+    },
+    "executionMs": 5394.954,
+    "callId": "cd37b1ab-e495-48b1-ab34-06048dce9ee9",
+    "argumentHash": "4e1eb43da271ad1bb05f74134b9b295e99f1f2684cd24a1d0fa257cee2d56c83"
+  }
+]

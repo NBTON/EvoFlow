@@ -1,0 +1,24 @@
+{
+  "case": "generic",
+  "appPid": 48048,
+  "target": "local",
+  "status": "PASS",
+  "approvals": [
+    "MCP · Fixture Echo / echo"
+  ],
+  "started": "2026-10-31T04:30:00.6438829+03:00",
+  "finalText": [
+    "EvoFlow",
+    "Needs attention",
+    "Conversation",
+    "Memory",
+    "You",
+    "Use the Fixture Echo MCP data connector to echo exactly: EvoFlow connector verified. Use its discovered echo tool; do not use a terminal or write files.",
+    "Local action",
+    "MCP response received from Fixture Echo / echo\nsucceeded · verified: false",
+    "EvoFlow",
+    "The Fixture Echo MCP tool responded successfully.\n\n- **Tool:** `fixture_echo` / `echo`\n- **Backend:** MCP\n- **Echoed text:** `EvoFlow connector verified`\n- **Server status:** `ok`\n\nThe returned `text` field matches the string exactly (no trailing period), confirming the data connector round-trip works. Note that this is a data echo — no terminal or files were used, and the response carries no application state to verify beyond the echoed payload itself.",
+    "Message",
+    "Enter to send · Shift+Enter for a new line"
+  ]
+}

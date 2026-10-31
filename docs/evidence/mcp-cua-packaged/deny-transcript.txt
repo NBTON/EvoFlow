@@ -1,0 +1,33 @@
+EvoFlow, collapse task panel
+EvoFlow
+Needs attention
+Conversation
+New Chat
+Chat history
+Memory and learned skills
+Memory
+Settings
+Keep task panel open
+ConversationScroll
+You
+Use Cua to open Calculator and inspect its current display. If native approval is declined, stop and report the denial.
+Local action
+Native approval declined. No connector call was dispatched.
+denied · verified: false
+EvoFlow
+**Stopped — native approval was declined.**
+
+I attempted to launch Calculator with Cua:
+
+- **Call:** `launch_app(aumid="Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")`
+- **Result:** `status: denied`, `verified: false`, error code `approval_denied`
+- **Detail:** "Native approval declined. No connector call was dispatched."
+
+No Calculator instance was started, no window was inspected, and I did not attempt any workaround (no foreground escalation, no alternative launch path, no substitute automation tooling). Nothing about the Calculator display was read, so I have no result to report on that part of your request.
+
+If you'd like to proceed, re-issue the request and approve the native prompt when it appears.
+Vertical
+Task instructions
+Message
+Run task
+Enter to send · Shift+Enter for a new line

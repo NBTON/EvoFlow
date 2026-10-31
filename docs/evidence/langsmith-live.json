@@ -1,0 +1,37 @@
+{
+  "verified_at_utc": "2026-10-31T09:44:32.003325+00:00",
+  "started_at_utc": "2026-10-31T00:00:00+00:00",
+  "project": "EvoFlow",
+  "live": true,
+  "run_id": "00b6933e-6974-4f8d-8f4f-e3e6b7c8048c",
+  "session_id": "dd50a2c6-979b-4c10-9f8a-f997c7f50017",
+  "trace_id": "01a19156-1e02-7db6-a76f-e1bf76c537c6",
+  "conversation_complete": true,
+  "synthetic_marker_correct": true,
+  "model_calls": 2,
+  "llm_spans": 2,
+  "session_correlation_verified": true,
+  "all_inputs_empty": true,
+  "provider_spans": [
+    {
+      "model": "deepseek-flash",
+      "provider": "deepseek",
+      "usage": {
+        "input_tokens": 149,
+        "output_tokens": 9,
+        "total_tokens": 158
+      }
+    },
+    {
+      "model": "baseten/joey-1",
+      "provider": "openrouter",
+      "usage": {
+        "input_tokens": 1284,
+        "output_tokens": 3,
+        "total_cost": 1.284e-05,
+        "total_tokens": 1287
+      }
+    }
+  ],
+  "cost_note": "Only provider-reported costs included; missing costs remain unknown."
+}

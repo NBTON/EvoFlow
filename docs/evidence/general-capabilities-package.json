@@ -1,0 +1,29 @@
+{
+  "package": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\EvoFlow_1.0.0.0_x64.msix",
+  "sha256": "349580806e5b4fa020a2d6835668fa65c67586fac705268588930b280491bb58",
+  "bytes": 260092681,
+  "entries": 5820,
+  "runtime_default_template_present": true,
+  "reserved_development_templates_excluded": true,
+  "playwright_driver_present": true,
+  "delivery": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\delivery\\EvoFlow-20261031-034228\\app",
+  "running_pid": 50764,
+  "integrity": [
+    {
+      "path": "tools/EvoFlow.ToolHost.dll",
+      "sha256": "cc768d5b00e247fd720c9fcbb60d8afed837373bf2f94f20717e16ddbb4f6e46"
+    },
+    {
+      "path": "EvoFlow.dll",
+      "sha256": "968199b7b9c1e875186a2e9eadb5f01731a158e349bcce8e6ea3c8f491aec371"
+    },
+    {
+      "path": "worker/evoflow_worker/local_tools.py",
+      "sha256": "b241f099fb11eef6a2719a2a2932bd683872b17cd536ed6494d5e30b078abf97"
+    },
+    {
+      "path": "worker/evoflow_worker/document_handler.py",
+      "sha256": "8f11917247dfe181467587c8229b8e0778383f4f4d50ad85b5b2be4b61fa0c36"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "target": "local",
+  "appPid": 31384,
+  "status": "PASS",
+  "checks": [
+    "Main interface excludes demo and diagnostic controls",
+    "Settings sections available; sample selection returns to conversation",
+    "Shift Enter newline; double Enter produces one turn; verified result; Cancel hidden",
+    "Diagnostics available and Settings reopens without reparenting failure"
+  ]
+}

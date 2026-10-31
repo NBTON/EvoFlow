@@ -1,0 +1,9 @@
+{
+  "files_checked_for_provider_values": 96,
+  "provider_values_found": false,
+  "local_document_links_valid": true,
+  "images_reviewed": 11,
+  "package_integrity_passed": true,
+  "luna_additional_exact_answer_check": "failed; retained; no retry or substitution",
+  "luna_reasoning_delta_chunks": 6
+}

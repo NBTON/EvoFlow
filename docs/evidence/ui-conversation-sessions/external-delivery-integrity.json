@@ -1,0 +1,42 @@
+[
+  {
+    "file": "app/AppX/EvoFlow.dll",
+    "sha256": "54041C84D932BDCA86A6CEBA3F908BCABEB1CAD81FF6BD2286D59744A57F09B9",
+    "matches": true
+  },
+  {
+    "file": "app/AppX/worker/evoflow_worker/api.py",
+    "sha256": "A86654DD680EAD8B38DCDDBF571E4880E69D6A9B06F2EDAF738F600DCE837ED3",
+    "matches": true
+  },
+  {
+    "file": "app/AppX/worker/evoflow_worker/conversations.py",
+    "sha256": "BF1876B964EFA2C06A65DF1AEAB5BCAFAC7FE78092BF8FB771E08F263CCADFD4",
+    "matches": true
+  },
+  {
+    "file": "app/AppX/worker/evoflow_worker/store.py",
+    "sha256": "107317C0BBD01BC6A28361132850CC52FEDBDF8AFCF890010322EF66B6717F81",
+    "matches": true
+  },
+  {
+    "file": "app/AppX/worker/evoflow_worker/providers.py",
+    "sha256": "264FD168FEFFEFD0B8F6E1FE470ECF33A7E368322641CD4E769A96C2890622B6",
+    "matches": true
+  },
+  {
+    "file": "app/AppX/worker/evoflow_worker/models.py",
+    "sha256": "027F046D39465DA1FB679587F7E753ABC3996F640FA736535362CBB5A91807D2",
+    "matches": true
+  },
+  {
+    "file": "app/AppX/config/runtime.json",
+    "sha256": "303CC966A5204A08668F1CF6763E97929231A303D4BF172C0868A0CE6DB4A386",
+    "matches": true
+  },
+  {
+    "file": "EvoFlow_1.0.0.0_x64.msix",
+    "sha256": "EED7370DB1513E74D1BF6B6914B52DB2651AE51A31B3A28CF0351950408DB571",
+    "matches": true
+  }
+]

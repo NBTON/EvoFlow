@@ -1,0 +1,23 @@
+{
+  "reviewed": true,
+  "images": [
+    "docs\\evidence\\ui-multi-provider-top\\desktop-compact-top.png",
+    "docs\\evidence\\ui-multi-provider-top\\desktop-expanded-top.png",
+    "docs\\evidence\\ui-multi-provider-chat\\conversation.png",
+    "docs\\evidence\\ui-multi-provider-chat\\settings.png",
+    "docs\\evidence\\ui-multi-provider-native\\compact.png",
+    "docs\\evidence\\ui-multi-provider-native\\hover.png",
+    "docs\\evidence\\ui-multi-provider-native\\memory-management.png",
+    "docs\\evidence\\ui-multi-provider-native\\memory-search-empty.png",
+    "docs\\evidence\\ui-multi-provider-native\\memory.png",
+    "docs\\evidence\\ui-multi-provider-native\\settings.png",
+    "docs/evidence/ui-multi-provider-native/restarted.png"
+  ],
+  "notes": [
+    "Top-strip screenshots were captured during Starting; readiness verified subsequently.",
+    "No clipping or overlap prevents the tested actions. Settings has an intentional scrolling form.",
+    "Graph overview labels are small; the accessible list and zoom provide detail.",
+    "White outline on keyboard-focused pill is an intentional focus indicator.",
+    "Final restarted pill visually reviewed in Ready state."
+  ]
+}

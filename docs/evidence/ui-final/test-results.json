@@ -1,0 +1,51 @@
+{
+  "target": "local",
+  "appPid": 30484,
+  "mainWindow": "395970",
+  "time": "2026-10-30T19:58:28.3987802+03:00",
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "status": "PASS",
+      "name": "Compact native pill"
+    },
+    {
+      "status": "PASS",
+      "name": "Hover expansion and stable pointer traversal"
+    },
+    {
+      "status": "PASS",
+      "name": "Click keeps task panel accessible; no settings form in chat"
+    },
+    {
+      "status": "PASS",
+      "name": "Separate settings window and automatic cloud connection"
+    },
+    {
+      "status": "PASS",
+      "name": "Native graph uses stored memory"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph search, empty state and recovery"
+    },
+    {
+      "status": "PASS",
+      "name": "Graph zoom controls and history filter"
+    },
+    {
+      "status": "PASS",
+      "name": "Preference management remains separate and cancellable"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\compact.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\hover.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\settings.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\memory.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\memory-search-empty.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\memory-management.png"
+  ],
+  "visual_review": "pending"
+}

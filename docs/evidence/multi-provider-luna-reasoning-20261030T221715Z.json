@@ -1,0 +1,151 @@
+{
+  "timestamp_utc": "2026-10-30T22:17:15.183870+00:00",
+  "stage": "luna-reasoning",
+  "mimo_base_url": "https://api.xiaomimimo.com/v1",
+  "scope": "synthetic development verification; no sealed final fixtures or cloud sync",
+  "checks": [
+    {
+      "candidate": "gpt_luna_reasoning",
+      "passed": false,
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 183,
+        "output_tokens": 2960,
+        "reasoning_tokens": 2930,
+        "retries": 0,
+        "tool_calls": 0,
+        "local_execution_ms": 0.0,
+        "model_latency_ms": 61893.033199994534,
+        "billed_cost_usd": 0.00074915,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "category": "execution",
+            "model": "openai/gpt-6-luna",
+            "requested_model": "openai/gpt-6-luna",
+            "provider_adapter": "openrouter",
+            "interface": "chat/completions",
+            "status": "received",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "native_reasoning": {
+              "reasoning": {
+                "effort": "medium"
+              }
+            },
+            "effective_effort": "unknown",
+            "effective_model": "openai/gpt-6-luna",
+            "provider": "OpenAI",
+            "request_id": "gen-1793398636-2fNKxp1MpeTEsxcZmazy",
+            "usage": {
+              "prompt_tokens": 183,
+              "completion_tokens": 2960,
+              "cost": 0.00074915,
+              "completion_tokens_details": {
+                "reasoning_tokens": 2930,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "routing": {
+              "provider_adapter": "openrouter",
+              "requested_model": "openai/gpt-6-luna",
+              "requested_effort": "medium",
+              "submitted_effort": "medium",
+              "native_reasoning": {
+                "reasoning": {
+                  "effort": "medium"
+                }
+              },
+              "effective_effort": "unknown",
+              "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+              "capabilities_checked_at": 1793398636.9360774,
+              "effort_status": "submitted_unconfirmed",
+              "effective_model": "openai/gpt-6-luna",
+              "provider": "OpenAI",
+              "request_id": "gen-1793398636-2fNKxp1MpeTEsxcZmazy",
+              "usage": {
+                "prompt_tokens": 183,
+                "completion_tokens": 2960,
+                "total_tokens": 3143,
+                "cost": 0.00074915,
+                "is_byok": false,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "audio_tokens": 0,
+                  "video_tokens": 0
+                },
+                "cost_details": {
+                  "upstream_inference_cost": 0.00074915,
+                  "upstream_inference_prompt_cost": 9.15e-06,
+                  "upstream_inference_completions_cost": 0.00074
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 2930,
+                  "image_tokens": 0,
+                  "audio_tokens": 0
+                }
+              }
+            },
+            "latency_ms": 61893.033199994534
+          }
+        ],
+        "retrieval_queries": 0,
+        "reflection_model_calls": 0,
+        "verification_cases": 0,
+        "routing_decisions": []
+      },
+      "stream_observation": {
+        "visible_delta_chunks": 24,
+        "reasoning_delta_chunks": 6
+      },
+      "routing": {
+        "provider_adapter": "openrouter",
+        "requested_model": "openai/gpt-6-luna",
+        "requested_effort": "medium",
+        "submitted_effort": "medium",
+        "native_reasoning": {
+          "reasoning": {
+            "effort": "medium"
+          }
+        },
+        "effective_effort": "unknown",
+        "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+        "capabilities_checked_at": 1793398636.9360774,
+        "effort_status": "submitted_unconfirmed",
+        "effective_model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "request_id": "gen-1793398636-2fNKxp1MpeTEsxcZmazy",
+        "usage": {
+          "prompt_tokens": 183,
+          "completion_tokens": 2960,
+          "total_tokens": 3143,
+          "cost": 0.00074915,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00074915,
+            "upstream_inference_prompt_cost": 9.15e-06,
+            "upstream_inference_completions_cost": 0.00074
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2930,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      "answer_correct": false,
+      "reasoning_tokens_reported": true,
+      "failure_reason": "Final answer disagreed with the independent exhaustive optimization oracle; no retry or model substitution.",
+      "diagnostic_limit": "Original final JSON was not retained; exact comparison failed, but result versus formatting mismatch cannot be distinguished. No rerun."
+    }
+  ]
+}

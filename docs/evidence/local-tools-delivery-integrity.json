@@ -1,0 +1,42 @@
+{
+  "delivery": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\delivery\\EvoFlow-local-tools-20261031-021716\\app",
+  "running_layout": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\delivery\\EvoFlow-local-tools-20261031-021716\\app\\AppX",
+  "files": [
+    {
+      "path": "EvoFlow.dll",
+      "source_sha256": "15008bc10b029b9eddc42f2d13ba63c7e0f26eb2bcba6e924abce812886ddabb",
+      "delivery_sha256": "15008bc10b029b9eddc42f2d13ba63c7e0f26eb2bcba6e924abce812886ddabb",
+      "running_sha256": "15008bc10b029b9eddc42f2d13ba63c7e0f26eb2bcba6e924abce812886ddabb"
+    },
+    {
+      "path": "EvoFlow.exe",
+      "source_sha256": "09726baf5d365d9d7df582f6c8b12ab814fb2821a27837bb057e0649be547e88",
+      "delivery_sha256": "09726baf5d365d9d7df582f6c8b12ab814fb2821a27837bb057e0649be547e88",
+      "running_sha256": "09726baf5d365d9d7df582f6c8b12ab814fb2821a27837bb057e0649be547e88"
+    },
+    {
+      "path": "tools/EvoFlow.ToolHost.dll",
+      "source_sha256": "ee93e3a59b6e9f60097ce73a7511bfa6575030bb9f52dd36fe83fb2a28b8635d",
+      "delivery_sha256": "ee93e3a59b6e9f60097ce73a7511bfa6575030bb9f52dd36fe83fb2a28b8635d",
+      "running_sha256": "ee93e3a59b6e9f60097ce73a7511bfa6575030bb9f52dd36fe83fb2a28b8635d"
+    },
+    {
+      "path": "tools/EvoFlow.ToolHost.exe",
+      "source_sha256": "1988293e716c3e73c5b42784eed002f0be2d6a4d4aaa559e3e0bfa884bdec5c0",
+      "delivery_sha256": "1988293e716c3e73c5b42784eed002f0be2d6a4d4aaa559e3e0bfa884bdec5c0",
+      "running_sha256": "1988293e716c3e73c5b42784eed002f0be2d6a4d4aaa559e3e0bfa884bdec5c0"
+    },
+    {
+      "path": "worker/evoflow_worker/document_handler.py",
+      "source_sha256": "91239a152d64a9feeba9f69b7e32fd6c56b14fb6001cc6744e885d74c0b84977",
+      "delivery_sha256": "91239a152d64a9feeba9f69b7e32fd6c56b14fb6001cc6744e885d74c0b84977",
+      "running_sha256": "91239a152d64a9feeba9f69b7e32fd6c56b14fb6001cc6744e885d74c0b84977"
+    },
+    {
+      "path": "worker/evoflow_worker/local_tools.py",
+      "source_sha256": "864bd0c69ab9ded250a43a2eb6a6d38325fa61d4e9e24d09e176a6c80a61bf21",
+      "delivery_sha256": "864bd0c69ab9ded250a43a2eb6a6d38325fa61d4e9e24d09e176a6c80a61bf21",
+      "running_sha256": "864bd0c69ab9ded250a43a2eb6a6d38325fa61d4e9e24d09e176a6c80a61bf21"
+    }
+  ]
+}

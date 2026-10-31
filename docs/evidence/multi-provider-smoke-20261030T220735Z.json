@@ -1,0 +1,433 @@
+{
+  "timestamp_utc": "2026-10-30T22:07:35.282349+00:00",
+  "stage": "smoke",
+  "mimo_base_url": "https://api.xiaomimimo.com/v1",
+  "scope": "synthetic development verification; no sealed final fixtures or cloud sync",
+  "checks": [
+    {
+      "candidate": "mimo_flash",
+      "passed": true,
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 18,
+        "output_tokens": 24,
+        "reasoning_tokens": 18,
+        "retries": 0,
+        "tool_calls": 0,
+        "local_execution_ms": 0.0,
+        "model_latency_ms": 4042.3532999993768,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": false,
+        "calls": [
+          {
+            "category": "execution",
+            "model": "mimo-v2.6-flash",
+            "requested_model": "mimo-v2.6-flash",
+            "provider_adapter": "mimo",
+            "interface": "chat/completions",
+            "status": "received",
+            "requested_effort": "low",
+            "submitted_effort": "enabled",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              }
+            },
+            "effective_effort": "unknown",
+            "effective_model": "mimo-v2.6-flash",
+            "provider": "mimo",
+            "request_id": "37fc6c56-1e1e-44eb-a402-cebf36a9a809_a551d7fcd54140038eb2fa274a2e2cef",
+            "usage": {
+              "prompt_tokens": 18,
+              "completion_tokens": 24,
+              "completion_tokens_details": {
+                "reasoning_tokens": 18
+              }
+            },
+            "routing": {
+              "provider_adapter": "mimo",
+              "requested_model": "mimo-v2.6-flash",
+              "requested_effort": "low",
+              "submitted_effort": "enabled",
+              "native_reasoning": {
+                "thinking": {
+                  "type": "enabled"
+                }
+              },
+              "effective_effort": "unknown",
+              "effort_status": "submitted_unconfirmed",
+              "effective_model": "mimo-v2.6-flash",
+              "provider": "mimo",
+              "request_id": "37fc6c56-1e1e-44eb-a402-cebf36a9a809_a551d7fcd54140038eb2fa274a2e2cef",
+              "usage": {
+                "completion_tokens": 24,
+                "prompt_tokens": 18,
+                "total_tokens": 42,
+                "completion_tokens_details": {
+                  "reasoning_tokens": 18
+                },
+                "prompt_tokens_details": null
+              }
+            },
+            "latency_ms": 4042.3532999993768
+          }
+        ],
+        "retrieval_queries": 0,
+        "reflection_model_calls": 0,
+        "verification_cases": 0,
+        "routing_decisions": []
+      },
+      "nonempty_final_answer": true,
+      "expected_marker": true,
+      "routing": {
+        "provider_adapter": "mimo",
+        "requested_model": "mimo-v2.6-flash",
+        "requested_effort": "low",
+        "submitted_effort": "enabled",
+        "native_reasoning": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "effective_effort": "unknown",
+        "effort_status": "submitted_unconfirmed",
+        "effective_model": "mimo-v2.6-flash",
+        "provider": "mimo",
+        "request_id": "37fc6c56-1e1e-44eb-a402-cebf36a9a809_a551d7fcd54140038eb2fa274a2e2cef",
+        "usage": {
+          "completion_tokens": 24,
+          "prompt_tokens": 18,
+          "total_tokens": 42,
+          "completion_tokens_details": {
+            "reasoning_tokens": 18
+          },
+          "prompt_tokens_details": null
+        }
+      }
+    },
+    {
+      "candidate": "mimo_pro",
+      "passed": true,
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 18,
+        "output_tokens": 57,
+        "reasoning_tokens": 51,
+        "retries": 0,
+        "tool_calls": 0,
+        "local_execution_ms": 0.0,
+        "model_latency_ms": 3044.2184999992605,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": false,
+        "calls": [
+          {
+            "category": "execution",
+            "model": "mimo-v2.6-pro",
+            "requested_model": "mimo-v2.6-pro",
+            "provider_adapter": "mimo",
+            "interface": "chat/completions",
+            "status": "received",
+            "requested_effort": "low",
+            "submitted_effort": "enabled",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              }
+            },
+            "effective_effort": "unknown",
+            "effective_model": "mimo-v2.6-pro",
+            "provider": "mimo",
+            "request_id": "cee916f0-83b9-45f5-9e61-3603205c8702_c5e086d586bb46b2930bed957ead55c0",
+            "usage": {
+              "prompt_tokens": 18,
+              "completion_tokens": 57,
+              "completion_tokens_details": {
+                "reasoning_tokens": 51
+              }
+            },
+            "routing": {
+              "provider_adapter": "mimo",
+              "requested_model": "mimo-v2.6-pro",
+              "requested_effort": "low",
+              "submitted_effort": "enabled",
+              "native_reasoning": {
+                "thinking": {
+                  "type": "enabled"
+                }
+              },
+              "effective_effort": "unknown",
+              "effort_status": "submitted_unconfirmed",
+              "effective_model": "mimo-v2.6-pro",
+              "provider": "mimo",
+              "request_id": "cee916f0-83b9-45f5-9e61-3603205c8702_c5e086d586bb46b2930bed957ead55c0",
+              "usage": {
+                "completion_tokens": 57,
+                "prompt_tokens": 18,
+                "total_tokens": 75,
+                "completion_tokens_details": {
+                  "reasoning_tokens": 51
+                },
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                }
+              }
+            },
+            "latency_ms": 3044.2184999992605
+          }
+        ],
+        "retrieval_queries": 0,
+        "reflection_model_calls": 0,
+        "verification_cases": 0,
+        "routing_decisions": []
+      },
+      "nonempty_final_answer": true,
+      "expected_marker": true,
+      "routing": {
+        "provider_adapter": "mimo",
+        "requested_model": "mimo-v2.6-pro",
+        "requested_effort": "low",
+        "submitted_effort": "enabled",
+        "native_reasoning": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "effective_effort": "unknown",
+        "effort_status": "submitted_unconfirmed",
+        "effective_model": "mimo-v2.6-pro",
+        "provider": "mimo",
+        "request_id": "cee916f0-83b9-45f5-9e61-3603205c8702_c5e086d586bb46b2930bed957ead55c0",
+        "usage": {
+          "completion_tokens": 57,
+          "prompt_tokens": 18,
+          "total_tokens": 75,
+          "completion_tokens_details": {
+            "reasoning_tokens": 51
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "candidate": "joey",
+      "passed": true,
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 890,
+        "output_tokens": 3,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 0,
+        "local_execution_ms": 0.0,
+        "model_latency_ms": 843.0146999962744,
+        "billed_cost_usd": 8.9e-06,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "category": "decision",
+            "model": "baseten/joey-1",
+            "requested_model": "baseten/joey-1",
+            "provider_adapter": "openrouter",
+            "interface": "decisions",
+            "status": "received",
+            "requested_effort": null,
+            "submitted_effort": null,
+            "native_reasoning": null,
+            "effective_effort": "unknown",
+            "effective_model": "baseten/joey-1-20261029",
+            "provider": "BaseTen",
+            "request_id": "gen-dec-1793398061-yNtdX2OAZjfi9JIVn13F",
+            "usage": {
+              "input_tokens": 890,
+              "output_tokens": 3,
+              "cost": 8.9e-06
+            },
+            "latency_ms": 843.0146999962744
+          }
+        ],
+        "retrieval_queries": 0,
+        "reflection_model_calls": 0,
+        "verification_cases": 0,
+        "routing_decisions": []
+      },
+      "answers": {
+        "model": {
+          "type": "choice",
+          "choice": "deepseek_flash",
+          "confidence": 0.6349736325203912,
+          "probabilities": {
+            "deepseek_flash": 0.7262302243902934,
+            "mimo_flash": 0.020216912231796426,
+            "mimo_pro": 0.022647428522132796,
+            "gpt_luna": 0.23090543485577741
+          }
+        },
+        "effort": {
+          "type": "choice",
+          "choice": "medium",
+          "confidence": 0.12461269824112016,
+          "probabilities": {
+            "none": 0.0633136137784661,
+            "low": 0.098909591075939,
+            "medium": 0.27051058186760013,
+            "high": 0.25367922691349004,
+            "xhigh": 0.13021435642686452,
+            "max": 0.18337262993764034
+          }
+        },
+        "complexity": {
+          "type": "score",
+          "score": 1.0524389969188859,
+          "confidence": 0.33042598883401775,
+          "probabilities": {
+            "0": 0.1969718385958845,
+            "1": 0.5536173258893452,
+            "2": 0.24941083551477033
+          }
+        }
+      }
+    },
+    {
+      "candidate": "gpt_luna",
+      "passed": true,
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 16,
+        "output_tokens": 8,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 0,
+        "local_execution_ms": 0.0,
+        "model_latency_ms": 3073.959499997727,
+        "billed_cost_usd": 2.8e-06,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "category": "execution",
+            "model": "openai/gpt-6-luna",
+            "requested_model": "openai/gpt-6-luna",
+            "provider_adapter": "openrouter",
+            "interface": "chat/completions",
+            "status": "received",
+            "requested_effort": "low",
+            "submitted_effort": "low",
+            "native_reasoning": {
+              "reasoning": {
+                "effort": "low"
+              }
+            },
+            "effective_effort": "unknown",
+            "effective_model": "openai/gpt-6-luna",
+            "provider": "OpenAI",
+            "request_id": "gen-1793398063-gLPPKpEEjmCbnfLgM21y",
+            "usage": {
+              "prompt_tokens": 16,
+              "completion_tokens": 8,
+              "cost": 2.8e-06,
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "routing": {
+              "provider_adapter": "openrouter",
+              "requested_model": "openai/gpt-6-luna",
+              "requested_effort": "low",
+              "submitted_effort": "low",
+              "native_reasoning": {
+                "reasoning": {
+                  "effort": "low"
+                }
+              },
+              "effective_effort": "unknown",
+              "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+              "capabilities_checked_at": 1793398063.7471368,
+              "effort_status": "submitted_unconfirmed",
+              "effective_model": "openai/gpt-6-luna",
+              "provider": "OpenAI",
+              "request_id": "gen-1793398063-gLPPKpEEjmCbnfLgM21y",
+              "usage": {
+                "prompt_tokens": 16,
+                "completion_tokens": 8,
+                "total_tokens": 24,
+                "cost": 2.8e-06,
+                "is_byok": false,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "audio_tokens": 0,
+                  "video_tokens": 0
+                },
+                "cost_details": {
+                  "upstream_inference_cost": 2.8e-06,
+                  "upstream_inference_prompt_cost": 8e-07,
+                  "upstream_inference_completions_cost": 2e-06
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0,
+                  "image_tokens": 0,
+                  "audio_tokens": 0
+                }
+              }
+            },
+            "latency_ms": 3073.959499997727
+          }
+        ],
+        "retrieval_queries": 0,
+        "reflection_model_calls": 0,
+        "verification_cases": 0,
+        "routing_decisions": []
+      },
+      "nonempty_final_answer": true,
+      "expected_marker": true,
+      "routing": {
+        "provider_adapter": "openrouter",
+        "requested_model": "openai/gpt-6-luna",
+        "requested_effort": "low",
+        "submitted_effort": "low",
+        "native_reasoning": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "effective_effort": "unknown",
+        "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+        "capabilities_checked_at": 1793398063.7471368,
+        "effort_status": "submitted_unconfirmed",
+        "effective_model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "request_id": "gen-1793398063-gLPPKpEEjmCbnfLgM21y",
+        "usage": {
+          "prompt_tokens": 16,
+          "completion_tokens": 8,
+          "total_tokens": 24,
+          "cost": 2.8e-06,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.8e-06,
+            "upstream_inference_prompt_cost": 8e-07,
+            "upstream_inference_completions_cost": 2e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "target": "local",
+  "appPid": 27688,
+  "time": "2026-10-30T21:32:34.4857485+03:00",
+  "status": "PASS",
+  "checks": [
+    "Search shipping-policy: exactly 1 matching node",
+    "Knowledge filter: exactly 1 node, 0 links",
+    "Selected knowledge: stored source relationship populated",
+    "Relationship invocation: source inspector displayed"
+  ],
+  "window": "919768"
+}

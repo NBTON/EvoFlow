@@ -1,0 +1,102 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>EvoFlow</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon Condition="Exists('Assets\AppIcon.ico')">Assets\AppIcon.ico</ApplicationIcon>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">win-$([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture.ToString().ToLowerInvariant())</RuntimeIdentifier>
+    <PublishProfile Condition="Exists('Properties\PublishProfiles\win-$(Platform).pubxml')">win-$(Platform).pubxml</PublishProfile>
+    <UseWinUI>true</UseWinUI>
+    <WinUISDKReferences>false</WinUISDKReferences>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <WindowsPackageType>MSIX</WindowsPackageType>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>False</PublishTrimmed>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvoFlow.Connectors\EvoFlow.Connectors.csproj" />
+    <Compile Include="..\EvoFlow.ToolHost\ApplicationLauncher.cs" Link="LocalTools\ApplicationLauncher.cs" />
+    <Compile Include="..\EvoFlow.ToolHost\InstalledApplications.cs" Link="LocalTools\InstalledApplications.cs" />
+    <Compile Include="..\EvoFlow.ToolHost\ExecutionPolicy.cs" Link="LocalTools\ExecutionPolicy.cs" />
+    <Content Include="Assets\*.png" />
+    <Content Include="Assets\*.ico" />
+  </ItemGroup>
+  <Target Name="IncludeLocalToolHost" BeforeTargets="AssignTargetPaths" Condition="'$(DesignTimeBuild)' != 'true'">
+    <MSBuild Projects="..\EvoFlow.ToolHost\EvoFlow.ToolHost.csproj" Targets="Restore;Build" Properties="Configuration=$(Configuration);Platform=x64;RuntimeIdentifier=win-x64" />
+    <ItemGroup>
+      <_ToolHostPayload Include="..\EvoFlow.ToolHost\bin\x64\$(Configuration)\net10.0-windows\win-x64\**\*" Exclude="..\EvoFlow.ToolHost\bin\x64\$(Configuration)\net10.0-windows\win-x64\**\*.resources.dll" />
+      <!-- These are executable/data payloads, not localizable WinUI resources. -->
+      <None Include="@(_ToolHostPayload)">
+        <Link>tools\%(_ToolHostPayload.RecursiveDir)%(_ToolHostPayload.Filename)%(_ToolHostPayload.Extension)</Link>
+        <TargetPath>tools\%(_ToolHostPayload.RecursiveDir)%(_ToolHostPayload.Filename)%(_ToolHostPayload.Extension)</TargetPath>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </None>
+    </ItemGroup>
+    <Error Condition="!Exists('..\EvoFlow.ToolHost\bin\x64\$(Configuration)\net10.0-windows\win-x64\EvoFlow.ToolHost.exe')" Text="The required x64 native ToolHost payload is missing." />
+  </Target>
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+  <!--
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <!--
+    Microsoft.Windows.SDK.BuildTools.WinApp adds first-class support for
+    `dotnet run` on packaged WinUI apps: it hooks the .NET CLI Run target to
+    register a debug identity via the winapp CLI and launch the app with
+    package identity (AUMID).
+    Set <EnableWinAppRunSupport>false</EnableWinAppRunSupport> in a
+    <PropertyGroup> above to opt out.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2957" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools.WinUIAnalyzer" Version="0.7.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.6.4" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools.WinApp" Version="0.7.1" />
+  </ItemGroup>
+  <!--
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+  </PropertyGroup>
+  <!-- Publish Properties -->
+  <PropertyGroup>
+    <PublishReadyToRun Condition="'$(Configuration)' == 'Debug'">False</PublishReadyToRun>
+    <PublishReadyToRun Condition="'$(Configuration)' != 'Debug'">True</PublishReadyToRun>
+    <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
+    <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">False</PublishTrimmed>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Link="worker\evoflow_worker\%(RecursiveDir)%(Filename)%(Extension)" Include="..\..\worker\evoflow_worker\**\*.py" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Link="config\%(Filename)%(Extension)" Include="..\..\config\*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Link="worker-location.json" Include="worker-location.json" CopyToOutputDirectory="PreserveNewest" Condition="!Exists('..\..\runtime\python.exe')" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- python-docx's unpacked developer template contains OPC-reserved payload
+         names such as [Content_Types].xml and _rels/.rels. Runtime uses default.docx. -->
+    <None Include="..\..\runtime\**\*" Exclude="..\..\runtime\Lib\site-packages\docx\templates\default-docx-template\**\*" Link="runtime\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\docs\evidence\benchmark.json" Link="evidence\benchmark.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

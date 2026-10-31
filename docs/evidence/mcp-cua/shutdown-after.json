@@ -1,0 +1,16 @@
+{
+  "appPid": 48532,
+  "appAlive": false,
+  "ownedBefore": [
+    {
+      "ProcessId": 40324,
+      "Name": "python.exe"
+    },
+    {
+      "ProcessId": 46996,
+      "Name": "cua-driver.exe"
+    }
+  ],
+  "remainingOwned": [],
+  "time": "2026-10-31T08:04:56.8537902+03:00"
+}

@@ -1,0 +1,907 @@
+{
+  "app_name": "ApplicationFrameHost.exe",
+  "capture_id": "capture_c59d661634eb4b36b306f5076421d03f_0000000000000002",
+  "element_count": 39,
+  "elements": [
+    {
+      "actions": [
+        "set_value"
+      ],
+      "depth": 1,
+      "element_index": 0,
+      "element_token": "s00000044:0",
+      "enabled": true,
+      "frame": {
+        "h": 32,
+        "w": 188,
+        "x": 361,
+        "y": 151
+      },
+      "label": "Calculator",
+      "role": "Window",
+      "screenshot_frame": {
+        "h": 32,
+        "w": 188,
+        "x": 310,
+        "y": 0
+      },
+      "value": "Calculator"
+    },
+    {
+      "actions": [
+        "expand"
+      ],
+      "depth": 3,
+      "element_index": 1,
+      "element_token": "s00000044:1",
+      "enabled": true,
+      "label": "System",
+      "parent_index": 0,
+      "role": "MenuItem"
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 2,
+      "element_index": 2,
+      "element_token": "s00000044:2",
+      "enabled": true,
+      "frame": {
+        "h": 32,
+        "w": 46,
+        "x": 411,
+        "y": 151
+      },
+      "label": "Minimize Calculator",
+      "parent_index": 0,
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 32,
+        "w": 46,
+        "x": 360,
+        "y": 0
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 2,
+      "element_index": 3,
+      "element_token": "s00000044:3",
+      "enabled": true,
+      "frame": {
+        "h": 32,
+        "w": 46,
+        "x": 457,
+        "y": 151
+      },
+      "label": "Maximize Calculator",
+      "parent_index": 0,
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 32,
+        "w": 46,
+        "x": 406,
+        "y": 0
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 2,
+      "element_index": 4,
+      "element_token": "s00000044:4",
+      "enabled": true,
+      "frame": {
+        "h": 32,
+        "w": 46,
+        "x": 503,
+        "y": 151
+      },
+      "label": "Close Calculator",
+      "parent_index": 0,
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 32,
+        "w": 46,
+        "x": 452,
+        "y": 0
+      }
+    },
+    {
+      "actions": [
+        "text"
+      ],
+      "depth": 2,
+      "element_index": 5,
+      "element_token": "s00000044:5",
+      "enabled": true,
+      "frame": {
+        "h": 16,
+        "w": 55,
+        "x": 99,
+        "y": 159
+      },
+      "label": "Calculator",
+      "role": "Text",
+      "screenshot_frame": {
+        "h": 16,
+        "w": 55,
+        "x": 48,
+        "y": 8
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 3,
+      "element_index": 6,
+      "element_token": "s00000044:6",
+      "enabled": true,
+      "frame": {
+        "h": 36,
+        "w": 40,
+        "x": 55,
+        "y": 189
+      },
+      "label": "Open Navigation",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 36,
+        "w": 40,
+        "x": 4,
+        "y": 38
+      }
+    },
+    {
+      "actions": [
+        "text"
+      ],
+      "depth": 4,
+      "element_index": 7,
+      "element_token": "s00000044:7",
+      "enabled": true,
+      "label": "PaneTitleTextBlock",
+      "parent_index": 6,
+      "role": "Text"
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 4,
+      "element_index": 8,
+      "element_token": "s00000044:8",
+      "enabled": true,
+      "frame": {
+        "h": 111,
+        "w": 498,
+        "x": 51,
+        "y": 265
+      },
+      "label": "Display is 42",
+      "role": "Text",
+      "screenshot_frame": {
+        "h": 111,
+        "w": 498,
+        "x": 0,
+        "y": 114
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 4,
+      "element_index": 9,
+      "element_token": "s00000044:9",
+      "enabled": true,
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 509,
+        "y": 191
+      },
+      "label": "Open history flyout",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 32,
+        "w": 32,
+        "x": 458,
+        "y": 40
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 10,
+      "element_token": "s00000044:10",
+      "enabled": true,
+      "frame": {
+        "h": 47,
+        "w": 78,
+        "x": 215,
+        "y": 377
+      },
+      "label": "Memory add",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 47,
+        "w": 78,
+        "x": 164,
+        "y": 226
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 11,
+      "element_token": "s00000044:11",
+      "enabled": true,
+      "frame": {
+        "h": 47,
+        "w": 78,
+        "x": 295,
+        "y": 377
+      },
+      "label": "Memory subtract",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 47,
+        "w": 78,
+        "x": 244,
+        "y": 226
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 12,
+      "element_token": "s00000044:12",
+      "enabled": true,
+      "frame": {
+        "h": 47,
+        "w": 78,
+        "x": 375,
+        "y": 377
+      },
+      "label": "Memory store",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 47,
+        "w": 78,
+        "x": 324,
+        "y": 226
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 13,
+      "element_token": "s00000044:13",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 55,
+        "y": 426
+      },
+      "label": "Percent",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 4,
+        "y": 275
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 14,
+      "element_token": "s00000044:14",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 178,
+        "y": 426
+      },
+      "label": "Clear entry",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 127,
+        "y": 275
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 15,
+      "element_token": "s00000044:15",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 301,
+        "y": 426
+      },
+      "label": "Clear",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 250,
+        "y": 275
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 16,
+      "element_token": "s00000044:16",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 424,
+        "y": 426
+      },
+      "label": "Backspace",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 373,
+        "y": 275
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 17,
+      "element_token": "s00000044:17",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 55,
+        "y": 505
+      },
+      "label": "Reciprocal",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 4,
+        "y": 354
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 18,
+      "element_token": "s00000044:18",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 178,
+        "y": 505
+      },
+      "label": "Square",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 127,
+        "y": 354
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 19,
+      "element_token": "s00000044:19",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 301,
+        "y": 505
+      },
+      "label": "Square root",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 250,
+        "y": 354
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 20,
+      "element_token": "s00000044:20",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 424,
+        "y": 505
+      },
+      "label": "Divide by",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 373,
+        "y": 354
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 21,
+      "element_token": "s00000044:21",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 424,
+        "y": 583
+      },
+      "label": "Multiply by",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 373,
+        "y": 432
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 22,
+      "element_token": "s00000044:22",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 424,
+        "y": 662
+      },
+      "label": "Minus",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 373,
+        "y": 511
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 23,
+      "element_token": "s00000044:23",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 424,
+        "y": 740
+      },
+      "label": "Plus",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 373,
+        "y": 589
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 24,
+      "element_token": "s00000044:24",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 424,
+        "y": 819
+      },
+      "label": "Equals",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 373,
+        "y": 668
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 25,
+      "element_token": "s00000044:25",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 178,
+        "y": 819
+      },
+      "label": "Zero",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 127,
+        "y": 668
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 26,
+      "element_token": "s00000044:26",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 55,
+        "y": 740
+      },
+      "label": "One",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 4,
+        "y": 589
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 27,
+      "element_token": "s00000044:27",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 178,
+        "y": 740
+      },
+      "label": "Two",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 127,
+        "y": 589
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 28,
+      "element_token": "s00000044:28",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 301,
+        "y": 740
+      },
+      "label": "Three",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 250,
+        "y": 589
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 29,
+      "element_token": "s00000044:29",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 55,
+        "y": 662
+      },
+      "label": "Four",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 4,
+        "y": 511
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 30,
+      "element_token": "s00000044:30",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 178,
+        "y": 662
+      },
+      "label": "Five",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 127,
+        "y": 511
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 31,
+      "element_token": "s00000044:31",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 301,
+        "y": 662
+      },
+      "label": "Six",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 250,
+        "y": 511
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 32,
+      "element_token": "s00000044:32",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 55,
+        "y": 583
+      },
+      "label": "Seven",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 4,
+        "y": 432
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 33,
+      "element_token": "s00000044:33",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 178,
+        "y": 583
+      },
+      "label": "Eight",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 127,
+        "y": 432
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 34,
+      "element_token": "s00000044:34",
+      "enabled": true,
+      "frame": {
+        "h": 77,
+        "w": 121,
+        "x": 301,
+        "y": 583
+      },
+      "label": "Nine",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 77,
+        "w": 121,
+        "x": 250,
+        "y": 432
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 5,
+      "element_index": 35,
+      "element_token": "s00000044:35",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 301,
+        "y": 819
+      },
+      "label": "Decimal separator",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 250,
+        "y": 668
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 4,
+      "element_index": 36,
+      "element_token": "s00000044:36",
+      "enabled": true,
+      "frame": {
+        "h": 76,
+        "w": 121,
+        "x": 55,
+        "y": 819
+      },
+      "label": "Positive negative",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 76,
+        "w": 121,
+        "x": 4,
+        "y": 668
+      }
+    },
+    {
+      "actions": [
+        "text"
+      ],
+      "depth": 3,
+      "element_index": 37,
+      "element_token": "s00000044:37",
+      "enabled": true,
+      "frame": {
+        "h": 27,
+        "w": 82,
+        "x": 99,
+        "y": 192
+      },
+      "label": "Standard Calculator mode",
+      "role": "Text",
+      "screenshot_frame": {
+        "h": 27,
+        "w": 82,
+        "x": 48,
+        "y": 41
+      }
+    },
+    {
+      "actions": [
+        "invoke"
+      ],
+      "depth": 3,
+      "element_index": 38,
+      "element_token": "s00000044:38",
+      "enabled": true,
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 191,
+        "y": 191
+      },
+      "label": "Keep on top",
+      "role": "Button",
+      "screenshot_frame": {
+        "h": 32,
+        "w": 32,
+        "x": 140,
+        "y": 40
+      }
+    }
+  ],
+  "elements_complete": true,
+  "pid": 2664,
+  "returned_element_count": 39,
+  "screenshot_file_path": "\\\\?\\C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\mcp-cua\\calculator-42.png",
+  "screenshot_height": 750,
+  "screenshot_mime_type": "image/png",
+  "screenshot_width": 500,
+  "snapshot_id": "s00000044",
+  "timeout_ms": 1000,
+  "total_element_count": 39,
+  "tree_format": "elements",
+  "truncated": false,
+  "window_bounds": {
+    "height": 750,
+    "width": 500,
+    "x": 50,
+    "y": 150
+  },
+  "window_id": 34475372,
+  "window_title": "Calculator"
+}
+

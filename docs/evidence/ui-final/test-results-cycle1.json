@@ -1,0 +1,52 @@
+{
+  "target": "local",
+  "appPid": 27032,
+  "mainWindow": "1246352",
+  "time": "2026-10-30T19:46:39.4394768+03:00",
+  "passed": 4,
+  "failed": 4,
+  "results": [
+    {
+      "status": "PASS",
+      "name": "Compact native pill"
+    },
+    {
+      "status": "PASS",
+      "name": "Hover expansion and stable pointer traversal"
+    },
+    {
+      "status": "PASS",
+      "name": "Click keeps task panel accessible; no settings form in chat"
+    },
+    {
+      "status": "PASS",
+      "name": "Separate settings window and automatic cloud connection"
+    },
+    {
+      "status": "FAIL",
+      "detail": "",
+      "name": "Native graph uses stored memory"
+    },
+    {
+      "status": "FAIL",
+      "detail": "Description:\n  Set a value on an element programmatically. Works for TextBox, ComboBox, Slider, and other editable controls via UIA ValuePattern/RangeValuePattern, with a LegacyIAccessible (put_accValue) fallback for TextPattern-only edit controls — no app foreground required. Some rich text controls (e.g. WinUI 3 RichEditBox and WPF RichTextBox) don't support setting their value programmatically — use the 'send-keys' command with '--via send-input' to type into them instead. Usage: winapp ui set-value <selector> <value> -a <app>\n\nUsage:\n  winapp ui set-value [<selector> [<value>]] [options]\n\nArguments:\n  <selector>  Semantic slug (e.g., btn-minimize-d1a0) or text to search by name/automationId\n  <value>     Value to set (text for TextBox/ComboBox, number for Slider)\n\nOptions:\n  -a, --app <app>        Target app (process name, window title, or PID). Lists windows if ambiguous.\n  -w, --window <window>  Target window by HWND (stable handle from list output). Takes precedence over --app.\n  --json                 Format output as JSON\n  -v, --verbose          Enable verbose output\n  -q, --quiet            Suppress progress messages\n  -?, -h, --help         Show help and usage information\n  --cli-schema           Output the complete CLI command structure as JSON for tooling, scripting, and LLM integration. Includes all commands, options, arguments, and their descriptions.\n  --on <on>              Run this command on the named execution target instead of this machine. Supported: 'sandbox' (the Windows Sandbox winapp manages) and 'local' (the default). There is no fallback: if the target cannot be prepared, the command fails rather than running here.\n",
+      "name": "Graph search, empty state and recovery"
+    },
+    {
+      "status": "FAIL",
+      "detail": "Description:\n  Activate an element by slug or text search. Without --action, tries InvokePattern, TogglePattern, SelectionItemPattern, and ExpandCollapsePattern in order, then an invokable ancestor. Use --action for an exact operation on only the selected element.\n\nUsage:\n  winapp ui invoke [<selector>] [options]\n\nArguments:\n  <selector>  Semantic slug (e.g., btn-minimize-d1a0) or text to search by name/automationId\n\nOptions:\n  -a, --app <app>        Target app (process name, window title, or PID). Lists windows if ambiguous.\n  -w, --window <window>  Target window by HWND (stable handle from list output). Takes precedence over --app.\n  --action <action>      Perform exactly this action on the selected element, without pattern or ancestor fallback: invoke, select, toggle, toggle-on, toggle-off, expand, collapse.\n  --json                 Format output as JSON\n  -v, --verbose          Enable verbose output\n  -q, --quiet            Suppress progress messages\n  -?, -h, --help         Show help and usage information\n  --cli-schema           Output the complete CLI command structure as JSON for tooling, scripting, and LLM integration. Includes all commands, options, arguments, and their descriptions.\n  --on <on>              Run this command on the named execution target instead of this machine. Supported: 'sandbox' (the Windows Sandbox winapp manages) and 'local' (the default). There is no fallback: if the target cannot be prepared, the command fails rather than running here.\n",
+      "name": "Graph zoom controls and history filter"
+    },
+    {
+      "status": "FAIL",
+      "detail": "Description:\n  Activate an element by slug or text search. Without --action, tries InvokePattern, TogglePattern, SelectionItemPattern, and ExpandCollapsePattern in order, then an invokable ancestor. Use --action for an exact operation on only the selected element.\n\nUsage:\n  winapp ui invoke [<selector>] [options]\n\nArguments:\n  <selector>  Semantic slug (e.g., btn-minimize-d1a0) or text to search by name/automationId\n\nOptions:\n  -a, --app <app>        Target app (process name, window title, or PID). Lists windows if ambiguous.\n  -w, --window <window>  Target window by HWND (stable handle from list output). Takes precedence over --app.\n  --action <action>      Perform exactly this action on the selected element, without pattern or ancestor fallback: invoke, select, toggle, toggle-on, toggle-off, expand, collapse.\n  --json                 Format output as JSON\n  -v, --verbose          Enable verbose output\n  -q, --quiet            Suppress progress messages\n  -?, -h, --help         Show help and usage information\n  --cli-schema           Output the complete CLI command structure as JSON for tooling, scripting, and LLM integration. Includes all commands, options, arguments, and their descriptions.\n  --on <on>              Run this command on the named execution target instead of this machine. Supported: 'sandbox' (the Windows Sandbox winapp manages) and 'local' (the default). There is no fallback: if the target cannot be prepared, the command fails rather than running here.\n",
+      "name": "Preference management remains separate and cancellable"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\compact.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\hover.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-final\\settings.png"
+  ],
+  "visual_review": "pending"
+}

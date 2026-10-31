@@ -1,0 +1,11 @@
+{
+  "case": "cancel",
+  "appPid": 48532,
+  "windowId": 3017828,
+  "controller": "Cua CLI UIA on the interactive desktop; product execution uses its separate private MCP connections",
+  "status": "PASS",
+  "approvals": [
+    "MCP · Cua · Calculator / launch_app"
+  ],
+  "started": "2026-10-31T07:58:10.1898413+03:00"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "runId": "f078c595-290b-443a-98cb-5dbc7cdb00c3",
+  "appPid": 30624,
+  "foregroundWitness": 17633076,
+  "calls": 13,
+  "deniedBeforeDispatch": 1,
+  "focusOrPointerViolations": 0,
+  "stableSamples": 2,
+  "verifiedDisplay": "Display is 42",
+  "imageSha256": "8b58f051f98b02f9458e8521684b2e7628ba229f7f625e57c4d526e5d8ccb888",
+  "imageSource": "Independent Cua QA observation of the exact Calculator window after EvoFlow verification",
+  "delivery": "background"
+}

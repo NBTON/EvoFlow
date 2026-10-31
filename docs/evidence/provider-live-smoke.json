@@ -1,0 +1,45 @@
+{
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "nonempty_final_answer": true,
+  "expected_marker": true,
+  "metrics": {
+    "model_calls": 1,
+    "input_tokens": 13,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "tool_calls": 0,
+    "local_execution_ms": 0.0,
+    "model_latency_ms": 1147.2135000003618,
+    "billed_cost_usd": 0.0,
+    "usage_complete": true,
+    "cost_reported": false,
+    "calls": [
+      {
+        "category": "execution",
+        "model": "deepseek-flash",
+        "requested_model": "deepseek-flash",
+        "provider_adapter": "deepseek",
+        "interface": "chat/completions",
+        "status": "received",
+        "requested_effort": null,
+        "submitted_effort": null,
+        "native_reasoning": null,
+        "effective_effort": "unknown",
+        "effective_model": "deepseek-flash",
+        "provider": "deepseek",
+        "request_id": "51d4d8c5-1d4e-413d-9e84-0bf3b6f94b30",
+        "usage": {
+          "prompt_tokens": 13,
+          "completion_tokens": 5
+        },
+        "latency_ms": 1147.2135000003618
+      }
+    ],
+    "retrieval_queries": 0,
+    "reflection_model_calls": 0,
+    "verification_cases": 0,
+    "routing_decisions": []
+  }
+}

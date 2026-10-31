@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "checks": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "plan": {
+    "title": "Order Reconciliation Program",
+    "query": "",
+    "program": [
+      {
+        "op": "deduplicate",
+        "input": "orders",
+        "as": "orders_dedup"
+      },
+      {
+        "op": "deduplicate",
+        "input": "shipments",
+        "as": "shipments_dedup"
+      },
+      {
+        "op": "deduplicate",
+        "input": "inventory",
+        "as": "inventory_dedup"
+      },
+      {
+        "op": "filter_in",
+        "input": "shipments_dedup",
+        "as": "shipments_filtered",
+        "field": "status",
+        "values": [
+          "shipped",
+          "delivered"
+        ]
+      },
+      {
+        "op": "group_sum",
+        "input": "shipments_filtered",
+        "as": "shipments_agg",
+        "keys": [
+          "order_id"
+        ],
+        "field": "quantity",
+        "output": "shipped"
+      },
+      {
+        "op": "left_join",
+        "input": "orders_dedup",
+        "as": "orders_with_shipments",
+        "right": "shipments_agg",
+        "on": {
+          "order_id": "order_id"
+        },
+        "fields": {
+          "shipped": "shipped"
+        }
+      },
+      {
+        "op": "derive",
+        "input": "orders_with_shipments",
+        "as": "orders_shipped_filled",
+        "values": {
+          "shipped": "coalesce(shipped, 0)"
+        }
+      },
+      {
+        "op": "left_join",
+        "input": "orders_shipped_filled",
+        "as": "orders_with_inventory",
+        "right": "inventory_dedup",
+        "on": {
+          "sku": "sku",
+          "warehouse": "warehouse"
+        },
+        "fields": {
+          "available_qty": "available_qty"
+        }
+      },
+      {
+        "op": "derive",
+        "input": "orders_with_inventory",
+        "as": "orders_computed",
+        "values": {
+          "ordered": "quantity",
+          "remaining": "max(0, ordered - shipped)",
+          "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+          "cause": "('complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending')))"
+        }
+      },
+      {
+        "op": "project",
+        "input": "orders_computed",
+        "as": "final_result",
+        "columns": [
+          "order_id",
+          "warehouse",
+          "ordered",
+          "shipped",
+          "remaining",
+          "delayed",
+          "cause"
+        ]
+      }
+    ],
+    "summary": "Reconciles orders with shipments and inventory to compute shipped quantities, remaining quantities, delay status, and fulfillment cause per order."
+  },
+  "metrics": {
+    "model_calls": 1,
+    "input_tokens": 1468,
+    "output_tokens": 636,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "tool_calls": 0,
+    "local_execution_ms": 0.0,
+    "model_latency_ms": 13197.812799999156,
+    "billed_cost_usd": 0.0,
+    "usage_complete": true,
+    "cost_reported": true,
+    "calls": [
+      {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "interface": "chat/completions",
+        "status": 200,
+        "temperature": 0,
+        "reasoning": {
+          "enabled": false
+        },
+        "attempt": 0,
+        "provider": "Nvidia",
+        "request_id": "gen-1793367489-7xwDaTEPN9bdxptZFI1t",
+        "usage": {
+          "prompt_tokens": 1468,
+          "completion_tokens": 636,
+          "total_tokens": 2104,
+          "cost": 0,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0,
+            "upstream_inference_prompt_cost": 0,
+            "upstream_inference_completions_cost": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    ],
+    "retrieval_queries": 0,
+    "reflection_model_calls": 0,
+    "verification_cases": 0
+  }
+}

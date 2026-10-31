@@ -1,0 +1,43 @@
+{
+  "project": "csvfsltznjdaalnzvgbz",
+  "public_client_only": true,
+  "checks": [
+    {
+      "name": "user_0_authenticated",
+      "passed": true
+    },
+    {
+      "name": "user_1_authenticated",
+      "passed": true
+    },
+    {
+      "name": "owner_can_read_written_record",
+      "passed": true
+    },
+    {
+      "name": "other_user_cannot_read_record",
+      "passed": true
+    },
+    {
+      "name": "other_user_cannot_write_workspace",
+      "passed": true
+    },
+    {
+      "name": "owner_cannot_reassign_record_to_another_user",
+      "passed": true
+    },
+    {
+      "name": "anonymous_read_denied",
+      "passed": true
+    },
+    {
+      "name": "private_storage_owner_download",
+      "passed": true
+    },
+    {
+      "name": "private_storage_other_user_denied",
+      "passed": true
+    }
+  ],
+  "auth_sessions_signed_out": true
+}

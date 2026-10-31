@@ -1,0 +1,32 @@
+# Runtime state and credentials
+.env
+.env.*
+!.env.example
+provider-keys.env
+*.dpapi
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+*.db-shm
+*.db-wal
+*.pfx
+*.p12
+*.dmp
+node_modules/
+.winapp/
+bin/
+obj/
+artifacts/
+.vs/
+.idea/
+native/EvoFlow/worker-location.json
+runtime/
+*.msix
+*.msixbundle
+delivery/
+
+# Installed build-time agent guidance stays local; provenance is in skills-lock.json.
+/.agents/skills/
+

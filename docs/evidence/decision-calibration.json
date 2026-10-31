@@ -1,0 +1,76 @@
+{
+  "model": "respan/span-01-lite:free",
+  "interface": "/api/alpha/decisions",
+  "supported_question_types_tested": [
+    "noul"
+  ],
+  "threshold": 0.8,
+  "scores": {
+    "repeat_missing_field": 0.9933217,
+    "verified_revision": 0.018839158,
+    "successful_reuse": 9.8649114e-05,
+    "unchanged_wrong_total": 0.9970459
+  },
+  "development_checks": {
+    "repeat_missing_field": true,
+    "verified_revision": true,
+    "successful_reuse": true,
+    "unchanged_wrong_total": true
+  },
+  "passed": true,
+  "sample_count": 4,
+  "preliminary": true,
+  "automatic_scoring_enabled": false,
+  "state_format": "JSON-serialized string; Respan rejects arbitrary JSON state objects",
+  "threshold_note": "Predeclared development threshold on four examples; not a general calibration claim",
+  "authority": "Advisory only; never overrides deterministic checks or budgets",
+  "metrics": {
+    "model_calls": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "tool_calls": 0,
+    "local_execution_ms": 0.0,
+    "model_latency_ms": 1454.2215000001306,
+    "billed_cost_usd": 0.0,
+    "usage_complete": false,
+    "cost_reported": true,
+    "calls": [
+      {
+        "model": "respan/span-01-lite:free",
+        "interface": "decisions",
+        "status": 200,
+        "temperature": null,
+        "reasoning": null,
+        "attempt": 0,
+        "requested_model": "respan/span-01-lite:free",
+        "requested_effort": null,
+        "submitted_effort": null,
+        "effective_model": "respan/span-01-lite-20260925",
+        "effective_effort": "unknown",
+        "routing": null,
+        "provider": "Respan",
+        "request_id": "gen-dec-1793378019-UYmGpGF29zWO8Vp9CIrE",
+        "usage": {
+          "input_tokens": 1204,
+          "output_tokens": 0,
+          "cost": 0
+        },
+        "effort_status": "not_submitted"
+      }
+    ],
+    "retrieval_queries": 0,
+    "reflection_model_calls": 0,
+    "verification_cases": 0,
+    "routing_decisions": []
+  },
+  "corrected_request_diagnosis": {
+    "status": 400,
+    "message": "Respan state must be a string or an object with only input (a message array) and output (a message), where each message has a string content and a role of system, user, assistant or tool, and the output role is assistant",
+    "fix": "Serialize the four development examples into a state string instead of sending an arbitrary object.",
+    "diagnostic_requests_observed_this_session": 1,
+    "diagnostic_usage_reported": false
+  },
+  "source": "https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request"
+}

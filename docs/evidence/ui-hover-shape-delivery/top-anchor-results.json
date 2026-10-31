@@ -1,0 +1,15 @@
+{
+  "target": "local",
+  "appPid": 31120,
+  "time": "2026-10-30T22:19:07.7001906+03:00",
+  "status": "PASS",
+  "checks": [
+    "Compact pill anchored at top edge: y=0, 280x44",
+    "Expanded panel anchored at top edge: y=0, 560x520",
+    "Recollapsed pill anchored at top edge: y=0, 280x44"
+  ],
+  "screenshots": [
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape-delivery\\desktop-compact-top.png",
+    "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\docs\\evidence\\ui-hover-shape-delivery\\desktop-expanded-top.png"
+  ]
+}

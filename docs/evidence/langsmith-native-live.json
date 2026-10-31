@@ -1,0 +1,39 @@
+{
+  "verified_at_utc": "2026-10-31T09:52:23.081039+00:00",
+  "app_pid": 53168,
+  "packaged_native_conversation": true,
+  "run_id": "62c7ed48-4c5a-41e2-806b-801bb76edde3",
+  "session_id": "7d4884cb-dd34-41c3-9011-aae7737530f5",
+  "trace_id": "01a1915e-6813-7ed2-a7d8-a34d508c0de8",
+  "model_calls": 2,
+  "input_tokens": 4954,
+  "output_tokens": 67,
+  "cost_reported": false,
+  "llm_spans": 2,
+  "all_inputs_empty": true,
+  "session_correlation_verified": true,
+  "provider_spans": [
+    {
+      "model": "deepseek-flash",
+      "provider": "deepseek",
+      "usage": {
+        "input_tokens": 3647,
+        "output_token_details": {
+          "reasoning": 17
+        },
+        "output_tokens": 64,
+        "total_tokens": 3711
+      }
+    },
+    {
+      "model": "baseten/joey-1",
+      "provider": "openrouter",
+      "usage": {
+        "input_tokens": 1307,
+        "output_tokens": 3,
+        "total_cost": 1.307e-05,
+        "total_tokens": 1310
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "target": "local",
+  "appPid": 34548,
+  "status": "FAIL",
+  "document": "C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-local-tools-20261031-020800.docx",
+  "checks": [],
+  "error": "Unexpected approval: only this test document is authorized"
+}

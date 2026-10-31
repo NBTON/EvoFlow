@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-10-31T08:45:12.0014799+03:00",
+  "pythonTests": 160,
+  "connectorChecks": 30,
+  "ruff": "passed; 43 files formatted",
+  "nativeBuild": "x64; zero warnings and errors",
+  "toolHostProcessTests": "passed",
+  "flauiSmoke": "passed",
+  "nativeFilesystem": "passed independent readback",
+  "calculator": "passed actual app; two stable samples",
+  "background": "13 calls; zero focus or pointer violations; one pre-dispatch stale-token denial",
+  "disconnect": "passed; native Settings Test restored managed connection",
+  "shutdown": "passed; six owned descendants exited",
+  "history": "passed after restart",
+  "memory": "passed; 17 recorded nodes",
+  "cuaBrowser": "blocked: browser_endpoint_owner_mismatch",
+  "existingPlaywrightSmoke": "failed: Chrome startup TargetClosedException",
+  "oauthConsent": "not live tested",
+  "installer": "unsigned; clean-machine installation not verified",
+  "activePid": 41552,
+  "activeLayout": "delivery/EvoFlow-20261031-082834/app/AppX",
+  "noPushOrPublicDeployment": true
+}

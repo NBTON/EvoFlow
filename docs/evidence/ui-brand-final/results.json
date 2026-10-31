@@ -1,0 +1,12 @@
+{
+  "appPid": 42280,
+  "target": "local",
+  "status": "PASS",
+  "checks": [
+    "Persisted synthetic model conversation restored in the native UI",
+    "Actual native window icon and compiled executable icon extracted; existing package AUMID verified"
+  ],
+  "time": "2026-10-31T13:01:23.9495228+03:00",
+  "aumid": "12A42CE7-BC8B-448C-9C72-2DEB315E6F97_1z32rh13vfry6!App",
+  "executable": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\delivery\\EvoFlow-20261031-125713\\app\\AppX\\EvoFlow.exe"
+}

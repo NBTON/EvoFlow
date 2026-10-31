@@ -1,0 +1,13 @@
+{
+  "target": "local",
+  "appPid": 53168,
+  "time": "2026-10-31T12:49:19.5405909+03:00",
+  "status": "PASS",
+  "checks": [
+    "Compact pill anchored at top edge: y=0, 280x44",
+    "Expanded panel anchored at top edge: y=0, 560x520",
+    "Recollapsed pill anchored at top edge: y=0, 280x44"
+  ],
+  "screenshots": [],
+  "publication_note": "Geometry assertions retained. Screen strips contained unrelated browser UI and remain in ignored local publication backup."
+}

@@ -1,0 +1,11 @@
+{
+  "case": "disconnect",
+  "appPid": 30624,
+  "windowId": 48696628,
+  "controller": "Cua CLI UIA on the interactive desktop; product execution uses its separate private MCP connections",
+  "status": "PASS",
+  "approvals": [
+    "MCP · Cua · Calculator / launch_app"
+  ],
+  "started": "2026-10-31T08:39:41.0085182+03:00"
+}

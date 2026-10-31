@@ -1,0 +1,8 @@
+{
+  "native_pid": 31384,
+  "native_exited": true,
+  "owned_worker_pid": 31788,
+  "owned_worker_exited": true,
+  "verification": "Follow-up confirmed both absent; first assertion checked native exit immediately after worker exit and was too early",
+  "time": "2026-10-31T01:14:12.2778434+03:00"
+}

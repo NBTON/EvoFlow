@@ -1,0 +1,938 @@
+{
+  "depth": 8,
+  "interactive": true,
+  "hideDisabled": false,
+  "hideOffscreen": false,
+  "windows": [
+    {
+      "hwnd": 12454322,
+      "title": "EvoFlow \u00B7 Memory",
+      "windowDpi": 96,
+      "scale": 1,
+      "dpiAwareness": "per-monitor-aware",
+      "coordinateSpace": "physical-screen-pixels",
+      "elementCount": 47,
+      "elements": [
+        {
+          "type": "Button",
+          "name": "Manage saved preferences, policies, source documents and skill versions",
+          "automationId": "MemoryManage",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1086,
+          "y": 97,
+          "width": 130,
+          "height": 32,
+          "selector": "MemoryManage",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Reload saved memory",
+          "automationId": "MemoryRefresh",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1224,
+          "y": 97,
+          "width": 70,
+          "height": 32,
+          "selector": "MemoryRefresh",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Group",
+          "name": "Search saved memory",
+          "automationId": "MemorySearch",
+          "className": "AutoSuggestBox",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 357,
+          "y": 156,
+          "width": 340,
+          "height": 60,
+          "children": [
+            {
+              "type": "Edit",
+              "name": "Search saved memory",
+              "automationId": "TextBox",
+              "className": "TextBox",
+              "isEnabled": true,
+              "isOffscreen": false,
+              "x": 357,
+              "y": 156,
+              "width": 340,
+              "height": 60,
+              "selector": "TextBox",
+              "isInvokable": false
+            }
+          ],
+          "selector": "MemorySearch",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ComboBox",
+          "name": "Filter memory by record type",
+          "automationId": "MemoryTypeFilter",
+          "className": "ComboBox",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1006,
+          "y": 156,
+          "width": 158,
+          "height": 64,
+          "selector": "MemoryTypeFilter",
+          "expandState": "collapsed",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "CheckBox",
+          "name": "Include superseded, retired and rejected records",
+          "automationId": "MemoryHistory",
+          "className": "CheckBox",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1174,
+          "y": 177,
+          "width": 120,
+          "height": 32,
+          "selector": "MemoryHistory",
+          "toggleState": "off",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Zoom graph out",
+          "automationId": "MemoryZoomOut",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 58,
+          "y": 240,
+          "width": 34,
+          "height": 32,
+          "selector": "MemoryZoomOut",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Zoom graph in",
+          "automationId": "MemoryZoomIn",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 98,
+          "y": 240,
+          "width": 34,
+          "height": 32,
+          "selector": "MemoryZoomIn",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Fit all visible nodes",
+          "automationId": "MemoryFit",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 138,
+          "y": 240,
+          "width": 80,
+          "height": 32,
+          "selector": "MemoryFit",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "shipping-policy. Knowledge, current, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_knowledge:d151e631-af08-40c4-8d60-a039f9ba0bb3",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 493,
+          "y": 469,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_knowledge:d151e631-af08-40c4-8d60-a039f9ba0bb3",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Order Reconciliation Program. Learned skills, active. Inspect details.",
+          "automationId": "MemoryNode_skill:3a48d36a-75cc-4c71-a363-7f345aca013b",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 454,
+          "y": 543,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_skill:3a48d36a-75cc-4c71-a363-7f345aca013b",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 4ef81a7e. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:4ef81a7e-aeff-4d83-bcdf-2453be12f0e0",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 743,
+          "y": 703,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:4ef81a7e-aeff-4d83-bcdf-2453be12f0e0",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 a1c52235. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:a1c52235-d0d0-4b04-b6e9-87e75b9c1499",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 673,
+          "y": 703,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:a1c52235-d0d0-4b04-b6e9-87e75b9c1499",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 92a34444. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:92a34444-b746-4bcf-8be0-5c8d0a380bc2",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 569,
+          "y": 703,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:92a34444-b746-4bcf-8be0-5c8d0a380bc2",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 452a87f8. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:452a87f8-5836-429d-a461-b7cdea56a5be",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 416,
+          "y": 703,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:452a87f8-5836-429d-a461-b7cdea56a5be",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 b16fe7b5. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:b16fe7b5-e188-477a-be44-802aafc5bb9e",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 267,
+          "y": 703,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:b16fe7b5-e188-477a-be44-802aafc5bb9e",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 68f4abf1. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:68f4abf1-c12a-499e-b66d-b06f6163feb7",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 180,
+          "y": 703,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:68f4abf1-c12a-499e-b66d-b06f6163feb7",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 fff4ab60. Task runs, canceled, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:fff4ab60-a4a7-47ee-8e6d-b35af6ee648f",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 180,
+          "y": 572,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:fff4ab60-a4a7-47ee-8e6d-b35af6ee648f",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 b8b071ed. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:b8b071ed-5b2f-48b6-9564-4d1e96a23ad8",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 180,
+          "y": 411,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:b8b071ed-5b2f-48b6-9564-4d1e96a23ad8",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 e537a86b. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:e537a86b-c7eb-4af5-b523-ad190882e6b1",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 180,
+          "y": 306,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:e537a86b-c7eb-4af5-b523-ad190882e6b1",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 4a9bf8ec. Task runs, complete, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_run:4a9bf8ec-c09a-4932-ac00-52cc30a2fa02",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 300,
+          "y": 306,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:4a9bf8ec-c09a-4932-ac00-52cc30a2fa02",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 005dc4e2. Task runs, complete. Inspect details.",
+          "automationId": "MemoryNode_run:005dc4e2-6d89-40b3-b4da-d66bcb5eeeb3",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 462,
+          "y": 306,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:005dc4e2-6d89-40b3-b4da-d66bcb5eeeb3",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Task \u00B7 19d085af. Task runs, complete. Inspect details.",
+          "automationId": "MemoryNode_run:19d085af-ce87-4298-a110-c682f970c6bb",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 609,
+          "y": 306,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_run:19d085af-ce87-4298-a110-c682f970c6bb",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "fictional-policy:v1. Sources, referenced, demo or fictional source. Inspect details.",
+          "automationId": "MemoryNode_source:d0acb593939b2fa5645e0157",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 743,
+          "y": 306,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_source:d0acb593939b2fa5645e0157",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Schema 1 \u00B7 policy 1. Contracts, recorded. Inspect details.",
+          "automationId": "MemoryNode_contract:51b9c4a4360d15c33f237dc240e7287852d1d8640fa097cf4b4871864d8ca2b9",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 362,
+          "y": 530,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_contract:51b9c4a4360d15c33f237dc240e7287852d1d8640fa097cf4b4871864d8ca2b9",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Schema 2 \u00B7 policy 1. Contracts, recorded. Inspect details.",
+          "automationId": "MemoryNode_contract:d7c42ce8566d5b71890ab76e804574c692aa3d64ec663350962be557c8eab59d",
+          "className": "Button",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 743,
+          "y": 466,
+          "width": 90,
+          "height": 36,
+          "selector": "MemoryNode_contract:d7c42ce8566d5b71890ab76e804574c692aa3d64ec663350962be557c8eab59d",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "Pane"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "shipping-policy\nKnowledge \u00B7 current \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_knowledge:d151e631-af08-40c4-8d60-a039f9ba0bb3",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 974,
+          "y": 271,
+          "width": 320,
+          "height": 40,
+          "selector": "MemoryList_knowledge:d151e631-af08-40c4-8d60-a039f9ba0bb3",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Order Reconciliation Program\nLearned skills \u00B7 active",
+          "automationId": "MemoryList_skill:3a48d36a-75cc-4c71-a363-7f345aca013b",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 974,
+          "y": 311,
+          "width": 320,
+          "height": 40,
+          "selector": "MemoryList_skill:3a48d36a-75cc-4c71-a363-7f345aca013b",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 4ef81a7e\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:4ef81a7e-aeff-4d83-bcdf-2453be12f0e0",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 974,
+          "y": 351,
+          "width": 320,
+          "height": 40,
+          "selector": "MemoryList_run:4ef81a7e-aeff-4d83-bcdf-2453be12f0e0",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 a1c52235\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:a1c52235-d0d0-4b04-b6e9-87e75b9c1499",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 974,
+          "y": 391,
+          "width": 320,
+          "height": 40,
+          "selector": "MemoryList_run:a1c52235-d0d0-4b04-b6e9-87e75b9c1499",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 92a34444\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:92a34444-b746-4bcf-8be0-5c8d0a380bc2",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 974,
+          "y": 431,
+          "width": 320,
+          "height": 40,
+          "selector": "MemoryList_run:92a34444-b746-4bcf-8be0-5c8d0a380bc2",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 452a87f8\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:452a87f8-5836-429d-a461-b7cdea56a5be",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 974,
+          "y": 471,
+          "width": 320,
+          "height": 20,
+          "selector": "MemoryList_run:452a87f8-5836-429d-a461-b7cdea56a5be",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 b16fe7b5\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:b16fe7b5-e188-477a-be44-802aafc5bb9e",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:b16fe7b5-e188-477a-be44-802aafc5bb9e",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 68f4abf1\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:68f4abf1-c12a-499e-b66d-b06f6163feb7",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:68f4abf1-c12a-499e-b66d-b06f6163feb7",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 fff4ab60\nTask runs \u00B7 canceled \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:fff4ab60-a4a7-47ee-8e6d-b35af6ee648f",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:fff4ab60-a4a7-47ee-8e6d-b35af6ee648f",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 b8b071ed\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:b8b071ed-5b2f-48b6-9564-4d1e96a23ad8",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:b8b071ed-5b2f-48b6-9564-4d1e96a23ad8",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 e537a86b\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:e537a86b-c7eb-4af5-b523-ad190882e6b1",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:e537a86b-c7eb-4af5-b523-ad190882e6b1",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 4a9bf8ec\nTask runs \u00B7 complete \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_run:4a9bf8ec-c09a-4932-ac00-52cc30a2fa02",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:4a9bf8ec-c09a-4932-ac00-52cc30a2fa02",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 005dc4e2\nTask runs \u00B7 complete",
+          "automationId": "MemoryList_run:005dc4e2-6d89-40b3-b4da-d66bcb5eeeb3",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:005dc4e2-6d89-40b3-b4da-d66bcb5eeeb3",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Task \u00B7 19d085af\nTask runs \u00B7 complete",
+          "automationId": "MemoryList_run:19d085af-ce87-4298-a110-c682f970c6bb",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_run:19d085af-ce87-4298-a110-c682f970c6bb",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "fictional-policy:v1\nSources \u00B7 referenced \u00B7 DEMO / FICTIONAL",
+          "automationId": "MemoryList_source:d0acb593939b2fa5645e0157",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_source:d0acb593939b2fa5645e0157",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Schema 1 \u00B7 policy 1\nContracts \u00B7 recorded",
+          "automationId": "MemoryList_contract:51b9c4a4360d15c33f237dc240e7287852d1d8640fa097cf4b4871864d8ca2b9",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_contract:51b9c4a4360d15c33f237dc240e7287852d1d8640fa097cf4b4871864d8ca2b9",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "ListItem",
+          "name": "Schema 2 \u00B7 policy 1\nContracts \u00B7 recorded",
+          "automationId": "MemoryList_contract:d7c42ce8566d5b71890ab76e804574c692aa3d64ec663350962be557c8eab59d",
+          "className": "ListViewItem",
+          "isEnabled": true,
+          "isOffscreen": true,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "selector": "MemoryList_contract:d7c42ce8566d5b71890ab76e804574c692aa3d64ec663350962be557c8eab59d",
+          "ancestorPath": [
+            "Window",
+            "Pane",
+            "Pane",
+            "List"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "MenuItem",
+          "name": "System",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 34,
+          "y": 34,
+          "width": 22,
+          "height": 22,
+          "selector": "mnu-system-d909",
+          "expandState": "collapsed",
+          "ancestorPath": [
+            "Window",
+            "TitleBar",
+            "MenuBar"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Minimize",
+          "automationId": "Minimize-Restore",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1179,
+          "y": 27,
+          "width": 47,
+          "height": 30,
+          "selector": "Minimize-Restore",
+          "ancestorPath": [
+            "Window",
+            "TitleBar"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Maximize",
+          "automationId": "Maximize-Restore",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1226,
+          "y": 27,
+          "width": 46,
+          "height": 30,
+          "selector": "Maximize-Restore",
+          "ancestorPath": [
+            "Window",
+            "TitleBar"
+          ],
+          "isInvokable": true
+        },
+        {
+          "type": "Button",
+          "name": "Close",
+          "automationId": "Close",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1272,
+          "y": 27,
+          "width": 47,
+          "height": 30,
+          "selector": "Close",
+          "ancestorPath": [
+            "Window",
+            "TitleBar"
+          ],
+          "isInvokable": true
+        }
+      ]
+    }
+  ]
+}

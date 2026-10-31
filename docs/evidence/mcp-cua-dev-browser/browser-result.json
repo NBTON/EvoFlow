@@ -1,0 +1,26 @@
+{
+  "case": "browser",
+  "appPid": 49080,
+  "target": "local",
+  "status": "FAIL",
+  "approvals": [
+    "MCP · Cua · isolated browser / browser_prepare",
+    "MCP · Cua · isolated browser / get_guide"
+  ],
+  "started": "2026-10-31T04:20:21.1238295+03:00",
+  "finalText": [
+    "Local action",
+    "This exact MCP action was already handled. No effect was replayed; observe before another attempt. MCP response received from Cua · isolated browser / browser_prepare\nsucceeded · verified: false",
+    "Local action",
+    "Use the prepared browser PID.\ndenied · verified: false",
+    "Local action",
+    "Use the prepared browser PID.\ndenied · verified: false",
+    "Local action",
+    "MCP response received from Cua · isolated browser / get_guide\nsucceeded · verified: false",
+    "EvoFlow",
+    "I was unable to complete this task, and I'm reporting that honestly rather than claiming success.\n\n## What happened\n\n**1. Isolated browser preparation failed (hard refusal)**\n\n`browser_prepare(allow_launch=true, profile={mode:\"isolated_new\"})` returned:\n\n- `status: refused`\n- `code: browser_endpoint_owner_mismatch`\n- message: *\"the isolated browser profile endpoint did not match live loopback socket ownership\"*\n- driver hint: *\"The DevTools endpoint found is not provably this browser's, so it was refused. Act through get_window_state and the accessibility tree instead.\"*\n\nA second identical call was treated as an idempotent replay of the already-handled action, so no new attempt was made and no browser endpoint was established.\n\n**2. The native fallback path is also unreachable**\n\nThe refusal points to the native/accessibility route, but that route needs an exact `(pid, window_id)` pair. Every attempt to obtain one was blocked by policy:\n\n- `list_windows()` (unfiltered) → `policy_denied: \"Use the prepared browser PID.\"`\n- `list_windows(app=\"chrome\")` → `policy_denied: \"Use the prepared browser PID.\"`\n\nSince `browser_prepare` never produced a prepared PID, there is no PID I'm permitted to enumerate with, and the desktop `list_windows`/`get_window_state` surface requires a concrete `pid` argument. The only app launch I have available is the Calculator AUMID — there is no callable tool here to launch Chrome/Edge/Brave directly, so I can't bootstrap a browser window to bind against either.\n\nI then read the bundled `browser` guide to check for a documented recovery path for this specific refusal. It documents recovery for `browser_requires_setup`, `browser_consent_required`, `browser_binding_ambiguous`, `browser_ref_stale`, `browser_action_unavailable`, and `browser_input_trust_unavailable` — but not for `browser_endpoint_owner_mismatch`, so no approved workaround exists.\n\n## Result\n\n- Browser opened (isolated profile): **no**\n- Navigated to `https://www.selenium.dev/selenium/web/web-form.html`: **no**\n- Text field filled with `EvoFlow MCP verified`: **no**\n- Form submitted: **no**\n- \"Received!\" verified via a fresh Cua page observation: **no**\n\nNothing was verified, because no page state was ever reachable. No files, settings, or profiles were modified — the refusal is fail-closed with nothing changed.\n\n**Likely cause and next step:** the driver detected a DevTools endpoint on loopback that it could not prove belonged to the isolated profile it just created (typically a stale/squatted endpoint on the standard debugging port, or a leftover browser process from a previous session holding the port). Clearing that stale endpoint or restarting the Cua Driver daemon should let `browser_prepare` mint a verified endpoint. Once it does, the remaining steps — bind, navigate, type into the Text input, submit, and re-snapshot to confirm `Received!` — are straightforward, and I can run them immediately in this same chat.",
+    "Message",
+    "Enter to send · Shift+Enter for a new line"
+  ],
+  "error": "Cua browser interaction and changed page state were not established"
+}

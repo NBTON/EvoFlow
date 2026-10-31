@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "appPid": 50764,
+  "target": "local",
+  "document": "C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-general-20261031-034353.pdf",
+  "checks": [
+    "Actual agent opened Microsoft Word through installed-app discovery; independent WINWORD window check passed",
+    "Non-allowlisted native executable ipconfig ran after visible exact-command approval and returned exit code 0",
+    "Actual agent used packaged Playwright browser and returned Example Domain from live page inspection",
+    "Actual agent created and edited a PDF with text replacement, stamp and rotation after native approval"
+  ],
+  "sha256": "B2D504D7F39F469E90A0BBC93BAB2883681A74C2BF654CF29C5E8B7EE8FE630B",
+  "independent_pdf_verification": {
+    "pages": 1,
+    "rotation": 90,
+    "revised_text_found": true,
+    "original_text_absent": true,
+    "stamp_found": true
+  }
+}

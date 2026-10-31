@@ -1,0 +1,2662 @@
+{
+  "live": true,
+  "runs": [
+    {
+      "id": "9b39e947-e616-4b8e-b7e0-26ad7404574f",
+      "status": "complete",
+      "task": "Reconcile orders, inventory and shipments. For future reports, group delays by warehouse and show unresolved orders first.",
+      "mode": "evolving",
+      "live": true,
+      "started_at": 1793367591.7804828,
+      "fixture_hash": "80ca35fce5ad79f660a3a3a8f2169085c0651320fe7efb71cdfb926458acc363",
+      "contract": {
+        "schema_version": 1,
+        "tables": {
+          "orders": [
+            "order_id",
+            "promised_date",
+            "quantity",
+            "sku",
+            "warehouse"
+          ],
+          "shipments": [
+            "order_id",
+            "quantity",
+            "shipment_id",
+            "shipped_date",
+            "status"
+          ],
+          "inventory": [
+            "available_qty",
+            "sku",
+            "warehouse"
+          ]
+        },
+        "policy_version": 1,
+        "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+      },
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 1681,
+        "output_tokens": 678,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 7,
+        "local_execution_ms": 17.03290000114066,
+        "model_latency_ms": 16676.94499999925,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "enabled": false
+            },
+            "attempt": 0,
+            "provider": "Nvidia",
+            "request_id": "gen-1793367587-aN80EsUtbqq8ULpLb011",
+            "usage": {
+              "prompt_tokens": 1681,
+              "completion_tokens": 678,
+              "total_tokens": 2359,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 5,
+        "end_to_end_ms": 17483.080300000438
+      },
+      "result": [
+        {
+          "order_id": "ORD-21-011",
+          "warehouse": "Dammam",
+          "ordered": 14,
+          "shipped": 0,
+          "remaining": 14,
+          "delayed": 0,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-21-002",
+          "warehouse": "Dammam",
+          "ordered": 12,
+          "shipped": 7,
+          "remaining": 5,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-21-005",
+          "warehouse": "Dammam",
+          "ordered": 3,
+          "shipped": 1,
+          "remaining": 2,
+          "delayed": 0,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-21-008",
+          "warehouse": "Dammam",
+          "ordered": 16,
+          "shipped": 16,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-21-010",
+          "warehouse": "Jeddah",
+          "ordered": 18,
+          "shipped": 3,
+          "remaining": 15,
+          "delayed": 1,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-21-007",
+          "warehouse": "Jeddah",
+          "ordered": 10,
+          "shipped": 3,
+          "remaining": 7,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-21-001",
+          "warehouse": "Jeddah",
+          "ordered": 16,
+          "shipped": 13,
+          "remaining": 3,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-21-004",
+          "warehouse": "Jeddah",
+          "ordered": 10,
+          "shipped": 10,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-21-009",
+          "warehouse": "Riyadh",
+          "ordered": 17,
+          "shipped": 1,
+          "remaining": 16,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-21-006",
+          "warehouse": "Riyadh",
+          "ordered": 16,
+          "shipped": 2,
+          "remaining": 14,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-21-003",
+          "warehouse": "Riyadh",
+          "ordered": 18,
+          "shipped": 16,
+          "remaining": 2,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-21-000",
+          "warehouse": "Riyadh",
+          "ordered": 8,
+          "shipped": 8,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "orders_checked": 12,
+        "checks": [
+          "identity deduplication",
+          "shipment totals",
+          "remaining quantity",
+          "policy delay threshold",
+          "supported inventory cause"
+        ],
+        "mismatches": [],
+        "unexpected_rows": 0
+      },
+      "sync_status": "local",
+      "skill_id": "803f6187-d55b-49fe-b95e-b97efe6b339b",
+      "skill_version": 1,
+      "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 6 | Incomplete: 9\n\nGrouped by warehouse; unresolved first.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-21-011 | Dammam | 14 | 0 | 14 | No | stock_shortage |\n| ORD-21-002 | Dammam | 12 | 7 | 5 | No | fulfillment_pending |\n| ORD-21-005 | Dammam | 3 | 1 | 2 | No | inventory_unknown |\n| ORD-21-008 | Dammam | 16 | 16 | 0 | No | complete |\n| ORD-21-010 | Jeddah | 18 | 3 | 15 | Yes | inventory_unknown |\n| ORD-21-007 | Jeddah | 10 | 3 | 7 | Yes | stock_shortage |\n| ORD-21-001 | Jeddah | 16 | 13 | 3 | Yes | fulfillment_pending |\n| ORD-21-004 | Jeddah | 10 | 10 | 0 | No | complete |\n| ORD-21-009 | Riyadh | 17 | 1 | 16 | Yes | stock_shortage |\n| ORD-21-006 | Riyadh | 16 | 2 | 14 | Yes | stock_shortage |\n| ORD-21-003 | Riyadh | 18 | 16 | 2 | Yes | fulfillment_pending |\n| ORD-21-000 | Riyadh | 8 | 8 | 0 | No | complete |",
+      "report_path": "artifacts\\local\\live-demo-08\\artifacts\\9b39e947-e616-4b8e-b7e0-26ad7404574f\\report.md",
+      "grouped_by_warehouse": true,
+      "evidence_ids": [
+        "9527abf6-c4d7-475a-969f-43222dea140d"
+      ],
+      "reused": false,
+      "plan": {
+        "title": "Order Reconciliation with Inventory and Shipment Status",
+        "query": "",
+        "program": [
+          {
+            "op": "deduplicate",
+            "input": "orders",
+            "as": "orders_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "shipments",
+            "as": "shipments_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "inventory",
+            "as": "inventory_dedup"
+          },
+          {
+            "op": "filter_in",
+            "input": "shipments_dedup",
+            "as": "shipments_counted",
+            "field": "status",
+            "values": [
+              "shipped",
+              "delivered"
+            ]
+          },
+          {
+            "op": "group_sum",
+            "input": "shipments_counted",
+            "as": "shipments_agg",
+            "keys": [
+              "order_id"
+            ],
+            "field": "quantity",
+            "output": "shipped"
+          },
+          {
+            "op": "left_join",
+            "input": "orders_dedup",
+            "as": "orders_with_shipments",
+            "right": "shipments_agg",
+            "on": {
+              "order_id": "order_id"
+            },
+            "fields": {
+              "shipped": "shipped"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_shipments",
+            "as": "orders_shipped_filled",
+            "values": {
+              "shipped": "coalesce(shipped, 0)"
+            }
+          },
+          {
+            "op": "left_join",
+            "input": "orders_shipped_filled",
+            "as": "orders_with_inventory",
+            "right": "inventory_dedup",
+            "on": {
+              "sku": "sku",
+              "warehouse": "warehouse"
+            },
+            "fields": {
+              "available_qty": "available_qty"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_inventory",
+            "as": "orders_computed",
+            "values": {
+              "ordered": "quantity",
+              "remaining": "max(0, ordered - shipped)",
+              "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+              "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+            }
+          },
+          {
+            "op": "project",
+            "input": "orders_computed",
+            "as": "final_output",
+            "columns": [
+              "order_id",
+              "warehouse",
+              "ordered",
+              "shipped",
+              "remaining",
+              "delayed",
+              "cause"
+            ]
+          }
+        ],
+        "summary": "Reconciles orders against shipments and inventory to determine fulfillment status, delays, and causes. Deduplicates inputs, filters counted shipment statuses, aggregates shipped quantities per order, joins with inventory on SKU and warehouse, computes remaining quantities, delay flags, and root causes, then projects final columns."
+      },
+      "finished_at": 1793367609.261375
+    },
+    {
+      "id": "9a35b8a3-ce1a-46f2-b119-a245899d00e8",
+      "status": "complete",
+      "task": "Reconcile orders, inventory and shipments.",
+      "mode": "evolving",
+      "live": true,
+      "started_at": 1793367609.2729447,
+      "fixture_hash": "9b4d0eb75e683aa9c594ad18a4bdab72586c0637093c69e90d6483ed1bc460cc",
+      "contract": {
+        "schema_version": 1,
+        "tables": {
+          "orders": [
+            "order_id",
+            "promised_date",
+            "quantity",
+            "sku",
+            "warehouse"
+          ],
+          "shipments": [
+            "order_id",
+            "quantity",
+            "shipment_id",
+            "shipped_date",
+            "status"
+          ],
+          "inventory": [
+            "available_qty",
+            "sku",
+            "warehouse"
+          ]
+        },
+        "policy_version": 1,
+        "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+      },
+      "metrics": {
+        "model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 3,
+        "local_execution_ms": 5.175099999178201,
+        "model_latency_ms": 0.0,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 1,
+        "end_to_end_ms": 94.80529999927967
+      },
+      "result": [
+        {
+          "order_id": "ORD-22-002",
+          "warehouse": "Dammam",
+          "ordered": 17,
+          "shipped": 5,
+          "remaining": 12,
+          "delayed": 0,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-22-011",
+          "warehouse": "Dammam",
+          "ordered": 13,
+          "shipped": 4,
+          "remaining": 9,
+          "delayed": 0,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-22-005",
+          "warehouse": "Dammam",
+          "ordered": 4,
+          "shipped": 2,
+          "remaining": 2,
+          "delayed": 0,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-22-008",
+          "warehouse": "Dammam",
+          "ordered": 12,
+          "shipped": 12,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-22-001",
+          "warehouse": "Jeddah",
+          "ordered": 10,
+          "shipped": 0,
+          "remaining": 10,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-22-010",
+          "warehouse": "Jeddah",
+          "ordered": 4,
+          "shipped": 2,
+          "remaining": 2,
+          "delayed": 1,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-22-007",
+          "warehouse": "Jeddah",
+          "ordered": 3,
+          "shipped": 2,
+          "remaining": 1,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-22-004",
+          "warehouse": "Jeddah",
+          "ordered": 10,
+          "shipped": 10,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-22-009",
+          "warehouse": "Riyadh",
+          "ordered": 9,
+          "shipped": 2,
+          "remaining": 7,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-22-003",
+          "warehouse": "Riyadh",
+          "ordered": 14,
+          "shipped": 12,
+          "remaining": 2,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-22-006",
+          "warehouse": "Riyadh",
+          "ordered": 8,
+          "shipped": 6,
+          "remaining": 2,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-22-000",
+          "warehouse": "Riyadh",
+          "ordered": 7,
+          "shipped": 7,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "orders_checked": 12,
+        "checks": [
+          "identity deduplication",
+          "shipment totals",
+          "remaining quantity",
+          "policy delay threshold",
+          "supported inventory cause"
+        ],
+        "mismatches": [],
+        "unexpected_rows": 0
+      },
+      "sync_status": "local",
+      "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 6 | Incomplete: 9\n\nGrouped by warehouse; unresolved first.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-22-002 | Dammam | 17 | 5 | 12 | No | stock_shortage |\n| ORD-22-011 | Dammam | 13 | 4 | 9 | No | stock_shortage |\n| ORD-22-005 | Dammam | 4 | 2 | 2 | No | inventory_unknown |\n| ORD-22-008 | Dammam | 12 | 12 | 0 | No | complete |\n| ORD-22-001 | Jeddah | 10 | 0 | 10 | Yes | fulfillment_pending |\n| ORD-22-010 | Jeddah | 4 | 2 | 2 | Yes | inventory_unknown |\n| ORD-22-007 | Jeddah | 3 | 2 | 1 | Yes | fulfillment_pending |\n| ORD-22-004 | Jeddah | 10 | 10 | 0 | No | complete |\n| ORD-22-009 | Riyadh | 9 | 2 | 7 | Yes | stock_shortage |\n| ORD-22-003 | Riyadh | 14 | 12 | 2 | Yes | fulfillment_pending |\n| ORD-22-006 | Riyadh | 8 | 6 | 2 | Yes | stock_shortage |\n| ORD-22-000 | Riyadh | 7 | 7 | 0 | No | complete |",
+      "report_path": "artifacts\\local\\live-demo-08\\artifacts\\9a35b8a3-ce1a-46f2-b119-a245899d00e8\\report.md",
+      "grouped_by_warehouse": true,
+      "evidence_ids": [
+        "22222b4f-2f3f-4f45-b2fa-0297692be4da",
+        "9527abf6-c4d7-475a-969f-43222dea140d"
+      ],
+      "reused": true,
+      "plan": {
+        "title": "Order Reconciliation with Inventory and Shipment Status",
+        "query": "",
+        "program": [
+          {
+            "op": "deduplicate",
+            "input": "orders",
+            "as": "orders_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "shipments",
+            "as": "shipments_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "inventory",
+            "as": "inventory_dedup"
+          },
+          {
+            "op": "filter_in",
+            "input": "shipments_dedup",
+            "as": "shipments_counted",
+            "field": "status",
+            "values": [
+              "shipped",
+              "delivered"
+            ]
+          },
+          {
+            "op": "group_sum",
+            "input": "shipments_counted",
+            "as": "shipments_agg",
+            "keys": [
+              "order_id"
+            ],
+            "field": "quantity",
+            "output": "shipped"
+          },
+          {
+            "op": "left_join",
+            "input": "orders_dedup",
+            "as": "orders_with_shipments",
+            "right": "shipments_agg",
+            "on": {
+              "order_id": "order_id"
+            },
+            "fields": {
+              "shipped": "shipped"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_shipments",
+            "as": "orders_shipped_filled",
+            "values": {
+              "shipped": "coalesce(shipped, 0)"
+            }
+          },
+          {
+            "op": "left_join",
+            "input": "orders_shipped_filled",
+            "as": "orders_with_inventory",
+            "right": "inventory_dedup",
+            "on": {
+              "sku": "sku",
+              "warehouse": "warehouse"
+            },
+            "fields": {
+              "available_qty": "available_qty"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_inventory",
+            "as": "orders_computed",
+            "values": {
+              "ordered": "quantity",
+              "remaining": "max(0, ordered - shipped)",
+              "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+              "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+            }
+          },
+          {
+            "op": "project",
+            "input": "orders_computed",
+            "as": "final_output",
+            "columns": [
+              "order_id",
+              "warehouse",
+              "ordered",
+              "shipped",
+              "remaining",
+              "delayed",
+              "cause"
+            ]
+          }
+        ],
+        "summary": "Reconciles orders against shipments and inventory to determine fulfillment status, delays, and causes. Deduplicates inputs, filters counted shipment statuses, aggregates shipped quantities per order, joins with inventory on SKU and warehouse, computes remaining quantities, delay flags, and root causes, then projects final columns."
+      },
+      "skill_id": "803f6187-d55b-49fe-b95e-b97efe6b339b",
+      "skill_version": 1,
+      "finished_at": 1793367609.3661664
+    },
+    {
+      "id": "3d995564-7596-4625-a636-04c0084a7791",
+      "status": "complete",
+      "task": "Reconcile orders, inventory and shipments.",
+      "mode": "evolving",
+      "live": true,
+      "started_at": 1793367609.3767602,
+      "fixture_hash": "afb7f7b055db150220ab7cb2607dbb77463844f1983f3284bc56593ce8e15e9e",
+      "contract": {
+        "schema_version": 2,
+        "tables": {
+          "orders": [
+            "order_id",
+            "promised_date",
+            "requested_units",
+            "sku",
+            "warehouse"
+          ],
+          "shipments": [
+            "order_id",
+            "shipment_id",
+            "shipped_date",
+            "status",
+            "units"
+          ],
+          "inventory": [
+            "available_qty",
+            "sku",
+            "warehouse"
+          ]
+        },
+        "policy_version": 1,
+        "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+      },
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 1917,
+        "output_tokens": 637,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 12,
+        "local_execution_ms": 73.70840000112366,
+        "model_latency_ms": 5938.08750000062,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "enabled": false
+            },
+            "attempt": 0,
+            "provider": "Nvidia",
+            "request_id": "gen-1793367604-heByZnNpGAnYNSlwLpez",
+            "usage": {
+              "prompt_tokens": 1917,
+              "completion_tokens": 637,
+              "total_tokens": 2554,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 9,
+        "end_to_end_ms": 6192.077199999403
+      },
+      "result": [
+        {
+          "order_id": "ORD-23-002",
+          "warehouse": "Dammam",
+          "ordered": 12,
+          "shipped": 6,
+          "remaining": 6,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-23-011",
+          "warehouse": "Dammam",
+          "ordered": 14,
+          "shipped": 10,
+          "remaining": 4,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-23-005",
+          "warehouse": "Dammam",
+          "ordered": 3,
+          "shipped": 0,
+          "remaining": 3,
+          "delayed": 0,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-23-008",
+          "warehouse": "Dammam",
+          "ordered": 3,
+          "shipped": 3,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-23-010",
+          "warehouse": "Jeddah",
+          "ordered": 9,
+          "shipped": 0,
+          "remaining": 9,
+          "delayed": 1,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-23-001",
+          "warehouse": "Jeddah",
+          "ordered": 5,
+          "shipped": 0,
+          "remaining": 5,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-23-007",
+          "warehouse": "Jeddah",
+          "ordered": 5,
+          "shipped": 3,
+          "remaining": 2,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-23-004",
+          "warehouse": "Jeddah",
+          "ordered": 11,
+          "shipped": 11,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-23-006",
+          "warehouse": "Riyadh",
+          "ordered": 17,
+          "shipped": 0,
+          "remaining": 17,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-23-003",
+          "warehouse": "Riyadh",
+          "ordered": 14,
+          "shipped": 2,
+          "remaining": 12,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-23-009",
+          "warehouse": "Riyadh",
+          "ordered": 16,
+          "shipped": 11,
+          "remaining": 5,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-23-000",
+          "warehouse": "Riyadh",
+          "ordered": 12,
+          "shipped": 12,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "orders_checked": 12,
+        "checks": [
+          "identity deduplication",
+          "shipment totals",
+          "remaining quantity",
+          "policy delay threshold",
+          "supported inventory cause"
+        ],
+        "mismatches": [],
+        "unexpected_rows": 0
+      },
+      "sync_status": "local",
+      "skill_id": "7670d24f-47fc-42a4-bdde-5ce7003c408f",
+      "skill_version": 2,
+      "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 6 | Incomplete: 9\n\nGrouped by warehouse; unresolved first.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-23-002 | Dammam | 12 | 6 | 6 | No | fulfillment_pending |\n| ORD-23-011 | Dammam | 14 | 10 | 4 | No | fulfillment_pending |\n| ORD-23-005 | Dammam | 3 | 0 | 3 | No | inventory_unknown |\n| ORD-23-008 | Dammam | 3 | 3 | 0 | No | complete |\n| ORD-23-010 | Jeddah | 9 | 0 | 9 | Yes | inventory_unknown |\n| ORD-23-001 | Jeddah | 5 | 0 | 5 | Yes | fulfillment_pending |\n| ORD-23-007 | Jeddah | 5 | 3 | 2 | Yes | fulfillment_pending |\n| ORD-23-004 | Jeddah | 11 | 11 | 0 | No | complete |\n| ORD-23-006 | Riyadh | 17 | 0 | 17 | Yes | stock_shortage |\n| ORD-23-003 | Riyadh | 14 | 2 | 12 | Yes | stock_shortage |\n| ORD-23-009 | Riyadh | 16 | 11 | 5 | Yes | stock_shortage |\n| ORD-23-000 | Riyadh | 12 | 12 | 0 | No | complete |",
+      "report_path": "artifacts\\local\\live-demo-08\\artifacts\\3d995564-7596-4625-a636-04c0084a7791\\report.md",
+      "grouped_by_warehouse": true,
+      "evidence_ids": [
+        "22222b4f-2f3f-4f45-b2fa-0297692be4da",
+        "9527abf6-c4d7-475a-969f-43222dea140d"
+      ],
+      "reused": false,
+      "plan": {
+        "title": "Order Reconciliation Program",
+        "query": "",
+        "program": [
+          {
+            "op": "deduplicate",
+            "input": "orders",
+            "as": "orders_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "shipments",
+            "as": "shipments_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "inventory",
+            "as": "inventory_dedup"
+          },
+          {
+            "op": "filter_in",
+            "input": "shipments_dedup",
+            "as": "shipments_filtered",
+            "field": "status",
+            "values": [
+              "shipped",
+              "delivered"
+            ]
+          },
+          {
+            "op": "group_sum",
+            "input": "shipments_filtered",
+            "as": "shipments_agg",
+            "keys": [
+              "order_id"
+            ],
+            "field": "units",
+            "output": "shipped"
+          },
+          {
+            "op": "left_join",
+            "input": "orders_dedup",
+            "as": "orders_with_shipments",
+            "right": "shipments_agg",
+            "on": {
+              "order_id": "order_id"
+            },
+            "fields": {
+              "shipped": "shipped"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_shipments",
+            "as": "orders_shipped_filled",
+            "values": {
+              "shipped": "coalesce(shipped, 0)"
+            }
+          },
+          {
+            "op": "left_join",
+            "input": "orders_shipped_filled",
+            "as": "orders_with_inventory",
+            "right": "inventory_dedup",
+            "on": {
+              "sku": "sku",
+              "warehouse": "warehouse"
+            },
+            "fields": {
+              "available_qty": "available_qty"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_inventory",
+            "as": "orders_computed",
+            "values": {
+              "ordered": "requested_units",
+              "remaining": "max(0, ordered - shipped)",
+              "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+              "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+            }
+          },
+          {
+            "op": "project",
+            "input": "orders_computed",
+            "as": "final_report",
+            "columns": [
+              "order_id",
+              "warehouse",
+              "ordered",
+              "shipped",
+              "remaining",
+              "delayed",
+              "cause"
+            ]
+          }
+        ],
+        "summary": "Reconciles orders with shipments and inventory to compute shipped quantities, remaining units, delay status, and fulfillment cause per order."
+      },
+      "finished_at": 1793367615.566674
+    },
+    {
+      "id": "a4dcf04e-56ac-4923-b3ff-f1f24187bd72",
+      "status": "complete",
+      "task": "Reconcile orders, inventory and shipments.",
+      "mode": "evolving",
+      "live": true,
+      "started_at": 1793367615.590775,
+      "fixture_hash": "8c71d6c310cf1084ec63967ae0ef4a71b4d2a40f7a66ea48c2081a9cc531c119",
+      "contract": {
+        "schema_version": 2,
+        "tables": {
+          "orders": [
+            "order_id",
+            "promised_date",
+            "requested_units",
+            "sku",
+            "warehouse"
+          ],
+          "shipments": [
+            "order_id",
+            "shipment_id",
+            "shipped_date",
+            "status",
+            "units"
+          ],
+          "inventory": [
+            "available_qty",
+            "sku",
+            "warehouse"
+          ]
+        },
+        "policy_version": 2,
+        "policy_hash": "defe847b729bdbd5dc0742b857a3351c17d376f5f43864cfe402466ae73530a8"
+      },
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 1946,
+        "output_tokens": 665,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 11,
+        "local_execution_ms": 22.948100000576233,
+        "model_latency_ms": 21502.52779999937,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "enabled": false
+            },
+            "attempt": 0,
+            "provider": "Nvidia",
+            "request_id": "gen-1793367611-lEKDLuFrMShG9xk24qFC",
+            "usage": {
+              "prompt_tokens": 1946,
+              "completion_tokens": 665,
+              "total_tokens": 2611,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 9,
+        "end_to_end_ms": 21712.959899999987
+      },
+      "result": [
+        {
+          "order_id": "ORD-24-005",
+          "warehouse": "Dammam",
+          "ordered": 17,
+          "shipped": 3,
+          "remaining": 14,
+          "delayed": 0,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-24-002",
+          "warehouse": "Dammam",
+          "ordered": 9,
+          "shipped": 2,
+          "remaining": 7,
+          "delayed": 0,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-24-011",
+          "warehouse": "Dammam",
+          "ordered": 5,
+          "shipped": 4,
+          "remaining": 1,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-24-008",
+          "warehouse": "Dammam",
+          "ordered": 18,
+          "shipped": 18,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-24-010",
+          "warehouse": "Jeddah",
+          "ordered": 13,
+          "shipped": 4,
+          "remaining": 9,
+          "delayed": 0,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-24-001",
+          "warehouse": "Jeddah",
+          "ordered": 8,
+          "shipped": 3,
+          "remaining": 5,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-24-007",
+          "warehouse": "Jeddah",
+          "ordered": 18,
+          "shipped": 14,
+          "remaining": 4,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-24-004",
+          "warehouse": "Jeddah",
+          "ordered": 3,
+          "shipped": 3,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-24-009",
+          "warehouse": "Riyadh",
+          "ordered": 11,
+          "shipped": 9,
+          "remaining": 2,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-24-003",
+          "warehouse": "Riyadh",
+          "ordered": 7,
+          "shipped": 6,
+          "remaining": 1,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-24-006",
+          "warehouse": "Riyadh",
+          "ordered": 3,
+          "shipped": 2,
+          "remaining": 1,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-24-000",
+          "warehouse": "Riyadh",
+          "ordered": 15,
+          "shipped": 15,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "orders_checked": 12,
+        "checks": [
+          "identity deduplication",
+          "shipment totals",
+          "remaining quantity",
+          "policy delay threshold",
+          "supported inventory cause"
+        ],
+        "mismatches": [],
+        "unexpected_rows": 0
+      },
+      "sync_status": "local",
+      "skill_id": "2ef5a6e6-8854-4ce0-9ad4-60245741756a",
+      "skill_version": 3,
+      "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 3 | Incomplete: 9\n\nGrouped by warehouse; unresolved first.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-24-005 | Dammam | 17 | 3 | 14 | No | inventory_unknown |\n| ORD-24-002 | Dammam | 9 | 2 | 7 | No | stock_shortage |\n| ORD-24-011 | Dammam | 5 | 4 | 1 | No | fulfillment_pending |\n| ORD-24-008 | Dammam | 18 | 18 | 0 | No | complete |\n| ORD-24-010 | Jeddah | 13 | 4 | 9 | No | inventory_unknown |\n| ORD-24-001 | Jeddah | 8 | 3 | 5 | No | fulfillment_pending |\n| ORD-24-007 | Jeddah | 18 | 14 | 4 | No | fulfillment_pending |\n| ORD-24-004 | Jeddah | 3 | 3 | 0 | No | complete |\n| ORD-24-009 | Riyadh | 11 | 9 | 2 | Yes | fulfillment_pending |\n| ORD-24-003 | Riyadh | 7 | 6 | 1 | Yes | fulfillment_pending |\n| ORD-24-006 | Riyadh | 3 | 2 | 1 | Yes | fulfillment_pending |\n| ORD-24-000 | Riyadh | 15 | 15 | 0 | No | complete |",
+      "report_path": "artifacts\\local\\live-demo-08\\artifacts\\a4dcf04e-56ac-4923-b3ff-f1f24187bd72\\report.md",
+      "grouped_by_warehouse": true,
+      "evidence_ids": [
+        "22222b4f-2f3f-4f45-b2fa-0297692be4da",
+        "0a97dde2-fb00-4baf-8458-dd74422d4104"
+      ],
+      "reused": false,
+      "plan": {
+        "title": "Order Reconciliation with Inventory and Shipments",
+        "query": "",
+        "program": [
+          {
+            "op": "deduplicate",
+            "input": "orders",
+            "as": "orders_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "shipments",
+            "as": "shipments_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "inventory",
+            "as": "inventory_dedup"
+          },
+          {
+            "op": "filter_in",
+            "input": "shipments_dedup",
+            "as": "shipments_filtered",
+            "field": "status",
+            "values": [
+              "shipped",
+              "delivered"
+            ]
+          },
+          {
+            "op": "group_sum",
+            "input": "shipments_filtered",
+            "as": "shipments_agg",
+            "keys": [
+              "order_id"
+            ],
+            "field": "units",
+            "output": "shipped"
+          },
+          {
+            "op": "left_join",
+            "input": "orders_dedup",
+            "as": "orders_with_shipments",
+            "right": "shipments_agg",
+            "on": {
+              "order_id": "order_id"
+            },
+            "fields": {
+              "shipped": "shipped"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_shipments",
+            "as": "orders_shipped_filled",
+            "values": {
+              "shipped": "coalesce(shipped, 0)"
+            }
+          },
+          {
+            "op": "left_join",
+            "input": "orders_shipped_filled",
+            "as": "orders_with_inventory",
+            "right": "inventory_dedup",
+            "on": {
+              "sku": "sku",
+              "warehouse": "warehouse"
+            },
+            "fields": {
+              "available_qty": "available_qty"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_with_inventory",
+            "as": "orders_computed",
+            "values": {
+              "ordered": "requested_units",
+              "remaining": "max(0, ordered - shipped)",
+              "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+              "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+            }
+          },
+          {
+            "op": "project",
+            "input": "orders_computed",
+            "as": "final_output",
+            "columns": [
+              "order_id",
+              "warehouse",
+              "ordered",
+              "shipped",
+              "remaining",
+              "delayed",
+              "cause"
+            ]
+          }
+        ],
+        "summary": "Reconciles orders against shipments and inventory. Deduplicates inputs, filters shipments by counted statuses, aggregates shipped units per order, joins inventory on sku and warehouse, computes remaining, delayed, and cause fields, and projects final columns."
+      },
+      "finished_at": 1793367637.3014398
+    }
+  ],
+  "skills": [
+    {
+      "id": "2ef5a6e6-8854-4ce0-9ad4-60245741756a",
+      "version": 3,
+      "task_family": "order-reconciliation",
+      "title": "Order Reconciliation with Inventory and Shipments",
+      "state": "active",
+      "source_run": "a4dcf04e-56ac-4923-b3ff-f1f24187bd72",
+      "parent_version": "7670d24f-47fc-42a4-bdde-5ce7003c408f",
+      "plans": {
+        "1": {
+          "title": "Order Reconciliation with Inventory and Shipment Status",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "as": "shipments_counted",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ]
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_counted",
+              "as": "shipments_agg",
+              "keys": [
+                "order_id"
+              ],
+              "field": "quantity",
+              "output": "shipped"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "as": "orders_with_shipments",
+              "right": "shipments_agg",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_shipments",
+              "as": "orders_shipped_filled",
+              "values": {
+                "shipped": "coalesce(shipped, 0)"
+              }
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped_filled",
+              "as": "orders_with_inventory",
+              "right": "inventory_dedup",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_inventory",
+              "as": "orders_computed",
+              "values": {
+                "ordered": "quantity",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              }
+            },
+            {
+              "op": "project",
+              "input": "orders_computed",
+              "as": "final_output",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ]
+            }
+          ],
+          "summary": "Reconciles orders against shipments and inventory to determine fulfillment status, delays, and causes. Deduplicates inputs, filters counted shipment statuses, aggregates shipped quantities per order, joins with inventory on SKU and warehouse, computes remaining quantities, delay flags, and root causes, then projects final columns."
+        },
+        "2": {
+          "title": "Order Reconciliation with Inventory and Shipments",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "as": "shipments_filtered",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ]
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_filtered",
+              "as": "shipments_agg",
+              "keys": [
+                "order_id"
+              ],
+              "field": "units",
+              "output": "shipped"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "as": "orders_with_shipments",
+              "right": "shipments_agg",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_shipments",
+              "as": "orders_shipped_filled",
+              "values": {
+                "shipped": "coalesce(shipped, 0)"
+              }
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped_filled",
+              "as": "orders_with_inventory",
+              "right": "inventory_dedup",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_inventory",
+              "as": "orders_computed",
+              "values": {
+                "ordered": "requested_units",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              }
+            },
+            {
+              "op": "project",
+              "input": "orders_computed",
+              "as": "final_output",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ]
+            }
+          ],
+          "summary": "Reconciles orders against shipments and inventory. Deduplicates inputs, filters shipments by counted statuses, aggregates shipped units per order, joins inventory on sku and warehouse, computes remaining, delayed, and cause fields, and projects final columns."
+        }
+      },
+      "contracts": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        },
+        "2": {
+          "schema_version": 2,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "requested_units",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "shipment_id",
+              "shipped_date",
+              "status",
+              "units"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 2,
+          "policy_hash": "defe847b729bdbd5dc0742b857a3351c17d376f5f43864cfe402466ae73530a8"
+        }
+      },
+      "artifact_hash": "7635b637efda76abdbfb4d628dc16d092a30d2dfc978e39c5e9ba745b10a8dc7",
+      "parameters": [
+        "as_of",
+        "grace_days"
+      ],
+      "input_contract": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        },
+        "2": {
+          "schema_version": 2,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "requested_units",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "shipment_id",
+              "shipped_date",
+              "status",
+              "units"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 2,
+          "policy_hash": "defe847b729bdbd5dc0742b857a3351c17d376f5f43864cfe402466ae73530a8"
+        }
+      },
+      "output_contract": [
+        "cause",
+        "delayed",
+        "order_id",
+        "ordered",
+        "remaining",
+        "shipped",
+        "warehouse"
+      ],
+      "assumptions": [
+        "One SKU per order",
+        "Conflicting duplicates unsupported",
+        "Exact policy versions"
+      ],
+      "dependencies": [
+        "closed SQLite SELECT interpreter v1"
+      ],
+      "independent_checks": [
+        {
+          "fixture_hash": "59087f461f50b6a053ec62f3b6c7cf2495a5a347aabf8fb42e5ec311ff03392a",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "e105512a71e5bcd3fe3365b8e1e1dec9df16a01fd88aea32efb307eb83afbbb8",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "7915bee4f674b44327b782031ba2b9993fbaa37d6fe8b4d6f67fdc0c4dd1ca50",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "4408580a7f8563d1e706b5489655147d2c187cb80ac8575a7d31957fe3962c97",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "0e37b5cd139eab667a4930f1e13f4e2700cb2f893041db71e636f272791e51a8",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "6ce03d71168693e73374835537bb2db1d366b7855722665221cb11b8ee3d2608",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "05e373ff8283af325f0cce21b835bfbd286ef05d43225a8cc1e4461e2f80a0ac",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "06b5a1ab2ce1195954e48ca7241e751b32f180e7216c8cec564c0ec51d4c503f",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        }
+      ],
+      "triggering_evidence": "Verified actual task",
+      "knowledge_hash": "025e9875803359e335f3fd2b60cc4fc9f17a9398884f929eb2af579ee2ad3080",
+      "observed_performance": {
+        "model_calls": 1,
+        "input_tokens": 1946,
+        "output_tokens": 665,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 11,
+        "local_execution_ms": 22.948100000576233,
+        "model_latency_ms": 21502.52779999937,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "enabled": false
+            },
+            "attempt": 0,
+            "provider": "Nvidia",
+            "request_id": "gen-1793367611-lEKDLuFrMShG9xk24qFC",
+            "usage": {
+              "prompt_tokens": 1946,
+              "completion_tokens": 665,
+              "total_tokens": 2611,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 9
+      },
+      "policy_versions": {
+        "1": 1,
+        "2": 2
+      },
+      "admission": {
+        "passed": true,
+        "quality": "all development checks must pass",
+        "efficiency": "zero inference calls on covered reuse vs measured synthesis >0",
+        "reuse_model_calls": 0,
+        "acquisition_model_calls": 1
+      },
+      "promoted_at": 1793367637.2517016
+    },
+    {
+      "id": "7670d24f-47fc-42a4-bdde-5ce7003c408f",
+      "version": 2,
+      "task_family": "order-reconciliation",
+      "title": "Order Reconciliation Program",
+      "state": "retired",
+      "source_run": "3d995564-7596-4625-a636-04c0084a7791",
+      "parent_version": "803f6187-d55b-49fe-b95e-b97efe6b339b",
+      "plans": {
+        "1": {
+          "title": "Order Reconciliation with Inventory and Shipment Status",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "as": "shipments_counted",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ]
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_counted",
+              "as": "shipments_agg",
+              "keys": [
+                "order_id"
+              ],
+              "field": "quantity",
+              "output": "shipped"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "as": "orders_with_shipments",
+              "right": "shipments_agg",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_shipments",
+              "as": "orders_shipped_filled",
+              "values": {
+                "shipped": "coalesce(shipped, 0)"
+              }
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped_filled",
+              "as": "orders_with_inventory",
+              "right": "inventory_dedup",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_inventory",
+              "as": "orders_computed",
+              "values": {
+                "ordered": "quantity",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              }
+            },
+            {
+              "op": "project",
+              "input": "orders_computed",
+              "as": "final_output",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ]
+            }
+          ],
+          "summary": "Reconciles orders against shipments and inventory to determine fulfillment status, delays, and causes. Deduplicates inputs, filters counted shipment statuses, aggregates shipped quantities per order, joins with inventory on SKU and warehouse, computes remaining quantities, delay flags, and root causes, then projects final columns."
+        },
+        "2": {
+          "title": "Order Reconciliation Program",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "as": "shipments_filtered",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ]
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_filtered",
+              "as": "shipments_agg",
+              "keys": [
+                "order_id"
+              ],
+              "field": "units",
+              "output": "shipped"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "as": "orders_with_shipments",
+              "right": "shipments_agg",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_shipments",
+              "as": "orders_shipped_filled",
+              "values": {
+                "shipped": "coalesce(shipped, 0)"
+              }
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped_filled",
+              "as": "orders_with_inventory",
+              "right": "inventory_dedup",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_inventory",
+              "as": "orders_computed",
+              "values": {
+                "ordered": "requested_units",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              }
+            },
+            {
+              "op": "project",
+              "input": "orders_computed",
+              "as": "final_report",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ]
+            }
+          ],
+          "summary": "Reconciles orders with shipments and inventory to compute shipped quantities, remaining units, delay status, and fulfillment cause per order."
+        }
+      },
+      "contracts": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        },
+        "2": {
+          "schema_version": 2,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "requested_units",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "shipment_id",
+              "shipped_date",
+              "status",
+              "units"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        }
+      },
+      "artifact_hash": "133624dc37eff7b0b3e9d4476dba3009eb6252ea95ee59d29fdc06ffbe2d34c8",
+      "parameters": [
+        "as_of",
+        "grace_days"
+      ],
+      "input_contract": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        },
+        "2": {
+          "schema_version": 2,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "requested_units",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "shipment_id",
+              "shipped_date",
+              "status",
+              "units"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        }
+      },
+      "output_contract": [
+        "cause",
+        "delayed",
+        "order_id",
+        "ordered",
+        "remaining",
+        "shipped",
+        "warehouse"
+      ],
+      "assumptions": [
+        "One SKU per order",
+        "Conflicting duplicates unsupported",
+        "Exact policy versions"
+      ],
+      "dependencies": [
+        "closed SQLite SELECT interpreter v1"
+      ],
+      "independent_checks": [
+        {
+          "fixture_hash": "59087f461f50b6a053ec62f3b6c7cf2495a5a347aabf8fb42e5ec311ff03392a",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "e105512a71e5bcd3fe3365b8e1e1dec9df16a01fd88aea32efb307eb83afbbb8",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "7915bee4f674b44327b782031ba2b9993fbaa37d6fe8b4d6f67fdc0c4dd1ca50",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "4408580a7f8563d1e706b5489655147d2c187cb80ac8575a7d31957fe3962c97",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "7d283fb9730006da3c146f363778e758d34b48611b50bdb67da8f5611f20ca0e",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "8d7b940359d42b8571385e90216c4b6ff34a8483a37b5249f0467e9076791722",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "09ec46c1b98132498efdc5e8202fbfbec9e5e358bca998dd2bd317949f9e2d3e",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "96e09e34acdcded5d3a0fca8439ad7855219942ac88a8f78b5c4446d7bf6f505",
+          "schema": "2",
+          "passed": true,
+          "partition": "development"
+        }
+      ],
+      "triggering_evidence": "Verified actual task",
+      "knowledge_hash": "970b363d028aba592026baf0bc3c60ac4bc7ca633f45e15f80a7db5f4cc6ca71",
+      "observed_performance": {
+        "model_calls": 1,
+        "input_tokens": 1917,
+        "output_tokens": 637,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 12,
+        "local_execution_ms": 73.70840000112366,
+        "model_latency_ms": 5938.08750000062,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "enabled": false
+            },
+            "attempt": 0,
+            "provider": "Nvidia",
+            "request_id": "gen-1793367604-heByZnNpGAnYNSlwLpez",
+            "usage": {
+              "prompt_tokens": 1917,
+              "completion_tokens": 637,
+              "total_tokens": 2554,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 9
+      },
+      "policy_versions": {
+        "1": 1,
+        "2": 1
+      },
+      "admission": {
+        "passed": true,
+        "quality": "all development checks must pass",
+        "efficiency": "zero inference calls on covered reuse vs measured synthesis >0",
+        "reuse_model_calls": 0,
+        "acquisition_model_calls": 1
+      },
+      "promoted_at": 1793367615.5099347
+    },
+    {
+      "id": "803f6187-d55b-49fe-b95e-b97efe6b339b",
+      "version": 1,
+      "task_family": "order-reconciliation",
+      "title": "Order Reconciliation with Inventory and Shipment Status",
+      "state": "retired",
+      "source_run": "9b39e947-e616-4b8e-b7e0-26ad7404574f",
+      "parent_version": null,
+      "plans": {
+        "1": {
+          "title": "Order Reconciliation with Inventory and Shipment Status",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "as": "shipments_counted",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ]
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_counted",
+              "as": "shipments_agg",
+              "keys": [
+                "order_id"
+              ],
+              "field": "quantity",
+              "output": "shipped"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "as": "orders_with_shipments",
+              "right": "shipments_agg",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_shipments",
+              "as": "orders_shipped_filled",
+              "values": {
+                "shipped": "coalesce(shipped, 0)"
+              }
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped_filled",
+              "as": "orders_with_inventory",
+              "right": "inventory_dedup",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_with_inventory",
+              "as": "orders_computed",
+              "values": {
+                "ordered": "quantity",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if (remaining > 0 and days_between(as_of, promised_date) > grace_days) else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              }
+            },
+            {
+              "op": "project",
+              "input": "orders_computed",
+              "as": "final_output",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ]
+            }
+          ],
+          "summary": "Reconciles orders against shipments and inventory to determine fulfillment status, delays, and causes. Deduplicates inputs, filters counted shipment statuses, aggregates shipped quantities per order, joins with inventory on SKU and warehouse, computes remaining quantities, delay flags, and root causes, then projects final columns."
+        }
+      },
+      "contracts": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        }
+      },
+      "artifact_hash": "77ebbd7af651aaa99186198fdee0a1a1029aa7074834b05e67b077fd78f18f70",
+      "parameters": [
+        "as_of",
+        "grace_days"
+      ],
+      "input_contract": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        }
+      },
+      "output_contract": [
+        "cause",
+        "delayed",
+        "order_id",
+        "ordered",
+        "remaining",
+        "shipped",
+        "warehouse"
+      ],
+      "assumptions": [
+        "One SKU per order",
+        "Conflicting duplicates unsupported",
+        "Exact policy versions"
+      ],
+      "dependencies": [
+        "closed SQLite SELECT interpreter v1"
+      ],
+      "independent_checks": [
+        {
+          "fixture_hash": "59087f461f50b6a053ec62f3b6c7cf2495a5a347aabf8fb42e5ec311ff03392a",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "e105512a71e5bcd3fe3365b8e1e1dec9df16a01fd88aea32efb307eb83afbbb8",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "7915bee4f674b44327b782031ba2b9993fbaa37d6fe8b4d6f67fdc0c4dd1ca50",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "4408580a7f8563d1e706b5489655147d2c187cb80ac8575a7d31957fe3962c97",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        }
+      ],
+      "triggering_evidence": "Verified actual task",
+      "knowledge_hash": "970b363d028aba592026baf0bc3c60ac4bc7ca633f45e15f80a7db5f4cc6ca71",
+      "observed_performance": {
+        "model_calls": 1,
+        "input_tokens": 1681,
+        "output_tokens": 678,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 7,
+        "local_execution_ms": 17.03290000114066,
+        "model_latency_ms": 16676.94499999925,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "enabled": false
+            },
+            "attempt": 0,
+            "provider": "Nvidia",
+            "request_id": "gen-1793367587-aN80EsUtbqq8ULpLb011",
+            "usage": {
+              "prompt_tokens": 1681,
+              "completion_tokens": 678,
+              "total_tokens": 2359,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 5
+      },
+      "policy_versions": {
+        "1": 1
+      },
+      "admission": {
+        "passed": true,
+        "quality": "all development checks must pass",
+        "efficiency": "zero inference calls on covered reuse vs measured synthesis >0",
+        "reuse_model_calls": 0,
+        "acquisition_model_calls": 1
+      },
+      "promoted_at": 1793367609.2094893
+    }
+  ],
+  "events": {
+    "9b39e947-e616-4b8e-b7e0-26ad7404574f": [
+      {
+        "kind": "inspect",
+        "message": "Inspecting input schemas and business-rule versions",
+        "timestamp": 1793367591.811781,
+        "sequence": 1
+      },
+      {
+        "kind": "retrieve",
+        "message": "Retrieving scoped policy evidence and eligible workflow versions",
+        "timestamp": 1793367591.81829,
+        "sequence": 2
+      },
+      {
+        "kind": "synthesis",
+        "message": "Synthesizing an executable read-only workflow from the actual task",
+        "timestamp": 1793367591.8408446,
+        "sequence": 3
+      },
+      {
+        "kind": "execute",
+        "message": "Executing the synthesized workflow inside the closed query interpreter",
+        "timestamp": 1793367609.144909,
+        "sequence": 4
+      },
+      {
+        "kind": "evaluation",
+        "message": "Testing the candidate on independent development cases and old-case regressions",
+        "timestamp": 1793367609.1709,
+        "sequence": 5
+      },
+      {
+        "kind": "promotion",
+        "message": "Promoted skill v1",
+        "skill_id": "803f6187-d55b-49fe-b95e-b97efe6b339b",
+        "parent_version": null,
+        "timestamp": 1793367609.2094893,
+        "sequence": 6
+      },
+      {
+        "kind": "admission",
+        "message": "Skill v1 promoted after 4 development checks",
+        "timestamp": 1793367609.2180073,
+        "sequence": 7
+      },
+      {
+        "kind": "verified",
+        "message": "Independent correctness checks passed",
+        "timestamp": 1793367609.227027,
+        "sequence": 8
+      }
+    ],
+    "9a35b8a3-ce1a-46f2-b119-a245899d00e8": [
+      {
+        "kind": "inspect",
+        "message": "Inspecting input schemas and business-rule versions",
+        "timestamp": 1793367609.291549,
+        "sequence": 9
+      },
+      {
+        "kind": "retrieve",
+        "message": "Retrieving scoped policy evidence and eligible workflow versions",
+        "timestamp": 1793367609.2970574,
+        "sequence": 10
+      },
+      {
+        "kind": "reuse",
+        "message": "Reusing a saved skill",
+        "timestamp": 1793367609.3221316,
+        "sequence": 11
+      },
+      {
+        "kind": "verified",
+        "message": "Independent correctness checks passed",
+        "timestamp": 1793367609.3317187,
+        "sequence": 12
+      }
+    ],
+    "3d995564-7596-4625-a636-04c0084a7791": [
+      {
+        "kind": "inspect",
+        "message": "Inspecting input schemas and business-rule versions",
+        "timestamp": 1793367609.3907957,
+        "sequence": 13
+      },
+      {
+        "kind": "retrieve",
+        "message": "Retrieving scoped policy evidence and eligible workflow versions",
+        "timestamp": 1793367609.39981,
+        "sequence": 14
+      },
+      {
+        "kind": "invalidation",
+        "message": "Old workflow failed the independent schema/applicability check; adaptation needed",
+        "timestamp": 1793367609.4205644,
+        "skill_id": "803f6187-d55b-49fe-b95e-b97efe6b339b",
+        "diagnostic_passed": false,
+        "sequence": 15
+      },
+      {
+        "kind": "synthesis",
+        "message": "Synthesizing an executable read-only workflow from the actual task",
+        "timestamp": 1793367609.4316525,
+        "sequence": 16
+      },
+      {
+        "kind": "execute",
+        "message": "Executing the synthesized workflow inside the closed query interpreter",
+        "timestamp": 1793367615.3895838,
+        "sequence": 17
+      },
+      {
+        "kind": "evaluation",
+        "message": "Testing the candidate on independent development cases and old-case regressions",
+        "timestamp": 1793367615.4090357,
+        "sequence": 18
+      },
+      {
+        "kind": "promotion",
+        "message": "Promoted skill v2",
+        "skill_id": "7670d24f-47fc-42a4-bdde-5ce7003c408f",
+        "parent_version": "803f6187-d55b-49fe-b95e-b97efe6b339b",
+        "timestamp": 1793367615.5099347,
+        "sequence": 19
+      },
+      {
+        "kind": "admission",
+        "message": "Skill v2 promoted after 8 development checks",
+        "timestamp": 1793367615.5305262,
+        "sequence": 20
+      },
+      {
+        "kind": "verified",
+        "message": "Independent correctness checks passed",
+        "timestamp": 1793367615.5400383,
+        "sequence": 21
+      }
+    ],
+    "a4dcf04e-56ac-4923-b3ff-f1f24187bd72": [
+      {
+        "kind": "inspect",
+        "message": "Inspecting input schemas and business-rule versions",
+        "timestamp": 1793367615.6149447,
+        "sequence": 22
+      },
+      {
+        "kind": "retrieve",
+        "message": "Retrieving scoped policy evidence and eligible workflow versions",
+        "timestamp": 1793367615.6295238,
+        "sequence": 23
+      },
+      {
+        "kind": "invalidation",
+        "message": "Saved workflow assumptions changed; reuse blocked",
+        "timestamp": 1793367615.6480758,
+        "skill_id": "7670d24f-47fc-42a4-bdde-5ce7003c408f",
+        "sequence": 24
+      },
+      {
+        "kind": "synthesis",
+        "message": "Synthesizing an executable read-only workflow from the actual task",
+        "timestamp": 1793367615.6515849,
+        "sequence": 25
+      },
+      {
+        "kind": "execute",
+        "message": "Executing the synthesized workflow inside the closed query interpreter",
+        "timestamp": 1793367637.17938,
+        "sequence": 26
+      },
+      {
+        "kind": "evaluation",
+        "message": "Testing the candidate on independent development cases and old-case regressions",
+        "timestamp": 1793367637.1987655,
+        "sequence": 27
+      },
+      {
+        "kind": "promotion",
+        "message": "Promoted skill v3",
+        "skill_id": "2ef5a6e6-8854-4ce0-9ad4-60245741756a",
+        "parent_version": "7670d24f-47fc-42a4-bdde-5ce7003c408f",
+        "timestamp": 1793367637.2517016,
+        "sequence": 28
+      },
+      {
+        "kind": "admission",
+        "message": "Skill v3 promoted after 8 development checks",
+        "timestamp": 1793367637.268346,
+        "sequence": 29
+      },
+      {
+        "kind": "verified",
+        "message": "Independent correctness checks passed",
+        "timestamp": 1793367637.2770793,
+        "sequence": 30
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "appPid": 48532,
+  "before": [
+    {
+      "ProcessId": 40324,
+      "Name": "python.exe"
+    },
+    {
+      "ProcessId": 46996,
+      "Name": "cua-driver.exe"
+    }
+  ],
+  "desktopCanceledPid": 47920,
+  "desktopCanceledAlive": false
+}

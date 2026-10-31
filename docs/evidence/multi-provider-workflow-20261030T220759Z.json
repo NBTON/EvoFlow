@@ -1,0 +1,1030 @@
+{
+  "timestamp_utc": "2026-10-30T22:07:59.786687+00:00",
+  "stage": "workflow",
+  "mimo_base_url": "https://api.xiaomimimo.com/v1",
+  "scope": "synthetic development verification; no sealed final fixtures or cloud sync",
+  "checks": [
+    {
+      "candidate": "acquisition",
+      "passed": true,
+      "run": {
+        "id": "0e2fc0cf-f9c3-4c98-95af-46b6dcf048fe",
+        "status": "complete",
+        "task": "Reconcile orders, inventory and shipments.",
+        "mode": "evolving",
+        "live": true,
+        "started_at": 1793398079.8672705,
+        "fixture_hash": "6ad65a39423b2cc2914d01ca88810abf425ee65b15f4291220eb22d49e343476",
+        "contract": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        },
+        "metrics": {
+          "model_calls": 2,
+          "input_tokens": 2706,
+          "output_tokens": 4505,
+          "reasoning_tokens": 3935,
+          "retries": 0,
+          "tool_calls": 7,
+          "local_execution_ms": 13.801599998259917,
+          "model_latency_ms": 25307.77909999597,
+          "billed_cost_usd": 1.348e-05,
+          "usage_complete": true,
+          "cost_reported": false,
+          "calls": [
+            {
+              "category": "decision",
+              "model": "baseten/joey-1",
+              "requested_model": "baseten/joey-1",
+              "provider_adapter": "openrouter",
+              "interface": "decisions",
+              "status": "received",
+              "requested_effort": null,
+              "submitted_effort": null,
+              "native_reasoning": null,
+              "effective_effort": "unknown",
+              "effective_model": "baseten/joey-1-20261029",
+              "provider": "BaseTen",
+              "request_id": "gen-dec-1793398079-swDyGJyIqwX1rIcuZNH5",
+              "usage": {
+                "input_tokens": 1348,
+                "output_tokens": 3,
+                "cost": 1.348e-05
+              },
+              "latency_ms": 718.2356999983313
+            },
+            {
+              "category": "execution",
+              "model": "deepseek-flash",
+              "requested_model": "deepseek-flash",
+              "provider_adapter": "deepseek",
+              "interface": "chat/completions",
+              "status": "received",
+              "requested_effort": "high",
+              "submitted_effort": "high",
+              "native_reasoning": {
+                "thinking": {
+                  "type": "enabled"
+                },
+                "reasoning_effort": "high"
+              },
+              "effective_effort": "unknown",
+              "effective_model": "deepseek-flash",
+              "provider": "deepseek",
+              "request_id": "da6a993b-875a-42a1-8654-52816105b026",
+              "usage": {
+                "prompt_tokens": 1358,
+                "completion_tokens": 4502,
+                "completion_tokens_details": {
+                  "reasoning_tokens": 3935
+                }
+              },
+              "routing": {
+                "policy": "adaptive",
+                "policy_version": "decisions-model-effort-v2",
+                "context": {
+                  "task_novelty": true,
+                  "schema_novelty": false,
+                  "repair": false,
+                  "complexity": "standard",
+                  "delegated_role": null,
+                  "reuse": false
+                },
+                "profile": "deepseek_flash",
+                "reason": "Typed Decisions selection; probabilities are advisory, independent checks remain mandatory",
+                "decision_model": "baseten/joey-1",
+                "decision_answers": {
+                  "model": {
+                    "type": "choice",
+                    "choice": "deepseek_flash",
+                    "confidence": 0.5607669892864906,
+                    "probabilities": {
+                      "deepseek_flash": 0.670575241964868,
+                      "mimo_flash": 0.061797290721557374,
+                      "mimo_pro": 0.0591061496273915,
+                      "gpt_luna": 0.20852131768618296
+                    }
+                  },
+                  "effort": {
+                    "type": "choice",
+                    "choice": "high",
+                    "confidence": 0.13541229116027867,
+                    "probabilities": {
+                      "none": 0.08221408787402743,
+                      "low": 0.10291029919632895,
+                      "medium": 0.25867205586454656,
+                      "high": 0.27951024263356555,
+                      "xhigh": 0.13171675983702003,
+                      "max": 0.14497655459451145
+                    }
+                  },
+                  "complexity": {
+                    "type": "score",
+                    "score": 1.0656235472261817,
+                    "confidence": 0.4290624378158362,
+                    "probabilities": {
+                      "0": 0.15750074711496378,
+                      "1": 0.6193749585438908,
+                      "2": 0.22312429434114542
+                    }
+                  }
+                },
+                "requested_model": "deepseek-flash",
+                "requested_effort": "high",
+                "submitted_effort": "high",
+                "native_reasoning": {
+                  "thinking": {
+                    "type": "enabled"
+                  },
+                  "reasoning_effort": "high"
+                },
+                "provider_adapter": "deepseek",
+                "effective_model": "deepseek-flash",
+                "effective_effort": "unknown",
+                "effort_status": "submitted_unconfirmed",
+                "provider": "deepseek",
+                "request_id": "da6a993b-875a-42a1-8654-52816105b026",
+                "usage": {
+                  "prompt_tokens": 1358,
+                  "completion_tokens": 4502,
+                  "total_tokens": 5860,
+                  "prompt_tokens_details": {
+                    "cached_tokens": 0
+                  },
+                  "completion_tokens_details": {
+                    "reasoning_tokens": 3935
+                  },
+                  "prompt_cache_hit_tokens": 0,
+                  "prompt_cache_miss_tokens": 1358
+                }
+              },
+              "latency_ms": 24589.543399997638
+            }
+          ],
+          "retrieval_queries": 1,
+          "reflection_model_calls": 0,
+          "verification_cases": 5,
+          "routing_decisions": [
+            {
+              "policy": "adaptive",
+              "policy_version": "decisions-model-effort-v2",
+              "context": {
+                "task_novelty": true,
+                "schema_novelty": false,
+                "repair": false,
+                "complexity": "standard",
+                "delegated_role": null,
+                "reuse": false
+              },
+              "profile": "deepseek_flash",
+              "reason": "Typed Decisions selection; probabilities are advisory, independent checks remain mandatory",
+              "decision_model": "baseten/joey-1",
+              "decision_answers": {
+                "model": {
+                  "type": "choice",
+                  "choice": "deepseek_flash",
+                  "confidence": 0.5607669892864906,
+                  "probabilities": {
+                    "deepseek_flash": 0.670575241964868,
+                    "mimo_flash": 0.061797290721557374,
+                    "mimo_pro": 0.0591061496273915,
+                    "gpt_luna": 0.20852131768618296
+                  }
+                },
+                "effort": {
+                  "type": "choice",
+                  "choice": "high",
+                  "confidence": 0.13541229116027867,
+                  "probabilities": {
+                    "none": 0.08221408787402743,
+                    "low": 0.10291029919632895,
+                    "medium": 0.25867205586454656,
+                    "high": 0.27951024263356555,
+                    "xhigh": 0.13171675983702003,
+                    "max": 0.14497655459451145
+                  }
+                },
+                "complexity": {
+                  "type": "score",
+                  "score": 1.0656235472261817,
+                  "confidence": 0.4290624378158362,
+                  "probabilities": {
+                    "0": 0.15750074711496378,
+                    "1": 0.6193749585438908,
+                    "2": 0.22312429434114542
+                  }
+                }
+              },
+              "requested_model": "deepseek-flash",
+              "requested_effort": "high",
+              "submitted_effort": "high",
+              "native_reasoning": {
+                "thinking": {
+                  "type": "enabled"
+                },
+                "reasoning_effort": "high"
+              },
+              "provider_adapter": "deepseek",
+              "effective_model": "deepseek-flash",
+              "effective_effort": "unknown",
+              "effort_status": "submitted_unconfirmed",
+              "provider": "deepseek",
+              "request_id": "da6a993b-875a-42a1-8654-52816105b026",
+              "usage": {
+                "prompt_tokens": 1358,
+                "completion_tokens": 4502,
+                "total_tokens": 5860,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 3935
+                },
+                "prompt_cache_hit_tokens": 0,
+                "prompt_cache_miss_tokens": 1358
+              }
+            }
+          ],
+          "routing_policy": "adaptive",
+          "routing_context": {
+            "task_novelty": true,
+            "schema_novelty": false,
+            "repair": false,
+            "complexity": "standard",
+            "delegated_role": null,
+            "reuse": false
+          },
+          "decision_attempts": [
+            {
+              "model": "baseten/joey-1",
+              "fallback": false,
+              "status": "selected",
+              "answers": {
+                "model": {
+                  "type": "choice",
+                  "choice": "deepseek_flash",
+                  "confidence": 0.5607669892864906,
+                  "probabilities": {
+                    "deepseek_flash": 0.670575241964868,
+                    "mimo_flash": 0.061797290721557374,
+                    "mimo_pro": 0.0591061496273915,
+                    "gpt_luna": 0.20852131768618296
+                  }
+                },
+                "effort": {
+                  "type": "choice",
+                  "choice": "high",
+                  "confidence": 0.13541229116027867,
+                  "probabilities": {
+                    "none": 0.08221408787402743,
+                    "low": 0.10291029919632895,
+                    "medium": 0.25867205586454656,
+                    "high": 0.27951024263356555,
+                    "xhigh": 0.13171675983702003,
+                    "max": 0.14497655459451145
+                  }
+                },
+                "complexity": {
+                  "type": "score",
+                  "score": 1.0656235472261817,
+                  "confidence": 0.4290624378158362,
+                  "probabilities": {
+                    "0": 0.15750074711496378,
+                    "1": 0.6193749585438908,
+                    "2": 0.22312429434114542
+                  }
+                }
+              },
+              "request_id": "gen-dec-1793398079-swDyGJyIqwX1rIcuZNH5"
+            }
+          ],
+          "end_to_end_ms": 25737.23840000457
+        },
+        "result": [
+          {
+            "order_id": "ORD-701-000",
+            "warehouse": "Riyadh",
+            "ordered": 11,
+            "shipped": 11,
+            "remaining": 0,
+            "delayed": 0,
+            "cause": "complete"
+          },
+          {
+            "order_id": "ORD-701-001",
+            "warehouse": "Jeddah",
+            "ordered": 18,
+            "shipped": 3,
+            "remaining": 15,
+            "delayed": 1,
+            "cause": "stock_shortage"
+          },
+          {
+            "order_id": "ORD-701-002",
+            "warehouse": "Dammam",
+            "ordered": 10,
+            "shipped": 8,
+            "remaining": 2,
+            "delayed": 0,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-701-003",
+            "warehouse": "Riyadh",
+            "ordered": 18,
+            "shipped": 17,
+            "remaining": 1,
+            "delayed": 1,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-701-004",
+            "warehouse": "Jeddah",
+            "ordered": 4,
+            "shipped": 4,
+            "remaining": 0,
+            "delayed": 0,
+            "cause": "complete"
+          },
+          {
+            "order_id": "ORD-701-005",
+            "warehouse": "Dammam",
+            "ordered": 8,
+            "shipped": 1,
+            "remaining": 7,
+            "delayed": 0,
+            "cause": "inventory_unknown"
+          },
+          {
+            "order_id": "ORD-701-006",
+            "warehouse": "Riyadh",
+            "ordered": 7,
+            "shipped": 4,
+            "remaining": 3,
+            "delayed": 1,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-701-007",
+            "warehouse": "Jeddah",
+            "ordered": 4,
+            "shipped": 2,
+            "remaining": 2,
+            "delayed": 1,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-701-008",
+            "warehouse": "Dammam",
+            "ordered": 14,
+            "shipped": 14,
+            "remaining": 0,
+            "delayed": 0,
+            "cause": "complete"
+          },
+          {
+            "order_id": "ORD-701-009",
+            "warehouse": "Riyadh",
+            "ordered": 11,
+            "shipped": 4,
+            "remaining": 7,
+            "delayed": 1,
+            "cause": "stock_shortage"
+          },
+          {
+            "order_id": "ORD-701-010",
+            "warehouse": "Jeddah",
+            "ordered": 11,
+            "shipped": 2,
+            "remaining": 9,
+            "delayed": 1,
+            "cause": "inventory_unknown"
+          },
+          {
+            "order_id": "ORD-701-011",
+            "warehouse": "Dammam",
+            "ordered": 5,
+            "shipped": 4,
+            "remaining": 1,
+            "delayed": 0,
+            "cause": "fulfillment_pending"
+          }
+        ],
+        "verification": {
+          "passed": true,
+          "orders_checked": 12,
+          "checks": [
+            "identity deduplication",
+            "shipment totals",
+            "remaining quantity",
+            "policy delay threshold",
+            "supported inventory cause"
+          ],
+          "mismatches": [],
+          "unexpected_rows": 0
+        },
+        "routing": {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "decisions": [
+            {
+              "policy": "adaptive",
+              "policy_version": "decisions-model-effort-v2",
+              "context": {
+                "task_novelty": true,
+                "schema_novelty": false,
+                "repair": false,
+                "complexity": "standard",
+                "delegated_role": null,
+                "reuse": false
+              },
+              "profile": "deepseek_flash",
+              "reason": "Typed Decisions selection; probabilities are advisory, independent checks remain mandatory",
+              "decision_model": "baseten/joey-1",
+              "decision_answers": {
+                "model": {
+                  "type": "choice",
+                  "choice": "deepseek_flash",
+                  "confidence": 0.5607669892864906,
+                  "probabilities": {
+                    "deepseek_flash": 0.670575241964868,
+                    "mimo_flash": 0.061797290721557374,
+                    "mimo_pro": 0.0591061496273915,
+                    "gpt_luna": 0.20852131768618296
+                  }
+                },
+                "effort": {
+                  "type": "choice",
+                  "choice": "high",
+                  "confidence": 0.13541229116027867,
+                  "probabilities": {
+                    "none": 0.08221408787402743,
+                    "low": 0.10291029919632895,
+                    "medium": 0.25867205586454656,
+                    "high": 0.27951024263356555,
+                    "xhigh": 0.13171675983702003,
+                    "max": 0.14497655459451145
+                  }
+                },
+                "complexity": {
+                  "type": "score",
+                  "score": 1.0656235472261817,
+                  "confidence": 0.4290624378158362,
+                  "probabilities": {
+                    "0": 0.15750074711496378,
+                    "1": 0.6193749585438908,
+                    "2": 0.22312429434114542
+                  }
+                }
+              },
+              "requested_model": "deepseek-flash",
+              "requested_effort": "high",
+              "submitted_effort": "high",
+              "native_reasoning": {
+                "thinking": {
+                  "type": "enabled"
+                },
+                "reasoning_effort": "high"
+              },
+              "provider_adapter": "deepseek",
+              "effective_model": "deepseek-flash",
+              "effective_effort": "unknown",
+              "effort_status": "submitted_unconfirmed",
+              "provider": "deepseek",
+              "request_id": "da6a993b-875a-42a1-8654-52816105b026",
+              "usage": {
+                "prompt_tokens": 1358,
+                "completion_tokens": 4502,
+                "total_tokens": 5860,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 3935
+                },
+                "prompt_cache_hit_tokens": 0,
+                "prompt_cache_miss_tokens": 1358
+              }
+            }
+          ]
+        },
+        "sync_status": "local",
+        "skill_id": "9b0b5e1a-a3df-481c-a317-e00d6eb80688",
+        "skill_version": 1,
+        "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 6 | Incomplete: 9\n\nOrder-level results.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-701-000 | Riyadh | 11 | 11 | 0 | No | complete |\n| ORD-701-001 | Jeddah | 18 | 3 | 15 | Yes | stock_shortage |\n| ORD-701-002 | Dammam | 10 | 8 | 2 | No | fulfillment_pending |\n| ORD-701-003 | Riyadh | 18 | 17 | 1 | Yes | fulfillment_pending |\n| ORD-701-004 | Jeddah | 4 | 4 | 0 | No | complete |\n| ORD-701-005 | Dammam | 8 | 1 | 7 | No | inventory_unknown |\n| ORD-701-006 | Riyadh | 7 | 4 | 3 | Yes | fulfillment_pending |\n| ORD-701-007 | Jeddah | 4 | 2 | 2 | Yes | fulfillment_pending |\n| ORD-701-008 | Dammam | 14 | 14 | 0 | No | complete |\n| ORD-701-009 | Riyadh | 11 | 4 | 7 | Yes | stock_shortage |\n| ORD-701-010 | Jeddah | 11 | 2 | 9 | Yes | inventory_unknown |\n| ORD-701-011 | Dammam | 5 | 4 | 1 | No | fulfillment_pending |",
+        "report_path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\artifacts\\local\\multi-provider-ed8ab7d9e45a402db2c09d494ec4a501\\artifacts\\0e2fc0cf-f9c3-4c98-95af-46b6dcf048fe\\report.md",
+        "grouped_by_warehouse": false,
+        "evidence_ids": [],
+        "reused": false,
+        "plan": {
+          "title": "Reconcile Orders with Counted Shipments and Inventory Availability",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ],
+              "as": "shipments_counted"
+            },
+            {
+              "op": "project",
+              "input": "shipments_counted",
+              "columns": [
+                "order_id",
+                "shipment_id",
+                "quantity"
+              ],
+              "as": "shipments_proj"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments_proj",
+              "as": "shipments_unique"
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_unique",
+              "keys": [
+                "order_id"
+              ],
+              "field": "quantity",
+              "output": "shipped",
+              "as": "shipped_by_order"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "group_sum",
+              "input": "inventory_dedup",
+              "keys": [
+                "sku",
+                "warehouse"
+              ],
+              "field": "available_qty",
+              "output": "available_qty_total",
+              "as": "inventory_agg"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "right": "shipped_by_order",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped"
+              },
+              "as": "orders_shipped"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped",
+              "right": "inventory_agg",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty_total"
+              },
+              "as": "orders_inventory"
+            },
+            {
+              "op": "derive",
+              "input": "orders_inventory",
+              "values": {
+                "ordered": "quantity",
+                "shipped": "coalesce(shipped, 0)",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if remaining > 0 and days_between(as_of, promised_date) > grace_days else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              },
+              "as": "orders_enriched"
+            },
+            {
+              "op": "project",
+              "input": "orders_enriched",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ],
+              "as": "reconciled_orders"
+            }
+          ],
+          "summary": "Deduplicates orders, shipments, and inventory; filters shipments to counted statuses; aggregates distinct counted shipment quantities per order; aggregates inventory by sku and warehouse; joins both to orders; computes shipped, remaining, delayed, and cause; and projects the final seven-column result with one row per order_id."
+        },
+        "finished_at": 1793398105.6011589
+      }
+    },
+    {
+      "candidate": "fresh-input-reuse",
+      "passed": true,
+      "run": {
+        "id": "2dfe76dc-ae22-4f04-b7c8-bf0c4bcb655a",
+        "status": "complete",
+        "task": "Reconcile orders, inventory and shipments.",
+        "mode": "evolving",
+        "live": true,
+        "started_at": 1793398105.6111608,
+        "fixture_hash": "ff8436f2505744a926fa486bafc579832e637aa036c696761799d5c7c3ab9703",
+        "contract": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        },
+        "metrics": {
+          "model_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "retries": 0,
+          "tool_calls": 3,
+          "local_execution_ms": 22.662700001092162,
+          "model_latency_ms": 0.0,
+          "billed_cost_usd": 0.0,
+          "usage_complete": true,
+          "cost_reported": true,
+          "calls": [],
+          "retrieval_queries": 1,
+          "reflection_model_calls": 0,
+          "verification_cases": 1,
+          "routing_decisions": [
+            {
+              "policy": "adaptive",
+              "policy_version": "decisions-model-effort-v2",
+              "context": {
+                "task_novelty": false,
+                "schema_novelty": false,
+                "repair": false,
+                "complexity": "standard",
+                "delegated_role": null,
+                "reuse": true
+              },
+              "requested_model": null,
+              "requested_effort": null,
+              "submitted_effort": null,
+              "effective_model": null,
+              "effective_effort": "not_applicable",
+              "effort_status": "no_inference",
+              "profile": "reuse",
+              "reason": "Applicable verified skill; no inference requested"
+            }
+          ],
+          "routing_policy": "adaptive",
+          "routing_context": {
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "complexity": "standard",
+            "delegated_role": null,
+            "reuse": true
+          },
+          "end_to_end_ms": 168.8810999985435
+        },
+        "result": [
+          {
+            "order_id": "ORD-702-000",
+            "warehouse": "Riyadh",
+            "ordered": 6,
+            "shipped": 6,
+            "remaining": 0,
+            "delayed": 0,
+            "cause": "complete"
+          },
+          {
+            "order_id": "ORD-702-001",
+            "warehouse": "Jeddah",
+            "ordered": 7,
+            "shipped": 0,
+            "remaining": 7,
+            "delayed": 1,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-702-002",
+            "warehouse": "Dammam",
+            "ordered": 9,
+            "shipped": 4,
+            "remaining": 5,
+            "delayed": 0,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-702-003",
+            "warehouse": "Riyadh",
+            "ordered": 16,
+            "shipped": 2,
+            "remaining": 14,
+            "delayed": 1,
+            "cause": "stock_shortage"
+          },
+          {
+            "order_id": "ORD-702-004",
+            "warehouse": "Jeddah",
+            "ordered": 10,
+            "shipped": 10,
+            "remaining": 0,
+            "delayed": 0,
+            "cause": "complete"
+          },
+          {
+            "order_id": "ORD-702-005",
+            "warehouse": "Dammam",
+            "ordered": 8,
+            "shipped": 7,
+            "remaining": 1,
+            "delayed": 0,
+            "cause": "inventory_unknown"
+          },
+          {
+            "order_id": "ORD-702-006",
+            "warehouse": "Riyadh",
+            "ordered": 7,
+            "shipped": 5,
+            "remaining": 2,
+            "delayed": 1,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-702-007",
+            "warehouse": "Jeddah",
+            "ordered": 16,
+            "shipped": 12,
+            "remaining": 4,
+            "delayed": 1,
+            "cause": "fulfillment_pending"
+          },
+          {
+            "order_id": "ORD-702-008",
+            "warehouse": "Dammam",
+            "ordered": 3,
+            "shipped": 3,
+            "remaining": 0,
+            "delayed": 0,
+            "cause": "complete"
+          },
+          {
+            "order_id": "ORD-702-009",
+            "warehouse": "Riyadh",
+            "ordered": 10,
+            "shipped": 3,
+            "remaining": 7,
+            "delayed": 1,
+            "cause": "stock_shortage"
+          },
+          {
+            "order_id": "ORD-702-010",
+            "warehouse": "Jeddah",
+            "ordered": 14,
+            "shipped": 9,
+            "remaining": 5,
+            "delayed": 1,
+            "cause": "inventory_unknown"
+          },
+          {
+            "order_id": "ORD-702-011",
+            "warehouse": "Dammam",
+            "ordered": 17,
+            "shipped": 3,
+            "remaining": 14,
+            "delayed": 0,
+            "cause": "fulfillment_pending"
+          }
+        ],
+        "verification": {
+          "passed": true,
+          "orders_checked": 12,
+          "checks": [
+            "identity deduplication",
+            "shipment totals",
+            "remaining quantity",
+            "policy delay threshold",
+            "supported inventory cause"
+          ],
+          "mismatches": [],
+          "unexpected_rows": 0
+        },
+        "routing": {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "decisions": [
+            {
+              "policy": "adaptive",
+              "policy_version": "decisions-model-effort-v2",
+              "context": {
+                "task_novelty": false,
+                "schema_novelty": false,
+                "repair": false,
+                "complexity": "standard",
+                "delegated_role": null,
+                "reuse": true
+              },
+              "requested_model": null,
+              "requested_effort": null,
+              "submitted_effort": null,
+              "effective_model": null,
+              "effective_effort": "not_applicable",
+              "effort_status": "no_inference",
+              "profile": "reuse",
+              "reason": "Applicable verified skill; no inference requested"
+            }
+          ]
+        },
+        "sync_status": "local",
+        "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 6 | Incomplete: 9\n\nOrder-level results.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-702-000 | Riyadh | 6 | 6 | 0 | No | complete |\n| ORD-702-001 | Jeddah | 7 | 0 | 7 | Yes | fulfillment_pending |\n| ORD-702-002 | Dammam | 9 | 4 | 5 | No | fulfillment_pending |\n| ORD-702-003 | Riyadh | 16 | 2 | 14 | Yes | stock_shortage |\n| ORD-702-004 | Jeddah | 10 | 10 | 0 | No | complete |\n| ORD-702-005 | Dammam | 8 | 7 | 1 | No | inventory_unknown |\n| ORD-702-006 | Riyadh | 7 | 5 | 2 | Yes | fulfillment_pending |\n| ORD-702-007 | Jeddah | 16 | 12 | 4 | Yes | fulfillment_pending |\n| ORD-702-008 | Dammam | 3 | 3 | 0 | No | complete |\n| ORD-702-009 | Riyadh | 10 | 3 | 7 | Yes | stock_shortage |\n| ORD-702-010 | Jeddah | 14 | 9 | 5 | Yes | inventory_unknown |\n| ORD-702-011 | Dammam | 17 | 3 | 14 | No | fulfillment_pending |",
+        "report_path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\artifacts\\local\\multi-provider-ed8ab7d9e45a402db2c09d494ec4a501\\artifacts\\2dfe76dc-ae22-4f04-b7c8-bf0c4bcb655a\\report.md",
+        "grouped_by_warehouse": false,
+        "evidence_ids": [],
+        "reused": true,
+        "plan": {
+          "title": "Reconcile Orders with Counted Shipments and Inventory Availability",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ],
+              "as": "shipments_counted"
+            },
+            {
+              "op": "project",
+              "input": "shipments_counted",
+              "columns": [
+                "order_id",
+                "shipment_id",
+                "quantity"
+              ],
+              "as": "shipments_proj"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments_proj",
+              "as": "shipments_unique"
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_unique",
+              "keys": [
+                "order_id"
+              ],
+              "field": "quantity",
+              "output": "shipped",
+              "as": "shipped_by_order"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "group_sum",
+              "input": "inventory_dedup",
+              "keys": [
+                "sku",
+                "warehouse"
+              ],
+              "field": "available_qty",
+              "output": "available_qty_total",
+              "as": "inventory_agg"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "right": "shipped_by_order",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped"
+              },
+              "as": "orders_shipped"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped",
+              "right": "inventory_agg",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty_total"
+              },
+              "as": "orders_inventory"
+            },
+            {
+              "op": "derive",
+              "input": "orders_inventory",
+              "values": {
+                "ordered": "quantity",
+                "shipped": "coalesce(shipped, 0)",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if remaining > 0 and days_between(as_of, promised_date) > grace_days else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              },
+              "as": "orders_enriched"
+            },
+            {
+              "op": "project",
+              "input": "orders_enriched",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ],
+              "as": "reconciled_orders"
+            }
+          ],
+          "summary": "Deduplicates orders, shipments, and inventory; filters shipments to counted statuses; aggregates distinct counted shipment quantities per order; aggregates inventory by sku and warehouse; joins both to orders; computes shipped, remaining, delayed, and cause; and projects the final seven-column result with one row per order_id."
+        },
+        "skill_id": "9b0b5e1a-a3df-481c-a317-e00d6eb80688",
+        "skill_version": 1,
+        "finished_at": 1793398105.7787647
+      }
+    }
+  ],
+  "isolated_home": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\artifacts\\local\\multi-provider-ed8ab7d9e45a402db2c09d494ec4a501"
+}

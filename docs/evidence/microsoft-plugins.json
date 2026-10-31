@@ -1,0 +1,64 @@
+{
+  "installed": [
+    {
+      "pluginId": "windbg@win-dev-skills",
+      "name": "windbg",
+      "marketplaceName": "win-dev-skills",
+      "version": "1.0.0",
+      "installed": true,
+      "enabled": true,
+      "source": {
+        "source": "local",
+        "path": "C:\\Users\\nbton\\.codex\\.tmp\\marketplaces\\win-dev-skills\\plugins\\windbg"
+      },
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/microsoft/win-dev-skills.git"
+      },
+      "installPolicy": "AVAILABLE",
+      "authPolicy": "ON_INSTALL"
+    },
+    {
+      "pluginId": "winui@win-dev-skills",
+      "name": "winui",
+      "marketplaceName": "win-dev-skills",
+      "version": "0.7.1",
+      "installed": true,
+      "enabled": true,
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/microsoft/winappCli.git",
+        "path": "plugins/winui",
+        "sha": "5a064a427f1e056822a939b13ddce43b798090fa"
+      },
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/microsoft/win-dev-skills.git"
+      },
+      "installPolicy": "AVAILABLE",
+      "authPolicy": "ON_INSTALL"
+    },
+    {
+      "pluginId": "winappcli@win-dev-skills",
+      "name": "winappcli",
+      "marketplaceName": "win-dev-skills",
+      "version": "0.7.1",
+      "installed": true,
+      "enabled": true,
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/microsoft/winappCli.git",
+        "path": "plugins/winapp",
+        "ref": "v0.7.1",
+        "sha": "e3cd0b94f3e7b776ac51ba0564f4908094e979b5"
+      },
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/microsoft/win-dev-skills.git"
+      },
+      "installPolicy": "AVAILABLE",
+      "authPolicy": "ON_INSTALL"
+    }
+  ],
+  "available": []
+}

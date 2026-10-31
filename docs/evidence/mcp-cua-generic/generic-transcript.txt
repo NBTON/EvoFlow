@@ -1,0 +1,20 @@
+EvoFlow
+Needs attention
+Conversation
+Memory
+You
+Use the Fixture Echo MCP data connector to echo exactly: EvoFlow connector verified. Use its discovered echo tool; do not use a terminal or write files.
+Local action
+MCP response received from Fixture Echo / echo
+succeeded · verified: false
+EvoFlow
+The Fixture Echo MCP tool responded successfully.
+
+- **Tool:** `fixture_echo` / `echo`
+- **Backend:** MCP
+- **Echoed text:** `EvoFlow connector verified`
+- **Server status:** `ok`
+
+The returned `text` field matches the string exactly (no trailing period), confirming the data connector round-trip works. Note that this is a data echo — no terminal or files were used, and the response carries no application state to verify beyond the echoed payload itself.
+Message
+Enter to send · Shift+Enter for a new line

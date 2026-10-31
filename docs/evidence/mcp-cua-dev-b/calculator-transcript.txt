@@ -1,0 +1,62 @@
+EvoFlow
+Needs attention
+Conversation
+Memory
+You
+Open Calculator, compute 6 × 7, and verify that Calculator displays 42.
+Local action
+MCP response received from Cua · Calculator / launch_app
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / verify_state
+succeeded · verified: false
+EvoFlow
+Done — verified.
+
+**Result: Calculator displays 42** ✅
+
+Steps performed with the Cua desktop tools on Calculator (pid 2664, window 5050126, launched hidden in the background so it never stole focus):
+
+| Step | Action | Observed state |
+|---|---|---|
+| 1 | Launch Calculator | "Calculator" window opened, display `0` |
+| 2 | Click **Six** | Display `6` |
+| 3 | Click **Multiply by** | Accepted (next digit replaced the operand rather than appending) |
+| 4 | Click **Seven** | Display `7` (second operand) |
+| 5 | Click **Equals** | Display `42` |
+
+Verification: `verify_state` returned **satisfied** for the predicate "a Text element labeled `Display is 42`", stable across 2 consecutive samples (~1s). The observed accessibility element was the display region at (51,265) with label exactly `Display is 42`.
+
+All interactions used background UIA Invoke delivery — the foreground window and pointer position were unchanged throughout (`foregroundBefore = foregroundAfter`). A screenshot of the final state was saved as evidence at `C:\Users\nbton\AppData\Local\EvoFlow\connector-evidence\...\333dfca5c9604dc79f0c96ff8ae4c041.png`, though I did not visually inspect those pixels; the confirmation above is from the structured accessibility state.
+Message
+Enter to send · Shift+Enter for a new line

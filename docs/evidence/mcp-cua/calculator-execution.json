@@ -1,0 +1,2323 @@
+[
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua · Calculator / launch_app",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "launch_app",
+      "schemaHash": "3c9a78db7e0bbd1bc088c1e7849f4246947baa03090743922e2a729663476d45",
+      "text": "✅ Launched Microsoft.WindowsCalculator_8wekyb3d8bbwe!App (pid 2664) in background.\n\nWindows:\n- \"Calculator\" [window_id: 5050126]\n→ Call get_window_state(pid: 2664, window_id) to inspect.",
+      "structuredContent": {
+        "active": false,
+        "bundle_id": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App",
+        "name": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App",
+        "pid": 2664,
+        "running": true,
+        "windows": [
+          {
+            "bounds": {
+              "height": 750,
+              "width": 500,
+              "x": 50,
+              "y": 150
+            },
+            "is_on_screen": true,
+            "layer": 0,
+            "title": "Calculator",
+            "window_id": 5050126,
+            "z_index": 0
+          }
+        ]
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2949.325,
+    "callId": "fd81dad5-d1a3-4d64-88e4-0f2a4af8613e",
+    "argumentHash": "10790e65ef3ad60373e6a487b016a830cca145e5dbf092a0d0833971dfb81915"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua · Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=5050126 pid=2664 elements=39 snapshot_id=s00000001\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "capture_id": "capture_a80de8bc92d84c3dbb2fd00f5998c5d2_0000000000000000",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "set_value"
+            ],
+            "depth": 1,
+            "element_index": 0,
+            "element_token": "s00000001:0",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 188,
+              "x": 361,
+              "y": 151
+            },
+            "label": "Calculator",
+            "role": "Window",
+            "screenshot_frame": {
+              "h": 32,
+              "w": 188,
+              "x": 310,
+              "y": 0
+            },
+            "value": "Calculator"
+          },
+          {
+            "actions": [
+              "expand"
+            ],
+            "depth": 3,
+            "element_index": 1,
+            "element_token": "s00000001:1",
+            "enabled": true,
+            "label": "System",
+            "parent_index": 0,
+            "role": "MenuItem"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 2,
+            "element_token": "s00000001:2",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 411,
+              "y": 151
+            },
+            "label": "Minimize Calculator",
+            "parent_index": 0,
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 32,
+              "w": 46,
+              "x": 360,
+              "y": 0
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 3,
+            "element_token": "s00000001:3",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 457,
+              "y": 151
+            },
+            "label": "Maximize Calculator",
+            "parent_index": 0,
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 32,
+              "w": 46,
+              "x": 406,
+              "y": 0
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 4,
+            "element_token": "s00000001:4",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 503,
+              "y": 151
+            },
+            "label": "Close Calculator",
+            "parent_index": 0,
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 32,
+              "w": 46,
+              "x": 452,
+              "y": 0
+            }
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000001:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text",
+            "screenshot_frame": {
+              "h": 16,
+              "w": 55,
+              "x": 48,
+              "y": 8
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000001:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 36,
+              "w": 40,
+              "x": 4,
+              "y": 38
+            }
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 4,
+            "element_index": 7,
+            "element_token": "s00000001:7",
+            "enabled": true,
+            "label": "PaneTitleTextBlock",
+            "parent_index": 6,
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000001:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 0",
+            "role": "Text",
+            "screenshot_frame": {
+              "h": 111,
+              "w": 498,
+              "x": 0,
+              "y": 114
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 9,
+            "element_token": "s00000001:9",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 509,
+              "y": 191
+            },
+            "label": "Open history flyout",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 32,
+              "w": 32,
+              "x": 458,
+              "y": 40
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 10,
+            "element_token": "s00000001:10",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 215,
+              "y": 377
+            },
+            "label": "Memory add",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 47,
+              "w": 78,
+              "x": 164,
+              "y": 226
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 11,
+            "element_token": "s00000001:11",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 295,
+              "y": 377
+            },
+            "label": "Memory subtract",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 47,
+              "w": 78,
+              "x": 244,
+              "y": 226
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 12,
+            "element_token": "s00000001:12",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 375,
+              "y": 377
+            },
+            "label": "Memory store",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 47,
+              "w": 78,
+              "x": 324,
+              "y": 226
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 13,
+            "element_token": "s00000001:13",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 426
+            },
+            "label": "Percent",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 4,
+              "y": 275
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 14,
+            "element_token": "s00000001:14",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 426
+            },
+            "label": "Clear entry",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 127,
+              "y": 275
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 15,
+            "element_token": "s00000001:15",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 426
+            },
+            "label": "Clear",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 250,
+              "y": 275
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 16,
+            "element_token": "s00000001:16",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 426
+            },
+            "label": "Backspace",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 373,
+              "y": 275
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 17,
+            "element_token": "s00000001:17",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 505
+            },
+            "label": "Reciprocal",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 4,
+              "y": 354
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 18,
+            "element_token": "s00000001:18",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 505
+            },
+            "label": "Square",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 127,
+              "y": 354
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 19,
+            "element_token": "s00000001:19",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 505
+            },
+            "label": "Square root",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 250,
+              "y": 354
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 20,
+            "element_token": "s00000001:20",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 505
+            },
+            "label": "Divide by",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 373,
+              "y": 354
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 21,
+            "element_token": "s00000001:21",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 583
+            },
+            "label": "Multiply by",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 373,
+              "y": 432
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 22,
+            "element_token": "s00000001:22",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 662
+            },
+            "label": "Minus",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 373,
+              "y": 511
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 23,
+            "element_token": "s00000001:23",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 740
+            },
+            "label": "Plus",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 373,
+              "y": 589
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 24,
+            "element_token": "s00000001:24",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 819
+            },
+            "label": "Equals",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 373,
+              "y": 668
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 25,
+            "element_token": "s00000001:25",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 819
+            },
+            "label": "Zero",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 127,
+              "y": 668
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 26,
+            "element_token": "s00000001:26",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 740
+            },
+            "label": "One",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 4,
+              "y": 589
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 27,
+            "element_token": "s00000001:27",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 740
+            },
+            "label": "Two",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 127,
+              "y": 589
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 28,
+            "element_token": "s00000001:28",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 740
+            },
+            "label": "Three",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 250,
+              "y": 589
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 29,
+            "element_token": "s00000001:29",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 662
+            },
+            "label": "Four",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 4,
+              "y": 511
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 30,
+            "element_token": "s00000001:30",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 662
+            },
+            "label": "Five",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 127,
+              "y": 511
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 31,
+            "element_token": "s00000001:31",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 662
+            },
+            "label": "Six",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 250,
+              "y": 511
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 32,
+            "element_token": "s00000001:32",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 583
+            },
+            "label": "Seven",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 4,
+              "y": 432
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 33,
+            "element_token": "s00000001:33",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 583
+            },
+            "label": "Eight",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 127,
+              "y": 432
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 34,
+            "element_token": "s00000001:34",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 583
+            },
+            "label": "Nine",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 77,
+              "w": 121,
+              "x": 250,
+              "y": 432
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 35,
+            "element_token": "s00000001:35",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 819
+            },
+            "label": "Decimal separator",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 250,
+              "y": 668
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 36,
+            "element_token": "s00000001:36",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 819
+            },
+            "label": "Positive negative",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 76,
+              "w": 121,
+              "x": 4,
+              "y": 668
+            }
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 3,
+            "element_index": 37,
+            "element_token": "s00000001:37",
+            "enabled": true,
+            "frame": {
+              "h": 27,
+              "w": 82,
+              "x": 99,
+              "y": 192
+            },
+            "label": "Standard Calculator mode",
+            "role": "Text",
+            "screenshot_frame": {
+              "h": 27,
+              "w": 82,
+              "x": 48,
+              "y": 41
+            }
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 38,
+            "element_token": "s00000001:38",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 191,
+              "y": 191
+            },
+            "label": "Keep on top",
+            "role": "Button",
+            "screenshot_frame": {
+              "h": 32,
+              "w": 32,
+              "x": 140,
+              "y": 40
+            }
+          }
+        ],
+        "elements_complete": true,
+        "pid": 2664,
+        "returned_element_count": 39,
+        "screenshot_height": 750,
+        "screenshot_mime_type": "image/png",
+        "screenshot_width": 500,
+        "snapshot_id": "s00000001",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 5050126,
+        "window_title": "Calculator"
+      },
+      "images": [
+        {
+          "path": "C:\\Users\\nbton\\AppData\\Local\\EvoFlow\\connector-evidence\\a3524622df9301988a28\\1cbda977e35143e8bfe298f4a60464cc.png",
+          "sha256": "7bece80042b39f6eeb5e09a923706776be46143058ae1fa354672ba143fef446",
+          "mimeType": "image/png",
+          "modelInspected": false
+        }
+      ],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2241.1214,
+    "callId": "f64e1c57-8a47-441e-ac62-f30e4ee2f88c",
+    "argumentHash": "048f40713ea3a8477533a65c8a737466196425ccc900f56c655f73c4c09e0f49"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua · Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "✅ Performed UIA Invoke on [31] (screen (361,700)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 5050126
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "✅ Performed UIA Invoke on [31] (screen (361,700))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 1977.4368,
+    "callId": "f1890e52-069f-4a60-b929-4eb386940b75",
+    "argumentHash": "666360201b9d61f6e8ab9e7cfcc5b9d942c59be38fbfc0e2cb9066f38a6cb6ff"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua · Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=5050126 pid=2664 elements=13 snapshot_id=s00000002\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000001: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 13,
+        "elements": [
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000002:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000002:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000002:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 6",
+            "role": "Text"
+          }
+        ],
+        "elements_complete": false,
+        "invalidated_snapshot_ids": [
+          "s00000001"
+        ],
+        "pid": 2664,
+        "returned_element_count": 3,
+        "snapshot_id": "s00000002",
+        "timeout_ms": 1000,
+        "total_element_count": 13,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 5050126,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2101.3442,
+    "callId": "9d7ed36a-b5ab-45f3-a4ec-0a105ca54312",
+    "argumentHash": "bfc7490735a64421d3e95f1b6864596f027ee4d72f1c37dc36504519ecf3759e"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua · Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=5050126 pid=2664 elements=39 snapshot_id=s00000003\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000002: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000003:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000003:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 21,
+            "element_token": "s00000003:21",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 583
+            },
+            "label": "Multiply by",
+            "role": "Button"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000002"
+        ],
+        "pid": 2664,
+        "returned_element_count": 3,
+        "snapshot_id": "s00000003",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 5050126,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 1290.7974,
+    "callId": "710d27ed-c12b-49ae-91ba-6d49f1dfa8c3",
+    "argumentHash": "008cc84e3a8a55115ffaec4949747504c6b8cf5e0a494e7dbb50f2d58557f4d1"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua · Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "✅ Performed UIA Invoke on [21] (screen (484,621)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 5050126
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "✅ Performed UIA Invoke on [21] (screen (484,621))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2269.1266,
+    "callId": "2f8a324b-9a85-4da2-b33e-8ed1e9be4c34",
+    "argumentHash": "213065eb3188798530b66e306bf7bcb6a82a98ddc48ae9ab09883187c808123b"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua · Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=5050126 pid=2664 elements=39 snapshot_id=s00000004\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000003: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "set_value"
+            ],
+            "depth": 1,
+            "element_index": 0,
+            "element_token": "s00000004:0",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 188,
+              "x": 361,
+              "y": 151
+            },
+            "label": "Calculator",
+            "role": "Window",
+            "value": "Calculator"
+          },
+          {
+            "actions": [
+              "expand"
+            ],
+            "depth": 3,
+            "element_index": 1,
+            "element_token": "s00000004:1",
+            "enabled": true,
+            "label": "System",
+            "parent_index": 0,
+            "role": "MenuItem"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 2,
+            "element_token": "s00000004:2",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 411,
+              "y": 151
+            },
+            "label": "Minimize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 3,
+            "element_token": "s00000004:3",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 457,
+              "y": 151
+            },
+            "label": "Maximize Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 2,
+            "element_index": 4,
+            "element_token": "s00000004:4",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 46,
+              "x": 503,
+              "y": 151
+            },
+            "label": "Close Calculator",
+            "parent_index": 0,
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000004:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000004:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 4,
+            "element_index": 7,
+            "element_token": "s00000004:7",
+            "enabled": true,
+            "label": "PaneTitleTextBlock",
+            "parent_index": 6,
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000004:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 6",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 9,
+            "element_token": "s00000004:9",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 509,
+              "y": 191
+            },
+            "label": "Open history flyout",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 10,
+            "element_token": "s00000004:10",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 215,
+              "y": 377
+            },
+            "label": "Memory add",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 11,
+            "element_token": "s00000004:11",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 295,
+              "y": 377
+            },
+            "label": "Memory subtract",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 12,
+            "element_token": "s00000004:12",
+            "enabled": true,
+            "frame": {
+              "h": 47,
+              "w": 78,
+              "x": 375,
+              "y": 377
+            },
+            "label": "Memory store",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 13,
+            "element_token": "s00000004:13",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 426
+            },
+            "label": "Percent",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 14,
+            "element_token": "s00000004:14",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 426
+            },
+            "label": "Clear entry",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 15,
+            "element_token": "s00000004:15",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 426
+            },
+            "label": "Clear",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 16,
+            "element_token": "s00000004:16",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 426
+            },
+            "label": "Backspace",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 17,
+            "element_token": "s00000004:17",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 505
+            },
+            "label": "Reciprocal",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 18,
+            "element_token": "s00000004:18",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 505
+            },
+            "label": "Square",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 19,
+            "element_token": "s00000004:19",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 505
+            },
+            "label": "Square root",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 20,
+            "element_token": "s00000004:20",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 505
+            },
+            "label": "Divide by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 21,
+            "element_token": "s00000004:21",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 583
+            },
+            "label": "Multiply by",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 22,
+            "element_token": "s00000004:22",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 662
+            },
+            "label": "Minus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 23,
+            "element_token": "s00000004:23",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 424,
+              "y": 740
+            },
+            "label": "Plus",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 24,
+            "element_token": "s00000004:24",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 819
+            },
+            "label": "Equals",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 25,
+            "element_token": "s00000004:25",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 819
+            },
+            "label": "Zero",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 26,
+            "element_token": "s00000004:26",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 740
+            },
+            "label": "One",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 27,
+            "element_token": "s00000004:27",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 740
+            },
+            "label": "Two",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 28,
+            "element_token": "s00000004:28",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 740
+            },
+            "label": "Three",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 29,
+            "element_token": "s00000004:29",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 662
+            },
+            "label": "Four",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 30,
+            "element_token": "s00000004:30",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 178,
+              "y": 662
+            },
+            "label": "Five",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 31,
+            "element_token": "s00000004:31",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 662
+            },
+            "label": "Six",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 32,
+            "element_token": "s00000004:32",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 55,
+              "y": 583
+            },
+            "label": "Seven",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 33,
+            "element_token": "s00000004:33",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 178,
+              "y": 583
+            },
+            "label": "Eight",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 34,
+            "element_token": "s00000004:34",
+            "enabled": true,
+            "frame": {
+              "h": 77,
+              "w": 121,
+              "x": 301,
+              "y": 583
+            },
+            "label": "Nine",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 35,
+            "element_token": "s00000004:35",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 301,
+              "y": 819
+            },
+            "label": "Decimal separator",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 36,
+            "element_token": "s00000004:36",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 55,
+              "y": 819
+            },
+            "label": "Positive negative",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 3,
+            "element_index": 37,
+            "element_token": "s00000004:37",
+            "enabled": true,
+            "frame": {
+              "h": 27,
+              "w": 82,
+              "x": 99,
+              "y": 192
+            },
+            "label": "Standard Calculator mode",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 38,
+            "element_token": "s00000004:38",
+            "enabled": true,
+            "frame": {
+              "h": 32,
+              "w": 32,
+              "x": 191,
+              "y": 191
+            },
+            "label": "Keep on top",
+            "role": "Button"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000003"
+        ],
+        "pid": 2664,
+        "returned_element_count": 39,
+        "snapshot_id": "s00000004",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 5050126,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 1738.8074,
+    "callId": "f7a9a91f-9801-4b38-8338-1ec7ba4f9a43",
+    "argumentHash": "3be701afa27a29eedefca512b48b1b13bbc9e0d5e0bc541dc31c8e0c66edc4bb"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua · Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "✅ Performed UIA Invoke on [32] (screen (115,621)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire. Three single actions in a row: send the next ones as one run_steps call. It runs them in order, stops at the first failure and returns what changed.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 5050126
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "✅ Performed UIA Invoke on [32] (screen (115,621))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2517.0409,
+    "callId": "2fbf46a8-77b2-4ccc-a28b-cecb05131d26",
+    "argumentHash": "43cc230d206f2f0185fc7b27bff0434eec51f8f621593a6e97279d01bbbe1b60"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua · Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=5050126 pid=2664 elements=39 snapshot_id=s00000005\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000004: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000005:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000005:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 4,
+            "element_index": 8,
+            "element_token": "s00000005:8",
+            "enabled": true,
+            "frame": {
+              "h": 111,
+              "w": 498,
+              "x": 51,
+              "y": 265
+            },
+            "label": "Display is 7",
+            "role": "Text"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000004"
+        ],
+        "pid": 2664,
+        "returned_element_count": 3,
+        "snapshot_id": "s00000005",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 5050126,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2252.3463,
+    "callId": "e63ebd5c-be8f-4ec6-8ace-405cdb496062",
+    "argumentHash": "11039ba0672f7e0fc35ba4ae773f35aec4532bc5ae76c6eb75b10dc79ad9b741"
+  },
+  {
+    "status": "succeeded",
+    "verified": true,
+    "summary": "MCP response received from Cua · Calculator / get_window_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "get_window_state",
+      "schemaHash": "a8bb32d205e5b45804cdc59ef28d40bb27443e8598efae52da5f6dd775041cf0",
+      "text": "window_id=5050126 pid=2664 elements=39 snapshot_id=s00000006\n\n(tree is in structuredContent.elements; pass tree_format \"markdown\" for the compact text rendering)\nInvalidated snapshots s00000005: their element_tokens are stale.",
+      "structuredContent": {
+        "app_name": "ApplicationFrameHost.exe",
+        "element_count": 39,
+        "elements": [
+          {
+            "actions": [
+              "text"
+            ],
+            "depth": 2,
+            "element_index": 5,
+            "element_token": "s00000006:5",
+            "enabled": true,
+            "frame": {
+              "h": 16,
+              "w": 55,
+              "x": 99,
+              "y": 159
+            },
+            "label": "Calculator",
+            "role": "Text"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 3,
+            "element_index": 6,
+            "element_token": "s00000006:6",
+            "enabled": true,
+            "frame": {
+              "h": 36,
+              "w": 40,
+              "x": 55,
+              "y": 189
+            },
+            "label": "Open Navigation",
+            "role": "Button"
+          },
+          {
+            "actions": [
+              "invoke"
+            ],
+            "depth": 5,
+            "element_index": 24,
+            "element_token": "s00000006:24",
+            "enabled": true,
+            "frame": {
+              "h": 76,
+              "w": 121,
+              "x": 424,
+              "y": 819
+            },
+            "label": "Equals",
+            "role": "Button"
+          }
+        ],
+        "elements_complete": true,
+        "invalidated_snapshot_ids": [
+          "s00000005"
+        ],
+        "pid": 2664,
+        "returned_element_count": 3,
+        "snapshot_id": "s00000006",
+        "timeout_ms": 1000,
+        "total_element_count": 39,
+        "tree_format": "elements",
+        "truncated": false,
+        "window_bounds": {
+          "height": 750,
+          "width": 500,
+          "x": 50,
+          "y": 150
+        },
+        "window_id": 5050126,
+        "window_title": "Calculator"
+      },
+      "images": [],
+      "verification": "Fresh observation; evaluate the requested postcondition in this state.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2366.5268,
+    "callId": "dc62feee-3c31-48c1-bf2e-1bb5c943f01b",
+    "argumentHash": "f672317ab9442c284ec9ecc573f75d6adcaa6f5153af2b1ec8886b0482c9a085"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua · Calculator / click",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "click",
+      "schemaHash": "2415fc69229d888ef62fe0d262d5f315fad5df4476ac43c3edd461731de47ce6",
+      "text": "✅ Performed UIA Invoke on [24] (screen (484,857)).",
+      "structuredContent": {
+        "delivery": {
+          "mode": "background"
+        },
+        "effect": "unverifiable",
+        "hint": "The click was sent but nothing confirmed it. Read what changed before clicking again; a repeat can toggle or double-fire.",
+        "next_call": {
+          "arguments": {
+            "pid": 2664,
+            "since": "latest",
+            "window_id": 5050126
+          },
+          "tool": "get_window_state"
+        },
+        "route": "accessibility",
+        "summary": "✅ Performed UIA Invoke on [24] (screen (484,857))."
+      },
+      "images": [],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 2167.5956,
+    "callId": "c6fa74b4-bbac-4437-801d-56d7cd682691",
+    "argumentHash": "b4147793f01a1653ade1cb60a3d32a4f0b99c6db657753f88f217e4882d3e6db"
+  },
+  {
+    "status": "succeeded",
+    "verified": false,
+    "summary": "MCP response received from Cua · Calculator / verify_state",
+    "errorCode": null,
+    "data": {
+      "backend": "MCP",
+      "serverId": "cua_desktop",
+      "tool": "verify_state",
+      "schemaHash": "ad49c4a5c442f53fea41356b0940a24e2a2f96b05a2cc3b2e590b66563e7ed1e",
+      "text": "verify_state: satisfied after 2 sample(s) in 967 ms",
+      "structuredContent": {
+        "elapsed_ms": 967,
+        "predicates": [
+          {
+            "index": 0,
+            "observed_json": "{\"element_index\":8,\"enabled\":true,\"frame\":{\"h\":111,\"w\":498,\"x\":51,\"y\":265},\"label\":\"Display is 42\",\"role\":\"Text\"}",
+            "status": "satisfied",
+            "unknown_reason": null
+          }
+        ],
+        "samples": 2,
+        "stable": true,
+        "status": "satisfied"
+      },
+      "images": [
+        {
+          "path": "C:\\Users\\nbton\\AppData\\Local\\EvoFlow\\connector-evidence\\a3524622df9301988a28\\333dfca5c9604dc79f0c96ff8ae4c041.png",
+          "sha256": "ad1c70256d802b7e726f02b6f347c49d9afa242d07e12be859a317fd6cf9c963",
+          "mimeType": "image/png",
+          "modelInspected": false
+        }
+      ],
+      "verification": "Tool response only; inspect fresh application state before claiming effects.",
+      "deliveryEvidence": {
+        "foregroundBefore": 7998794,
+        "foregroundAfter": 7998794,
+        "pointerBeforeX": 2194,
+        "pointerBeforeY": 301,
+        "pointerAfterX": 2194,
+        "pointerAfterY": 301
+      }
+    },
+    "executionMs": 4086.8255,
+    "callId": "b084b644-07bd-4bf8-a7e8-6031ddf2661c",
+    "argumentHash": "ca0f6b1d912e81be2e17c2a520ab885c52b6af1c03097bb553174453b2448927"
+  }
+]

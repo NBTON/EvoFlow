@@ -1,0 +1,13 @@
+{
+  "target": "local",
+  "appPid": 21280,
+  "status": "PASS",
+  "checks": [
+    "New Chat, History, Memory and Settings header controls; fresh empty transcript",
+    "A: natural actual-model greeting; no reconciliation output",
+    "B: follow-up uses current chat context",
+    "C: New Chat during a running task isolates messages, output and name context",
+    "History reopens the previous transcript and safely completed old task",
+    "Legacy task results remain accessible separately from chat transcripts"
+  ]
+}

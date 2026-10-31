@@ -1,0 +1,1 @@
+{"case":"browser","appPid":30624,"status":"FAIL","started":"2026-10-31T05:41:26.6643456\u002B00:00","windowId":"48696628","approvals":["MCP \u00B7 Cua \u00B7 isolated browser / browser_prepare"],"error":"Requested acceptance postcondition was not established; inspect retained transcript."}

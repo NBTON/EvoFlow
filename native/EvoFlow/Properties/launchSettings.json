@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EvoFlow (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "EvoFlow (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

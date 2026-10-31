@@ -1,0 +1,62 @@
+EvoFlow
+Needs attention
+Conversation
+Memory
+You
+Open Calculator, compute 6 × 7, and verify that Calculator displays 42.
+Local action
+MCP response received from Cua · Calculator / launch_app
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+A fresh snapshot-bound Calculator element_token is required. Pixel, modifier and global input routes are disabled.
+denied · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / verify_state
+succeeded · verified: true
+EvoFlow
+Done — verified successfully.
+
+- **Launched:** Calculator (packaged app `Microsoft.WindowsCalculator_8wekyb3d8bbwe!App`), PID 2664, window "Calculator" (window_id 34475372), launched in the background without stealing focus.
+- **Input sequence (all clicked via accessibility Invoke, background delivery):**
+  1. `Six` → display read back as **"Display is 6"** (verified)
+  2. `Multiply by` → display still "6", operator entered
+  3. `Seven` → display read back as **"Display is 7"** (verified)
+  4. `Equals` → computed
+- **Final verification:** `verify_state` on the exact window/PID satisfied its predicate **"Display is 42"** across 2 stable samples (2.4 s).
+
+Calculator now displays **42**, confirming 6 × 7 = 42.
+Message
+Enter to send · Shift+Enter for a new line

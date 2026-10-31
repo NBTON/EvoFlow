@@ -1,0 +1,22 @@
+EvoFlow, collapse task panel
+EvoFlow
+Ready
+Conversation
+New Chat
+Chat history
+Memory and learned skills
+Memory
+Settings
+Keep task panel open
+ConversationScroll
+You
+Use Cua to open Calculator and inspect its current display.
+EvoFlow
+Request canceled.
+Local action
+Canceled or timed out. Partial effects are uncertain; reconnect and observe before retrying.
+canceled · verified: false
+Task instructions
+Message
+Run task
+Enter to send · Shift+Enter for a new line

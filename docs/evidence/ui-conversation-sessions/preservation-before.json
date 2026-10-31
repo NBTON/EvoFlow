@@ -1,0 +1,10 @@
+{
+  "memory_sha256": "90eaa4292bfac9a3b0852052707c4c517fd6088154920b55cb9a5bdf1eacf913",
+  "memory_records": 2,
+  "legacy_run_count": 12,
+  "legacy_greeting_preserved": true,
+  "session_count": 4,
+  "message_count": 8,
+  "active_conversations": 0,
+  "settings_sha256": "b30ca868437c51cba70dc3f7c22e692af9ebc6eba46bd8779e06bf763594c883"
+}

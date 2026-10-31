@@ -1,0 +1,163 @@
+{
+  "depth": 4,
+  "interactive": false,
+  "hideDisabled": false,
+  "hideOffscreen": false,
+  "windows": [
+    {
+      "hwnd": 2098212,
+      "title": "EvoFlow",
+      "windowDpi": 96,
+      "scale": 1,
+      "dpiAwareness": "per-monitor-aware",
+      "coordinateSpace": "physical-screen-pixels",
+      "elementCount": 10,
+      "elements": [
+        {
+          "type": "Window",
+          "name": "EvoFlow",
+          "className": "WinUIDesktopWin32WindowClass",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1140,
+          "y": 0,
+          "width": 280,
+          "height": 44,
+          "children": [
+            {
+              "type": "Pane",
+              "name": "PopupHost",
+              "className": "Microsoft.UI.Content.PopupWindowSiteBridge",
+              "isEnabled": true,
+              "isOffscreen": false,
+              "x": 1135,
+              "y": 52,
+              "width": 290,
+              "height": 57,
+              "children": [
+                {
+                  "type": "Pane",
+                  "className": "InputSiteWindowClass",
+                  "isEnabled": true,
+                  "isOffscreen": false,
+                  "x": 1140,
+                  "y": 0,
+                  "width": 280,
+                  "height": 44,
+                  "children": [
+                    {
+                      "type": "Window",
+                      "name": "Popup",
+                      "className": "Popup",
+                      "isEnabled": true,
+                      "isOffscreen": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 0,
+                      "height": 0,
+                      "children": [
+                        {
+                          "type": "ToolTip",
+                          "name": "Hover to preview \u00B7 click to keep open \u00B7 Escape to collapse",
+                          "className": "ToolTip",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1139,
+                          "y": 53,
+                          "width": 282,
+                          "height": 48,
+                          "selector": "tip-hovertopreviewc-ac24",
+                          "isInvokable": false,
+                          "hasMoreChildren": true
+                        }
+                      ],
+                      "selector": "win-popup-ad39",
+                      "isInvokable": false
+                    }
+                  ],
+                  "selector": "pn-50e5",
+                  "isInvokable": false
+                }
+              ],
+              "selector": "pn-popuphost-4fa5",
+              "isInvokable": false
+            },
+            {
+              "type": "Pane",
+              "className": "Microsoft.UI.Content.DesktopChildSiteBridge",
+              "isEnabled": true,
+              "isOffscreen": false,
+              "x": 1140,
+              "y": 0,
+              "width": 280,
+              "height": 44,
+              "children": [
+                {
+                  "type": "Pane",
+                  "className": "InputSiteWindowClass",
+                  "isEnabled": true,
+                  "isOffscreen": false,
+                  "x": 1140,
+                  "y": 0,
+                  "width": 280,
+                  "height": 44,
+                  "children": [
+                    {
+                      "type": "Button",
+                      "name": "EvoFlow, open task panel",
+                      "automationId": "Pill",
+                      "className": "Button",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1142,
+                      "y": 1,
+                      "width": 276,
+                      "height": 40,
+                      "children": [
+                        {
+                          "type": "Text",
+                          "name": "EvoFlow",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1188,
+                          "y": 12,
+                          "width": 173,
+                          "height": 19,
+                          "selector": "lbl-evoflow-785b",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "Ready",
+                          "automationId": "PillStatus",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1371,
+                          "y": 14,
+                          "width": 33,
+                          "height": 16,
+                          "selector": "PillStatus",
+                          "isInvokable": false
+                        }
+                      ],
+                      "selector": "Pill",
+                      "isInvokable": true
+                    }
+                  ],
+                  "selector": "pn-5093",
+                  "isInvokable": false
+                }
+              ],
+              "selector": "pn-4e9f",
+              "isInvokable": false
+            }
+          ],
+          "selector": "win-evoflow-490b",
+          "isInvokable": false
+        }
+      ]
+    }
+  ]
+}

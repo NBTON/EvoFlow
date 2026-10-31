@@ -1,0 +1,137 @@
+{
+  "snapshot_date": "2026-10-30",
+  "timezone": "Asia/Riyadh",
+  "submission_deadline": "2026-10-31T20:00:00+03:00",
+  "repository": "https://github.com/NBTON/EvoFlow.git",
+  "supabase_project_ref": "csvfsltznjdaalnzvgbz",
+  "status": "Proposed roles; metadata checked; authenticated inference not tested",
+  "refresh_before_use": true,
+  "allow_paid_fallback": false,
+  "default_roles": {
+    "general": "nvidia/nemotron-3.5-lightning:free",
+    "code": "cohere/north-mini-code:free",
+    "decision_scoring": "respan/span-01-lite:free"
+  },
+  "policies": {
+    "unknown_model": "Disable until verified; never guess an API identifier",
+    "capability": "Confirm the serving endpoint and validate a small real request before use",
+    "decision_scores": "Advisory; cannot override deterministic verification or budgets",
+    "embeddings": "Discover dimensions from actual response and bind stored vectors to model and dimension",
+    "benchmark": "Keep model-role assignments comparable across no-skill, frozen-skill, and evolving-skill conditions",
+    "free_pricing": "Report actual billed cost; infer no dollar or hardware-compute saving from free pricing"
+  },
+  "models": [
+    {
+      "id": "respan/span-01-lite:free",
+      "role": "decision_scoring",
+      "interface": "decisions",
+      "default_enabled": true,
+      "source": "https://openrouter.ai/api/v1/models/respan/span-01-lite:free/endpoints",
+      "note": "Specialized behavior scoring; verify model-specific question support and response schema"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning:free",
+      "role": "general",
+      "interface": "chat",
+      "default_enabled": true,
+      "note": "Catalog advertises tools; response_format was not advertised in this snapshot"
+    },
+    {
+      "id": "cohere/north-mini-code:free",
+      "role": "code",
+      "interface": "chat",
+      "default_enabled": true,
+      "note": "Candidate synthesis and repair; benchmark against using the general model alone"
+    },
+    {
+      "id": "thinkingmachines/inkling-small:free",
+      "role": "optional_complex_reasoning",
+      "interface": "chat",
+      "default_enabled": false
+    },
+    {
+      "id": "thinkingmachines/inkling:free",
+      "role": "optional_complex_reasoning",
+      "interface": "chat",
+      "default_enabled": false
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "role": "optional_complex_reasoning",
+      "interface": "chat",
+      "default_enabled": false
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it:free",
+      "role": "optional_generation_alternative",
+      "interface": "chat",
+      "default_enabled": false
+    },
+    {
+      "id": "google/gemma-4-31b-it:free",
+      "role": "optional_generation_alternative",
+      "interface": "chat",
+      "default_enabled": false
+    },
+    {
+      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "role": "optional_multimodal_perception",
+      "interface": "chat",
+      "default_enabled": false
+    },
+    {
+      "id": "nvidia/nemotron-3.5-content-safety:free",
+      "role": "optional_moderation",
+      "interface": "chat",
+      "default_enabled": false,
+      "note": "Content classification is not a correctness or code-execution security check"
+    },
+    {
+      "id": "nvidia/nemotron-3-embed-1b:free",
+      "role": "optional_text_skill_retrieval",
+      "interface": "embeddings",
+      "default_enabled": false
+    },
+    {
+      "id": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+      "role": "optional_multimodal_retrieval",
+      "interface": "embeddings",
+      "default_enabled": false
+    },
+    {
+      "id": "nvidia/llama-nemotron-rerank-vl-1b-v2:free",
+      "role": "optional_reranking",
+      "interface": "rerank",
+      "default_enabled": false,
+      "source": "https://openrouter.ai/api/v1/models/nvidia/llama-nemotron-rerank-vl-1b-v2:free/endpoints"
+    },
+    {
+      "id": "fish-audio/s2.1-pro-free:free",
+      "role": "optional_speech_output",
+      "interface": "speech",
+      "default_enabled": false,
+      "source": "https://openrouter.ai/api/v1/models/fish-audio/s2.1-pro-free:free/endpoints"
+    },
+    {
+      "id": "poolside/laguna-s-2.1:free",
+      "role": "retiring_code_candidate",
+      "interface": "chat",
+      "default_enabled": false,
+      "expiration_date": "2026-10-31",
+      "note": "Retires on submission day; do not make the demonstration depend on it"
+    },
+    {
+      "id": "poolside/laguna-xs-2.1:free",
+      "role": "retiring_code_candidate",
+      "interface": "chat",
+      "default_enabled": false,
+      "expiration_date": "2026-10-31",
+      "note": "Retires on submission day; do not make the demonstration depend on it"
+    }
+  ],
+  "catalog_sources": {
+    "chat": "https://openrouter.ai/api/v1/models",
+    "embeddings": "https://openrouter.ai/api/v1/embeddings/models",
+    "decisions_reference": "https://openrouter.ai/docs/client-sdks/python/sdks/decisions/README.md"
+  }
+}

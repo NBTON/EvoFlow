@@ -1,0 +1,495 @@
+{
+  "verified_at_utc": "2026-10-30T12:50:35.197487+00:00",
+  "client": "C:\\Users\\nbton\\AppData\\Local\\OpenAI\\Codex\\bin\\22cfb1d302613eae\\codex.exe",
+  "client_version": "codex-cli 0.166.0-alpha.5.1",
+  "method": "fresh app-server client; skills/list forceReload=true; no model turn",
+  "current_chat_reloaded": false,
+  "langchain_source_commit": "126c384d8552dcb476b226c244172186cc3f4328",
+  "skills": [
+    {
+      "name": "deep-agents-core",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\deep-agents-core\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "deep-agents-memory",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\deep-agents-memory\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "deep-agents-orchestration",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\deep-agents-orchestration\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "deepagents-python-quickstart",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\deepagents-python-quickstart\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "deepagents-typescript-quickstart",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\deepagents-typescript-quickstart\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "ecosystem-primer",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\ecosystem-primer\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "eval-engineering",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\eval-engineering\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langchain-dependencies",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langchain-dependencies\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langchain-fundamentals",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langchain-fundamentals\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langchain-middleware",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langchain-middleware\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langchain-python-quickstart",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langchain-python-quickstart\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langchain-rag",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langchain-rag\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langchain-typescript-quickstart",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langchain-typescript-quickstart\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langgraph-cli",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langgraph-cli\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langgraph-decision-models",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langgraph-decision-models\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langgraph-fundamentals",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langgraph-fundamentals\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langgraph-human-in-the-loop",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langgraph-human-in-the-loop\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langgraph-persistence",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langgraph-persistence\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langgraph-python-quickstart",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langgraph-python-quickstart\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "langgraph-typescript-quickstart",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\langgraph-typescript-quickstart\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "managed-deep-agents",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\managed-deep-agents\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "swarm",
+      "scope": "repo",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\OneDrive - KFUPM\\EvoFlow\\.agents\\skills\\swarm\\SKILL.md",
+      "pluginId": null
+    },
+    {
+      "name": "winappcli:winapp-find-api",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-find-api\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-find-ui",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-find-ui\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-frameworks",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-frameworks\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-identity",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-identity\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-manifest",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-manifest\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-maui",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-maui\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-package",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-package\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-sandbox",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-sandbox\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-setup",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-setup\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-signing",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-signing\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-troubleshoot",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-troubleshoot\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "winappcli:winapp-ui-automation",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winappcli\\0.7.1\\skills\\winapp-ui-automation\\SKILL.md",
+      "pluginId": "winappcli@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-diagnostic-method",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-diagnostic-method\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-kernel-bugcheck-triage",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-kernel-bugcheck-triage\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-kernel-irp-lifecycle-triage",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-kernel-irp-lifecycle-triage\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-kernel-lock-deadlock-triage",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-kernel-lock-deadlock-triage\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-kernel-verifier-triage",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-kernel-verifier-triage\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-user-exception-triage",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-user-exception-triage\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-user-heap-corruption-investigation",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-user-heap-corruption-investigation\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-user-mutex-held-across-co-await",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-user-mutex-held-across-co-await\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-user-ttd-reverse-debugging-triage",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-user-ttd-reverse-debugging-triage\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-user-virtual-memory-exhaustion",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-user-virtual-memory-exhaustion\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "windbg:windbg-user-wait-chain-analysis",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\windbg\\1.0.0\\skills\\windbg-user-wait-chain-analysis\\SKILL.md",
+      "pluginId": "windbg@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-code-review",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-code-review\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-design",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-design\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-dev-workflow",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-dev-workflow\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-packaging",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-packaging\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-session-report",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-session-report\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-setup",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-setup\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-ui-testing",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-ui-testing\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    },
+    {
+      "name": "winui:winui-wpf-migration",
+      "scope": "user",
+      "enabled": true,
+      "path": "C:\\Users\\nbton\\.codex\\plugins\\cache\\win-dev-skills\\winui\\0.7.1\\agent-plugin\\skills\\winui-wpf-migration\\SKILL.md",
+      "pluginId": "winui@win-dev-skills"
+    }
+  ],
+  "source_hash_checks": [
+    {
+      "skill": "deep-agents-core",
+      "sha256": "590e86e15b7be4e6f4efbfe90832a3675de37d732c37a723e8517f8c10e275de",
+      "matches_source": true
+    },
+    {
+      "skill": "deep-agents-memory",
+      "sha256": "524e7dd145564421e771016fc569eb450d62ec8b6b5ca17b60575099e448438f",
+      "matches_source": true
+    },
+    {
+      "skill": "deep-agents-orchestration",
+      "sha256": "6555df54110d504b74ee615219f98c4e0adb525eb58a3f8f6c6f2bfce7023915",
+      "matches_source": true
+    },
+    {
+      "skill": "deepagents-python-quickstart",
+      "sha256": "d44080d0c1e633e809427786146984c446570403f79bb113765d0f682d9f8c8d",
+      "matches_source": true
+    },
+    {
+      "skill": "deepagents-typescript-quickstart",
+      "sha256": "1ba8f6544a3dc570d31108b4ea2abe7e360d270abb18338b40bc254bb8c739b0",
+      "matches_source": true
+    },
+    {
+      "skill": "ecosystem-primer",
+      "sha256": "b1a49bbbee28216ed8968be88b96f9ea44e63ed3fdb8b7c4f17fa310db8b215e",
+      "matches_source": true
+    },
+    {
+      "skill": "eval-engineering",
+      "sha256": "663359e049c23a6e51b04aee062e17355fab7a6538446491c0917f2e19f196b3",
+      "matches_source": true
+    },
+    {
+      "skill": "langchain-dependencies",
+      "sha256": "07d25f3a6541957ed0b47de52c69b84aa18a619e0f8271e346c4cfa0b546d52a",
+      "matches_source": true
+    },
+    {
+      "skill": "langchain-fundamentals",
+      "sha256": "fead18ee3a0fea2fcebf83ead019c85f32252813fcc1fb3147e2906c107892bc",
+      "matches_source": true
+    },
+    {
+      "skill": "langchain-middleware",
+      "sha256": "b06bd9294ba9a6341b66bb99de9d67ca7c16e6ba113b77c10679a8adcae55b95",
+      "matches_source": true
+    },
+    {
+      "skill": "langchain-python-quickstart",
+      "sha256": "d9783f76d9ad12edb8020f67f0c8b974bef0e076ed8c067aa3c606fe774f3cf9",
+      "matches_source": true
+    },
+    {
+      "skill": "langchain-rag",
+      "sha256": "4d508793fd26266686eebb7f802e564cd9681514b95ce83a8d3a7d7e6a94dc52",
+      "matches_source": true
+    },
+    {
+      "skill": "langchain-typescript-quickstart",
+      "sha256": "03b3f1c6f55c76a08cab4ac79f6ee8dce5bb0675e4a467a552fba31e7238937b",
+      "matches_source": true
+    },
+    {
+      "skill": "langgraph-cli",
+      "sha256": "4572d939ef6b0720c288ffd6ff920b437b187c3dc5f5c308b173acfa46fe0688",
+      "matches_source": true
+    },
+    {
+      "skill": "langgraph-decision-models",
+      "sha256": "bb88fd132f5cd416ee2c1a27ce57984549afb641e399d7385fd750692eef0061",
+      "matches_source": true
+    },
+    {
+      "skill": "langgraph-fundamentals",
+      "sha256": "f7eba6e2b5a99d784e68f25e7ba84b290e1c8041867e9638abfa8d6029ecbbea",
+      "matches_source": true
+    },
+    {
+      "skill": "langgraph-human-in-the-loop",
+      "sha256": "8e9047e81a4506c3a12814ea6d4f4ec2a2e7e941122ba715c152de46b920d2ec",
+      "matches_source": true
+    },
+    {
+      "skill": "langgraph-persistence",
+      "sha256": "c825ec79d46b4a4b12103ce8b14c481b4859bdd7a73b7cb6d18f1ff98b75deb0",
+      "matches_source": true
+    },
+    {
+      "skill": "langgraph-python-quickstart",
+      "sha256": "89fc0a2a9e493476f233d3e5573ea3f4f2f80a179ac61dcacf8bce822e23f90d",
+      "matches_source": true
+    },
+    {
+      "skill": "langgraph-typescript-quickstart",
+      "sha256": "ad4c351ad14c3a371a148376cc57d4e33908502567068a90c1ac7c1aafdfa7ba",
+      "matches_source": true
+    },
+    {
+      "skill": "managed-deep-agents",
+      "sha256": "72a7c23e4945a8f319e7daef53e293ed9ac7452471153e5e88cccf797c01273a",
+      "matches_source": true
+    },
+    {
+      "skill": "swarm",
+      "sha256": "e624716943d7333b1eacca6fe85868d7f9ff22772155e3ae515aec771f242e38",
+      "matches_source": true
+    }
+  ],
+  "missing_required_skills": [],
+  "discovery_errors": []
+}

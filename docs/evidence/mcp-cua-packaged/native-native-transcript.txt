@@ -1,0 +1,28 @@
+Hover to preview · click to keep open · Escape to collapse
+EvoFlow
+✓ Complete
+Conversation
+Memory
+You
+Use the native filesystem tool to create a new text file named EvoFlow-native-MCP-check-1793424768546.txt in the default EvoFlow workspace containing exactly EvoFlow native tool verified. Then read it back to verify its contents.
+Local action
+write: C:\Users\nbton\Documents\EvoFlow Files\EvoFlow-native-MCP-check-1793424768546.txt
+Local action
+File written and hash verified.
+succeeded · verified: true
+Local action
+read: C:\Users\nbton\Documents\EvoFlow Files\EvoFlow-native-MCP-check-1793424768546.txt
+Local action
+File read.
+succeeded · verified: true
+EvoFlow
+**Done — verified.**
+
+- **Path:** `C:\Users\nbton\Documents\EvoFlow Files\EvoFlow-native-MCP-check-1793424768546.txt`
+- **Write:** succeeded, hash-verified, 28 bytes
+- **SHA-256:** `07A2DFFD43A22E667BE2CE86835CE349D5D3180301BEAAC74A2842659D1A4FAE`
+- **Read-back content:** `EvoFlow native tool verified`
+
+The read-back matches the requested contents exactly (no trailing newline; 28 bytes), so the file was created and confirmed via the native filesystem tool.
+Message
+Enter to send · Shift+Enter for a new line

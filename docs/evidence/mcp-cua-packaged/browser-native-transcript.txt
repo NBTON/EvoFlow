@@ -1,0 +1,31 @@
+EvoFlow
+Needs attention
+Conversation
+Memory
+You
+Use Cua to open an isolated browser, navigate to https://www.selenium.dev/selenium/web/web-form.html, fill the Text input with EvoFlow MCP verified, submit, and verify the page says Received! If preparation is refused, stop and report the refusal without retrying or another backend.
+Local action
+MCP server returned error content. Read the structured refusal; no fallback was attempted.
+failed · verified: false
+EvoFlow
+Browser preparation was refused, so I stopped there as instructed.
+
+**Result: refusal — no browser session created, nothing completed.**
+
+- **Tool:** Cua `browser_prepare` (`allow_launch=true`, `profile={mode: isolated_new}`)
+- **Status:** `refused` (`verified: false`)
+- **Refusal code:** `browser_endpoint_owner_mismatch`
+- **Message:** "the isolated browser profile endpoint did not match live loopback socket ownership"
+- **Driver hint:** The DevTools endpoint found is not provably this browser's, so it was refused. Act through `get_window_state` and the accessibility tree instead.
+
+No fallback was attempted and no retry was made, per your instruction.
+
+Consequently, nothing else was done: the URL `https://www.selenium.dev/selenium/web/web-form.html` was not opened, the Text field was not filled with "EvoFlow MCP verified", the form was not submitted, and the "Received!" page was never observed. Foreground window and pointer position were unchanged by the attempt.
+
+Two notes on what I cannot claim:
+- Preparation was refused, so no target/tab binding exists — there is no browser state for me to inspect or act on.
+- The driver's hint suggests an accessibility-tree route, but that route is not the browser MCP path you requested, and browser preparation must succeed before any typed browser call is legitimate. Per your instruction I did not pursue it or any other backend.
+
+If you want to proceed, the setup would need to be resolved on your side so the isolated browser's DevTools endpoint verifiably belongs to that launch; then I can re-run prepare → navigate → fill → submit → verify.
+Message
+Enter to send · Shift+Enter for a new line

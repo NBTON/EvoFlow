@@ -1,0 +1,176 @@
+{
+  "live": true,
+  "purpose": "Small capability request only; not a workflow quality benchmark",
+  "routing": {
+    "policy": "adaptive",
+    "policy_version": "model-effort-v1",
+    "context": {
+      "task_novelty": true
+    },
+    "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "requested_effort": "medium",
+    "submitted_effort": "medium",
+    "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "effective_effort": "unknown",
+    "effort_status": "submitted_unconfirmed",
+    "profile": "novel",
+    "reason": "No prior skill contract for this task family",
+    "capability_reason": "Effort supported by current model and endpoint metadata",
+    "capabilities_checked_at": 1793377885.2352378,
+    "eligible_providers": [
+      "nvidia"
+    ],
+    "provider": "Nvidia",
+    "request_id": "gen-1793377880-9RopDhqzXqP3tLINgsRa",
+    "usage": {
+      "prompt_tokens": 23,
+      "completion_tokens": 27,
+      "total_tokens": 50,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 23,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "metrics": {
+    "model_calls": 1,
+    "input_tokens": 23,
+    "output_tokens": 27,
+    "reasoning_tokens": 23,
+    "retries": 0,
+    "tool_calls": 0,
+    "local_execution_ms": 0.0,
+    "model_latency_ms": 1873.8468999981706,
+    "billed_cost_usd": 0.0,
+    "usage_complete": true,
+    "cost_reported": true,
+    "calls": [
+      {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "interface": "chat/completions",
+        "status": 200,
+        "temperature": 0,
+        "reasoning": {
+          "effort": "medium"
+        },
+        "attempt": 0,
+        "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "requested_effort": "medium",
+        "submitted_effort": "medium",
+        "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "effective_effort": "unknown",
+        "routing": {
+          "policy": "adaptive",
+          "policy_version": "model-effort-v1",
+          "context": {
+            "task_novelty": true
+          },
+          "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "requested_effort": "medium",
+          "submitted_effort": "medium",
+          "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "profile": "novel",
+          "reason": "No prior skill contract for this task family",
+          "capability_reason": "Effort supported by current model and endpoint metadata",
+          "capabilities_checked_at": 1793377885.2352378,
+          "eligible_providers": [
+            "nvidia"
+          ],
+          "provider": "Nvidia",
+          "request_id": "gen-1793377880-9RopDhqzXqP3tLINgsRa",
+          "usage": {
+            "prompt_tokens": 23,
+            "completion_tokens": 27,
+            "total_tokens": 50,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 23,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        },
+        "provider": "Nvidia",
+        "request_id": "gen-1793377880-9RopDhqzXqP3tLINgsRa",
+        "usage": {
+          "prompt_tokens": 23,
+          "completion_tokens": 27,
+          "total_tokens": 50,
+          "cost": 0,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0,
+            "upstream_inference_prompt_cost": 0,
+            "upstream_inference_completions_cost": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 23,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "effort_status": "submitted_unconfirmed"
+      }
+    ],
+    "retrieval_queries": 0,
+    "reflection_model_calls": 0,
+    "verification_cases": 0,
+    "routing_decisions": []
+  },
+  "content": "EvoFlow ready",
+  "finish_reason": "stop",
+  "metadata_note": {
+    "observed_supported_efforts": [
+      "high",
+      "medium",
+      "none"
+    ],
+    "mandatory": false,
+    "semantics": "supported_efforts null accepts gateway efforts; omitted means no effort selection; mandatory true prohibits disable. Unsupported effort is suppressed, never remapped. Actual provider effort remains unknown."
+  },
+  "sources": [
+    {
+      "url": "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",
+      "purpose": "Current model reasoning metadata and supported_efforts semantics"
+    },
+    {
+      "url": "https://openrouter.ai/docs/guides/routing/provider-selection#requiring-providers-to-support-all-parameters",
+      "purpose": "Only route to endpoints advertising submitted parameters"
+    }
+  ],
+  "historical_evidence_note": "Separate capability test; does not update or relabel the previous live benchmark or workflow quality evidence."
+}

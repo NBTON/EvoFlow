@@ -1,0 +1,33 @@
+EvoFlow, collapse task panel
+EvoFlow
+Needs attention
+Conversation
+New Chat
+Chat history
+Memory and learned skills
+Memory
+Settings
+Keep task panel open
+ConversationScroll
+You
+Use Cua to open Calculator and inspect its current display. This is a runtime failure test: if the connector disconnects or fails, stop and report that failure without retrying or using another backend.
+Local action
+MCP connection failed (IOException). Check transport, authentication and server compatibility in Connections. No automatic replay; partial effects may remain.
+failed · verified: false
+EvoFlow
+The Cua Calculator connector failed at the very first step, so I stopped as instructed.
+
+**Failure report**
+- **Action attempted:** Launch Calculator via Cua (`launch_app`, aumid `Microsoft.WindowsCalculator_8wekyb3d8bbwe!App`)
+- **Result:** `status: failed`, `verified: false`
+- **Error code:** `connector_failed` — "MCP connection failed (IOException). Check transport, authentication and server compatibility in Connections. No automatic replay; partial effects may remain."
+- **Elapsed:** ~3.0 s
+
+**What I did NOT do:** no retry of the launch, no fallback to another backend (no FlaUI/Playwright substitute, no alternative app-launch route), and no display inspection — I never reached a `list_windows` / `get_window_state` step, so I have no reading of the Calculator display and cannot report one.
+
+Note for later cleanup: the driver warns that partial effects may remain, so a Calculator process could conceivably exist even though the call reported failure. Because the connector is down, I can't enumerate windows to confirm either way — that needs a fresh connection.
+Vertical
+Task instructions
+Message
+Run task
+Enter to send · Shift+Enter for a new line

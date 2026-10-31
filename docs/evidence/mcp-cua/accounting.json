@@ -1,0 +1,11 @@
+{
+  "model_calls": 125,
+  "tool_calls": 93,
+  "input_tokens": 1393884,
+  "output_tokens": 21371,
+  "local_execution_ms": 242512.06279999999,
+  "runs": 18,
+  "failures_included": true,
+  "cost_complete": false,
+  "interpretation": "Acceptance-test workload, not a benchmark. Local execution time includes native review/IPC/discovery. Startup background work and protocol-message counts are not independently metered. No GPU or dollar savings claim."
+}

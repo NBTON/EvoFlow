@@ -1,0 +1,1388 @@
+{
+  "live": true,
+  "purpose": "Development-only adaptive acquisition and covered new-record reuse; separate from historical fixed-policy benchmark",
+  "created_at": 1793378738.716083,
+  "validation_id": "adaptive-validation-af25484351a54b4b99b21f53ef121bf1",
+  "routing_policy": "adaptive",
+  "task": "Reconcile orders, inventory and shipments.",
+  "fixture_partition": "development-only",
+  "fixture_seeds": [
+    17,
+    18
+  ],
+  "configuration": {
+    "general_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "synthesis_role": "general_model",
+    "generation_reasoning": {
+      "enabled": false
+    },
+    "routing": {
+      "policy_version": "model-effort-v1",
+      "default_policy": "adaptive",
+      "fixed": {
+        "model_role": "general_model",
+        "effort": "none"
+      },
+      "profiles": {
+        "routine": {
+          "model_role": "general_model",
+          "effort": "none"
+        },
+        "novel": {
+          "model_role": "general_model",
+          "effort": "medium"
+        },
+        "complex": {
+          "model_role": "general_model",
+          "effort": "high"
+        },
+        "repair": {
+          "model_role": "general_model",
+          "effort": "high"
+        }
+      },
+      "delegated_roles": {
+        "code": {
+          "enabled": false,
+          "model_role": "code_model",
+          "effort": "medium"
+        }
+      },
+      "candidate_note": "Only Nemotron Ultra is enabled after live workflow validation. Other roles require separate capability and reliability validation. Effort controls are capability checked; actual provider effort remains unknown unless reported."
+    },
+    "code_model": "cohere/north-mini-code:free",
+    "decision_model": "respan/span-01-lite:free",
+    "allow_paid_fallback": false,
+    "max_model_calls_per_run": 3,
+    "max_generation_tokens": 3500,
+    "max_retries": 1,
+    "request_timeout_seconds": 90,
+    "metadata_timeout_seconds": 10,
+    "metadata_ttl_seconds": 300,
+    "retrieval_limit": 4,
+    "supabase_url": "https://csvfsltznjdaalnzvgbz.supabase.co",
+    "supabase_publishable_key": "sb_publishable_6DZ98TM3iUhr1np7oxGEzA_X6vUrf9b"
+  },
+  "configuration_hash": "f7a8f3c69f778937ab82688b0e1b1a38de0db8a849f2115e96d255cd0722b5cd",
+  "credential_provenance": "Current-user Windows DPAPI OpenRouter credential; credential contents excluded",
+  "runs": [
+    {
+      "id": "0b0018d0-fbe9-4cd9-a78e-3abc4d008a86",
+      "status": "complete",
+      "task": "Reconcile orders, inventory and shipments.",
+      "mode": "evolving",
+      "live": true,
+      "started_at": 1793378738.7250817,
+      "fixture_hash": "7e87e5f6469d7efb32714596def6ee3f93751e145bff7a88c4b6f0994a40bfe9",
+      "contract": {
+        "schema_version": 1,
+        "tables": {
+          "orders": [
+            "order_id",
+            "promised_date",
+            "quantity",
+            "sku",
+            "warehouse"
+          ],
+          "shipments": [
+            "order_id",
+            "quantity",
+            "shipment_id",
+            "shipped_date",
+            "status"
+          ],
+          "inventory": [
+            "available_qty",
+            "sku",
+            "warehouse"
+          ]
+        },
+        "policy_version": 1,
+        "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+      },
+      "metrics": {
+        "model_calls": 1,
+        "input_tokens": 1454,
+        "output_tokens": 3023,
+        "reasoning_tokens": 2451,
+        "retries": 0,
+        "tool_calls": 7,
+        "local_execution_ms": 21.141700006410247,
+        "model_latency_ms": 86072.14309999836,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "effort": "medium"
+            },
+            "attempt": 0,
+            "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "effective_effort": "unknown",
+            "routing": {
+              "policy": "adaptive",
+              "policy_version": "model-effort-v1",
+              "context": {
+                "task_novelty": true,
+                "schema_novelty": false,
+                "repair": false,
+                "complexity": "standard",
+                "delegated_role": null,
+                "reuse": false
+              },
+              "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+              "requested_effort": "medium",
+              "submitted_effort": "medium",
+              "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+              "effective_effort": "unknown",
+              "effort_status": "submitted_unconfirmed",
+              "profile": "novel",
+              "reason": "No prior skill contract for this task family",
+              "capability_reason": "Effort supported by current model and endpoint metadata",
+              "capabilities_checked_at": 1793378739.6044073,
+              "eligible_providers": [
+                "nvidia"
+              ],
+              "provider": "Nvidia",
+              "request_id": "gen-1793378734-dhy6ZpcwGEGzZMCpxxdJ",
+              "usage": {
+                "prompt_tokens": 1454,
+                "completion_tokens": 3023,
+                "total_tokens": 4477,
+                "cost": 0,
+                "is_byok": false,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "audio_tokens": 0,
+                  "video_tokens": 0
+                },
+                "cost_details": {
+                  "upstream_inference_cost": 0,
+                  "upstream_inference_prompt_cost": 0,
+                  "upstream_inference_completions_cost": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 2451,
+                  "image_tokens": 0,
+                  "audio_tokens": 0
+                }
+              }
+            },
+            "provider": "Nvidia",
+            "request_id": "gen-1793378734-dhy6ZpcwGEGzZMCpxxdJ",
+            "usage": {
+              "prompt_tokens": 1454,
+              "completion_tokens": 3023,
+              "total_tokens": 4477,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2451,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "effort_status": "submitted_unconfirmed"
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 5,
+        "routing_decisions": [
+          {
+            "policy": "adaptive",
+            "policy_version": "model-effort-v1",
+            "context": {
+              "task_novelty": true,
+              "schema_novelty": false,
+              "repair": false,
+              "complexity": "standard",
+              "delegated_role": null,
+              "reuse": false
+            },
+            "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "profile": "novel",
+            "reason": "No prior skill contract for this task family",
+            "capability_reason": "Effort supported by current model and endpoint metadata",
+            "capabilities_checked_at": 1793378739.6044073,
+            "eligible_providers": [
+              "nvidia"
+            ],
+            "provider": "Nvidia",
+            "request_id": "gen-1793378734-dhy6ZpcwGEGzZMCpxxdJ",
+            "usage": {
+              "prompt_tokens": 1454,
+              "completion_tokens": 3023,
+              "total_tokens": 4477,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2451,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "routing_policy": "adaptive",
+        "routing_context": {
+          "task_novelty": true,
+          "schema_novelty": false,
+          "repair": false,
+          "complexity": "standard",
+          "delegated_role": null,
+          "reuse": false
+        },
+        "end_to_end_ms": 87076.6644999967
+      },
+      "result": [
+        {
+          "order_id": "ORD-17-000",
+          "warehouse": "Riyadh",
+          "ordered": 16,
+          "shipped": 16,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-17-001",
+          "warehouse": "Jeddah",
+          "ordered": 12,
+          "shipped": 5,
+          "remaining": 7,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-17-002",
+          "warehouse": "Dammam",
+          "ordered": 8,
+          "shipped": 4,
+          "remaining": 4,
+          "delayed": 0,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-17-003",
+          "warehouse": "Riyadh",
+          "ordered": 3,
+          "shipped": 0,
+          "remaining": 3,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-17-004",
+          "warehouse": "Jeddah",
+          "ordered": 16,
+          "shipped": 16,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-17-005",
+          "warehouse": "Dammam",
+          "ordered": 13,
+          "shipped": 10,
+          "remaining": 3,
+          "delayed": 0,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-17-006",
+          "warehouse": "Riyadh",
+          "ordered": 15,
+          "shipped": 2,
+          "remaining": 13,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-17-007",
+          "warehouse": "Jeddah",
+          "ordered": 4,
+          "shipped": 1,
+          "remaining": 3,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-17-008",
+          "warehouse": "Dammam",
+          "ordered": 7,
+          "shipped": 7,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-17-009",
+          "warehouse": "Riyadh",
+          "ordered": 9,
+          "shipped": 5,
+          "remaining": 4,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-17-010",
+          "warehouse": "Jeddah",
+          "ordered": 6,
+          "shipped": 5,
+          "remaining": 1,
+          "delayed": 1,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-17-011",
+          "warehouse": "Dammam",
+          "ordered": 5,
+          "shipped": 2,
+          "remaining": 3,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "orders_checked": 12,
+        "checks": [
+          "identity deduplication",
+          "shipment totals",
+          "remaining quantity",
+          "policy delay threshold",
+          "supported inventory cause"
+        ],
+        "mismatches": [],
+        "unexpected_rows": 0
+      },
+      "routing": {
+        "policy": "adaptive",
+        "policy_version": "model-effort-v1",
+        "decisions": [
+          {
+            "policy": "adaptive",
+            "policy_version": "model-effort-v1",
+            "context": {
+              "task_novelty": true,
+              "schema_novelty": false,
+              "repair": false,
+              "complexity": "standard",
+              "delegated_role": null,
+              "reuse": false
+            },
+            "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "profile": "novel",
+            "reason": "No prior skill contract for this task family",
+            "capability_reason": "Effort supported by current model and endpoint metadata",
+            "capabilities_checked_at": 1793378739.6044073,
+            "eligible_providers": [
+              "nvidia"
+            ],
+            "provider": "Nvidia",
+            "request_id": "gen-1793378734-dhy6ZpcwGEGzZMCpxxdJ",
+            "usage": {
+              "prompt_tokens": 1454,
+              "completion_tokens": 3023,
+              "total_tokens": 4477,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2451,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ]
+      },
+      "sync_status": "local",
+      "skill_id": "c44e7366-0dcc-4241-b13c-a9e4af28cede",
+      "skill_version": 1,
+      "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 6 | Incomplete: 9\n\nOrder-level results.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-17-000 | Riyadh | 16 | 16 | 0 | No | complete |\n| ORD-17-001 | Jeddah | 12 | 5 | 7 | Yes | fulfillment_pending |\n| ORD-17-002 | Dammam | 8 | 4 | 4 | No | stock_shortage |\n| ORD-17-003 | Riyadh | 3 | 0 | 3 | Yes | fulfillment_pending |\n| ORD-17-004 | Jeddah | 16 | 16 | 0 | No | complete |\n| ORD-17-005 | Dammam | 13 | 10 | 3 | No | inventory_unknown |\n| ORD-17-006 | Riyadh | 15 | 2 | 13 | Yes | fulfillment_pending |\n| ORD-17-007 | Jeddah | 4 | 1 | 3 | Yes | fulfillment_pending |\n| ORD-17-008 | Dammam | 7 | 7 | 0 | No | complete |\n| ORD-17-009 | Riyadh | 9 | 5 | 4 | Yes | fulfillment_pending |\n| ORD-17-010 | Jeddah | 6 | 5 | 1 | Yes | inventory_unknown |\n| ORD-17-011 | Dammam | 5 | 2 | 3 | No | fulfillment_pending |",
+      "grouped_by_warehouse": false,
+      "evidence_ids": [],
+      "reused": false,
+      "plan": {
+        "title": "Order Shipment Inventory Reconciliation",
+        "query": "",
+        "program": [
+          {
+            "op": "deduplicate",
+            "input": "orders",
+            "as": "orders_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "shipments",
+            "as": "shipments_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "inventory",
+            "as": "inventory_dedup"
+          },
+          {
+            "op": "filter_in",
+            "input": "shipments_dedup",
+            "as": "shipments_filtered",
+            "field": "status",
+            "values": [
+              "shipped",
+              "delivered"
+            ]
+          },
+          {
+            "op": "group_sum",
+            "input": "shipments_filtered",
+            "as": "shipments_agg",
+            "keys": [
+              "order_id"
+            ],
+            "field": "quantity",
+            "output": "shipped_qty"
+          },
+          {
+            "op": "left_join",
+            "input": "orders_dedup",
+            "as": "orders_shipped",
+            "right": "shipments_agg",
+            "on": {
+              "order_id": "order_id"
+            },
+            "fields": {
+              "shipped": "shipped_qty"
+            }
+          },
+          {
+            "op": "left_join",
+            "input": "orders_shipped",
+            "as": "orders_inv",
+            "right": "inventory_dedup",
+            "on": {
+              "sku": "sku",
+              "warehouse": "warehouse"
+            },
+            "fields": {
+              "available_qty": "available_qty"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_inv",
+            "as": "orders_calc",
+            "values": {
+              "ordered": "quantity",
+              "shipped": "coalesce(shipped, 0)",
+              "remaining": "max(0, ordered - shipped)",
+              "delayed": "1 if remaining > 0 and days_between(as_of, promised_date) > grace_days else 0",
+              "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+            }
+          },
+          {
+            "op": "project",
+            "input": "orders_calc",
+            "as": "final",
+            "columns": [
+              "order_id",
+              "warehouse",
+              "ordered",
+              "shipped",
+              "remaining",
+              "delayed",
+              "cause"
+            ]
+          }
+        ],
+        "summary": "Deduplicate inputs, filter counted shipments, aggregate per order, join with inventory, compute shipped, remaining, delayed, and cause per order."
+      },
+      "finished_at": 1793378825.7970524,
+      "development_stage": "acquisition",
+      "fixture_seed": 17,
+      "artifact_provenance": "Locally retained in the isolated validation directory; local absolute paths excluded from exported evidence"
+    },
+    {
+      "id": "678c2f71-124a-470f-b616-56a05575c3bb",
+      "status": "complete",
+      "task": "Reconcile orders, inventory and shipments.",
+      "mode": "evolving",
+      "live": true,
+      "started_at": 1793378825.813106,
+      "fixture_hash": "9eb73f086491fe4af3afa9c47f3c9de69bd35a51d33617dbd4913fca8b7c4f2c",
+      "contract": {
+        "schema_version": 1,
+        "tables": {
+          "orders": [
+            "order_id",
+            "promised_date",
+            "quantity",
+            "sku",
+            "warehouse"
+          ],
+          "shipments": [
+            "order_id",
+            "quantity",
+            "shipment_id",
+            "shipped_date",
+            "status"
+          ],
+          "inventory": [
+            "available_qty",
+            "sku",
+            "warehouse"
+          ]
+        },
+        "policy_version": 1,
+        "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+      },
+      "metrics": {
+        "model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 3,
+        "local_execution_ms": 8.63770000069053,
+        "model_latency_ms": 0.0,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 1,
+        "routing_decisions": [
+          {
+            "policy": "adaptive",
+            "policy_version": "model-effort-v1",
+            "context": {
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "complexity": "standard",
+              "delegated_role": null,
+              "reuse": true
+            },
+            "requested_model": null,
+            "requested_effort": null,
+            "submitted_effort": null,
+            "effective_model": null,
+            "effective_effort": "not_applicable",
+            "effort_status": "no_inference",
+            "profile": "reuse",
+            "reason": "Applicable verified skill; no inference requested"
+          }
+        ],
+        "routing_policy": "adaptive",
+        "routing_context": {
+          "task_novelty": false,
+          "schema_novelty": false,
+          "repair": false,
+          "complexity": "standard",
+          "delegated_role": null,
+          "reuse": true
+        },
+        "end_to_end_ms": 110.31550000188872
+      },
+      "result": [
+        {
+          "order_id": "ORD-18-000",
+          "warehouse": "Riyadh",
+          "ordered": 8,
+          "shipped": 8,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-18-001",
+          "warehouse": "Jeddah",
+          "ordered": 6,
+          "shipped": 5,
+          "remaining": 1,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-18-002",
+          "warehouse": "Dammam",
+          "ordered": 13,
+          "shipped": 3,
+          "remaining": 10,
+          "delayed": 0,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-18-003",
+          "warehouse": "Riyadh",
+          "ordered": 18,
+          "shipped": 15,
+          "remaining": 3,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-18-004",
+          "warehouse": "Jeddah",
+          "ordered": 18,
+          "shipped": 18,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-18-005",
+          "warehouse": "Dammam",
+          "ordered": 17,
+          "shipped": 8,
+          "remaining": 9,
+          "delayed": 0,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-18-006",
+          "warehouse": "Riyadh",
+          "ordered": 9,
+          "shipped": 4,
+          "remaining": 5,
+          "delayed": 1,
+          "cause": "stock_shortage"
+        },
+        {
+          "order_id": "ORD-18-007",
+          "warehouse": "Jeddah",
+          "ordered": 13,
+          "shipped": 8,
+          "remaining": 5,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-18-008",
+          "warehouse": "Dammam",
+          "ordered": 10,
+          "shipped": 10,
+          "remaining": 0,
+          "delayed": 0,
+          "cause": "complete"
+        },
+        {
+          "order_id": "ORD-18-009",
+          "warehouse": "Riyadh",
+          "ordered": 10,
+          "shipped": 3,
+          "remaining": 7,
+          "delayed": 1,
+          "cause": "fulfillment_pending"
+        },
+        {
+          "order_id": "ORD-18-010",
+          "warehouse": "Jeddah",
+          "ordered": 9,
+          "shipped": 7,
+          "remaining": 2,
+          "delayed": 1,
+          "cause": "inventory_unknown"
+        },
+        {
+          "order_id": "ORD-18-011",
+          "warehouse": "Dammam",
+          "ordered": 9,
+          "shipped": 4,
+          "remaining": 5,
+          "delayed": 0,
+          "cause": "fulfillment_pending"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "orders_checked": 12,
+        "checks": [
+          "identity deduplication",
+          "shipment totals",
+          "remaining quantity",
+          "policy delay threshold",
+          "supported inventory cause"
+        ],
+        "mismatches": [],
+        "unexpected_rows": 0
+      },
+      "routing": {
+        "policy": "adaptive",
+        "policy_version": "model-effort-v1",
+        "decisions": [
+          {
+            "policy": "adaptive",
+            "policy_version": "model-effort-v1",
+            "context": {
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "complexity": "standard",
+              "delegated_role": null,
+              "reuse": true
+            },
+            "requested_model": null,
+            "requested_effort": null,
+            "submitted_effort": null,
+            "effective_model": null,
+            "effective_effort": "not_applicable",
+            "effort_status": "no_inference",
+            "profile": "reuse",
+            "reason": "Applicable verified skill; no inference requested"
+          }
+        ]
+      },
+      "sync_status": "local",
+      "report": "# EvoFlow reconciliation\n\nLive execution; independently verified.\nOrders: 12 | Delayed: 6 | Incomplete: 9\n\nOrder-level results.\n\n| Order | Warehouse | Ordered | Shipped | Remaining | Delayed | Evidence-based cause |\n|---|---|---:|---:|---:|---|---|\n| ORD-18-000 | Riyadh | 8 | 8 | 0 | No | complete |\n| ORD-18-001 | Jeddah | 6 | 5 | 1 | Yes | fulfillment_pending |\n| ORD-18-002 | Dammam | 13 | 3 | 10 | No | stock_shortage |\n| ORD-18-003 | Riyadh | 18 | 15 | 3 | Yes | fulfillment_pending |\n| ORD-18-004 | Jeddah | 18 | 18 | 0 | No | complete |\n| ORD-18-005 | Dammam | 17 | 8 | 9 | No | inventory_unknown |\n| ORD-18-006 | Riyadh | 9 | 4 | 5 | Yes | stock_shortage |\n| ORD-18-007 | Jeddah | 13 | 8 | 5 | Yes | fulfillment_pending |\n| ORD-18-008 | Dammam | 10 | 10 | 0 | No | complete |\n| ORD-18-009 | Riyadh | 10 | 3 | 7 | Yes | fulfillment_pending |\n| ORD-18-010 | Jeddah | 9 | 7 | 2 | Yes | inventory_unknown |\n| ORD-18-011 | Dammam | 9 | 4 | 5 | No | fulfillment_pending |",
+      "grouped_by_warehouse": false,
+      "evidence_ids": [],
+      "reused": true,
+      "plan": {
+        "title": "Order Shipment Inventory Reconciliation",
+        "query": "",
+        "program": [
+          {
+            "op": "deduplicate",
+            "input": "orders",
+            "as": "orders_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "shipments",
+            "as": "shipments_dedup"
+          },
+          {
+            "op": "deduplicate",
+            "input": "inventory",
+            "as": "inventory_dedup"
+          },
+          {
+            "op": "filter_in",
+            "input": "shipments_dedup",
+            "as": "shipments_filtered",
+            "field": "status",
+            "values": [
+              "shipped",
+              "delivered"
+            ]
+          },
+          {
+            "op": "group_sum",
+            "input": "shipments_filtered",
+            "as": "shipments_agg",
+            "keys": [
+              "order_id"
+            ],
+            "field": "quantity",
+            "output": "shipped_qty"
+          },
+          {
+            "op": "left_join",
+            "input": "orders_dedup",
+            "as": "orders_shipped",
+            "right": "shipments_agg",
+            "on": {
+              "order_id": "order_id"
+            },
+            "fields": {
+              "shipped": "shipped_qty"
+            }
+          },
+          {
+            "op": "left_join",
+            "input": "orders_shipped",
+            "as": "orders_inv",
+            "right": "inventory_dedup",
+            "on": {
+              "sku": "sku",
+              "warehouse": "warehouse"
+            },
+            "fields": {
+              "available_qty": "available_qty"
+            }
+          },
+          {
+            "op": "derive",
+            "input": "orders_inv",
+            "as": "orders_calc",
+            "values": {
+              "ordered": "quantity",
+              "shipped": "coalesce(shipped, 0)",
+              "remaining": "max(0, ordered - shipped)",
+              "delayed": "1 if remaining > 0 and days_between(as_of, promised_date) > grace_days else 0",
+              "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+            }
+          },
+          {
+            "op": "project",
+            "input": "orders_calc",
+            "as": "final",
+            "columns": [
+              "order_id",
+              "warehouse",
+              "ordered",
+              "shipped",
+              "remaining",
+              "delayed",
+              "cause"
+            ]
+          }
+        ],
+        "summary": "Deduplicate inputs, filter counted shipments, aggregate per order, join with inventory, compute shipped, remaining, delayed, and cause per order."
+      },
+      "skill_id": "c44e7366-0dcc-4241-b13c-a9e4af28cede",
+      "skill_version": 1,
+      "finished_at": 1793378825.9223604,
+      "development_stage": "covered_reuse",
+      "fixture_seed": 18,
+      "artifact_provenance": "Locally retained in the isolated validation directory; local absolute paths excluded from exported evidence"
+    }
+  ],
+  "skills": [
+    {
+      "id": "c44e7366-0dcc-4241-b13c-a9e4af28cede",
+      "version": 1,
+      "task_family": "order-reconciliation",
+      "title": "Order Shipment Inventory Reconciliation",
+      "state": "active",
+      "source_run": "0b0018d0-fbe9-4cd9-a78e-3abc4d008a86",
+      "parent_version": null,
+      "plans": {
+        "1": {
+          "title": "Order Shipment Inventory Reconciliation",
+          "query": "",
+          "program": [
+            {
+              "op": "deduplicate",
+              "input": "orders",
+              "as": "orders_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "shipments",
+              "as": "shipments_dedup"
+            },
+            {
+              "op": "deduplicate",
+              "input": "inventory",
+              "as": "inventory_dedup"
+            },
+            {
+              "op": "filter_in",
+              "input": "shipments_dedup",
+              "as": "shipments_filtered",
+              "field": "status",
+              "values": [
+                "shipped",
+                "delivered"
+              ]
+            },
+            {
+              "op": "group_sum",
+              "input": "shipments_filtered",
+              "as": "shipments_agg",
+              "keys": [
+                "order_id"
+              ],
+              "field": "quantity",
+              "output": "shipped_qty"
+            },
+            {
+              "op": "left_join",
+              "input": "orders_dedup",
+              "as": "orders_shipped",
+              "right": "shipments_agg",
+              "on": {
+                "order_id": "order_id"
+              },
+              "fields": {
+                "shipped": "shipped_qty"
+              }
+            },
+            {
+              "op": "left_join",
+              "input": "orders_shipped",
+              "as": "orders_inv",
+              "right": "inventory_dedup",
+              "on": {
+                "sku": "sku",
+                "warehouse": "warehouse"
+              },
+              "fields": {
+                "available_qty": "available_qty"
+              }
+            },
+            {
+              "op": "derive",
+              "input": "orders_inv",
+              "as": "orders_calc",
+              "values": {
+                "ordered": "quantity",
+                "shipped": "coalesce(shipped, 0)",
+                "remaining": "max(0, ordered - shipped)",
+                "delayed": "1 if remaining > 0 and days_between(as_of, promised_date) > grace_days else 0",
+                "cause": "'complete' if remaining == 0 else ('inventory_unknown' if available_qty is None else ('stock_shortage' if available_qty < remaining else 'fulfillment_pending'))"
+              }
+            },
+            {
+              "op": "project",
+              "input": "orders_calc",
+              "as": "final",
+              "columns": [
+                "order_id",
+                "warehouse",
+                "ordered",
+                "shipped",
+                "remaining",
+                "delayed",
+                "cause"
+              ]
+            }
+          ],
+          "summary": "Deduplicate inputs, filter counted shipments, aggregate per order, join with inventory, compute shipped, remaining, delayed, and cause per order."
+        }
+      },
+      "contracts": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        }
+      },
+      "artifact_hash": "ac6d42ce8e6367d1851cd195f250872c6da386ff7857f7cb24e3a717093da6cf",
+      "parameters": [
+        "as_of",
+        "grace_days"
+      ],
+      "input_contract": {
+        "1": {
+          "schema_version": 1,
+          "tables": {
+            "orders": [
+              "order_id",
+              "promised_date",
+              "quantity",
+              "sku",
+              "warehouse"
+            ],
+            "shipments": [
+              "order_id",
+              "quantity",
+              "shipment_id",
+              "shipped_date",
+              "status"
+            ],
+            "inventory": [
+              "available_qty",
+              "sku",
+              "warehouse"
+            ]
+          },
+          "policy_version": 1,
+          "policy_hash": "77e22342a05b2be9756908a32f8a9a31345f4cb4f4f5dacca2b7aeee7eb1b73a"
+        }
+      },
+      "output_contract": [
+        "cause",
+        "delayed",
+        "order_id",
+        "ordered",
+        "remaining",
+        "shipped",
+        "warehouse"
+      ],
+      "assumptions": [
+        "One SKU per order",
+        "Conflicting duplicates unsupported",
+        "Exact policy versions"
+      ],
+      "dependencies": [
+        "closed SQLite SELECT interpreter v1"
+      ],
+      "independent_checks": [
+        {
+          "fixture_hash": "59087f461f50b6a053ec62f3b6c7cf2495a5a347aabf8fb42e5ec311ff03392a",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "e105512a71e5bcd3fe3365b8e1e1dec9df16a01fd88aea32efb307eb83afbbb8",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "7915bee4f674b44327b782031ba2b9993fbaa37d6fe8b4d6f67fdc0c4dd1ca50",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        },
+        {
+          "fixture_hash": "4408580a7f8563d1e706b5489655147d2c187cb80ac8575a7d31957fe3962c97",
+          "schema": "1",
+          "passed": true,
+          "partition": "development"
+        }
+      ],
+      "triggering_evidence": "Verified actual task",
+      "knowledge_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "knowledge_dependencies": [],
+      "observed_performance": {
+        "model_calls": 1,
+        "input_tokens": 1454,
+        "output_tokens": 3023,
+        "reasoning_tokens": 2451,
+        "retries": 0,
+        "tool_calls": 7,
+        "local_execution_ms": 21.141700006410247,
+        "model_latency_ms": 86072.14309999836,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "interface": "chat/completions",
+            "status": 200,
+            "temperature": 0,
+            "reasoning": {
+              "effort": "medium"
+            },
+            "attempt": 0,
+            "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "effective_effort": "unknown",
+            "routing": {
+              "policy": "adaptive",
+              "policy_version": "model-effort-v1",
+              "context": {
+                "task_novelty": true,
+                "schema_novelty": false,
+                "repair": false,
+                "complexity": "standard",
+                "delegated_role": null,
+                "reuse": false
+              },
+              "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+              "requested_effort": "medium",
+              "submitted_effort": "medium",
+              "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+              "effective_effort": "unknown",
+              "effort_status": "submitted_unconfirmed",
+              "profile": "novel",
+              "reason": "No prior skill contract for this task family",
+              "capability_reason": "Effort supported by current model and endpoint metadata",
+              "capabilities_checked_at": 1793378739.6044073,
+              "eligible_providers": [
+                "nvidia"
+              ],
+              "provider": "Nvidia",
+              "request_id": "gen-1793378734-dhy6ZpcwGEGzZMCpxxdJ",
+              "usage": {
+                "prompt_tokens": 1454,
+                "completion_tokens": 3023,
+                "total_tokens": 4477,
+                "cost": 0,
+                "is_byok": false,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "audio_tokens": 0,
+                  "video_tokens": 0
+                },
+                "cost_details": {
+                  "upstream_inference_cost": 0,
+                  "upstream_inference_prompt_cost": 0,
+                  "upstream_inference_completions_cost": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 2451,
+                  "image_tokens": 0,
+                  "audio_tokens": 0
+                }
+              }
+            },
+            "provider": "Nvidia",
+            "request_id": "gen-1793378734-dhy6ZpcwGEGzZMCpxxdJ",
+            "usage": {
+              "prompt_tokens": 1454,
+              "completion_tokens": 3023,
+              "total_tokens": 4477,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2451,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "effort_status": "submitted_unconfirmed"
+          }
+        ],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 5,
+        "routing_decisions": [
+          {
+            "policy": "adaptive",
+            "policy_version": "model-effort-v1",
+            "context": {
+              "task_novelty": true,
+              "schema_novelty": false,
+              "repair": false,
+              "complexity": "standard",
+              "delegated_role": null,
+              "reuse": false
+            },
+            "requested_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "effective_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "profile": "novel",
+            "reason": "No prior skill contract for this task family",
+            "capability_reason": "Effort supported by current model and endpoint metadata",
+            "capabilities_checked_at": 1793378739.6044073,
+            "eligible_providers": [
+              "nvidia"
+            ],
+            "provider": "Nvidia",
+            "request_id": "gen-1793378734-dhy6ZpcwGEGzZMCpxxdJ",
+            "usage": {
+              "prompt_tokens": 1454,
+              "completion_tokens": 3023,
+              "total_tokens": 4477,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2451,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          }
+        ],
+        "routing_policy": "adaptive",
+        "routing_context": {
+          "task_novelty": true,
+          "schema_novelty": false,
+          "repair": false,
+          "complexity": "standard",
+          "delegated_role": null,
+          "reuse": false
+        }
+      },
+      "policy_versions": {
+        "1": 1
+      },
+      "admission": {
+        "passed": true,
+        "quality": "all development checks must pass",
+        "efficiency": "zero inference calls on covered reuse vs measured synthesis >0",
+        "reuse_model_calls": 0,
+        "acquisition_model_calls": 1
+      },
+      "promoted_at": 1793378825.7550485
+    }
+  ],
+  "events": {
+    "0b0018d0-fbe9-4cd9-a78e-3abc4d008a86": [
+      {
+        "kind": "inspect",
+        "message": "Inspecting input schemas and business-rule versions",
+        "timestamp": 1793378738.7575934,
+        "sequence": 1
+      },
+      {
+        "kind": "retrieve",
+        "message": "Retrieving scoped policy evidence and eligible workflow versions",
+        "timestamp": 1793378738.7625945,
+        "sequence": 2
+      },
+      {
+        "kind": "synthesis",
+        "message": "Synthesizing an executable read-only workflow from the actual task",
+        "timestamp": 1793378738.787592,
+        "sequence": 3
+      },
+      {
+        "kind": "execute",
+        "message": "Executing the synthesized workflow inside the closed query interpreter",
+        "timestamp": 1793378825.6871738,
+        "sequence": 4
+      },
+      {
+        "kind": "evaluation",
+        "message": "Testing the candidate on independent development cases and old-case regressions",
+        "timestamp": 1793378825.7166712,
+        "sequence": 5
+      },
+      {
+        "kind": "promotion",
+        "message": "Promoted skill v1",
+        "skill_id": "c44e7366-0dcc-4241-b13c-a9e4af28cede",
+        "parent_version": null,
+        "timestamp": 1793378825.7550485,
+        "sequence": 6
+      },
+      {
+        "kind": "admission",
+        "message": "Skill v1 promoted after 4 development checks",
+        "timestamp": 1793378825.7640748,
+        "sequence": 7
+      },
+      {
+        "kind": "verified",
+        "message": "Independent correctness checks passed",
+        "timestamp": 1793378825.7710423,
+        "sequence": 8
+      }
+    ],
+    "678c2f71-124a-470f-b616-56a05575c3bb": [
+      {
+        "kind": "inspect",
+        "message": "Inspecting input schemas and business-rule versions",
+        "timestamp": 1793378825.8361285,
+        "sequence": 9
+      },
+      {
+        "kind": "retrieve",
+        "message": "Retrieving scoped policy evidence and eligible workflow versions",
+        "timestamp": 1793378825.8421247,
+        "sequence": 10
+      },
+      {
+        "kind": "reuse",
+        "message": "Reusing a saved skill",
+        "timestamp": 1793378825.8671253,
+        "sequence": 11
+      },
+      {
+        "kind": "verified",
+        "message": "Independent correctness checks passed",
+        "timestamp": 1793378825.8821256,
+        "sequence": 12
+      }
+    ]
+  },
+  "notice": "No sealed final fixtures used. No changes to runtime configuration, model roles, admission criteria, oracle, or historical evidence.",
+  "outcome": "Development acquisition and covered reuse completed",
+  "checks": {
+    "acquisition_correct": true,
+    "reuse_correct": true,
+    "second_run_reused": true,
+    "second_run_zero_model_calls": true,
+    "candidate_development_checks_passed": true,
+    "candidate_development_check_count": 4,
+    "active_skill_count": 1
+  },
+  "local_artifact_directory": "artifacts/local/adaptive-validation-af25484351a54b4b99b21f53ef121bf1",
+  "limitations": [
+    "One development acquisition and one covered fresh-record reuse; no general quality or efficiency claim.",
+    "All enabled profiles use the previously validated generator; alternate delegated generation remains disabled.",
+    "Actual effective reasoning effort is not reported by the provider and remains unknown.",
+    "This worker-only timing excludes native startup and cloud synchronization."
+  ]
+}

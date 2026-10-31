@@ -1,0 +1,66 @@
+EvoFlow
+Needs attention
+Conversation
+Memory
+You
+Open Calculator, compute 6 × 7, and verify that Calculator displays 42.
+Local action
+EvoFlow owns the private transport lifecycle. Omit session.
+denied · verified: false
+Local action
+MCP response received from Cua · Calculator / launch_app
+succeeded · verified: false
+Local action
+Protected or stale target. This native capability is restricted to the installed Calculator executable.
+denied · verified: false
+Local action
+Select the exact PID returned by Calculator launch before listing windows.
+denied · verified: false
+Local action
+Protected or stale target. This native capability is restricted to the installed Calculator executable.
+denied · verified: false
+Local action
+MCP response received from Cua · Calculator / launch_app
+succeeded · verified: false
+Local action
+Protected or stale target. This native capability is restricted to the installed Calculator executable.
+denied · verified: false
+Local action
+Open Calculator · C:\WINDOWS\system32\calc.exe
+Local action
+Launch was requested, but no stable matching application window remained available.
+failed · verified: false
+Local action
+This reviewed desktop capability launches Windows Calculator by its exact AUMID only. Launch arguments, URLs and arbitrary executables are disabled.
+denied · verified: false
+Local action
+Protected or stale target. This native capability is restricted to the installed Calculator executable.
+denied · verified: false
+Local action
+Protected or stale target. This native capability is restricted to the installed Calculator executable.
+denied · verified: false
+Local action
+MCP response received from Cua · Calculator / launch_app
+succeeded · verified: false
+Local action
+Protected or stale target. This native capability is restricted to the installed Calculator executable.
+denied · verified: false
+EvoFlow
+I attempted the task but could not complete it. Here's exactly what happened:
+
+**What worked**
+- Calculator launched via the reviewed Cua path with the exact AUMID `Microsoft.WindowsCalculator_8wekyb3d8bbwe!App`. Launch succeeded and reported a visible "Calculator" window (e.g. window_id 2232036, bounds 500×750 at 50,150) under pid 2664.
+
+**What was blocked**
+- Every attempt to inspect the app (`get_window_state`) and to verify state (`verify_state`) for that pid/window was refused by native policy with `policy_denied`: *"Protected or stale target. This native capability is restricted to the installed Calculator executable."*
+- This repeated across 3 separate launches (window_ids 1445628, 8588200, 2232036) with the same pid 2664, so it isn't a single stale window ID — the launched process/window pair does not satisfy the Calculator-target restriction in this session.
+- `list_windows` with an `app` filter and without a pid was also denied ("Select the exact PID returned by Calculator launch"), and `start_minimized` was denied as an unsupported launch variant.
+- A direct `application_launch` of Calculator also failed verification (`launch_unverified`, no stable matching window, expected `C:\WINDOWS\system32\calc.exe`).
+
+**Result**
+- **6 × 7 was not computed in Calculator, and nothing was verified as displaying 42.** I did not press any calculator keys, so I have no display evidence.
+- Per policy I also did not fall back to FlaUI/`windows_ui` or any other automation after the Cua denials.
+
+If you want, I can retry in a fresh session (which may restore access to the Calculator target), or you can open Calculator yourself and I'll attempt the keystrokes and read back the display.
+Message
+Enter to send · Shift+Enter for a new line

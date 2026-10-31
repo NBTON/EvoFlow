@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="EvoFlow.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EvoFlow">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+            </ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="CompanionSurfaceBrush" Color="#191A20" />
+                    <SolidColorBrush x:Key="CompanionStrokeBrush" Color="#363840" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="CompanionSurfaceBrush" Color="#191A20" />
+                    <SolidColorBrush x:Key="CompanionStrokeBrush" Color="#363840" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <StaticResource x:Key="CompanionSurfaceBrush" ResourceKey="SystemColorWindowColorBrush" />
+                    <StaticResource x:Key="CompanionStrokeBrush" ResourceKey="SystemColorWindowTextColorBrush" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

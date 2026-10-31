@@ -1,0 +1,135 @@
+EVOFLOW - JUDGE DEMO PROMPTS AND EVIDENCE GUIDE
+Prepared 2026-10-30. Documentation only; no demo runs were executed to create this file.
+
+WHAT THIS BUILD DOES
+EvoFlow is a native Windows order-reconciliation workflow learner. It reconciles orders, inventory and shipments, verifies results independently, and can reuse or revise model-authored executable plans. It is not a general chat assistant, browser agent, unrestricted code executor, or full Prime Agent reproduction. Learning is in external skills and scoped memory, not model-weight training.
+
+The original brief proposed several model roles. Current implementation has ONE workflow-validated active generator:
+nvidia/nemotron-3-ultra-550b-a55b:free
+All enabled generation profiles use this same model. Other delegated generation roles remain disabled pending validation. Do not describe this demo as switching to a cheaper or different model. There is no paid fallback.
+
+The key demonstration is verified procedural reuse: a saved plan computes answers for new records with no model inference when its contract is covered. It is not simply replaying a cached answer.
+
+WHERE TO GO IN THE NEW UI
+- Settings > Demos: DemoStage selector and dataset attachment controls.
+- Settings > Advanced / Diagnostics: completed results, report, verification evidence, Model & effort, and run accounting.
+- Settings > Benchmarks: historical comparisons.
+These are the requested new UI destinations, not a claim that this documentation task tested or delivered those UI changes. Older builds place DemoStage/attachment in the expanded panel and results/comparison in the separate Details window. If the new sections are absent, use the matching older controls or obtain the intended build; do not assume a prompt creates UI functionality.
+
+BEFORE PRESENTING
+1. Keep the existing protected device session and saved skills. Do not reset/delete user state to force a cold run. Use only fictional demo data for this sequence.
+2. For each stage, open Settings > Demos and choose its number BEFORE entering the prompt. Ensure no dataset attachment is selected for the built-in sequence. An attached dataset takes precedence over the stage fixture.
+3. Close Settings, paste only the text between BEGIN PROMPT and END PROMPT into the task box, and press Run once. Wait for completion before changing stages.
+4. Inspect the completed run in Settings > Advanced / Diagnostics. Do not use a result window opened while the run was still working as proof of the final route or outcome.
+5. Record actual verification, reuse status, skill version, calls, tokens, attempts, and routing fields. The observations below are conditional expectations, not fresh test results.
+
+IMPORTANT: Prompt text alone does not replace the dataset, rename its columns, or change its authoritative policy/schema. Saying "stage 4" or "two-day grace" in a prompt does not select stage 4. The selector supplies the fictional dataset and policy; an attachment supplies its own validated dataset. Do not ask text to override these contracts.
+
+The demo runs persist real run/skill/memory records and may synchronize through the existing workspace. Stage 1 below explicitly asks to save a report-format preference. Built-in stages also register their labeled fictional shipping policy. They are not read-only previews. This document itself changes none of that state.
+
+STAGE 1 - RECONCILE AND RETAIN AN EXPLICIT FORMAT PREFERENCE
+Setup: Settings > Demos > Stage 1; no attachment.
+Input: fictional seed 21, schema 1, policy 1, zero grace days. Orders and shipments use quantity fields.
+
+BEGIN PROMPT
+Reconcile orders, inventory and shipments. For future reports, group delays by warehouse and show unresolved orders first.
+END PROMPT
+
+Expected observations to check:
+- Order-level rows contain order_id, warehouse, ordered, shipped, remaining, delayed, and cause.
+- Independent checks cover identity deduplication, shipment totals, remaining quantity, policy delay threshold, and supported inventory cause.
+- The explicit future-report preference can be retained after successful verification. Grouped output remains order-level, not a new warehouse aggregation schema.
+- With no eligible saved skill, the system may synthesize a candidate, execute it, evaluate independent development cases and promote it only if admission passes.
+- With an existing covered skill, this can be reuse already. Do NOT call it a cold acquisition or promise skill v1. Preserve the existing library.
+
+Judge narration: "The output must pass independent checks. A successful candidate is admitted as an executable skill, not merely saved as an answer. On this device an applicable skill may already exist."
+
+STAGE 2 - NEW RECORDS, SAME CONTRACT
+Setup: Select Stage 2; no attachment. Run after a successful stage 1.
+Input: fictional seed 22, same schema 1 and policy 1; different order records.
+
+BEGIN PROMPT
+Reconcile orders, inventory and shipments.
+END PROMPT
+
+Expected observations to check:
+- New ORD-22 records are computed rather than the stage 1 answers replayed.
+- If a verified applicable skill remains available, reused=true, model_calls=0, input_tokens=0, output_tokens=0, effort_status=no_inference, and effective_effort=not_applicable.
+- Independent correctness checks still run locally. Zero inference does not mean zero computation.
+- The previously saved warehouse preference should apply without repeating it, if retained and retrieved in this workspace.
+- If synthesis occurs instead, show the actual applicability/evidence reason; do not describe it as zero-call reuse.
+
+Judge narration: "This is the central efficiency mechanism: execute a verified procedure on fresh records instead of asking the model to solve the same covered workflow again."
+
+STAGE 3 - SPLIT SHIPMENTS AND A CHANGED SCHEMA
+Setup: Select Stage 3; no attachment.
+Input: fictional seed 23, schema 2, split shipments, policy 1. Order quantity is now requested_units; shipment quantity is units.
+
+BEGIN PROMPT
+Reconcile orders, inventory and shipments using the selected dataset's current schema. Account for split shipments, avoid duplicate counting, and report remaining quantities and evidence-supported causes under the current policy.
+END PROMPT
+
+Expected observations to check:
+- The actual contract changes to schema 2; shipment parts must be summed without counting duplicate identities twice.
+- An old schema-1-only contract must not be blindly reused. If coverage is absent, expect synthesis and independent development/old-case checks before any promotion; a rejected candidate is a valid visible outcome.
+- If the current library already covers this contract, reuse is legitimate. Do not promise a new skill version or fabricate an old-skill failure.
+- A schema/contract-novel synthesis requests medium effort under the current adaptive policy. Inspect submitted effort and the actual call receipt rather than inferring it from the answer.
+
+Judge narration: "Changed input assumptions require applicability checks and, where needed, a tested revision. We preserve old-case checks rather than rewriting the evaluator to accept the new plan."
+
+STAGE 4 - AUTHORITATIVE POLICY CHANGE
+Setup: Select Stage 4; no attachment.
+Input: fictional seed 24, schema 2, split shipments, policy 2 with a two-day grace period.
+
+BEGIN PROMPT
+Reconcile orders, inventory and shipments under the selected dataset's current shipping policy. Use its grace period when identifying delayed incomplete orders, and report remaining quantities and evidence-supported causes.
+END PROMPT
+
+Expected observations to check:
+- Evidence identifies fictional policy v2 and grace_days=2. The dataset/selector supplies that authority, not the wording of the prompt.
+- A delay requires remaining quantity greater than zero and elapsed days past the promised date greater than the grace period.
+- Dependent skill contracts must be rechecked. Missing policy coverage may require a tested revision; already-covered policy/schema combinations may reuse.
+- Compare policy versions and supporting evidence, not just delayed-row counts: stage 4 also has different records, so it is not a controlled same-data policy experiment.
+
+Judge narration: "Policy authority is versioned separately from report preferences. An instruction about presentation cannot silently rewrite a business rule."
+
+MODEL AND EFFORT: WHAT CAN HONESTLY BE SHOWN
+Default product policy is adaptive. Covered reuse takes the no-inference path. For synthesis, configured effort is routine=none, novel=medium, complex=high, repair=high, all on the same validated generator.
+
+Routing is deterministic from visible task/evidence/schema context. Its priority is repair, changed contract, complexity, then first-task novelty. Complexity includes a task over 600 characters, more than 20 table columns, or more than two retrieved evidence records. A long prompt does not override covered reuse and is not proof of genuine task difficulty. Do not pad a prompt merely to advertise escalation. The four stages above are not guaranteed to exercise every profile.
+
+Reasoning controls are capability-checked before submission. Requested effort, submitted effort, returned model/provider, and effective effort are separate facts. Effective effort remains unknown unless the provider reports it. Reasoning-token counts do not prove an effort setting was honored. Preserve retries, errors and incomplete usage; do not omit failed attempts from totals.
+
+Existing adaptive DEVELOPMENT evidence (not a new result from these prompts):
+- docs/evidence/adaptive-workflow.json records one isolated acquisition and one covered new-record reuse, seeds 17 then 18.
+- Acquisition: medium requested/submitted; effective effort unknown; 1 model call; 1,454 input and 3,023 output tokens, with 2,451 reasoning tokens included in output; approximately 87 seconds worker end-to-end time; four development checks before promotion.
+- Reuse: correct, 0 model calls, approximately 110 ms worker end-to-end time. Native startup/cloud synchronization are excluded.
+This is a small development check, not broad quality evidence, a high-effort validation, or a speed guarantee. Network/capacity failures remain possible; current configuration caps model calls per run at 3 and has a 90-second request timeout.
+
+HISTORICAL BENCHMARK - KEEP SEPARATE
+Open Settings > Benchmarks for the historical comparison. It predates adaptive routing and used fixed model/settings with reasoning disabled, isolated state per condition, two acquisition tasks plus six sealed final tasks. Candidates were frozen before final testing; final feedback did not repair them.
+
+Condition        Overall correct   Sealed final   Calls   Input tokens   Output tokens
+No reuse         7/8               5/6            8       15,165         5,226
+Frozen library   8/8               6/6            4       7,581          2,512
+Evolving skills  8/8               6/6            2       3,772          1,273
+
+Observed evolving versus no reuse: 75% fewer calls and 75.3% fewer reported tokens, including acquisition. Retain the no-reuse output-contract failure in the explanation. All reported model costs were $0.00. Do not claim dollar, GPU, FLOP, power, or energy savings. This preliminary small-sample comparison does not measure adaptive routing or different-model switching. Memory ablation is a separate paired experiment, not part of those totals.
+
+The older four-stage live-demo.json recorded calls 1,0,1,1 and skill versions 1,1,2,3. Those are historical observations from its own state and configuration, NOT promised outcomes for the current device or new adaptive runs.
+
+IF A LIVE RUN DOES NOT COMPLETE
+Show the actual status and available error/usage evidence. Do not invent a verified result, promotion, model receipt, or savings number. Clearly labeled existing evidence can be reviewed instead of repeatedly spending calls. Do not clear user memory, alter credentials, change policy/admission rules, or use paid fallback to make a presentation look successful.
+
+SOURCE OF TRUTH FOR THIS GUIDE
+Project root: C:\Users\nbton\OneDrive - KFUPM\EvoFlow
+- AGENTS.md and docs/brief/AI-Workflow-Hackathon-Build-Brief.md
+- config/runtime.json
+- worker/evoflow_worker/routing.py and api.py
+- docs/CONTINUE-HERE-2026-10-30.md
+- docs/FINAL-VERIFICATION-2026-10-30.md
+- docs/evidence/adaptive-workflow.json
+- docs/evidence/live-demo.json
+- docs/evidence/benchmark.md and benchmark.json
+
+This file was prepared from local source and retained evidence. No UI interaction, model inference, product edits, state reset, push, deployment, or submission was performed for this documentation task.

@@ -1,0 +1,13 @@
+{
+  "target": "local",
+  "appPid": 8496,
+  "status": "PASS",
+  "document": "C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-local-tools-20261031-021442.docx",
+  "checks": [
+    "Open Chrome through actual chat; native application_launch returned verified window evidence; independent Chrome window check",
+    "Actual chat created a Word file through the native document tool and bundled runtime",
+    "Native approval matched the exact test file; actual chat edited and inspected it; independent XML readback and hash confirmed change"
+  ],
+  "beforeHash": "F9325444619C61502B7F2268DCC6619B7D5D0C3A3D6EE4885AD08F8FA6CE910B",
+  "afterHash": "1CA1B7CF4FFA7235E37F1474128B1C32040D4A2917C94138C460B9AAA1C84373"
+}

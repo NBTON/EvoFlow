@@ -1,0 +1,145 @@
+{
+  "live": true,
+  "preliminary": true,
+  "objective": "Maintain exact oracle correctness; reduce measured inference per successful task",
+  "notice": "Free vs free is not dollar savings; tokens are not hardware compute.",
+  "comparison": {
+    "model_calls_reduced": 6,
+    "tokens_reduced": 15346,
+    "quality_maintained": true,
+    "acquisition_included": true,
+    "billed_dollar_savings_claimed": false,
+    "hardware_compute_savings_claimed": false,
+    "all_conditions_perfect": false,
+    "model_call_reduction_percent": 75.0,
+    "token_reduction_percent": 75.25869256044334,
+    "success_normalized_model_calls": {
+      "none": 1.1428571428571428,
+      "frozen": 0.5,
+      "evolving": 0.25
+    }
+  },
+  "publication": "Aggregate historical evidence. Raw sealed final rows, plans, events, fixture seeds and feedback are retained locally and omitted from this public artifact.",
+  "conditions": {
+    "none": {
+      "totals": {
+        "model_calls": 8,
+        "input_tokens": 15165,
+        "output_tokens": 5226,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 24,
+        "local_execution_ms": 34.67830000045069,
+        "end_to_end_ms": 127310.5515999996,
+        "billed_cost_usd": 0.0,
+        "verification_cases": 7,
+        "retrieval_queries": 8,
+        "tasks": 8,
+        "successes": 7,
+        "final_tasks": 6,
+        "final_successes": 5,
+        "final_latency_mean_ms": 16028.160983333086,
+        "final_latency_stdev_ms": 6916.8025069856085,
+        "usage_complete": true,
+        "cost_reported": true
+      },
+      "freeze_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "frozen": {
+      "totals": {
+        "model_calls": 4,
+        "input_tokens": 7581,
+        "output_tokens": 2512,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 31,
+        "local_execution_ms": 122.15369999648829,
+        "end_to_end_ms": 124420.31329999918,
+        "billed_cost_usd": 0.0,
+        "verification_cases": 12,
+        "retrieval_queries": 8,
+        "tasks": 8,
+        "successes": 8,
+        "final_tasks": 6,
+        "final_successes": 6,
+        "final_latency_mean_ms": 5880.959833333084,
+        "final_latency_stdev_ms": 9218.762333114213,
+        "usage_complete": true,
+        "cost_reported": true
+      },
+      "freeze_hash": "52c6e6e195174a79b27a5a0d6e1af0ce6c30888bd8abbe9c6adf01470cd321f1"
+    },
+    "evolving": {
+      "totals": {
+        "model_calls": 2,
+        "input_tokens": 3772,
+        "output_tokens": 1273,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 37,
+        "local_execution_ms": 97.77880000547157,
+        "end_to_end_ms": 30427.567899998394,
+        "billed_cost_usd": 0.0,
+        "verification_cases": 20,
+        "retrieval_queries": 8,
+        "tasks": 8,
+        "successes": 8,
+        "final_tasks": 6,
+        "final_successes": 6,
+        "final_latency_mean_ms": 225.28853333308993,
+        "final_latency_stdev_ms": 29.210403870930325,
+        "usage_complete": true,
+        "cost_reported": true
+      },
+      "freeze_hash": "a644337e8bb3eb99ac2dc22128e2063eaec33af9b3ca66baaec0fb5fa74315f3"
+    }
+  },
+  "memory_ablation": [
+    {
+      "enabled": false,
+      "correct": true,
+      "preference_retained": false,
+      "metrics": {
+        "model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 2,
+        "local_execution_ms": 8.66199999836681,
+        "model_latency_ms": 0.0,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [],
+        "retrieval_queries": 0,
+        "reflection_model_calls": 0,
+        "verification_cases": 1,
+        "end_to_end_ms": 157.00760000072478
+      }
+    },
+    {
+      "enabled": true,
+      "correct": true,
+      "preference_retained": true,
+      "metrics": {
+        "model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "retries": 0,
+        "tool_calls": 3,
+        "local_execution_ms": 4.067699999723118,
+        "model_latency_ms": 0.0,
+        "billed_cost_usd": 0.0,
+        "usage_complete": true,
+        "cost_reported": true,
+        "calls": [],
+        "retrieval_queries": 1,
+        "reflection_model_calls": 0,
+        "verification_cases": 1,
+        "end_to_end_ms": 206.30370000071707
+      }
+    }
+  ]
+}

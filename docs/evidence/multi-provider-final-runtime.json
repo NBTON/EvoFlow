@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-31T01:14:32.8138903+03:00",
+  "native_pid": 28596,
+  "native_exe": "C:\\Users\\nbton\\Documents\\EvoFlow-Delivery-20261031-011103\\app\\AppX\\EvoFlow.exe",
+  "worker_pid": 4828,
+  "worker_exe": "C:\\Users\\nbton\\Documents\\EvoFlow-Delivery-20261031-011103\\app\\AppX\\runtime\\python.exe",
+  "ready": true,
+  "top": 0,
+  "width": 280,
+  "height": 44,
+  "runtime_signature": "Valid"
+}

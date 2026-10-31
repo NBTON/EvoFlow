@@ -1,0 +1,12 @@
+{
+  "staged_files_scanned": 469,
+  "credential_findings": [],
+  "forbidden_runtime_or_private_artifacts": [],
+  "readme_missing_local_links": [],
+  "example_assignments_empty": true,
+  "raw_sealed_benchmark_not_published": true,
+  "github_markdown_api_rendered": true,
+  "mermaid_diagrams": 2,
+  "expandable_sections": 3,
+  "mermaid_syntax_validated": true
+}

@@ -1,0 +1,43 @@
+[project]
+name = "evoflow-worker"
+version = "0.1.0"
+description = "Local LangGraph workflow learning runtime for EvoFlow"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "httpx>=0.28,<1",
+  "langgraph>=1,<2",
+  "langgraph-checkpoint-sqlite>=3,<4",
+  "pydantic>=2.10,<3",
+  "jsonschema==4.26.0",
+  "sqlglot>=28,<40",
+  "python-docx==1.2.0",
+  "python-pptx==1.0.2",
+  "openpyxl==3.1.5",
+  "reportlab==4.4.10",
+  "pdfplumber==0.11.9",
+  "pypdf==6.12.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "ruff>=0.13,<1"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["worker/evoflow_worker"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+

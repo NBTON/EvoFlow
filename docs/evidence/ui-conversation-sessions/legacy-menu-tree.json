@@ -1,0 +1,1099 @@
+{
+  "depth": 16,
+  "interactive": false,
+  "hideDisabled": false,
+  "hideOffscreen": false,
+  "windows": [
+    {
+      "hwnd": 9701194,
+      "title": "EvoFlow",
+      "className": "WinUIDesktopWin32WindowClass",
+      "windowDpi": 96,
+      "scale": 1,
+      "dpiAwareness": "per-monitor-aware",
+      "coordinateSpace": "physical-screen-pixels",
+      "elementCount": 31,
+      "elements": [
+        {
+          "type": "Window",
+          "name": "EvoFlow",
+          "className": "WinUIDesktopWin32WindowClass",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1000,
+          "y": 0,
+          "width": 560,
+          "height": 520,
+          "children": [
+            {
+              "type": "Pane",
+              "className": "Microsoft.UI.Content.DesktopChildSiteBridge",
+              "isEnabled": true,
+              "isOffscreen": false,
+              "x": 1000,
+              "y": 0,
+              "width": 560,
+              "height": 520,
+              "children": [
+                {
+                  "type": "Pane",
+                  "className": "InputSiteWindowClass",
+                  "isEnabled": true,
+                  "isOffscreen": false,
+                  "x": 1000,
+                  "y": 0,
+                  "width": 560,
+                  "height": 520,
+                  "children": [
+                    {
+                      "type": "Button",
+                      "name": "EvoFlow, collapse task panel",
+                      "automationId": "Pill",
+                      "className": "Button",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1002,
+                      "y": 1,
+                      "width": 556,
+                      "height": 40,
+                      "children": [
+                        {
+                          "type": "Text",
+                          "name": "EvoFlow",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1048,
+                          "y": 12,
+                          "width": 453,
+                          "height": 19,
+                          "selector": "lbl-evoflow-b77c",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "Ready",
+                          "automationId": "PillStatus",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1511,
+                          "y": 14,
+                          "width": 33,
+                          "height": 16,
+                          "selector": "PillStatus",
+                          "isInvokable": false
+                        }
+                      ],
+                      "selector": "Pill",
+                      "isInvokable": true
+                    },
+                    {
+                      "type": "Text",
+                      "name": "Conversation",
+                      "className": "TextBlock",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1020,
+                      "y": 45,
+                      "width": 248,
+                      "height": 27,
+                      "selector": "lbl-conversation-b77e",
+                      "isInvokable": false
+                    },
+                    {
+                      "type": "Button",
+                      "name": "New Chat",
+                      "automationId": "NewChatButton",
+                      "className": "Button",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1274,
+                      "y": 45,
+                      "width": 32,
+                      "height": 28,
+                      "selector": "NewChatButton",
+                      "isInvokable": true
+                    },
+                    {
+                      "type": "Button",
+                      "name": "Chat history",
+                      "automationId": "ChatHistoryButton",
+                      "className": "Button",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1312,
+                      "y": 45,
+                      "width": 32,
+                      "height": 28,
+                      "selector": "ChatHistoryButton",
+                      "isInvokable": true
+                    },
+                    {
+                      "type": "Button",
+                      "name": "Memory and learned skills",
+                      "automationId": "BrainButton",
+                      "className": "Button",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1350,
+                      "y": 42,
+                      "width": 74,
+                      "height": 33,
+                      "children": [
+                        {
+                          "type": "Text",
+                          "name": "Memory",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1361,
+                          "y": 49,
+                          "width": 52,
+                          "height": 19,
+                          "selector": "lbl-memory-b783",
+                          "isInvokable": false
+                        }
+                      ],
+                      "selector": "BrainButton",
+                      "isInvokable": true
+                    },
+                    {
+                      "type": "Button",
+                      "name": "Settings",
+                      "automationId": "SettingsButton",
+                      "className": "Button",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1430,
+                      "y": 42,
+                      "width": 72,
+                      "height": 33,
+                      "selector": "SettingsButton",
+                      "isInvokable": true
+                    },
+                    {
+                      "type": "Button",
+                      "name": "Keep task panel open",
+                      "automationId": "PinButton",
+                      "className": "ToggleButton",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1508,
+                      "y": 45,
+                      "width": 32,
+                      "height": 28,
+                      "selector": "PinButton",
+                      "toggleState": "off",
+                      "isInvokable": true
+                    },
+                    {
+                      "type": "Pane",
+                      "automationId": "ConversationScroll",
+                      "className": "ScrollViewer",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1020,
+                      "y": 85,
+                      "width": 520,
+                      "height": 276,
+                      "children": [
+                        {
+                          "type": "Text",
+                          "name": "You",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 89,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-you-b7a1",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "Hi, my name is Omar.",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 112,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-himynameisomar-b7a2",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "EvoFlow",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 143,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-evoflow-b7a3",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "Hi Omar! Nice to meet you. How can I help you today?",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 166,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-hiomarnicetomee-b7a4",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "You",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 197,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-you-b7a5",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "What is my name?",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 220,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-whatismyname-b7a6",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "EvoFlow",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 251,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-evoflow-b7a7",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "Your name is Omar \u2014 you told me at the start of our conversation.",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 274,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-yournameisomary-b7a8",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "You",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 305,
+                          "width": 512,
+                          "height": 19,
+                          "selector": "lbl-you-b7a9",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "Prove correctness and give Python code for a longest path in a directed acyclic graph with negative edges, in O(V\u002BE). Include the topological-sort invariant, unreachable targets and a counterexample to greedy Dijkstra.",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 328,
+                          "width": 512,
+                          "height": 33,
+                          "selector": "lbl-provecorrectnes-b7aa",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "EvoFlow",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": true,
+                          "x": 0,
+                          "y": 0,
+                          "width": 0,
+                          "height": 0,
+                          "selector": "lbl-evoflow-b7ab",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "Text",
+                          "name": "# Longest Path in a DAG (with negative edges) in O(V\u002BE)\n\n## 1. Why the problem is well-posed\n\nA **directed acyclic graph** has no cycles, so any path visits each vertex at most once. That means:\n- There are finitely many paths.\n- A **longest** (max-weight) path always exists.\n- The longest *simple* path and longest *walk* coincide (no walk can repeat a vertex, because it couldn\u0027t get back).\n\nNegative edges are not a problem in a DAG, because a longest path never needs to \u0022revisit\u0022 anything \u2014 the DP processes vertices in an order that respects all edges.\n\nContrast with a general graph: longest path (even simple-path) is NP-hard. The acyclic structure is what gives us linear time.\n\n---\n\n## 2. The topological-sort invariant\n\n**Claim (invariant).** Let \u0060order = v\u2081, v\u2082, \u2026, v\u2099\u0060 be any topological ordering. When the DP reaches \u0060v\u1D62\u0060, the value \u0060dist[v\u1D62]\u0060 already equals the maximum weight over all paths from the source \u0060s\u0060 that end at \u0060v\u1D62\u0060 (or \u0060-\u221E\u0060 if none exists).\n\n**Proof (induction on i).**\n\n*Base:* \u0060dist[s] = 0\u0060, and every other value starts at \u0060-\u221E\u0060. For any vertex placed before all of \u0060s\u0060\u0027s ancestors \u2014 in particular \u0060s\u0060 itself \u2014 no incoming edges come from earlier vertices other than the ones already processed. If \u0060v\u2081 = s\u0060, \u0060dist[s]=0\u0060 is correct (empty path). If \u0060v\u2081 \u2260 s\u0060, then \u0060v\u2081\u0060 has no incoming edges at all (else a predecessor would precede it), so no path from \u0060s\u0060 ends at \u0060v\u2081\u0060 and \u0060-\u221E\u0060 is correct.\n\n*Step:* Assume correct for all \u0060v\u2C7C\u0060, \u0060j \u003C i\u0060. Any path from \u0060s\u0060 to \u0060v\u1D62\u0060 is either empty (only if \u0060v\u1D62 = s\u0060, handled) or is a path from \u0060s\u0060 to some predecessor \u0060u\u0060 of \u0060v\u1D62\u0060 followed by edge \u0060u \u2192 v\u1D62\u0060. In a topological order, every predecessor \u0060u\u0060 of \u0060v\u1D62\u0060 appears at index \u0060\u003C i\u0060, so it has already been finalized. Therefore\n\n\u0060\u0060\u0060\ndist[v\u1D62] = max_{u \u2192 v\u1D62} ( dist[u] \u002B w(u, v\u1D62) )\n\u0060\u0060\u0060\n\nenumerates exactly all candidates, each built on an optimal prefix (by the inductive hypothesis), so the max is the weight of the best path to \u0060v\u1D62\u0060.\n\n*Consequence:* Finalization is monotone \u2014 once a vertex is processed its value never changes, because all its predecessors have already been processed. No relaxation order issues, no re-processing. This is the key difference from Dijkstra.\n\n**Complexity.** Topological sort is O(V\u002BE). The DP visits each vertex once and relaxes each outgoing edge once: **O(V \u002B E)** total, and it handles negative edge weights because the invariant never relies on non-negativity.\n\n---\n\n## 3. Unreachable targets\n\nIf \u0060s\u0060 has no path to target \u0060t\u0060, \u0060dist[t]\u0060 stays \u0060-\u221E\u0060 (use \u0060None\u0060 or \u0060float(\u0027-inf\u0027)\u0060).\n\nCaveat for **path reconstruction**: \u0060-\u221E\u0060 propagates and never causes a spurious finite value, because \u0060-\u221E \u002B w = -\u221E\u0060 for any finite \u0060w\u0060. But you must **not** reconstruct a predecessor chain from an unreachable vertex \u2014 it has no valid \u0060parent\u0060, so return \u0022no path\u0022 up front. The code below does this explicitly.\n\n---\n\n## 4. Counterexample: greedy Dijkstra fails\n\nConsider \u0060s = A\u0060, target \u0060D\u0060:\n\n\u0060\u0060\u0060\nA \u2192 B  weight 1\nA \u2192 C  weight 0\nC \u2192 B  weight 5\nB \u2192 D  weight 1\nC \u2192 D  weight 1\n\u0060\u0060\u0060\n\nAll edges positive here \u2014 we don\u0027t even need negatives to break na\u00EFve **longest-path Dijkstra**. The point:\n\n- A naive \u0022max-first\u0022 Dijkstra pops \u0060B\u0060 (distance 1) before \u0060C\u0060 (distance 0), finalizes \u0060dist[B] = 1\u0060, then relaxes \u0060B \u2192 D\u0060, giving \u0060dist[D] = 2\u0060.\n- But the true best path is \u0060A \u2192 C \u2192 B \u2192 D = 0 \u002B 5 \u002B 1 = 6\u0060. Dijkstra finalized \u0060B\u0060 too early and never revisits it.\n\n**Why it breaks:** in a longest-path setting, \u0022settled\u0022 values are only final if no later vertex can offer a better route back in \u2014 which is exactly the condition Dijkstra relies on for shortest paths and which fails here. The DAG DP avoids this because the *topological order* guarantees all predecessors are processed before a vertex\u0027s value is used \u2014 an ordering guarantee, not a greedy guess.\n\nNegative weights break shortest-path Dijkstra similarly (classic \u0060A\u2192B = 2\u0060, \u0060A\u2192C = 5\u0060, \u0060C\u2192B = -4\u0060). In a DAG neither issue arises.\n\n*(Note: a \u0022negate the weights and run Dijkstra\u0022 trick does not save you either \u2014 the counterexample above becomes a shortest-path instance with a negative edge \u0060C\u2192B = -5\u0060, so Dijkstra is still invalid.)*\n\n---\n\n## 5. Python implementation\n\n\u0060\u0060\u0060python\nimport sys\nfrom collections import deque\nfrom typing import Optional\n\nNEG_INF = float(\u0022-inf\u0022)\n\n\ndef topological_order(adj: dict, vertices: list) -\u003E Optional[list]:\n    \u0022\u0022\u0022Kahn\u0027s algorithm. Returns a topological order, or None if a cycle exists.\u0022\u0022\u0022\n    indeg = {v: 0 for v in vertices}\n    for u in vertices:\n        for v, _ in adj.get(u, ()):\n            indeg[v] \u002B= 1\n\n    q = deque(v for v in vertices if indeg[v] == 0)\n    order = []\n    while q:\n        u = q.popleft()\n        order.append(u)\n        for v, _ in adj.get(u, ()):\n            indeg[v] -= 1\n            if indeg[v] == 0:\n                q.append(v)\n\n    if len(order) != len(vertices):\n        return None  # cycle \u2014 graph is not a DAG\n    return order\n\n\ndef longest_path(adj: dict, vertices: list, source, target=None):\n    \u0022\u0022\u0022\n    Longest (max-weight) path in a DAG. Edges may have negative weights.\n\n    adj: {u: [(v, w), ...]}\n    Returns a dict with:\n      \u0027order\u0027  : topological order (or None if cycle found)\n      \u0027dist\u0027   : max weight from source to each vertex (-inf if unreachable)\n      \u0027path\u0027   : one optimal path source-\u003Etarget (list), or None\n    Raises ValueError if the graph contains a cycle.\n    \u0022\u0022\u0022\n    # --- topological sort, verifying acyclicity ---\n    indeg = {v: 0 for v in vertices}\n    for u in vertices:\n        for v, _ in adj.get(u, ()):\n            indeg[v] \u002B= 1\n    q = deque(v for v in vertices if indeg[v] == 0)\n    order = []\n    while q:\n        u = q.popleft()\n        order.append(u)\n        for v, _ in adj.get(u, ()):\n            indeg[v] -= 1\n            if indeg[v] == 0:\n                q.append(v)\n    if len(order) != len(vertices):\n        raise ValueError(\u0022Graph contains a cycle; longest path is not defined by this algorithm.\u0022)\n\n    # --- DP over the topological order ---\n    dist = {v: NEG_INF for v in vertices}\n    parent = {v: None for v in vertices}\n    dist[source] = 0\n\n    for u in order:\n        if dist[u] == NEG_INF:\n            continue                     # unreachable: do not relax from here\n        for v, w in adj.get(u, ()):\n            cand = dist[u] \u002B w\n            if cand \u003E dist[v]:\n                dist[v] = cand\n                parent[v] = u\n\n    # --- reconstruction ---\n    path = None\n    if target is not None:\n        if dist[target] == NEG_INF:\n            path = None                  # explicit: target unreachable\n        else:\n            path = []\n            cur = target\n            while cur is not None:\n                path.append(cur)\n                cur = parent[cur]\n                if cur is None and path[-1] != source:\n                    path = None          # defensive; should not happen for reachable t\n                    break\n            if path is not None:\n                path.reverse()\n\n    return {\u0022order\u0022: order, \u0022dist\u0022: dist, \u0022path\u0022: path}\n\n\n# ---------------- demo / test ----------------\nif __name__ == \u0022__main__\u0022:\n    vertices = [\u0022A\u0022, \u0022B\u0022, \u0022C\u0022, \u0022D\u0022]\n    # same graph as the counterexample; includes negative weights to show they\u0027re fine\n    adj = {\n        \u0022A\u0022: [(\u0022B\u0022, 1), (\u0022C\u0022, 0)],\n        \u0022C\u0022: [(\u0022B\u0022, 5), (\u0022D\u0022, 1)],\n        \u0022B\u0022: [(\u0022D\u0022, -2)],\n        \u0022D\u0022: [],\n    }\n    res = longest_path(adj, vertices, \u0022A\u0022, \u0022D\u0022)\n    print(\u0022topological order:\u0022, res[\u0022order\u0022])\n    print(\u0022distances:\u0022, res[\u0022dist\u0022])\n    print(\u0022longest path A-\u003ED:\u0022, res[\u0022path\u0022], \u0022weight =\u0022, res[\u0022dist\u0022][\u0022D\u0022])\n    # best path is A -\u003E C -\u003E B -\u003E D  with weight 0 \u002B 5 \u002B (-2) = 3\n\n    # unreachable target\n    adj2 = {\u0022A\u0022: [(\u0022B\u0022, -1)], \u0022B\u0022: [], \u0022C\u0022: [], \u0022D\u0022: []}\n    res2 = longest_path(adj2, [\u0022A\u0022, \u0022B\u0022, \u0022C\u0022, \u0022D\u0022], \u0022A\u0022, \u0022C\u0022)\n    print(\u0022unreachable C -\u003E\u0022, res2[\u0022dist\u0022][\u0022C\u0022], \u0022| path:\u0022, res2[\u0022path\u0022])\n\u0060\u0060\u0060\n\n**Output:**\n\n\u0060\u0060\u0060\ntopological order: [\u0027A\u0027, \u0027C\u0027, \u0027B\u0027, \u0027D\u0027]\ndistances: {\u0027A\u0027: 0, \u0027B\u0027: 5, \u0027C\u0027: 0, \u0027D\u0027: 3}\nlongest path A-\u003ED: [\u0027A\u0027, \u0027C\u0027, \u0027B\u0027, \u0027D\u0027] weight = 3\nunreachable C -\u003E -inf | path: None\n\u0060\u0060\u0060\n\nWith the negative edge \u0060B\u2192D = -2\u0060, the best path is \u0060A \u2192 C \u2192 B \u2192 D\u0060 (weight 3). A greedy algorithm that settled \u0060B\u0060 at distance 1 would produce a wrong answer of \u0060-1\u0060; the DP gets it right because \u0060C\u0060 (weight 0) is processed before \u0060B\u0060 in the topological order.\n\n---\n\n## 6. Summary of correctness\n\n1. **Acyclicity \u21D2 finite path set** and a valid topological order exists (Kahn\u0027s check enforces this).\n2. **Invariant:** processing vertices in topological order means every predecessor is finalized before its successor\u0027s value is computed. Induction on the order proves \u0060dist\u0060 equals max path weight.\n3. **Finalization is monotone** \u2014 values never improve after being used \u2014 so each edge is relaxed exactly once: O(V\u002BE).\n4. **Negative edges** are harmless because the proof never assumed non-negativity; only reachability matters.\n5. **Unreachable targets** keep \u0060dist = -\u221E\u0060; reconstruction is skipped and reported as no path.\n6. **Greedy (Dijkstra-style) fails**, as shown by the \u0060A\u2192B\u2192D\u0060 vs \u0060A\u2192C\u2192B\u2192D\u0060 counterexample, because early \u0022settling\u0022 of a vertex is not justified without an ordering guarantee.",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": true,
+                          "x": 0,
+                          "y": 0,
+                          "width": 0,
+                          "height": 0,
+                          "selector": "lbl-longestpathinad-b7ac",
+                          "isInvokable": false
+                        },
+                        {
+                          "type": "ScrollBar",
+                          "name": "Vertical",
+                          "automationId": "VerticalScrollBar",
+                          "className": "ScrollBar",
+                          "isEnabled": true,
+                          "isOffscreen": true,
+                          "x": 0,
+                          "y": 0,
+                          "width": 0,
+                          "height": 0,
+                          "selector": "VerticalScrollBar",
+                          "isInvokable": false
+                        }
+                      ],
+                      "selector": "ConversationScroll",
+                      "scrollDir": "v",
+                      "isInvokable": false
+                    },
+                    {
+                      "type": "Edit",
+                      "name": "Task instructions",
+                      "automationId": "TaskText",
+                      "className": "TextBox",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1020,
+                      "y": 371,
+                      "width": 435,
+                      "height": 101,
+                      "children": [
+                        {
+                          "type": "Text",
+                          "name": "Message",
+                          "className": "TextBlock",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1020,
+                          "y": 371,
+                          "width": 55,
+                          "height": 19,
+                          "selector": "lbl-message-b78c",
+                          "isInvokable": false
+                        }
+                      ],
+                      "selector": "TaskText",
+                      "isInvokable": false
+                    },
+                    {
+                      "type": "Button",
+                      "name": "Run task",
+                      "automationId": "RunButton",
+                      "className": "Button",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1463,
+                      "y": 440,
+                      "width": 77,
+                      "height": 32,
+                      "selector": "RunButton",
+                      "isInvokable": true
+                    },
+                    {
+                      "type": "Text",
+                      "name": "Enter to send \u00B7 Shift\u002BEnter for a new line",
+                      "automationId": "InteractionHint",
+                      "className": "TextBlock",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1020,
+                      "y": 478,
+                      "width": 520,
+                      "height": 16,
+                      "selector": "InteractionHint",
+                      "isInvokable": false
+                    }
+                  ],
+                  "selector": "pn-523d",
+                  "isInvokable": false
+                }
+              ],
+              "selector": "pn-525b",
+              "isInvokable": false
+            }
+          ],
+          "selector": "win-evoflow-4c31",
+          "isInvokable": false
+        }
+      ]
+    },
+    {
+      "hwnd": 2755166,
+      "title": "PopupHost",
+      "className": "Microsoft.UI.Content.PopupWindowSiteBridge",
+      "windowDpi": 96,
+      "scale": 1,
+      "dpiAwareness": "per-monitor-aware",
+      "coordinateSpace": "physical-screen-pixels",
+      "elementCount": 28,
+      "elements": [
+        {
+          "type": "Pane",
+          "name": "PopupHost",
+          "className": "Microsoft.UI.Content.PopupWindowSiteBridge",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1430,
+          "y": 209,
+          "width": 397,
+          "height": 505,
+          "children": [
+            {
+              "type": "Pane",
+              "className": "InputSiteWindowClass",
+              "isEnabled": true,
+              "isOffscreen": false,
+              "x": 1000,
+              "y": 0,
+              "width": 560,
+              "height": 520,
+              "children": [
+                {
+                  "type": "Window",
+                  "name": "Popup",
+                  "className": "Popup",
+                  "isEnabled": true,
+                  "isOffscreen": true,
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0,
+                  "children": [
+                    {
+                      "type": "Menu",
+                      "className": "MenuFlyout",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1440,
+                      "y": 211,
+                      "width": 377,
+                      "height": 485,
+                      "children": [
+                        {
+                          "type": "MenuItem",
+                          "name": "hi my name is omar \u00B7 fictional demo",
+                          "automationId": "LegacyTask_4ef81a7e-aeff-4d83-bcdf-2453be12f0e0",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 216,
+                          "width": 367,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "hi my name is omar \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 220,
+                              "width": 345,
+                              "height": 19,
+                              "selector": "lbl-textblock-012b",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_4ef81a7e-aeff-4d83-bcdf-2453be12f0e0",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile orders\rshipments \u00B7 fictional demo",
+                          "automationId": "LegacyTask_a1c52235-d0d0-4b04-b6e9-87e75b9c1499",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 248,
+                          "width": 367,
+                          "height": 47,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile orders\rshipments \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 252,
+                              "width": 345,
+                              "height": 38,
+                              "selector": "lbl-textblock-012d",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_a1c52235-d0d0-4b04-b6e9-87e75b9c1499",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "I said hi my name is omar \u00B7 fictional demo",
+                          "automationId": "LegacyTask_92a34444-b746-4bcf-8be0-5c8d0a380bc2",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 299,
+                          "width": 367,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "I said hi my name is omar \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 303,
+                              "width": 345,
+                              "height": 19,
+                              "selector": "lbl-textblock-012f",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_92a34444-b746-4bcf-8be0-5c8d0a380bc2",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "hi my name is omar \u00B7 fictional demo",
+                          "automationId": "LegacyTask_452a87f8-5836-429d-a461-b7cdea56a5be",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 331,
+                          "width": 367,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "hi my name is omar \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 335,
+                              "width": 345,
+                              "height": 19,
+                              "selector": "lbl-textblock-0131",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_452a87f8-5836-429d-a461-b7cdea56a5be",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile orders\rshipments \u00B7 fictional demo",
+                          "automationId": "LegacyTask_b16fe7b5-e188-477a-be44-802aafc5bb9e",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 363,
+                          "width": 367,
+                          "height": 47,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile orders\rshipments \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 367,
+                              "width": 345,
+                              "height": 38,
+                              "selector": "lbl-textblock-0133",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_b16fe7b5-e188-477a-be44-802aafc5bb9e",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile orders\rshipments \u00B7 fictional demo",
+                          "automationId": "LegacyTask_68f4abf1-c12a-499e-b66d-b06f6163feb7",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 414,
+                          "width": 367,
+                          "height": 47,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile orders\rshipments \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 418,
+                              "width": 345,
+                              "height": 38,
+                              "selector": "lbl-textblock-0135",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_68f4abf1-c12a-499e-b66d-b06f6163feb7",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 fictional demo",
+                          "automationId": "LegacyTask_fff4ab60-a4a7-47ee-8e6d-b35af6ee648f",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 465,
+                          "width": 367,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 469,
+                              "width": 345,
+                              "height": 19,
+                              "selector": "lbl-textblock-0137",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_fff4ab60-a4a7-47ee-8e6d-b35af6ee648f",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile\rorders \u00B7 fictional demo",
+                          "automationId": "LegacyTask_b8b071ed-5b2f-48b6-9564-4d1e96a23ad8",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 497,
+                          "width": 367,
+                          "height": 47,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile\rorders \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 501,
+                              "width": 345,
+                              "height": 38,
+                              "selector": "lbl-textblock-0139",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_b8b071ed-5b2f-48b6-9564-4d1e96a23ad8",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile\rorders \u00B7 fictional demo",
+                          "automationId": "LegacyTask_e537a86b-c7eb-4af5-b523-ad190882e6b1",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 548,
+                          "width": 367,
+                          "height": 47,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile\rorders \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 552,
+                              "width": 345,
+                              "height": 38,
+                              "selector": "lbl-textblock-013b",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_e537a86b-c7eb-4af5-b523-ad190882e6b1",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 fictional demo",
+                          "automationId": "LegacyTask_4a9bf8ec-c09a-4932-ac00-52cc30a2fa02",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 599,
+                          "width": 367,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 fictional demo",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 603,
+                              "width": 345,
+                              "height": 19,
+                              "selector": "lbl-textblock-013d",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_4a9bf8ec-c09a-4932-ac00-52cc30a2fa02",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 task result",
+                          "automationId": "LegacyTask_005dc4e2-6d89-40b3-b4da-d66bcb5eeeb3",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 631,
+                          "width": 367,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 task result",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 635,
+                              "width": 345,
+                              "height": 19,
+                              "selector": "lbl-textblock-013f",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_005dc4e2-6d89-40b3-b4da-d66bcb5eeeb3",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 task result",
+                          "automationId": "LegacyTask_19d085af-ce87-4298-a110-c682f970c6bb",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1445,
+                          "y": 663,
+                          "width": 367,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Reconcile orders, inventory and shipm\u2026 \u00B7 task result",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1456,
+                              "y": 667,
+                              "width": 345,
+                              "height": 19,
+                              "selector": "lbl-textblock-0141",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTask_19d085af-ce87-4298-a110-c682f970c6bb",
+                          "isInvokable": true
+                        }
+                      ],
+                      "selector": "mnu-0143",
+                      "isInvokable": false
+                    }
+                  ],
+                  "selector": "win-popup-0144",
+                  "isInvokable": false
+                }
+              ],
+              "selector": "pn-502f",
+              "isInvokable": false
+            }
+          ],
+          "selector": "pn-popuphost-4f45",
+          "isInvokable": false
+        }
+      ]
+    },
+    {
+      "hwnd": 4524422,
+      "title": "PopupHost",
+      "className": "Microsoft.UI.Content.PopupWindowSiteBridge",
+      "windowDpi": 96,
+      "scale": 1,
+      "dpiAwareness": "per-monitor-aware",
+      "coordinateSpace": "physical-screen-pixels",
+      "elementCount": 14,
+      "elements": [
+        {
+          "type": "Pane",
+          "name": "PopupHost",
+          "className": "Microsoft.UI.Content.PopupWindowSiteBridge",
+          "isEnabled": true,
+          "isOffscreen": false,
+          "x": 1202,
+          "y": 75,
+          "width": 253,
+          "height": 189,
+          "children": [
+            {
+              "type": "Pane",
+              "className": "InputSiteWindowClass",
+              "isEnabled": true,
+              "isOffscreen": false,
+              "x": 1000,
+              "y": 0,
+              "width": 560,
+              "height": 520,
+              "children": [
+                {
+                  "type": "Window",
+                  "name": "Popup",
+                  "className": "Popup",
+                  "isEnabled": true,
+                  "isOffscreen": true,
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0,
+                  "children": [
+                    {
+                      "type": "Menu",
+                      "className": "MenuFlyout",
+                      "isEnabled": true,
+                      "isOffscreen": false,
+                      "x": 1212,
+                      "y": 77,
+                      "width": 233,
+                      "height": 169,
+                      "children": [
+                        {
+                          "type": "MenuItem",
+                          "name": "New Chat",
+                          "automationId": "Chat_14a2d265-6ba3-497a-9993-d3892d65b070",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1217,
+                          "y": 82,
+                          "width": 223,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "New Chat",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1228,
+                              "y": 86,
+                              "width": 201,
+                              "height": 19,
+                              "selector": "lbl-textblock-7626",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "Chat_14a2d265-6ba3-497a-9993-d3892d65b070",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Hi, my name is Omar. \u00B7 current",
+                          "automationId": "Chat_28f7fd96-01fd-41fe-bed1-019fe2f0ce70",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1217,
+                          "y": 114,
+                          "width": 223,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Hi, my name is Omar. \u00B7 current",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1228,
+                              "y": 118,
+                              "width": 201,
+                              "height": 19,
+                              "selector": "lbl-textblock-7628",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "Chat_28f7fd96-01fd-41fe-bed1-019fe2f0ce70",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "What name did I tell you earlier?",
+                          "automationId": "Chat_7d70f3d0-e3de-45b9-97c5-f546eb7bc204",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1217,
+                          "y": 146,
+                          "width": 223,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "What name did I tell you earlier?",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1228,
+                              "y": 150,
+                              "width": 201,
+                              "height": 19,
+                              "selector": "lbl-textblock-762a",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "Chat_7d70f3d0-e3de-45b9-97c5-f546eb7bc204",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "New Chat",
+                          "automationId": "Chat_f92a0dcd-e954-4ffc-b486-9e7de4644e1a",
+                          "className": "MenuFlyoutItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1217,
+                          "y": 178,
+                          "width": 223,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "New Chat",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1228,
+                              "y": 182,
+                              "width": 201,
+                              "height": 19,
+                              "selector": "lbl-textblock-762c",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "Chat_f92a0dcd-e954-4ffc-b486-9e7de4644e1a",
+                          "isInvokable": true
+                        },
+                        {
+                          "type": "MenuItem",
+                          "name": "Previous task results",
+                          "automationId": "LegacyTaskHistory",
+                          "className": "MenuFlyoutSubItem",
+                          "isEnabled": true,
+                          "isOffscreen": false,
+                          "x": 1217,
+                          "y": 213,
+                          "width": 223,
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "Text",
+                              "name": "Previous task results",
+                              "automationId": "TextBlock",
+                              "className": "TextBlock",
+                              "isEnabled": true,
+                              "isOffscreen": false,
+                              "x": 1228,
+                              "y": 217,
+                              "width": 165,
+                              "height": 19,
+                              "selector": "lbl-textblock-764b",
+                              "isInvokable": false
+                            }
+                          ],
+                          "selector": "LegacyTaskHistory",
+                          "expandState": "expanded",
+                          "isInvokable": true
+                        }
+                      ],
+                      "selector": "mnu-762f",
+                      "isInvokable": false
+                    }
+                  ],
+                  "selector": "win-popup-7630",
+                  "isInvokable": false
+                }
+              ],
+              "selector": "pn-4eb5",
+              "isInvokable": false
+            }
+          ],
+          "selector": "pn-popuphost-4e6d",
+          "isInvokable": false
+        }
+      ]
+    }
+  ]
+}

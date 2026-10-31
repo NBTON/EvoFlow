@@ -1,0 +1,1314 @@
+[
+  {
+    "id": "e6ff1cc2-1ace-4674-8477-5142e13fc04b",
+    "session_id": "573f95cf-4b80-49a6-9d9a-fde2139668d3",
+    "task": "Edit the Word document at 'C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-local-tools-20261031-023548.docx': replace 'Original document content.' with 'Revised document content.' using the document tool. Then inspect the file to verify that the edit is present.",
+    "status": "complete",
+    "assistant_response": "The edit is done and verified.\n\n- **File:** `C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-local-tools-20261031-023548.docx`\n- **Replacement:** \"Original document content.\" \u2192 \"Revised document content.\"\n- **Re-inspection of the file shows paragraphs:** \"EvoFlow Local Tools\" and \"Revised document content.\" (no tables, 36,633 bytes)\n- The old text \"Original document content.\" is no longer present in the document.",
+    "tool_evidence": [
+      {
+        "tool": "document",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "a102c6aa9af42d1194808e359c0484cbbbe323f7245df1ae7d01be64fa09f9c5"
+      },
+      {
+        "tool": "document",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "92f6b4d42694f18b5de83c410a556d0c8eb4d5a379fb2de449caf71b4a303ef0"
+      }
+    ],
+    "metrics": {
+      "model_calls": 4,
+      "input_tokens": 10469,
+      "output_tokens": 428,
+      "reasoning_tokens": 80,
+      "retries": 0,
+      "tool_calls": 2,
+      "local_execution_ms": 1618.9436,
+      "model_latency_ms": 6722.078900005727,
+      "billed_cost_usd": 1.584e-05,
+      "usage_complete": true,
+      "cost_reported": false,
+      "calls": [
+        {
+          "category": "decision",
+          "model": "baseten/joey-1",
+          "requested_model": "baseten/joey-1",
+          "provider_adapter": "openrouter",
+          "interface": "decisions",
+          "status": "received",
+          "requested_effort": null,
+          "submitted_effort": null,
+          "native_reasoning": null,
+          "effective_effort": "unknown",
+          "effective_model": "baseten/joey-1-20261029",
+          "provider": "BaseTen",
+          "request_id": "gen-dec-1793403375-RoE1YLWfCxjfJ09MLnGb",
+          "usage": {
+            "input_tokens": 1584,
+            "output_tokens": 3,
+            "cost": 1.584e-05
+          },
+          "latency_ms": 1322.4905000024592
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "82efe42f-3086-497e-ae29-63df7ba8a237",
+          "usage": {
+            "prompt_tokens": 2606,
+            "completion_tokens": 210,
+            "completion_tokens_details": {
+              "reasoning_tokens": 72
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 4,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.27643099276313926,
+                "probabilities": {
+                  "deepseek_flash": 0.45732324457235446,
+                  "mimo_flash": 0.11017220813036678,
+                  "mimo_pro": 0.045201363381952984,
+                  "gpt_luna": 0.3873031839153258
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.1851068222829865,
+                "probabilities": {
+                  "none": 0.0705820013401218,
+                  "low": 0.26635981401944336,
+                  "medium": 0.32092235190248874,
+                  "high": 0.18833450270396043,
+                  "xhigh": 0.0810045764704903,
+                  "max": 0.07279675356349544
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 1.0285488771891524,
+                "confidence": 0.20847239591963607,
+                "probabilities": {
+                  "0": 0.24956809609887842,
+                  "1": 0.4723149306130906,
+                  "2": 0.2781169732880309
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "medium",
+            "submitted_effort": "high",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoning_effort": "high"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "82efe42f-3086-497e-ae29-63df7ba8a237",
+            "usage": {
+              "prompt_tokens": 2606,
+              "completion_tokens": 210,
+              "total_tokens": 2816,
+              "prompt_tokens_details": {
+                "cached_tokens": 2432
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 72
+              },
+              "prompt_cache_hit_tokens": 2432,
+              "prompt_cache_miss_tokens": 174
+            }
+          },
+          "latency_ms": 2155.42909999931
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "b27e52bd-a437-4f10-b02f-1971c879bf09",
+          "usage": {
+            "prompt_tokens": 3013,
+            "completion_tokens": 106,
+            "completion_tokens_details": {
+              "reasoning_tokens": 8
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 4,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.27643099276313926,
+                "probabilities": {
+                  "deepseek_flash": 0.45732324457235446,
+                  "mimo_flash": 0.11017220813036678,
+                  "mimo_pro": 0.045201363381952984,
+                  "gpt_luna": 0.3873031839153258
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.1851068222829865,
+                "probabilities": {
+                  "none": 0.0705820013401218,
+                  "low": 0.26635981401944336,
+                  "medium": 0.32092235190248874,
+                  "high": 0.18833450270396043,
+                  "xhigh": 0.0810045764704903,
+                  "max": 0.07279675356349544
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 1.0285488771891524,
+                "confidence": 0.20847239591963607,
+                "probabilities": {
+                  "0": 0.24956809609887842,
+                  "1": 0.4723149306130906,
+                  "2": 0.2781169732880309
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "medium",
+            "submitted_effort": "high",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoning_effort": "high"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "b27e52bd-a437-4f10-b02f-1971c879bf09",
+            "usage": {
+              "prompt_tokens": 3013,
+              "completion_tokens": 106,
+              "total_tokens": 3119,
+              "prompt_tokens_details": {
+                "cached_tokens": 2816
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 8
+              },
+              "prompt_cache_hit_tokens": 2816,
+              "prompt_cache_miss_tokens": 197
+            }
+          },
+          "latency_ms": 1534.5225999990362
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "f22f2c2c-3611-49e4-a64f-7f2294e6c8d5",
+          "usage": {
+            "prompt_tokens": 3266,
+            "completion_tokens": 109,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 4,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.27643099276313926,
+                "probabilities": {
+                  "deepseek_flash": 0.45732324457235446,
+                  "mimo_flash": 0.11017220813036678,
+                  "mimo_pro": 0.045201363381952984,
+                  "gpt_luna": 0.3873031839153258
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.1851068222829865,
+                "probabilities": {
+                  "none": 0.0705820013401218,
+                  "low": 0.26635981401944336,
+                  "medium": 0.32092235190248874,
+                  "high": 0.18833450270396043,
+                  "xhigh": 0.0810045764704903,
+                  "max": 0.07279675356349544
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 1.0285488771891524,
+                "confidence": 0.20847239591963607,
+                "probabilities": {
+                  "0": 0.24956809609887842,
+                  "1": 0.4723149306130906,
+                  "2": 0.2781169732880309
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "medium",
+            "submitted_effort": "high",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoning_effort": "high"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "f22f2c2c-3611-49e4-a64f-7f2294e6c8d5",
+            "usage": {
+              "prompt_tokens": 3266,
+              "completion_tokens": 109,
+              "total_tokens": 3375,
+              "prompt_tokens_details": {
+                "cached_tokens": 3072
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "prompt_cache_hit_tokens": 3072,
+              "prompt_cache_miss_tokens": 194
+            }
+          },
+          "latency_ms": 1709.6367000049213
+        }
+      ],
+      "retrieval_queries": 0,
+      "reflection_model_calls": 0,
+      "verification_cases": 0,
+      "routing_decisions": [
+        {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "context": {
+            "task_kind": "conversation",
+            "complexity": "standard",
+            "history_messages": 4,
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "reuse": false
+          },
+          "profile": "deepseek_flash",
+          "reason": "Typed Decisions selection from the latest user message and bounded session context",
+          "decision_model": "baseten/joey-1",
+          "decision_answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.27643099276313926,
+              "probabilities": {
+                "deepseek_flash": 0.45732324457235446,
+                "mimo_flash": 0.11017220813036678,
+                "mimo_pro": 0.045201363381952984,
+                "gpt_luna": 0.3873031839153258
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.1851068222829865,
+              "probabilities": {
+                "none": 0.0705820013401218,
+                "low": 0.26635981401944336,
+                "medium": 0.32092235190248874,
+                "high": 0.18833450270396043,
+                "xhigh": 0.0810045764704903,
+                "max": 0.07279675356349544
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 1.0285488771891524,
+              "confidence": 0.20847239591963607,
+              "probabilities": {
+                "0": 0.24956809609887842,
+                "1": 0.4723149306130906,
+                "2": 0.2781169732880309
+              }
+            }
+          },
+          "requested_model": "deepseek-flash",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "provider_adapter": "deepseek",
+          "effective_model": "deepseek-flash",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "provider": "deepseek",
+          "request_id": "f22f2c2c-3611-49e4-a64f-7f2294e6c8d5",
+          "usage": {
+            "prompt_tokens": 3266,
+            "completion_tokens": 109,
+            "total_tokens": 3375,
+            "prompt_tokens_details": {
+              "cached_tokens": 3072
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 3072,
+            "prompt_cache_miss_tokens": 194
+          }
+        }
+      ],
+      "agent_tools": true,
+      "decision_attempts": [
+        {
+          "model": "baseten/joey-1",
+          "fallback": false,
+          "status": "selected",
+          "answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.27643099276313926,
+              "probabilities": {
+                "deepseek_flash": 0.45732324457235446,
+                "mimo_flash": 0.11017220813036678,
+                "mimo_pro": 0.045201363381952984,
+                "gpt_luna": 0.3873031839153258
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.1851068222829865,
+              "probabilities": {
+                "none": 0.0705820013401218,
+                "low": 0.26635981401944336,
+                "medium": 0.32092235190248874,
+                "high": 0.18833450270396043,
+                "xhigh": 0.0810045764704903,
+                "max": 0.07279675356349544
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 1.0285488771891524,
+              "confidence": 0.20847239591963607,
+              "probabilities": {
+                "0": 0.24956809609887842,
+                "1": 0.4723149306130906,
+                "2": 0.2781169732880309
+              }
+            }
+          },
+          "request_id": "gen-dec-1793403375-RoE1YLWfCxjfJ09MLnGb"
+        }
+      ],
+      "end_to_end_ms": 11648.39768409729
+    }
+  },
+  {
+    "id": "0319d0df-c3d2-4bce-9149-26740809678c",
+    "session_id": "573f95cf-4b80-49a6-9d9a-fde2139668d3",
+    "task": "Create a Word document at 'C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-local-tools-20261031-023548.docx'. Title: EvoFlow Local Tools. Include this exact paragraph: Original document content. Use the document tool to create the actual file and verify the content.",
+    "status": "complete",
+    "assistant_response": "The Word document was created and verified:\n\n- **File:** `C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-local-tools-20261031-023548.docx`\n- **Title:** EvoFlow Local Tools\n- **Body paragraph:** Original document content.\n\nVerification on reopen shows exactly those two paragraphs (title + the exact requested text), a single title, no tables, and a file size of 36,633 bytes.",
+    "tool_evidence": [
+      {
+        "tool": "document",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "a80d01dcd3cca3646f81a21e3d973aa92da4ef6c25d7870bb866c3b9d0fb6ce7"
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "input_tokens": 6605,
+      "output_tokens": 247,
+      "reasoning_tokens": 8,
+      "retries": 0,
+      "tool_calls": 1,
+      "local_execution_ms": 1342.1548,
+      "model_latency_ms": 4497.845999991114,
+      "billed_cost_usd": 1.377e-05,
+      "usage_complete": true,
+      "cost_reported": false,
+      "calls": [
+        {
+          "category": "decision",
+          "model": "baseten/joey-1",
+          "requested_model": "baseten/joey-1",
+          "provider_adapter": "openrouter",
+          "interface": "decisions",
+          "status": "received",
+          "requested_effort": null,
+          "submitted_effort": null,
+          "native_reasoning": null,
+          "effective_effort": "unknown",
+          "effective_model": "baseten/joey-1-20261029",
+          "provider": "BaseTen",
+          "request_id": "gen-dec-1793403365-NEeArbyv5NTSVTggvCmi",
+          "usage": {
+            "input_tokens": 1377,
+            "output_tokens": 3,
+            "cost": 1.377e-05
+          },
+          "latency_ms": 1200.8312999969348
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "99d01c19-056d-4ac5-a8d7-800c4e1ff85d",
+          "usage": {
+            "prompt_tokens": 2441,
+            "completion_tokens": 147,
+            "completion_tokens_details": {
+              "reasoning_tokens": 8
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 2,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.4204147038561139,
+                "probabilities": {
+                  "deepseek_flash": 0.5653110278920854,
+                  "mimo_flash": 0.08615813169484854,
+                  "mimo_pro": 0.04844380341282251,
+                  "gpt_luna": 0.3000870370002435
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.17904478525219172,
+                "probabilities": {
+                  "none": 0.08398480668945248,
+                  "low": 0.15361638660657695,
+                  "medium": 0.31587065437682643,
+                  "high": 0.24920107531622115,
+                  "xhigh": 0.06934846881803926,
+                  "max": 0.12797860819288367
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 1.0749242250217281,
+                "confidence": 0.23651712548503334,
+                "probabilities": {
+                  "0": 0.2170321789941249,
+                  "1": 0.4910114169900224,
+                  "2": 0.2919564040158528
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "medium",
+            "submitted_effort": "high",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoning_effort": "high"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "99d01c19-056d-4ac5-a8d7-800c4e1ff85d",
+            "usage": {
+              "prompt_tokens": 2441,
+              "completion_tokens": 147,
+              "total_tokens": 2588,
+              "prompt_tokens_details": {
+                "cached_tokens": 2304
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 8
+              },
+              "prompt_cache_hit_tokens": 2304,
+              "prompt_cache_miss_tokens": 137
+            }
+          },
+          "latency_ms": 1715.9065999949235
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "020130bc-5e82-40c4-9b4f-10c2fcb2eb05",
+          "usage": {
+            "prompt_tokens": 2787,
+            "completion_tokens": 97,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 2,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.4204147038561139,
+                "probabilities": {
+                  "deepseek_flash": 0.5653110278920854,
+                  "mimo_flash": 0.08615813169484854,
+                  "mimo_pro": 0.04844380341282251,
+                  "gpt_luna": 0.3000870370002435
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.17904478525219172,
+                "probabilities": {
+                  "none": 0.08398480668945248,
+                  "low": 0.15361638660657695,
+                  "medium": 0.31587065437682643,
+                  "high": 0.24920107531622115,
+                  "xhigh": 0.06934846881803926,
+                  "max": 0.12797860819288367
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 1.0749242250217281,
+                "confidence": 0.23651712548503334,
+                "probabilities": {
+                  "0": 0.2170321789941249,
+                  "1": 0.4910114169900224,
+                  "2": 0.2919564040158528
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "medium",
+            "submitted_effort": "high",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoning_effort": "high"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "020130bc-5e82-40c4-9b4f-10c2fcb2eb05",
+            "usage": {
+              "prompt_tokens": 2787,
+              "completion_tokens": 97,
+              "total_tokens": 2884,
+              "prompt_tokens_details": {
+                "cached_tokens": 2560
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "prompt_cache_hit_tokens": 2560,
+              "prompt_cache_miss_tokens": 227
+            }
+          },
+          "latency_ms": 1581.1080999992555
+        }
+      ],
+      "retrieval_queries": 0,
+      "reflection_model_calls": 0,
+      "verification_cases": 0,
+      "routing_decisions": [
+        {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "context": {
+            "task_kind": "conversation",
+            "complexity": "standard",
+            "history_messages": 2,
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "reuse": false
+          },
+          "profile": "deepseek_flash",
+          "reason": "Typed Decisions selection from the latest user message and bounded session context",
+          "decision_model": "baseten/joey-1",
+          "decision_answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.4204147038561139,
+              "probabilities": {
+                "deepseek_flash": 0.5653110278920854,
+                "mimo_flash": 0.08615813169484854,
+                "mimo_pro": 0.04844380341282251,
+                "gpt_luna": 0.3000870370002435
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.17904478525219172,
+              "probabilities": {
+                "none": 0.08398480668945248,
+                "low": 0.15361638660657695,
+                "medium": 0.31587065437682643,
+                "high": 0.24920107531622115,
+                "xhigh": 0.06934846881803926,
+                "max": 0.12797860819288367
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 1.0749242250217281,
+              "confidence": 0.23651712548503334,
+              "probabilities": {
+                "0": 0.2170321789941249,
+                "1": 0.4910114169900224,
+                "2": 0.2919564040158528
+              }
+            }
+          },
+          "requested_model": "deepseek-flash",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "provider_adapter": "deepseek",
+          "effective_model": "deepseek-flash",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "provider": "deepseek",
+          "request_id": "020130bc-5e82-40c4-9b4f-10c2fcb2eb05",
+          "usage": {
+            "prompt_tokens": 2787,
+            "completion_tokens": 97,
+            "total_tokens": 2884,
+            "prompt_tokens_details": {
+              "cached_tokens": 2560
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 2560,
+            "prompt_cache_miss_tokens": 227
+          }
+        }
+      ],
+      "agent_tools": true,
+      "decision_attempts": [
+        {
+          "model": "baseten/joey-1",
+          "fallback": false,
+          "status": "selected",
+          "answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.4204147038561139,
+              "probabilities": {
+                "deepseek_flash": 0.5653110278920854,
+                "mimo_flash": 0.08615813169484854,
+                "mimo_pro": 0.04844380341282251,
+                "gpt_luna": 0.3000870370002435
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.17904478525219172,
+              "probabilities": {
+                "none": 0.08398480668945248,
+                "low": 0.15361638660657695,
+                "medium": 0.31587065437682643,
+                "high": 0.24920107531622115,
+                "xhigh": 0.06934846881803926,
+                "max": 0.12797860819288367
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 1.0749242250217281,
+              "confidence": 0.23651712548503334,
+              "probabilities": {
+                "0": 0.2170321789941249,
+                "1": 0.4910114169900224,
+                "2": 0.2919564040158528
+              }
+            }
+          },
+          "request_id": "gen-dec-1793403365-NEeArbyv5NTSVTggvCmi"
+        }
+      ],
+      "end_to_end_ms": 6364.392042160034
+    }
+  },
+  {
+    "id": "1a268ef6-fd56-471e-9434-3da813913196",
+    "session_id": "573f95cf-4b80-49a6-9d9a-fde2139668d3",
+    "task": "Open Chrome",
+    "status": "complete",
+    "assistant_response": "Chrome is open and its window is confirmed available.",
+    "tool_evidence": [
+      {
+        "tool": "application_launch",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "2178ae8ef57dae8ace590cda758073309ca6e5eec900529d12ec66c21bbcf608"
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "input_tokens": 6119,
+      "output_tokens": 55,
+      "reasoning_tokens": 0,
+      "retries": 0,
+      "tool_calls": 1,
+      "local_execution_ms": 1923.851,
+      "model_latency_ms": 4216.601200001605,
+      "billed_cost_usd": 1.273e-05,
+      "usage_complete": true,
+      "cost_reported": false,
+      "calls": [
+        {
+          "category": "decision",
+          "model": "baseten/joey-1",
+          "requested_model": "baseten/joey-1",
+          "provider_adapter": "openrouter",
+          "interface": "decisions",
+          "status": "received",
+          "requested_effort": null,
+          "submitted_effort": null,
+          "native_reasoning": null,
+          "effective_effort": "unknown",
+          "effective_model": "baseten/joey-1-20261029",
+          "provider": "BaseTen",
+          "request_id": "gen-dec-1793403354-dcNa9vAkVVMmf5dPkUdM",
+          "usage": {
+            "input_tokens": 1273,
+            "output_tokens": 3,
+            "cost": 1.273e-05
+          },
+          "latency_ms": 1251.851799999713
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "6a496b32-1f57-4e1d-8369-8d29b1395d8b",
+          "usage": {
+            "prompt_tokens": 2359,
+            "completion_tokens": 40,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 0,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.41845384109860645,
+                "probabilities": {
+                  "deepseek_flash": 0.5638403808239548,
+                  "mimo_flash": 0.057263838508903965,
+                  "mimo_pro": 0.05521612052045867,
+                  "gpt_luna": 0.3236796601466825
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.13381711752548028,
+                "probabilities": {
+                  "none": 0.2205090351585217,
+                  "low": 0.22019341310526938,
+                  "medium": 0.27818093127123356,
+                  "high": 0.15179412571043027,
+                  "xhigh": 0.062246106100486955,
+                  "max": 0.0670763886540583
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.7103658953206073,
+                "confidence": 0.0,
+                "probabilities": {
+                  "0": 0.44688172071933646,
+                  "1": 0.3958706632407197,
+                  "2": 0.15724761603994386
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "medium",
+            "submitted_effort": "high",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoning_effort": "high"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "6a496b32-1f57-4e1d-8369-8d29b1395d8b",
+            "usage": {
+              "prompt_tokens": 2359,
+              "completion_tokens": 40,
+              "total_tokens": 2399,
+              "prompt_tokens_details": {
+                "cached_tokens": 2176
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "prompt_cache_hit_tokens": 2176,
+              "prompt_cache_miss_tokens": 183
+            }
+          },
+          "latency_ms": 1507.5156000020797
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "927d79d3-7589-4fad-b7af-607bd4eb848b",
+          "usage": {
+            "prompt_tokens": 2487,
+            "completion_tokens": 12,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 0,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.41845384109860645,
+                "probabilities": {
+                  "deepseek_flash": 0.5638403808239548,
+                  "mimo_flash": 0.057263838508903965,
+                  "mimo_pro": 0.05521612052045867,
+                  "gpt_luna": 0.3236796601466825
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.13381711752548028,
+                "probabilities": {
+                  "none": 0.2205090351585217,
+                  "low": 0.22019341310526938,
+                  "medium": 0.27818093127123356,
+                  "high": 0.15179412571043027,
+                  "xhigh": 0.062246106100486955,
+                  "max": 0.0670763886540583
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.7103658953206073,
+                "confidence": 0.0,
+                "probabilities": {
+                  "0": 0.44688172071933646,
+                  "1": 0.3958706632407197,
+                  "2": 0.15724761603994386
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "medium",
+            "submitted_effort": "high",
+            "native_reasoning": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoning_effort": "high"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "927d79d3-7589-4fad-b7af-607bd4eb848b",
+            "usage": {
+              "prompt_tokens": 2487,
+              "completion_tokens": 12,
+              "total_tokens": 2499,
+              "prompt_tokens_details": {
+                "cached_tokens": 2304
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "prompt_cache_hit_tokens": 2304,
+              "prompt_cache_miss_tokens": 183
+            }
+          },
+          "latency_ms": 1457.2337999998126
+        }
+      ],
+      "retrieval_queries": 0,
+      "reflection_model_calls": 0,
+      "verification_cases": 0,
+      "routing_decisions": [
+        {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "context": {
+            "task_kind": "conversation",
+            "complexity": "standard",
+            "history_messages": 0,
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "reuse": false
+          },
+          "profile": "deepseek_flash",
+          "reason": "Typed Decisions selection from the latest user message and bounded session context",
+          "decision_model": "baseten/joey-1",
+          "decision_answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.41845384109860645,
+              "probabilities": {
+                "deepseek_flash": 0.5638403808239548,
+                "mimo_flash": 0.057263838508903965,
+                "mimo_pro": 0.05521612052045867,
+                "gpt_luna": 0.3236796601466825
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.13381711752548028,
+              "probabilities": {
+                "none": 0.2205090351585217,
+                "low": 0.22019341310526938,
+                "medium": 0.27818093127123356,
+                "high": 0.15179412571043027,
+                "xhigh": 0.062246106100486955,
+                "max": 0.0670763886540583
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.7103658953206073,
+              "confidence": 0.0,
+              "probabilities": {
+                "0": 0.44688172071933646,
+                "1": 0.3958706632407197,
+                "2": 0.15724761603994386
+              }
+            }
+          },
+          "requested_model": "deepseek-flash",
+          "requested_effort": "medium",
+          "submitted_effort": "high",
+          "native_reasoning": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "high"
+          },
+          "provider_adapter": "deepseek",
+          "effective_model": "deepseek-flash",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "provider": "deepseek",
+          "request_id": "927d79d3-7589-4fad-b7af-607bd4eb848b",
+          "usage": {
+            "prompt_tokens": 2487,
+            "completion_tokens": 12,
+            "total_tokens": 2499,
+            "prompt_tokens_details": {
+              "cached_tokens": 2304
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 2304,
+            "prompt_cache_miss_tokens": 183
+          }
+        }
+      ],
+      "agent_tools": true,
+      "decision_attempts": [
+        {
+          "model": "baseten/joey-1",
+          "fallback": false,
+          "status": "selected",
+          "answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.41845384109860645,
+              "probabilities": {
+                "deepseek_flash": 0.5638403808239548,
+                "mimo_flash": 0.057263838508903965,
+                "mimo_pro": 0.05521612052045867,
+                "gpt_luna": 0.3236796601466825
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.13381711752548028,
+              "probabilities": {
+                "none": 0.2205090351585217,
+                "low": 0.22019341310526938,
+                "medium": 0.27818093127123356,
+                "high": 0.15179412571043027,
+                "xhigh": 0.062246106100486955,
+                "max": 0.0670763886540583
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.7103658953206073,
+              "confidence": 0.0,
+              "probabilities": {
+                "0": 0.44688172071933646,
+                "1": 0.3958706632407197,
+                "2": 0.15724761603994386
+              }
+            }
+          },
+          "request_id": "gen-dec-1793403354-dcNa9vAkVVMmf5dPkUdM"
+        }
+      ],
+      "end_to_end_ms": 7343.753099441528
+    }
+  }
+]

@@ -1,0 +1,1766 @@
+[
+  {
+    "id": "ca2e264f-537a-4170-a896-e4d1c3fde007",
+    "task": "Create a PDF at 'C:\\Users\\nbton\\Documents\\EvoFlow Files\\EvoFlow-general-20261031-034353.pdf' with title General Tools and paragraph 'Original content'. Then edit that PDF: replace 'Original' with 'Revised', stamp 'APPROVED' at x=36, y=200, and rotate page 0 clockwise by 90 degrees. Verify the saved changes.",
+    "status": "complete",
+    "assistant_response": "Created and edited the PDF. Verification confirms it contains \u201cRevised\u201d and the \u201cAPPROVED\u201d stamp on page 0; the page was rotated 90\u00b0 clockwise.",
+    "tool_evidence": [
+      {
+        "tool": "document",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "106bc101ea92370f0ef6e42b5da543790f0b685cec6a32b2badb708086d8aceb"
+      },
+      {
+        "tool": "document",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "c61f7a39074fcfc9f42554da9f7032bb016158ef405646eb517c739d6fac0954"
+      }
+    ],
+    "metrics": {
+      "model_calls": 4,
+      "input_tokens": 9200,
+      "output_tokens": 248,
+      "reasoning_tokens": 32,
+      "retries": 0,
+      "tool_calls": 2,
+      "local_execution_ms": 6628.008,
+      "model_latency_ms": 8689.949100007652,
+      "billed_cost_usd": 0.00030271,
+      "usage_complete": true,
+      "cost_reported": true,
+      "calls": [
+        {
+          "category": "decision",
+          "model": "baseten/joey-1",
+          "requested_model": "baseten/joey-1",
+          "provider_adapter": "openrouter",
+          "interface": "decisions",
+          "status": "received",
+          "requested_effort": null,
+          "submitted_effort": null,
+          "native_reasoning": null,
+          "effective_effort": "unknown",
+          "effective_model": "baseten/joey-1-20261029",
+          "provider": "BaseTen",
+          "request_id": "gen-dec-1793407503-z6Ggbonuy5V7erqzfeYl",
+          "usage": {
+            "input_tokens": 1521,
+            "output_tokens": 3,
+            "cost": 1.521e-05
+          },
+          "latency_ms": 941.6571000037948
+        },
+        {
+          "category": "execution",
+          "model": "openai/gpt-6-luna",
+          "requested_model": "openai/gpt-6-luna",
+          "provider_adapter": "openrouter",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "medium",
+          "native_reasoning": {
+            "reasoning": {
+              "effort": "medium"
+            }
+          },
+          "effective_effort": "unknown",
+          "effective_model": "openai/gpt-6-luna",
+          "provider": "OpenAI",
+          "request_id": "gen-1793407504-1dgpzcGGcKYH5C4mqHoq",
+          "usage": {
+            "prompt_tokens": 2292,
+            "completion_tokens": 96,
+            "cost": 9.488e-05,
+            "completion_tokens_details": {
+              "reasoning_tokens": 32,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 6,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "gpt_luna",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "gpt_luna",
+                "confidence": 0.29910198892162376,
+                "probabilities": {
+                  "deepseek_flash": 0.4549117467754437,
+                  "mimo_flash": 0.03963169955670737,
+                  "mimo_pro": 0.031130061976631106,
+                  "gpt_luna": 0.4743264916912178
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.1919078584599479,
+                "probabilities": {
+                  "none": 0.1091410074430613,
+                  "low": 0.32144300981597584,
+                  "medium": 0.3265898820499566,
+                  "high": 0.13429483935675157,
+                  "xhigh": 0.05525284139975017,
+                  "max": 0.05327841993450453
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.9602131052014704,
+                "confidence": 0.3691643590486309,
+                "probabilities": {
+                  "0": 0.23017199438305444,
+                  "1": 0.5794429060324205,
+                  "2": 0.19038509958452496
+                }
+              }
+            },
+            "requested_model": "openai/gpt-6-luna",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "native_reasoning": {
+              "reasoning": {
+                "effort": "medium"
+              }
+            },
+            "provider_adapter": "openrouter",
+            "effective_model": "openai/gpt-6-luna",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+            "capabilities_checked_at": 1793407505.0457006,
+            "provider": "OpenAI",
+            "request_id": "gen-1793407504-1dgpzcGGcKYH5C4mqHoq",
+            "usage": {
+              "prompt_tokens": 2292,
+              "completion_tokens": 96,
+              "total_tokens": 2388,
+              "cost": 9.488e-05,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 2083,
+                "cache_write_tokens": 206,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 9.488e-05,
+                "upstream_inference_prompt_cost": 4.688e-05,
+                "upstream_inference_completions_cost": 4.8e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 32,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "latency_ms": 2998.0179999984102
+        },
+        {
+          "category": "execution",
+          "model": "openai/gpt-6-luna",
+          "requested_model": "openai/gpt-6-luna",
+          "provider_adapter": "openrouter",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "medium",
+          "native_reasoning": {
+            "reasoning": {
+              "effort": "medium"
+            }
+          },
+          "effective_effort": "unknown",
+          "effective_model": "openai/gpt-6-luna",
+          "provider": "OpenAI",
+          "request_id": "gen-1793407513-11cxLUlvLisyeRjcfO56",
+          "usage": {
+            "prompt_tokens": 2541,
+            "completion_tokens": 109,
+            "cost": 0.000108815,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 6,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "gpt_luna",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "gpt_luna",
+                "confidence": 0.29910198892162376,
+                "probabilities": {
+                  "deepseek_flash": 0.4549117467754437,
+                  "mimo_flash": 0.03963169955670737,
+                  "mimo_pro": 0.031130061976631106,
+                  "gpt_luna": 0.4743264916912178
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.1919078584599479,
+                "probabilities": {
+                  "none": 0.1091410074430613,
+                  "low": 0.32144300981597584,
+                  "medium": 0.3265898820499566,
+                  "high": 0.13429483935675157,
+                  "xhigh": 0.05525284139975017,
+                  "max": 0.05327841993450453
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.9602131052014704,
+                "confidence": 0.3691643590486309,
+                "probabilities": {
+                  "0": 0.23017199438305444,
+                  "1": 0.5794429060324205,
+                  "2": 0.19038509958452496
+                }
+              }
+            },
+            "requested_model": "openai/gpt-6-luna",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "native_reasoning": {
+              "reasoning": {
+                "effort": "medium"
+              }
+            },
+            "provider_adapter": "openrouter",
+            "effective_model": "openai/gpt-6-luna",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+            "capabilities_checked_at": 1793407513.9990604,
+            "provider": "OpenAI",
+            "request_id": "gen-1793407513-11cxLUlvLisyeRjcfO56",
+            "usage": {
+              "prompt_tokens": 2541,
+              "completion_tokens": 109,
+              "total_tokens": 2650,
+              "cost": 0.000108815,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 2289,
+                "cache_write_tokens": 249,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0.000108815,
+                "upstream_inference_prompt_cost": 5.4315e-05,
+                "upstream_inference_completions_cost": 5.45e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "latency_ms": 2583.8247000065167
+        },
+        {
+          "category": "execution",
+          "model": "openai/gpt-6-luna",
+          "requested_model": "openai/gpt-6-luna",
+          "provider_adapter": "openrouter",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "medium",
+          "submitted_effort": "medium",
+          "native_reasoning": {
+            "reasoning": {
+              "effort": "medium"
+            }
+          },
+          "effective_effort": "unknown",
+          "effective_model": "openai/gpt-6-luna",
+          "provider": "OpenAI",
+          "request_id": "gen-1793407519-JdkS7MTMwwYYjckhjJ0E",
+          "usage": {
+            "prompt_tokens": 2846,
+            "completion_tokens": 40,
+            "cost": 8.3805e-05,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 6,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "gpt_luna",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "gpt_luna",
+                "confidence": 0.29910198892162376,
+                "probabilities": {
+                  "deepseek_flash": 0.4549117467754437,
+                  "mimo_flash": 0.03963169955670737,
+                  "mimo_pro": 0.031130061976631106,
+                  "gpt_luna": 0.4743264916912178
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "medium",
+                "confidence": 0.1919078584599479,
+                "probabilities": {
+                  "none": 0.1091410074430613,
+                  "low": 0.32144300981597584,
+                  "medium": 0.3265898820499566,
+                  "high": 0.13429483935675157,
+                  "xhigh": 0.05525284139975017,
+                  "max": 0.05327841993450453
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.9602131052014704,
+                "confidence": 0.3691643590486309,
+                "probabilities": {
+                  "0": 0.23017199438305444,
+                  "1": 0.5794429060324205,
+                  "2": 0.19038509958452496
+                }
+              }
+            },
+            "requested_model": "openai/gpt-6-luna",
+            "requested_effort": "medium",
+            "submitted_effort": "medium",
+            "native_reasoning": {
+              "reasoning": {
+                "effort": "medium"
+              }
+            },
+            "provider_adapter": "openrouter",
+            "effective_model": "openai/gpt-6-luna",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+            "capabilities_checked_at": 1793407520.2649415,
+            "provider": "OpenAI",
+            "request_id": "gen-1793407519-JdkS7MTMwwYYjckhjJ0E",
+            "usage": {
+              "prompt_tokens": 2846,
+              "completion_tokens": 40,
+              "total_tokens": 2886,
+              "cost": 8.3805e-05,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 2538,
+                "cache_write_tokens": 305,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 8.3805e-05,
+                "upstream_inference_prompt_cost": 6.3805e-05,
+                "upstream_inference_completions_cost": 2e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "latency_ms": 2166.4492999989307
+        }
+      ],
+      "retrieval_queries": 0,
+      "reflection_model_calls": 0,
+      "verification_cases": 0,
+      "routing_decisions": [
+        {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "context": {
+            "task_kind": "conversation",
+            "complexity": "standard",
+            "history_messages": 6,
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "reuse": false
+          },
+          "profile": "gpt_luna",
+          "reason": "Typed Decisions selection from the latest user message and bounded session context",
+          "decision_model": "baseten/joey-1",
+          "decision_answers": {
+            "model": {
+              "type": "choice",
+              "choice": "gpt_luna",
+              "confidence": 0.29910198892162376,
+              "probabilities": {
+                "deepseek_flash": 0.4549117467754437,
+                "mimo_flash": 0.03963169955670737,
+                "mimo_pro": 0.031130061976631106,
+                "gpt_luna": 0.4743264916912178
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.1919078584599479,
+              "probabilities": {
+                "none": 0.1091410074430613,
+                "low": 0.32144300981597584,
+                "medium": 0.3265898820499566,
+                "high": 0.13429483935675157,
+                "xhigh": 0.05525284139975017,
+                "max": 0.05327841993450453
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.9602131052014704,
+              "confidence": 0.3691643590486309,
+              "probabilities": {
+                "0": 0.23017199438305444,
+                "1": 0.5794429060324205,
+                "2": 0.19038509958452496
+              }
+            }
+          },
+          "requested_model": "openai/gpt-6-luna",
+          "requested_effort": "medium",
+          "submitted_effort": "medium",
+          "native_reasoning": {
+            "reasoning": {
+              "effort": "medium"
+            }
+          },
+          "provider_adapter": "openrouter",
+          "effective_model": "openai/gpt-6-luna",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+          "capabilities_checked_at": 1793407520.2649415,
+          "provider": "OpenAI",
+          "request_id": "gen-1793407519-JdkS7MTMwwYYjckhjJ0E",
+          "usage": {
+            "prompt_tokens": 2846,
+            "completion_tokens": 40,
+            "total_tokens": 2886,
+            "cost": 8.3805e-05,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 2538,
+              "cache_write_tokens": 305,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 8.3805e-05,
+              "upstream_inference_prompt_cost": 6.3805e-05,
+              "upstream_inference_completions_cost": 2e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        }
+      ],
+      "agent_tools": true,
+      "decision_attempts": [
+        {
+          "model": "baseten/joey-1",
+          "fallback": false,
+          "status": "selected",
+          "answers": {
+            "model": {
+              "type": "choice",
+              "choice": "gpt_luna",
+              "confidence": 0.29910198892162376,
+              "probabilities": {
+                "deepseek_flash": 0.4549117467754437,
+                "mimo_flash": 0.03963169955670737,
+                "mimo_pro": 0.031130061976631106,
+                "gpt_luna": 0.4743264916912178
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "medium",
+              "confidence": 0.1919078584599479,
+              "probabilities": {
+                "none": 0.1091410074430613,
+                "low": 0.32144300981597584,
+                "medium": 0.3265898820499566,
+                "high": 0.13429483935675157,
+                "xhigh": 0.05525284139975017,
+                "max": 0.05327841993450453
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.9602131052014704,
+              "confidence": 0.3691643590486309,
+              "probabilities": {
+                "0": 0.23017199438305444,
+                "1": 0.5794429060324205,
+                "2": 0.19038509958452496
+              }
+            }
+          },
+          "request_id": "gen-dec-1793407503-z6Ggbonuy5V7erqzfeYl"
+        }
+      ],
+      "end_to_end_ms": 18385.454416275024
+    }
+  },
+  {
+    "id": "3da2169d-29e6-4dc6-bdd6-f9faf98fa591",
+    "task": "Use the browser tool to navigate to https://example.com and report its page title. Use the browser tool, not application_launch.",
+    "status": "complete",
+    "assistant_response": "The page title is **Example Domain**.",
+    "tool_evidence": [
+      {
+        "tool": "browser",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "51a93a5397ad45672610fd871f26ee783a6e3206673cce5d0a4711d612f1ad49"
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "input_tokens": 7119,
+      "output_tokens": 40,
+      "reasoning_tokens": 0,
+      "retries": 0,
+      "tool_calls": 1,
+      "local_execution_ms": 4150.1581,
+      "model_latency_ms": 5943.429699989792,
+      "billed_cost_usd": 0.000257555,
+      "usage_complete": true,
+      "cost_reported": true,
+      "calls": [
+        {
+          "category": "decision",
+          "model": "baseten/joey-1",
+          "requested_model": "baseten/joey-1",
+          "provider_adapter": "openrouter",
+          "interface": "decisions",
+          "status": "received",
+          "requested_effort": null,
+          "submitted_effort": null,
+          "native_reasoning": null,
+          "effective_effort": "unknown",
+          "effective_model": "baseten/joey-1-20261029",
+          "provider": "BaseTen",
+          "request_id": "gen-dec-1793407486-wKwt9mJlivzCHXQvmSky",
+          "usage": {
+            "input_tokens": 1390,
+            "output_tokens": 3,
+            "cost": 1.39e-05
+          },
+          "latency_ms": 889.9863999977242
+        },
+        {
+          "category": "execution",
+          "model": "openai/gpt-6-luna",
+          "requested_model": "openai/gpt-6-luna",
+          "provider_adapter": "openrouter",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "low",
+          "submitted_effort": "low",
+          "native_reasoning": {
+            "reasoning": {
+              "effort": "low"
+            }
+          },
+          "effective_effort": "unknown",
+          "effective_model": "openai/gpt-6-luna",
+          "provider": "OpenAI",
+          "request_id": "gen-1793407488-bf7aK2B8GGYZgIHi7dGa",
+          "usage": {
+            "prompt_tokens": 2188,
+            "completion_tokens": 24,
+            "cost": 4.588e-05,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 4,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "gpt_luna",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "gpt_luna",
+                "confidence": 0.3330377862759761,
+                "probabilities": {
+                  "deepseek_flash": 0.4144357414715684,
+                  "mimo_flash": 0.04947808676348904,
+                  "mimo_pro": 0.03630783205796038,
+                  "gpt_luna": 0.49977833970698204
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "low",
+                "confidence": 0.26123949026218396,
+                "probabilities": {
+                  "none": 0.25962390072996366,
+                  "low": 0.3843662418851533,
+                  "medium": 0.19765807733110646,
+                  "high": 0.07599210122095178,
+                  "xhigh": 0.03940158354127262,
+                  "max": 0.042958095291552034
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.4961782412711021,
+                "confidence": 0.2557326380933468,
+                "probabilities": {
+                  "0": 0.5994877316961884,
+                  "1": 0.3048462953365209,
+                  "2": 0.09566597296729061
+                }
+              }
+            },
+            "requested_model": "openai/gpt-6-luna",
+            "requested_effort": "low",
+            "submitted_effort": "low",
+            "native_reasoning": {
+              "reasoning": {
+                "effort": "low"
+              }
+            },
+            "provider_adapter": "openrouter",
+            "effective_model": "openai/gpt-6-luna",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+            "capabilities_checked_at": 1793407488.9248767,
+            "provider": "OpenAI",
+            "request_id": "gen-1793407488-bf7aK2B8GGYZgIHi7dGa",
+            "usage": {
+              "prompt_tokens": 2188,
+              "completion_tokens": 24,
+              "total_tokens": 2212,
+              "cost": 4.588e-05,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 2083,
+                "cache_write_tokens": 102,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 4.588e-05,
+                "upstream_inference_prompt_cost": 3.388e-05,
+                "upstream_inference_completions_cost": 1.2e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "latency_ms": 2262.6903999989736
+        },
+        {
+          "category": "execution",
+          "model": "openai/gpt-6-luna",
+          "requested_model": "openai/gpt-6-luna",
+          "provider_adapter": "openrouter",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "low",
+          "submitted_effort": "low",
+          "native_reasoning": {
+            "reasoning": {
+              "effort": "low"
+            }
+          },
+          "effective_effort": "unknown",
+          "effective_model": "openai/gpt-6-luna",
+          "provider": "OpenAI",
+          "request_id": "gen-1793407497-2hkFSZgo1eYGpvB0D9go",
+          "usage": {
+            "prompt_tokens": 3541,
+            "completion_tokens": 13,
+            "cost": 0.000197775,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 4,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "gpt_luna",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "gpt_luna",
+                "confidence": 0.3330377862759761,
+                "probabilities": {
+                  "deepseek_flash": 0.4144357414715684,
+                  "mimo_flash": 0.04947808676348904,
+                  "mimo_pro": 0.03630783205796038,
+                  "gpt_luna": 0.49977833970698204
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "low",
+                "confidence": 0.26123949026218396,
+                "probabilities": {
+                  "none": 0.25962390072996366,
+                  "low": 0.3843662418851533,
+                  "medium": 0.19765807733110646,
+                  "high": 0.07599210122095178,
+                  "xhigh": 0.03940158354127262,
+                  "max": 0.042958095291552034
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.4961782412711021,
+                "confidence": 0.2557326380933468,
+                "probabilities": {
+                  "0": 0.5994877316961884,
+                  "1": 0.3048462953365209,
+                  "2": 0.09566597296729061
+                }
+              }
+            },
+            "requested_model": "openai/gpt-6-luna",
+            "requested_effort": "low",
+            "submitted_effort": "low",
+            "native_reasoning": {
+              "reasoning": {
+                "effort": "low"
+              }
+            },
+            "provider_adapter": "openrouter",
+            "effective_model": "openai/gpt-6-luna",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+            "capabilities_checked_at": 1793407498.048063,
+            "provider": "OpenAI",
+            "request_id": "gen-1793407497-2hkFSZgo1eYGpvB0D9go",
+            "usage": {
+              "prompt_tokens": 3541,
+              "completion_tokens": 13,
+              "total_tokens": 3554,
+              "cost": 0.000197775,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 2185,
+                "cache_write_tokens": 1353,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0.000197775,
+                "upstream_inference_prompt_cost": 0.000191275,
+                "upstream_inference_completions_cost": 6.5e-06
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "latency_ms": 2790.7528999930946
+        }
+      ],
+      "retrieval_queries": 0,
+      "reflection_model_calls": 0,
+      "verification_cases": 0,
+      "routing_decisions": [
+        {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "context": {
+            "task_kind": "conversation",
+            "complexity": "standard",
+            "history_messages": 4,
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "reuse": false
+          },
+          "profile": "gpt_luna",
+          "reason": "Typed Decisions selection from the latest user message and bounded session context",
+          "decision_model": "baseten/joey-1",
+          "decision_answers": {
+            "model": {
+              "type": "choice",
+              "choice": "gpt_luna",
+              "confidence": 0.3330377862759761,
+              "probabilities": {
+                "deepseek_flash": 0.4144357414715684,
+                "mimo_flash": 0.04947808676348904,
+                "mimo_pro": 0.03630783205796038,
+                "gpt_luna": 0.49977833970698204
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "low",
+              "confidence": 0.26123949026218396,
+              "probabilities": {
+                "none": 0.25962390072996366,
+                "low": 0.3843662418851533,
+                "medium": 0.19765807733110646,
+                "high": 0.07599210122095178,
+                "xhigh": 0.03940158354127262,
+                "max": 0.042958095291552034
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.4961782412711021,
+              "confidence": 0.2557326380933468,
+              "probabilities": {
+                "0": 0.5994877316961884,
+                "1": 0.3048462953365209,
+                "2": 0.09566597296729061
+              }
+            }
+          },
+          "requested_model": "openai/gpt-6-luna",
+          "requested_effort": "low",
+          "submitted_effort": "low",
+          "native_reasoning": {
+            "reasoning": {
+              "effort": "low"
+            }
+          },
+          "provider_adapter": "openrouter",
+          "effective_model": "openai/gpt-6-luna",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "capability_reason": "Current model effort allowlist and endpoint parameters verified",
+          "capabilities_checked_at": 1793407498.048063,
+          "provider": "OpenAI",
+          "request_id": "gen-1793407497-2hkFSZgo1eYGpvB0D9go",
+          "usage": {
+            "prompt_tokens": 3541,
+            "completion_tokens": 13,
+            "total_tokens": 3554,
+            "cost": 0.000197775,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 2185,
+              "cache_write_tokens": 1353,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.000197775,
+              "upstream_inference_prompt_cost": 0.000191275,
+              "upstream_inference_completions_cost": 6.5e-06
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        }
+      ],
+      "agent_tools": true,
+      "decision_attempts": [
+        {
+          "model": "baseten/joey-1",
+          "fallback": false,
+          "status": "selected",
+          "answers": {
+            "model": {
+              "type": "choice",
+              "choice": "gpt_luna",
+              "confidence": 0.3330377862759761,
+              "probabilities": {
+                "deepseek_flash": 0.4144357414715684,
+                "mimo_flash": 0.04947808676348904,
+                "mimo_pro": 0.03630783205796038,
+                "gpt_luna": 0.49977833970698204
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "low",
+              "confidence": 0.26123949026218396,
+              "probabilities": {
+                "none": 0.25962390072996366,
+                "low": 0.3843662418851533,
+                "medium": 0.19765807733110646,
+                "high": 0.07599210122095178,
+                "xhigh": 0.03940158354127262,
+                "max": 0.042958095291552034
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.4961782412711021,
+              "confidence": 0.2557326380933468,
+              "probabilities": {
+                "0": 0.5994877316961884,
+                "1": 0.3048462953365209,
+                "2": 0.09566597296729061
+              }
+            }
+          },
+          "request_id": "gen-dec-1793407486-wKwt9mJlivzCHXQvmSky"
+        }
+      ],
+      "end_to_end_ms": 13603.593587875366
+    }
+  },
+  {
+    "id": "d4399894-29f3-4e2f-a591-515846e0c6f4",
+    "task": "Run ipconfig with no arguments through terminal_run. Report only whether it executed and its exit code; omit network details.",
+    "status": "complete",
+    "assistant_response": "`ipconfig` executed successfully with exit code 0.",
+    "tool_evidence": [
+      {
+        "tool": "terminal_run",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "a6d01de2416904c5cfd4242f754174b24b006ab334c5402f9234fe80c0a9924a"
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "input_tokens": 8660,
+      "output_tokens": 54,
+      "reasoning_tokens": 0,
+      "retries": 0,
+      "tool_calls": 1,
+      "local_execution_ms": 101.7718,
+      "model_latency_ms": 4833.8121000051615,
+      "billed_cost_usd": 1.331e-05,
+      "usage_complete": true,
+      "cost_reported": false,
+      "calls": [
+        {
+          "category": "decision",
+          "model": "baseten/joey-1",
+          "requested_model": "baseten/joey-1",
+          "provider_adapter": "openrouter",
+          "interface": "decisions",
+          "status": "received",
+          "requested_effort": null,
+          "submitted_effort": null,
+          "native_reasoning": null,
+          "effective_effort": "unknown",
+          "effective_model": "baseten/joey-1-20261029",
+          "provider": "BaseTen",
+          "request_id": "gen-dec-1793407476-sjOSdwNtZt0hJhiy3Rmw",
+          "usage": {
+            "input_tokens": 1331,
+            "output_tokens": 3,
+            "cost": 1.331e-05
+          },
+          "latency_ms": 1296.5985000046203
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "none",
+          "submitted_effort": "none",
+          "native_reasoning": {
+            "thinking": {
+              "type": "disabled"
+            },
+            "reasoning_effort": "none"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "0c78dc2e-b3e8-486c-9412-217ba61e721c",
+          "usage": {
+            "prompt_tokens": 3329,
+            "completion_tokens": 39
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 2,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.37556136820339975,
+                "probabilities": {
+                  "deepseek_flash": 0.5316710261525498,
+                  "mimo_flash": 0.07624815472274431,
+                  "mimo_pro": 0.0490891675732555,
+                  "gpt_luna": 0.3429916515514503
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "none",
+                "confidence": 0.214383028646824,
+                "probabilities": {
+                  "none": 0.34531919053902,
+                  "low": 0.2602566983322259,
+                  "medium": 0.20956530173768323,
+                  "high": 0.10080277397393193,
+                  "xhigh": 0.03803934398264194,
+                  "max": 0.04601669143449708
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.48524386677534315,
+                "confidence": 0.2721341998369853,
+                "probabilities": {
+                  "0": 0.6098916881839924,
+                  "1": 0.29497275685667196,
+                  "2": 0.09513555495933558
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "none",
+            "submitted_effort": "none",
+            "native_reasoning": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_effort": "none"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "0c78dc2e-b3e8-486c-9412-217ba61e721c",
+            "usage": {
+              "prompt_tokens": 3329,
+              "completion_tokens": 39,
+              "total_tokens": 3368,
+              "prompt_tokens_details": {
+                "cached_tokens": 3072
+              },
+              "prompt_cache_hit_tokens": 3072,
+              "prompt_cache_miss_tokens": 257
+            }
+          },
+          "latency_ms": 2406.318800000008
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "none",
+          "submitted_effort": "none",
+          "native_reasoning": {
+            "thinking": {
+              "type": "disabled"
+            },
+            "reasoning_effort": "none"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "4b185a04-44e5-4046-b1c9-9e31e61ca65d",
+          "usage": {
+            "prompt_tokens": 4000,
+            "completion_tokens": 12
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 2,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.37556136820339975,
+                "probabilities": {
+                  "deepseek_flash": 0.5316710261525498,
+                  "mimo_flash": 0.07624815472274431,
+                  "mimo_pro": 0.0490891675732555,
+                  "gpt_luna": 0.3429916515514503
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "none",
+                "confidence": 0.214383028646824,
+                "probabilities": {
+                  "none": 0.34531919053902,
+                  "low": 0.2602566983322259,
+                  "medium": 0.20956530173768323,
+                  "high": 0.10080277397393193,
+                  "xhigh": 0.03803934398264194,
+                  "max": 0.04601669143449708
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.48524386677534315,
+                "confidence": 0.2721341998369853,
+                "probabilities": {
+                  "0": 0.6098916881839924,
+                  "1": 0.29497275685667196,
+                  "2": 0.09513555495933558
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "none",
+            "submitted_effort": "none",
+            "native_reasoning": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_effort": "none"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "4b185a04-44e5-4046-b1c9-9e31e61ca65d",
+            "usage": {
+              "prompt_tokens": 4000,
+              "completion_tokens": 12,
+              "total_tokens": 4012,
+              "prompt_tokens_details": {
+                "cached_tokens": 3328
+              },
+              "prompt_cache_hit_tokens": 3328,
+              "prompt_cache_miss_tokens": 672
+            }
+          },
+          "latency_ms": 1130.894800000533
+        }
+      ],
+      "retrieval_queries": 0,
+      "reflection_model_calls": 0,
+      "verification_cases": 0,
+      "routing_decisions": [
+        {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "context": {
+            "task_kind": "conversation",
+            "complexity": "standard",
+            "history_messages": 2,
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "reuse": false
+          },
+          "profile": "deepseek_flash",
+          "reason": "Typed Decisions selection from the latest user message and bounded session context",
+          "decision_model": "baseten/joey-1",
+          "decision_answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.37556136820339975,
+              "probabilities": {
+                "deepseek_flash": 0.5316710261525498,
+                "mimo_flash": 0.07624815472274431,
+                "mimo_pro": 0.0490891675732555,
+                "gpt_luna": 0.3429916515514503
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "none",
+              "confidence": 0.214383028646824,
+              "probabilities": {
+                "none": 0.34531919053902,
+                "low": 0.2602566983322259,
+                "medium": 0.20956530173768323,
+                "high": 0.10080277397393193,
+                "xhigh": 0.03803934398264194,
+                "max": 0.04601669143449708
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.48524386677534315,
+              "confidence": 0.2721341998369853,
+              "probabilities": {
+                "0": 0.6098916881839924,
+                "1": 0.29497275685667196,
+                "2": 0.09513555495933558
+              }
+            }
+          },
+          "requested_model": "deepseek-flash",
+          "requested_effort": "none",
+          "submitted_effort": "none",
+          "native_reasoning": {
+            "thinking": {
+              "type": "disabled"
+            },
+            "reasoning_effort": "none"
+          },
+          "provider_adapter": "deepseek",
+          "effective_model": "deepseek-flash",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "provider": "deepseek",
+          "request_id": "4b185a04-44e5-4046-b1c9-9e31e61ca65d",
+          "usage": {
+            "prompt_tokens": 4000,
+            "completion_tokens": 12,
+            "total_tokens": 4012,
+            "prompt_tokens_details": {
+              "cached_tokens": 3328
+            },
+            "prompt_cache_hit_tokens": 3328,
+            "prompt_cache_miss_tokens": 672
+          }
+        }
+      ],
+      "agent_tools": true,
+      "decision_attempts": [
+        {
+          "model": "baseten/joey-1",
+          "fallback": false,
+          "status": "selected",
+          "answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.37556136820339975,
+              "probabilities": {
+                "deepseek_flash": 0.5316710261525498,
+                "mimo_flash": 0.07624815472274431,
+                "mimo_pro": 0.0490891675732555,
+                "gpt_luna": 0.3429916515514503
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "none",
+              "confidence": 0.214383028646824,
+              "probabilities": {
+                "none": 0.34531919053902,
+                "low": 0.2602566983322259,
+                "medium": 0.20956530173768323,
+                "high": 0.10080277397393193,
+                "xhigh": 0.03803934398264194,
+                "max": 0.04601669143449708
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.48524386677534315,
+              "confidence": 0.2721341998369853,
+              "probabilities": {
+                "0": 0.6098916881839924,
+                "1": 0.29497275685667196,
+                "2": 0.09513555495933558
+              }
+            }
+          },
+          "request_id": "gen-dec-1793407476-sjOSdwNtZt0hJhiy3Rmw"
+        }
+      ],
+      "end_to_end_ms": 7678.398132324219
+    }
+  },
+  {
+    "id": "c847176d-2c90-459a-b4f0-924eda6c57cd",
+    "task": "Open Word.",
+    "status": "complete",
+    "assistant_response": "Microsoft Word is now open and its window is verified as available.",
+    "tool_evidence": [
+      {
+        "tool": "application_launch",
+        "contract_version": 1,
+        "status": "succeeded",
+        "verified": true,
+        "result_hash": "eedf08d6695891295e9561e35efcb7c2d4909a7c8866a2ac83acf667899ca471"
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "input_tokens": 7987,
+      "output_tokens": 62,
+      "reasoning_tokens": 0,
+      "retries": 0,
+      "tool_calls": 1,
+      "local_execution_ms": 10430.2323,
+      "model_latency_ms": 3712.2944999937317,
+      "billed_cost_usd": 1.273e-05,
+      "usage_complete": true,
+      "cost_reported": false,
+      "calls": [
+        {
+          "category": "decision",
+          "model": "baseten/joey-1",
+          "requested_model": "baseten/joey-1",
+          "provider_adapter": "openrouter",
+          "interface": "decisions",
+          "status": "received",
+          "requested_effort": null,
+          "submitted_effort": null,
+          "native_reasoning": null,
+          "effective_effort": "unknown",
+          "effective_model": "baseten/joey-1-20261029",
+          "provider": "BaseTen",
+          "request_id": "gen-dec-1793407446-WSeN6ESZidlWPKAg11dn",
+          "usage": {
+            "input_tokens": 1273,
+            "output_tokens": 3,
+            "cost": 1.273e-05
+          },
+          "latency_ms": 1039.4424999976764
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "none",
+          "submitted_effort": "none",
+          "native_reasoning": {
+            "thinking": {
+              "type": "disabled"
+            },
+            "reasoning_effort": "none"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "94fa0b83-ae94-40db-8eab-458b2a5e3e2f",
+          "usage": {
+            "prompt_tokens": 3288,
+            "completion_tokens": 46
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 0,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.30612495378670973,
+                "probabilities": {
+                  "deepseek_flash": 0.4795937153400323,
+                  "mimo_flash": 0.06054845277534403,
+                  "mimo_pro": 0.04771892784355116,
+                  "gpt_luna": 0.4121389040410725
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "none",
+                "confidence": 0.24512496250728205,
+                "probabilities": {
+                  "none": 0.37093746875606837,
+                  "low": 0.2567023897814786,
+                  "medium": 0.1961143620973643,
+                  "high": 0.09310812417256996,
+                  "xhigh": 0.03824053370980316,
+                  "max": 0.04489712148271564
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.39543719614219625,
+                "confidence": 0.40684420578670555,
+                "probabilities": {
+                  "0": 0.6851597859376197,
+                  "1": 0.2342432319825643,
+                  "2": 0.08059698207981597
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "none",
+            "submitted_effort": "none",
+            "native_reasoning": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_effort": "none"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "94fa0b83-ae94-40db-8eab-458b2a5e3e2f",
+            "usage": {
+              "prompt_tokens": 3288,
+              "completion_tokens": 46,
+              "total_tokens": 3334,
+              "prompt_tokens_details": {
+                "cached_tokens": 3072
+              },
+              "prompt_cache_hit_tokens": 3072,
+              "prompt_cache_miss_tokens": 216
+            }
+          },
+          "latency_ms": 1230.741699997452
+        },
+        {
+          "category": "execution",
+          "model": "deepseek-flash",
+          "requested_model": "deepseek-flash",
+          "provider_adapter": "deepseek",
+          "interface": "chat/completions",
+          "status": "received",
+          "requested_effort": "none",
+          "submitted_effort": "none",
+          "native_reasoning": {
+            "thinking": {
+              "type": "disabled"
+            },
+            "reasoning_effort": "none"
+          },
+          "effective_effort": "unknown",
+          "effective_model": "deepseek-flash",
+          "provider": "deepseek",
+          "request_id": "f0cef553-0e16-4b0a-b80e-2a6216c3798f",
+          "usage": {
+            "prompt_tokens": 3426,
+            "completion_tokens": 13
+          },
+          "routing": {
+            "policy": "adaptive",
+            "policy_version": "decisions-model-effort-v2",
+            "context": {
+              "task_kind": "conversation",
+              "complexity": "standard",
+              "history_messages": 0,
+              "task_novelty": false,
+              "schema_novelty": false,
+              "repair": false,
+              "reuse": false
+            },
+            "profile": "deepseek_flash",
+            "reason": "Typed Decisions selection from the latest user message and bounded session context",
+            "decision_model": "baseten/joey-1",
+            "decision_answers": {
+              "model": {
+                "type": "choice",
+                "choice": "deepseek_flash",
+                "confidence": 0.30612495378670973,
+                "probabilities": {
+                  "deepseek_flash": 0.4795937153400323,
+                  "mimo_flash": 0.06054845277534403,
+                  "mimo_pro": 0.04771892784355116,
+                  "gpt_luna": 0.4121389040410725
+                }
+              },
+              "effort": {
+                "type": "choice",
+                "choice": "none",
+                "confidence": 0.24512496250728205,
+                "probabilities": {
+                  "none": 0.37093746875606837,
+                  "low": 0.2567023897814786,
+                  "medium": 0.1961143620973643,
+                  "high": 0.09310812417256996,
+                  "xhigh": 0.03824053370980316,
+                  "max": 0.04489712148271564
+                }
+              },
+              "complexity": {
+                "type": "score",
+                "score": 0.39543719614219625,
+                "confidence": 0.40684420578670555,
+                "probabilities": {
+                  "0": 0.6851597859376197,
+                  "1": 0.2342432319825643,
+                  "2": 0.08059698207981597
+                }
+              }
+            },
+            "requested_model": "deepseek-flash",
+            "requested_effort": "none",
+            "submitted_effort": "none",
+            "native_reasoning": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_effort": "none"
+            },
+            "provider_adapter": "deepseek",
+            "effective_model": "deepseek-flash",
+            "effective_effort": "unknown",
+            "effort_status": "submitted_unconfirmed",
+            "provider": "deepseek",
+            "request_id": "f0cef553-0e16-4b0a-b80e-2a6216c3798f",
+            "usage": {
+              "prompt_tokens": 3426,
+              "completion_tokens": 13,
+              "total_tokens": 3439,
+              "prompt_tokens_details": {
+                "cached_tokens": 3200
+              },
+              "prompt_cache_hit_tokens": 3200,
+              "prompt_cache_miss_tokens": 226
+            }
+          },
+          "latency_ms": 1442.1102999986033
+        }
+      ],
+      "retrieval_queries": 0,
+      "reflection_model_calls": 0,
+      "verification_cases": 0,
+      "routing_decisions": [
+        {
+          "policy": "adaptive",
+          "policy_version": "decisions-model-effort-v2",
+          "context": {
+            "task_kind": "conversation",
+            "complexity": "standard",
+            "history_messages": 0,
+            "task_novelty": false,
+            "schema_novelty": false,
+            "repair": false,
+            "reuse": false
+          },
+          "profile": "deepseek_flash",
+          "reason": "Typed Decisions selection from the latest user message and bounded session context",
+          "decision_model": "baseten/joey-1",
+          "decision_answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.30612495378670973,
+              "probabilities": {
+                "deepseek_flash": 0.4795937153400323,
+                "mimo_flash": 0.06054845277534403,
+                "mimo_pro": 0.04771892784355116,
+                "gpt_luna": 0.4121389040410725
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "none",
+              "confidence": 0.24512496250728205,
+              "probabilities": {
+                "none": 0.37093746875606837,
+                "low": 0.2567023897814786,
+                "medium": 0.1961143620973643,
+                "high": 0.09310812417256996,
+                "xhigh": 0.03824053370980316,
+                "max": 0.04489712148271564
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.39543719614219625,
+              "confidence": 0.40684420578670555,
+              "probabilities": {
+                "0": 0.6851597859376197,
+                "1": 0.2342432319825643,
+                "2": 0.08059698207981597
+              }
+            }
+          },
+          "requested_model": "deepseek-flash",
+          "requested_effort": "none",
+          "submitted_effort": "none",
+          "native_reasoning": {
+            "thinking": {
+              "type": "disabled"
+            },
+            "reasoning_effort": "none"
+          },
+          "provider_adapter": "deepseek",
+          "effective_model": "deepseek-flash",
+          "effective_effort": "unknown",
+          "effort_status": "submitted_unconfirmed",
+          "provider": "deepseek",
+          "request_id": "f0cef553-0e16-4b0a-b80e-2a6216c3798f",
+          "usage": {
+            "prompt_tokens": 3426,
+            "completion_tokens": 13,
+            "total_tokens": 3439,
+            "prompt_tokens_details": {
+              "cached_tokens": 3200
+            },
+            "prompt_cache_hit_tokens": 3200,
+            "prompt_cache_miss_tokens": 226
+          }
+        }
+      ],
+      "agent_tools": true,
+      "decision_attempts": [
+        {
+          "model": "baseten/joey-1",
+          "fallback": false,
+          "status": "selected",
+          "answers": {
+            "model": {
+              "type": "choice",
+              "choice": "deepseek_flash",
+              "confidence": 0.30612495378670973,
+              "probabilities": {
+                "deepseek_flash": 0.4795937153400323,
+                "mimo_flash": 0.06054845277534403,
+                "mimo_pro": 0.04771892784355116,
+                "gpt_luna": 0.4121389040410725
+              }
+            },
+            "effort": {
+              "type": "choice",
+              "choice": "none",
+              "confidence": 0.24512496250728205,
+              "probabilities": {
+                "none": 0.37093746875606837,
+                "low": 0.2567023897814786,
+                "medium": 0.1961143620973643,
+                "high": 0.09310812417256996,
+                "xhigh": 0.03824053370980316,
+                "max": 0.04489712148271564
+              }
+            },
+            "complexity": {
+              "type": "score",
+              "score": 0.39543719614219625,
+              "confidence": 0.40684420578670555,
+              "probabilities": {
+                "0": 0.6851597859376197,
+                "1": 0.2342432319825643,
+                "2": 0.08059698207981597
+              }
+            }
+          },
+          "request_id": "gen-dec-1793407446-WSeN6ESZidlWPKAg11dn"
+        }
+      ],
+      "end_to_end_ms": 26494.060754776
+    }
+  }
+]

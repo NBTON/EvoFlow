@@ -1,0 +1,46 @@
+EvoFlow
+Needs attention
+Conversation
+Memory
+You
+Use Cua to launch a new Calculator window. Observe it, click its Close Calculator button using a fresh element token, then request get_window_state for that same now-closed pid/window_id to verify that a stale target is refused. Do not relaunch or use another backend.
+Local action
+MCP response received from Cua · Calculator / launch_app
+succeeded · verified: false
+Local action
+MCP response received from Cua · Calculator / get_window_state
+succeeded · verified: true
+Local action
+MCP response received from Cua · Calculator / click
+succeeded · verified: false
+Local action
+Stale target or mismatched PID/window. Rediscover and observe.
+denied · verified: false
+Local action
+Protected or stale PID. First launch Calculator to obtain its exact window.
+denied · verified: false
+EvoFlow
+Done — full Cua-only sequence, no relaunch, no other backend.
+
+**1. Launch (Cua `launch_app`, background, non-activating)**
+- AUMID: `Microsoft.WindowsCalculator_8wekyb3d8bbwe!App`
+- Returned **pid 2664**, window **12586370**, title "Calculator", bounds 500×750 at (50,150)
+- Delivery evidence: foreground handle unchanged before/after (6030506 → 6030506); nothing was stolen from you
+
+**2. Observation (`get_window_state`, elements, 250 elements / depth 8)**
+- `verified: true`, snapshot **s00000001**, 39 elements, `elements_complete: true`
+- Window host: `ApplicationFrameHost.exe`; display showed "Display is 0"
+- Title-bar controls found: `Minimize Calculator` [2], `Maximize Calculator` [3], **`Close Calculator` [4]** (role Button, `invoke`, screen rect (503,151,46,32))
+
+**3. Click on fresh token (Cua `click`, background / accessibility route)**
+- Target: `{kind: window, pid 2664, window_id 12586370}`, `element_token: s00000001:4`
+- Result: `✅ Performed UIA Invoke on [4] (screen (526,167))`
+- The driver itself reported `effect: unverifiable` — a dispatch, not a proven postcondition — and recommended re-reading state. Foreground handle again unchanged (6030506 → 6030506), so the close did not activate your window.
+
+**4. Stale-target verification (same pid 2664 / window_id 12586370, no relaunch)**
+- `get_window_state` → **`status: denied`, `errorCode: policy_denied`**, summary: *"Stale target or mismatched PID/window. Rediscover and observe."* — the closed window id is refused exactly as expected.
+- Supporting cross-check, `list_windows(pid: 2664)` → also **denied**: *"Protected or stale PID. First launch Calculator to obtain its exact window."*
+
+**Interpretation, stated honestly:** the click's own response never claimed success (`verified: false`, `effect: unverifiable`), so I have no direct "closed" confirmation from step 3. What I do have as evidence is step 4: the driver's policy layer refusing the exact pid/window_id it had just been serving a fresh snapshot for — which can only happen if that window is no longer live. Calculator therefore was closed and stays closed; I have not relaunched it or touched the window state again.
+Message
+Enter to send · Shift+Enter for a new line
