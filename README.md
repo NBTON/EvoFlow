@@ -7,7 +7,7 @@
   <a href="#memory-and-brain-graph">Memory graph</a> · <a href="#workflow-evolution">Evolution</a> ·
   <a href="#set-up-with-your-agent">Agent setup</a> · <a href="#run-from-source">Manual setup</a> ·
   <a href="#validation">Build & test</a> ·
-  <a href="#evidence-and-boundaries">Evidence</a>
+  <a href="#evidence-and-boundaries">Evidence</a> · <a href="#research-and-inspiration">Research</a>
 </p>
 
 Talk to a compact desktop island, use registered local tools with native
@@ -275,18 +275,32 @@ library. Acquisition is included. These small observations do not establish
 general reliability, routing optimality or hardware/cost savings.
 Direct-provider cost reporting is incomplete, and provider availability changes.
 
+## Research and inspiration
+
+These papers and official documentation informed EvoFlow's approach to reusable
+workflows, external procedural knowledge and persistent execution state.
+
+| Source | Connection to EvoFlow |
+| --- | --- |
+| [**Prime Agent: A Self-Improving RLM Harness**](https://arxiv.org/pdf/2608.23552) (2026) | Inspired persistent skills and memory outside model weights, with explicit execution, verification and resource accounting in the agent harness. |
+| [**Agent Workflow Memory**](https://arxiv.org/pdf/2409.07429) (2024) | Inspired learning reusable workflows from prior task experience and applying them to subsequent tasks. |
+| [**Hermes Agent — Skills System**](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills) | Informed agent-authored, on-demand procedural knowledge stored as reusable external artifacts. |
+| [**LangGraph — Persistence**](https://docs.langchain.com/oss/python/langgraph/persistence) | Guided checkpointed graph state and the separation of thread state from durable knowledge. EvoFlow uses local SQLite checkpoints and separate skill, knowledge and preference records. |
+
+EvoFlow applies these ideas to a scoped reconciliation task family, with fixed
+model weights and independently checked, versioned executable plans. It does not
+reproduce the complete Prime Agent or Agent Workflow Memory systems or claim
+their published benchmark results. Checkpoints preserve execution state; skill
+learning and admission are separate application mechanisms.
+
 <details>
-<summary><strong>Project references and inspiration</strong></summary>
+<summary><strong>Project references</strong></summary>
 
 - [Complete build brief](docs/brief/AI-Workflow-Hackathon-Build-Brief.md)
 - [Current delivery verification](docs/BRANDING-MONITORING-VERIFICATION-2026-10-31.md)
 - [Provider contracts](docs/model-provider-contracts.md)
 - [MCP/Cua verification and remaining gaps](docs/MCP-CUA-VERIFICATION-2026-10-31.md)
 - [Installed skill provenance](skills-lock.json)
-- [Hermes procedural skills](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)
-  and [Prime Agent](https://arxiv.org/html/2608.23552v1) inspired external workflow
-  learning. EvoFlow implements a narrower scope and does not reproduce their
-  complete harnesses or train model weights.
 - [Clicky](https://github.com/farzaa/clicky) informed the compact interaction.
   All EvoFlow product surfaces remain native WinUI.
 
