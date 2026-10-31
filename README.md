@@ -4,7 +4,8 @@
 <p align="center">WinUI 3 · Python / LangGraph · Local execution · Supabase · Optional LangSmith</p>
 <p align="center">
   <a href="#meet-evoflow">Tour</a> · <a href="#workflow-evolution">Evolution</a> ·
-  <a href="#run-from-source">Get started</a> · <a href="#validation">Build & test</a> ·
+  <a href="#set-up-with-your-agent">Agent setup</a> · <a href="#run-from-source">Manual setup</a> ·
+  <a href="#validation">Build & test</a> ·
   <a href="#evidence-and-boundaries">Evidence</a>
 </p>
 
@@ -88,6 +89,64 @@ privileged cloud key is required. Offline changes queue for synchronization.
 Read [local tool policy](docs/local-tool-architecture.md),
 [current capability boundaries](docs/general-capabilities.md) and
 [MCP/Cua architecture](docs/mcp-cua-architecture.md) for the implemented contracts.
+
+## Set up with your agent
+
+Copy this prompt into your coding agent on a **Windows x64 PC**. It prepares
+EvoFlow, then opens your private configuration file so you can paste keys locally.
+
+```text
+Set up EvoFlow from https://github.com/NBTON/EvoFlow.git on this Windows x64 PC.
+Complete the setup you can do without API keys, then open my private key-entry
+file as your final action. Never ask me to paste keys into chat.
+
+1. Inspect this PC and any existing EvoFlow checkout. Reuse an existing clone
+   where appropriate; otherwise clone into a user-owned development folder.
+   Read AGENTS.md, README.md and the current setup guidance. Preserve local
+   changes, existing app settings/credentials and shared agent-skill links.
+
+2. Check Git, the .NET SDK required by global.json, uv/Python 3.12 and WinApp CLI
+   0.7.1 or later. Use official sources for missing build prerequisites. Report
+   any Windows permission or Developer Mode blocker; do not reboot the PC or
+   install/trust signing certificates. Do not purchase services or deploy anything.
+
+3. Run scripts/Setup.ps1, the repository's Python tests and Ruff checks, and:
+   dotnet build native/EvoFlow/EvoFlow.csproj -p:Platform=x64
+   Launch the native app with WinApp CLI and check that its window and local
+   worker start. Do not send paid model requests or run live demos/benchmarks.
+   If the supported pinned Cua runtime is already installed, follow the repo's
+   Sync-CuaRuntime.ps1 guidance and rebuild. Otherwise report that optional
+   capability as unavailable without blocking the basic app setup.
+
+4. Prepare %LOCALAPPDATA%\EvoFlow\provider-keys.env, outside the checkout.
+   Create its directory if needed. For a new file, copy the blank assignments
+   and explanatory comments from .env.example. For an existing file, preserve
+   all values and add only missing blank placeholders, with no duplicate names.
+   Never print, screenshot, commit or put credential values in command arguments.
+   Do not copy credentials or device sessions from another person or machine.
+
+5. Explain which fields I need: OPENROUTER_API_KEY for Decisions routing, plus
+   credentials for at least one enabled generation provider in config/runtime.json.
+   The OpenRouter key can also serve an enabled OpenRouter generation model;
+   DEEPSEEK_API_KEY and MIMO_API_KEY are only needed for their direct providers.
+   Mark MIMO_BASE_URL for account-specific endpoint selection; do not guess it.
+   LANGSMITH_API_KEY is optional; leave monitoring disabled unless I request it.
+   Supabase uses its automatic protected device session, with no password entry.
+
+6. Before opening the file, give me a short setup/checks summary, its actual
+   absolute path, the key fields to fill, and any unresolved blockers. Tell me
+   to save, fully quit EvoFlow from its tray menu, and relaunch after adding keys.
+   Distinguish a successful local launch from unverified provider connectivity.
+
+7. Finally, open that exact provider-keys.env file in a visible local editor
+   (use Notepad if no suitable editor is available), with OPENROUTER_API_KEY
+   clearly identified. Leave it open for me to paste my keys. Do not read or
+   capture its contents afterward, and do not wait for keys in chat.
+```
+
+Fill only the providers you intend to use; you do not need every key. Provider
+usage may incur charges. After saving, restart EvoFlow to import nonempty keys
+into Windows DPAPI. Optional monitoring setup is [explained below](#optional-langsmith-monitoring).
 
 ## Run from source
 
