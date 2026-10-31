@@ -4,7 +4,7 @@
 <p align="center">WinUI 3 · Python / LangGraph · Local execution · Supabase · Optional LangSmith</p>
 <p align="center">
   <a href="#quick-demo">Watch demo</a> · <a href="#meet-evoflow">Tour</a> ·
-  <a href="#workflow-evolution">Evolution</a> ·
+  <a href="#memory-and-brain-graph">Memory graph</a> · <a href="#workflow-evolution">Evolution</a> ·
   <a href="#set-up-with-your-agent">Agent setup</a> · <a href="#run-from-source">Manual setup</a> ·
   <a href="#validation">Build & test</a> ·
   <a href="#evidence-and-boundaries">Evidence</a>
@@ -50,15 +50,23 @@ and Quit. Windows controls whether its icon appears beside the clock or in overf
 | Optional monitoring | Metadata-only LangSmith traces with run/session correlation and provider usage receipts. |
 
 <details>
-<summary><strong>More of the real native interface</strong></summary>
+<summary><strong>Native Settings</strong></summary>
 
-<p><img src="docs/images/native-memory.png" width="1000" alt="Native Memory explorer showing saved records and recorded relationships"></p>
 <p><img src="docs/images/native-settings.png" width="520" alt="Separate native EvoFlow Settings window"></p>
 
 These are captures of the running Windows application. The graph represents
 saved records and recorded links. See [capture provenance and checks](docs/BRANDING-MONITORING-VERIFICATION-2026-10-31.md).
 
 </details>
+
+## Memory and brain graph
+
+[![EvoFlow Memory explorer: knowledge, learned skills, task runs, sources and contracts connected by recorded relationships.](docs/images/native-memory.png)](docs/images/native-memory.png)
+
+See what EvoFlow remembers, where it came from, and what depends on it. Search
+and filter saved records, pan or zoom the graph, and select a node to inspect its
+provenance. Lines represent recorded relationships; demo/fictional records are
+labeled in the interface. Click the screenshot to view it at full size.
 
 ## Workflow evolution
 
