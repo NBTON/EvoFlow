@@ -16,18 +16,17 @@ reconciliation demo, a model writes a bounded executable plan; independent
 checks decide whether it earns a place in the versioned skill library.
 Covered fresh inputs can then run locally without another model request.
 
-Built for **HUMAIN Future AI Builders Hackathon · Challenge 2: Deliver AI with
-Less Compute**. This working prototype includes limited-scope measured evidence.
+This working prototype includes limited-scope measured evidence.
 It makes no dollar, GPU, energy or general quality claim.
 
 ## Quick demo
 
-[![Watch the EvoFlow demo: a chat request opens Notepad.](docs/images/demo-video-preview.png)](https://github.com/NBTON/EvoFlow/raw/refs/heads/main/docs/media/evoflow-notepad-demo.mp4)
+[![EvoFlow demo: a chat request opens Notepad.](docs/images/evoflow-notepad-demo.gif)](https://github.com/NBTON/EvoFlow/raw/refs/heads/main/docs/media/evoflow-notepad-demo.mp4)
 
-**[▶ Watch or download the demo — 27 seconds, MP4](https://github.com/NBTON/EvoFlow/raw/refs/heads/main/docs/media/evoflow-notepad-demo.mp4)**
+**[Open the full-resolution video — 27 seconds, MP4](https://github.com/NBTON/EvoFlow/raw/refs/heads/main/docs/media/evoflow-notepad-demo.mp4)**
 
-A short desktop recording shows EvoFlow receiving “open the notepad app for me”
-and launching Notepad. Click the preview above to open the full-resolution video.
+A looping animated preview shows EvoFlow receiving “open the notepad app for me”
+and launching Notepad. Click it to open the full-resolution video.
 
 ## Meet EvoFlow
 
